@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Généré par Microsoft Visio 11.0, SVG Export, v1.0 Schémas Cloud Computing.svg Page 1 -->
+
+<svg
+   xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="9.9018898in"
+   height="5.00001in"
+   viewBox="0 0 712.936 360.00048"
+   xml:space="preserve"
+   class="st13"
+   version="1.1"
+   id="svg619"
+   sodipodi:docname="cloud-types.svg"
+   style="font-size:12px;overflow:visible;color-interpolation-filters:sRGB;fill:none;fill-rule:evenodd;stroke-linecap:square;stroke-miterlimit:3"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/kariminf/Github/projeduc/1CP_BWeb/img/Bweb01-environnement/cloud-types.svg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><metadata
+   id="metadata623"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="708"
+   id="namedview621"
+   showgrid="false"
+   inkscape:zoom="0.88082075"
+   inkscape:cx="503.50715"
+   inkscape:cy="459.87755"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g617" />
+	<v:documentProperties
+   v:langID="1036"
+   v:metric="true"
+   v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud
+   v:nameU="VisAecIsTechnical"
+   v:val="VT0(0):26" />
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style
+   type="text/css"
+   id="style2">
+	<![CDATA[
+		.st1 {fill:#afc2da;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st2 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st3 {fill:#772f28;font-family:Arial;font-size:1.16666em;font-weight:bold}
+		.st4 {font-size:0.799988em}
+		.st5 {fill:#9dbb61;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st6 {fill:#000000;font-family:Arial;font-size:1.00001em}
+		.st7 {font-size:1em}
+		.st8 {fill:#da9792;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st9 {fill:url(#grad26-97);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st10 {fill:url(#grad27-133);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st11 {fill:#000000;font-family:Arial;font-size:1.5em;font-style:italic;font-weight:bold}
+		.st12 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st13 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs
+   id="Patterns_And_Gradients">
+		<linearGradient
+   id="grad26-97"
+   v:fillPattern="26"
+   v:foreground="#9dbb61"
+   v:background="#da9792"
+   x1="-0.17136461"
+   y1="1133.7155"
+   x2="60.891075"
+   y2="1133.7155"
+   gradientTransform="scale(2.100784,0.47601276)"
+   gradientUnits="userSpaceOnUse">
+			<stop
+   offset="0"
+   style="stop-color:#da9792;stop-opacity:1"
+   id="stop4" />
+			<stop
+   offset="0.5"
+   style="stop-color:#9dbb61;stop-opacity:1"
+   id="stop6" />
+			<stop
+   offset="1"
+   style="stop-color:#da9792;stop-opacity:1"
+   id="stop8" />
+		</linearGradient>
+		<linearGradient
+   id="grad27-133"
+   v:fillPattern="27"
+   v:foreground="#9dbb61"
+   v:background="#da9792"
+   x1="60.891075"
+   y1="1133.7155"
+   x2="-0.17136461"
+   y2="1133.7155"
+   gradientTransform="scale(2.100784,0.47601276)"
+   gradientUnits="userSpaceOnUse">
+			<stop
+   offset="0"
+   style="stop-color:#9dbb61;stop-opacity:1"
+   id="stop11" />
+			<stop
+   offset="1"
+   style="stop-color:#da9792;stop-opacity:1"
+   id="stop13" />
+		</linearGradient>
+	</defs>
+	<g
+   v:mID="0"
+   v:index="1"
+   v:groupContext="foregroundPage"
+   id="g617"
+   transform="translate(0,-208.3685)">
+		<title
+   id="title17">Page 1</title>
+		<v:pageProperties
+   v:drawingScale="0.0393701"
+   v:pageScale="0.0393701"
+   v:drawingUnits="24"
+   v:shadowOffsetX="8.50394"
+   v:shadowOffsetY="-8.50394" />
+		<v:layer
+   v:name="Lien"
+   v:index="0" />
+		<g
+   id="shape16-1"
+   v:mID="16"
+   v:groupContext="shape"
+   transform="matrix(1.000858,0,0,0.53452105,544.90025,166.57664)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title19">Feuille.16</title>
+			<rect
+   x="0"
+   y="94.983299"
+   width="167.244"
+   height="473.38599"
+   class="st1"
+   id="rect21"
+   style="fill:#afc2da;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="shape4-3"
+   v:mID="4"
+   v:groupContext="shape"
+   transform="matrix(1.0008532,0,0,0.53811538,0.64865371,165.38481)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title24">Feuille.4</title>
+			<rect
+   x="0"
+   y="94.983299"
+   width="167.244"
+   height="473.38599"
+   class="st1"
+   id="rect26"
+   style="fill:#afc2da;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="shape1-5"
+   v:mID="1"
+   v:groupContext="shape"
+   transform="translate(20.5625,-322.629)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title29">Feuille.1</title>
+			<desc
+   id="desc31">Modèle interne</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="552.779"
+   width="127.56"
+   height="31.1811" />
+			<rect
+   x="0"
+   y="537.18799"
+   width="127.559"
+   height="31.181101"
+   class="st2"
+   id="rect33"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="12.13"
+   y="556.97998"
+   class="st3"
+   v:langID="1036"
+   id="text39"
+   style="font-weight:bold;font-size:13.99991989px;font-family:Arial;fill:#772f28"><v:paragraph
+   v:horizAlign="1" /><v:tabList />M<tspan
+   class="st4"
+   id="tspan35"
+   style="font-size:11.19976711px">ODÈLE</tspan> <tspan
+   class="st4"
+   id="tspan37"
+   style="font-size:11.19976711px">INTERNE</tspan></text>
+		</g>
+		<g
+   id="shape2-10"
+   v:mID="2"
+   v:groupContext="shape"
+   transform="translate(20.5625,-294.283)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title42">Feuille.2</title>
+			<desc
+   id="desc44">Code applicatif</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect46"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="24.09"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text48"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Code applicatif</text>
+		</g>
+		<g
+   id="shape3-13"
+   v:mID="3"
+   v:groupContext="shape"
+   transform="translate(20.5625,-254.598)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title51">Feuille.3</title>
+			<desc
+   id="desc53">Données</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect55"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="39.759998"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text57"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Données</text>
+		</g>
+		
+		<g
+   id="shape6-19"
+   v:mID="6"
+   v:groupContext="shape"
+   transform="translate(20.5625,-216.897)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title69">Feuille.6</title>
+			<desc
+   id="desc71">Systèmes d’exploitation</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect73"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="37.439999"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text77"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Systèmes <tspan
+   x="28.75"
+   dy="1.2em"
+   class="st7"
+   id="tspan75"
+   style="font-size:12.00012016px">d</tspan>’exploitation</text>
+		</g>
+		
+		<g
+   id="shape8-27"
+   v:mID="8"
+   v:groupContext="shape"
+   transform="translate(20.5625,-179.692)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title91">Feuille.8</title>
+			<desc
+   id="desc93">Plates-formes matérielles</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect95"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="26.77"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text99"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Plates-formes <tspan
+   x="34.77"
+   dy="1.2em"
+   class="st7"
+   id="tspan97"
+   style="font-size:12.00012016px">matérielles</tspan></text>
+		</g>
+		
+		
+		<g
+   id="shape11-38"
+   v:mID="11"
+   v:groupContext="shape"
+   transform="translate(20.5625,-142.807)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title122">Feuille.11</title>
+			<desc
+   id="desc124">Réseau interne</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect126"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="23.09"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text128"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau interne</text>
+		</g>
+		<g
+   id="shape12-41"
+   v:mID="12"
+   v:groupContext="shape"
+   transform="translate(20.5625,-105.956)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title131">Feuille.12</title>
+			<desc
+   id="desc133">Réseau externe</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect135"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="21.42"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text137"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau externe</text>
+		</g>
+		
+		<g
+   id="shape14-47"
+   v:mID="14"
+   v:groupContext="shape"
+   transform="matrix(1.0008532,0,0,0.53631804,179.23165,166.40636)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title149">Feuille.14</title>
+			<rect
+   x="0"
+   y="94.983299"
+   width="167.244"
+   height="473.38599"
+   class="st1"
+   id="rect151"
+   style="fill:#afc2da;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="shape15-49"
+   v:mID="15"
+   v:groupContext="shape"
+   transform="matrix(1.000858,0,0,0.53452105,360.64825,166.57664)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title154">Feuille.15</title>
+			<rect
+   x="0"
+   y="94.983299"
+   width="167.244"
+   height="473.38599"
+   class="st1"
+   id="rect156"
+   style="fill:#afc2da;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="shape17-51"
+   v:mID="17"
+   v:groupContext="shape"
+   transform="translate(190.641,-297.118)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title159">Feuille.17</title>
+			<desc
+   id="desc161">Code applicatif</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect163"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="24.09"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text165"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Code applicatif</text>
+		</g>
+		<g
+   id="shape18-54"
+   v:mID="18"
+   v:groupContext="shape"
+   transform="translate(190.641,-257.433)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title168">Feuille.18</title>
+			<desc
+   id="desc170">Données</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect172"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="39.759998"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text174"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Données</text>
+		</g>
+		
+		<g
+   id="shape20-60"
+   v:mID="20"
+   v:groupContext="shape"
+   transform="translate(190.641,-219.732)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title186">Feuille.20</title>
+			<desc
+   id="desc188">Systèmes d’exploitation</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect190"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="37.439999"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text194"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Systèmes <tspan
+   x="28.75"
+   dy="1.2em"
+   class="st7"
+   id="tspan192"
+   style="font-size:12.00012016px">d</tspan>’exploitation</text>
+		</g>
+		
+		<g
+   id="shape22-68"
+   v:mID="22"
+   v:groupContext="shape"
+   transform="translate(190.641,-182.527)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title208">Feuille.22</title>
+			<desc
+   id="desc210">Plates-formes matérielles</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect212"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="26.77"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text216"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Plates-formes <tspan
+   x="34.77"
+   dy="1.2em"
+   class="st7"
+   id="tspan214"
+   style="font-size:12.00012016px">matérielles</tspan></text>
+		</g>
+		
+		
+		<g
+   id="shape25-79"
+   v:mID="25"
+   v:groupContext="shape"
+   transform="translate(190.641,-145.641)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title239">Feuille.25</title>
+			<desc
+   id="desc241">Réseau « privé »</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect243"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="18.42"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text245"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau « privé »</text>
+		</g>
+		<g
+   id="shape26-82"
+   v:mID="26"
+   v:groupContext="shape"
+   transform="translate(190.641,-108.791)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title248">Feuille.26</title>
+			<desc
+   id="desc250">Réseau externe</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect252"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="21.42"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text254"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau externe</text>
+		</g>
+		
+		<g
+   id="shape28-88"
+   v:mID="28"
+   v:groupContext="shape"
+   transform="translate(381.98,-297.118)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title266">Feuille.28</title>
+			<desc
+   id="desc268">Code applicatif</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect270"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="24.09"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text272"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Code applicatif</text>
+		</g>
+		<g
+   id="shape29-91"
+   v:mID="29"
+   v:groupContext="shape"
+   transform="translate(381.98,-257.433)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title275">Feuille.29</title>
+			<desc
+   id="desc277">Données</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st5"
+   id="rect279"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="39.759998"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text281"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Données</text>
+		</g>
+		
+		<g
+   id="shape31-99"
+   v:mID="31"
+   v:groupContext="shape"
+   transform="translate(381.98,-219.732)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title293">Feuille.31</title>
+			<desc
+   id="desc295">Systèmes d’exploitation</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect297"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="37.439999"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text301"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Systèmes <tspan
+   x="28.75"
+   dy="1.2em"
+   class="st7"
+   id="tspan299"
+   style="font-size:12.00012016px">d</tspan>’exploitation</text>
+		</g>
+		
+		<g
+   id="shape33-107"
+   v:mID="33"
+   v:groupContext="shape"
+   transform="translate(381.98,-184.027)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title315">Feuille.33</title>
+			<desc
+   id="desc317">Plates-formes matérielles</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect319"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="26.77"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text323"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Plates-formes <tspan
+   x="34.77"
+   dy="1.2em"
+   class="st7"
+   id="tspan321"
+   style="font-size:12.00012016px">matérielles</tspan></text>
+		</g>
+		
+		
+		<g
+   id="shape36-118"
+   v:mID="36"
+   v:groupContext="shape"
+   transform="translate(381.98,-145.641)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title346">Feuille.36</title>
+			<desc
+   id="desc348">Réseau « privé »</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect350"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="18.42"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text352"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau « privé »</text>
+		</g>
+		<g
+   id="shape37-121"
+   v:mID="37"
+   v:groupContext="shape"
+   transform="translate(381.98,-108.791)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title355">Feuille.37</title>
+			<desc
+   id="desc357">Réseau externe</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect359"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="21.42"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text361"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau externe</text>
+		</g>
+		
+		<g
+   id="shape39-127"
+   v:mID="39"
+   v:groupContext="shape"
+   transform="translate(566.232,-297.118)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title373">Feuille.39</title>
+			<desc
+   id="desc375">Code applicatif</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect377"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="24.09"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text379"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Code applicatif</text>
+		</g>
+		<g
+   id="shape40-130"
+   v:mID="40"
+   v:groupContext="shape"
+   transform="translate(566.232,-257.433)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title382">Feuille.40</title>
+			<desc
+   id="desc384">Données</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st10"
+   id="rect386"
+   style="fill:url(#grad27-133);stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="39.759998"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text388"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Données</text>
+		</g>
+		
+		<g
+   id="shape42-138"
+   v:mID="42"
+   v:groupContext="shape"
+   transform="translate(566.232,-219.732)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title400">Feuille.42</title>
+			<desc
+   id="desc402">Systèmes d’exploitation</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect404"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="37.439999"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text408"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Systèmes <tspan
+   x="28.75"
+   dy="1.2em"
+   class="st7"
+   id="tspan406"
+   style="font-size:12.00012016px">d</tspan>’exploitation</text>
+		</g>
+		
+		<g
+   id="shape44-146"
+   v:mID="44"
+   v:groupContext="shape"
+   transform="translate(566.232,-182.527)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title422">Feuille.44</title>
+			<desc
+   id="desc424">Plates-formes matérielles</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect426"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="26.77"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text430"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Plates-formes <tspan
+   x="34.77"
+   dy="1.2em"
+   class="st7"
+   id="tspan428"
+   style="font-size:12.00012016px">matérielles</tspan></text>
+		</g>
+		
+		
+		<g
+   id="shape47-157"
+   v:mID="47"
+   v:groupContext="shape"
+   transform="translate(566.232,-145.641)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title453">Feuille.47</title>
+			<desc
+   id="desc455">Réseau « privé »</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect457"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="18.42"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text459"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau « privé »</text>
+		</g>
+		<g
+   id="shape48-160"
+   v:mID="48"
+   v:groupContext="shape"
+   transform="translate(566.232,-108.791)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title462">Feuille.48</title>
+			<desc
+   id="desc464">Réseau externe</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st8"
+   id="rect466"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="21.42"
+   y="557.79999"
+   class="st6"
+   v:langID="1036"
+   id="text468"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Réseau externe</text>
+		</g>
+		
+		<g
+   id="shape50-166"
+   v:mID="50"
+   v:groupContext="shape"
+   transform="translate(190.641,-322.629)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title480">Feuille.50</title>
+			<desc
+   id="desc482">Modèle IAAS</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="552.779"
+   width="127.56"
+   height="31.1811" />
+			<rect
+   x="0"
+   y="537.18799"
+   width="127.559"
+   height="31.181101"
+   class="st2"
+   id="rect484"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="19.99"
+   y="556.97998"
+   class="st3"
+   v:langID="1036"
+   id="text488"
+   style="font-weight:bold;font-size:13.99991989px;font-family:Arial;fill:#772f28"><v:paragraph
+   v:horizAlign="1" /><v:tabList />M<tspan
+   class="st4"
+   id="tspan486"
+   style="font-size:11.19976711px">ODÈLE</tspan> IAAS</text>
+		</g>
+		<g
+   id="shape51-170"
+   v:mID="51"
+   v:groupContext="shape"
+   transform="translate(366.389,-322.629)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title491">Feuille.51</title>
+			<desc
+   id="desc493">Modèle PAAS</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="552.779"
+   width="127.56"
+   height="31.1811" />
+			<rect
+   x="0"
+   y="537.18799"
+   width="127.559"
+   height="31.181101"
+   class="st2"
+   id="rect495"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="17.27"
+   y="556.97998"
+   class="st3"
+   v:langID="1036"
+   id="text499"
+   style="font-weight:bold;font-size:13.99991989px;font-family:Arial;fill:#772f28"><v:paragraph
+   v:horizAlign="1" /><v:tabList />M<tspan
+   class="st4"
+   id="tspan497"
+   style="font-size:11.19976711px">ODÈLE</tspan> PAAS</text>
+		</g>
+		<g
+   id="shape52-174"
+   v:mID="52"
+   v:groupContext="shape"
+   transform="translate(559.145,-322.629)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title502">Feuille.52</title>
+			<desc
+   id="desc504">Modèle SAAS</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="552.779"
+   width="127.56"
+   height="31.1811" />
+			<rect
+   x="0"
+   y="537.18799"
+   width="127.559"
+   height="31.181101"
+   class="st2"
+   id="rect506"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="17.27"
+   y="556.97998"
+   class="st3"
+   v:langID="1036"
+   id="text510"
+   style="font-weight:bold;font-size:13.99991989px;font-family:Arial;fill:#772f28"><v:paragraph
+   v:horizAlign="1" /><v:tabList />M<tspan
+   class="st4"
+   id="tspan508"
+   style="font-size:11.19976711px">ODÈLE</tspan> SAAS</text>
+		</g>
+		<g
+   id="shape54-178"
+   v:mID="54"
+   v:groupContext="shape"
+   transform="translate(230.326,-6.7200018)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title513">Feuille.54</title>
+			<desc
+   id="desc515">Sous la responsabilité de l’entreprise</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st2"
+   id="rect517"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="5.0799999"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text521"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Sous la responsabilité <tspan
+   x="26.09"
+   dy="1.2em"
+   class="st7"
+   id="tspan519"
+   style="font-size:12.00012016px">de l</tspan>’entreprise</text>
+		</g>
+		<g
+   id="shape55-182"
+   v:mID="55"
+   v:groupContext="shape"
+   transform="translate(457.098,-6.7200018)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title524">Feuille.55</title>
+			<desc
+   id="desc526">Sous la responsabilité du fournisseur</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="63.7795"
+   cy="554.196"
+   width="127.56"
+   height="28.3465" />
+			<rect
+   x="0"
+   y="540.02301"
+   width="127.559"
+   height="28.3465"
+   class="st2"
+   id="rect528"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="5.0799999"
+   y="550.59998"
+   class="st6"
+   v:langID="1036"
+   id="text532"
+   style="font-size:12.00012016px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Sous la responsabilité <tspan
+   x="25.76"
+   dy="1.2em"
+   class="st7"
+   id="tspan530"
+   style="font-size:12.00012016px">du fournisseur </tspan> </text>
+		</g>
+		<g
+   id="shape57-186"
+   v:mID="57"
+   v:groupContext="shape"
+   transform="translate(180.72,-60.578297)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title535">Feuille.57</title>
+			<desc
+   id="desc537">Infrastructure as a service</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="77.9528"
+   cy="552.779"
+   width="155.91"
+   height="31.1811" />
+			<rect
+   x="0"
+   y="537.18799"
+   width="155.90601"
+   height="31.181101"
+   class="st2"
+   id="rect539"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="11.06"
+   y="547.38"
+   class="st11"
+   v:langID="1036"
+   id="text549"
+   style="font-style:italic;font-weight:bold;font-size:18px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />I<tspan
+   class="st4"
+   id="tspan541"
+   style="font-size:14.39978313px">NFRASTRUCTURE</tspan> <tspan
+   x="26.139999"
+   dy="1.5em"
+   class="st4"
+   id="tspan543"
+   style="font-size:14.39978313px">AS</tspan> <tspan
+   class="st4"
+   id="tspan545"
+   style="font-size:14.39978313px">A</tspan> <tspan
+   class="st4"
+   id="tspan547"
+   style="font-size:14.39978313px">SERVICE</tspan></text>
+		</g>
+		<g
+   id="shape59-193"
+   v:mID="59"
+   v:groupContext="shape"
+   transform="translate(372.059,-60.578297)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title552">Feuille.59</title>
+			<desc
+   id="desc554">Platform as a service</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="77.9528"
+   cy="552.779"
+   width="155.91"
+   height="31.1811" />
+			<rect
+   x="0"
+   y="537.18799"
+   width="155.90601"
+   height="31.181101"
+   class="st2"
+   id="rect556"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="16.559999"
+   y="547.38"
+   class="st11"
+   v:langID="1036"
+   id="text566"
+   style="font-style:italic;font-weight:bold;font-size:18px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />P<tspan
+   class="st4"
+   id="tspan558"
+   style="font-size:14.39978313px">LATFORM</tspan> <tspan
+   class="st4"
+   id="tspan560"
+   style="font-size:14.39978313px">AS</tspan> <tspan
+   class="st4"
+   id="tspan562"
+   style="font-size:14.39978313px">A</tspan> <tspan
+   x="46.34"
+   dy="1.5em"
+   class="st4"
+   id="tspan564"
+   style="font-size:14.39978313px">SERVICE</tspan></text>
+		</g>
+		<g
+   id="shape60-200"
+   v:mID="60"
+   v:groupContext="shape"
+   transform="translate(542.137,-60.578297)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title569">Feuille.60</title>
+			<desc
+   id="desc571">Software as a service</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="77.9528"
+   cy="552.779"
+   width="155.91"
+   height="31.1811" />
+			<rect
+   x="0"
+   y="537.18799"
+   width="155.90601"
+   height="31.181101"
+   class="st2"
+   id="rect573"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="15.35"
+   y="547.38"
+   class="st11"
+   v:langID="1036"
+   id="text583"
+   style="font-style:italic;font-weight:bold;font-size:18px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />S<tspan
+   class="st4"
+   id="tspan575"
+   style="font-size:14.39978313px">OFTWARE</tspan> <tspan
+   class="st4"
+   id="tspan577"
+   style="font-size:14.39978313px">AS</tspan> <tspan
+   class="st4"
+   id="tspan579"
+   style="font-size:14.39978313px">A</tspan> <tspan
+   x="46.34"
+   dy="1.5em"
+   class="st4"
+   id="tspan581"
+   style="font-size:14.39978313px">SERVICE</tspan></text>
+		</g>
+		<g
+   id="shape61-207"
+   v:mID="61"
+   v:groupContext="shape"
+   v:layerMember="0"
+   transform="translate(438.673,-245.244)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title586">Lien dynamique.61</title>
+			<path
+   d="m 7.09,565.53 v -8.5"
+   class="st12"
+   id="path588"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="shape62-210"
+   v:mID="62"
+   v:groupContext="shape"
+   transform="translate(10.6413,-59.160898)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title591">Feuille.62</title>
+			<desc
+   id="desc593">Interne</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)"
+   v:tabSpace="42.5197" />
+			<v:textRect
+   cx="77.9528"
+   cy="549.944"
+   width="155.91"
+   height="36.8504" />
+			<rect
+   x="0"
+   y="531.51898"
+   width="155.90601"
+   height="36.850399"
+   class="st2"
+   id="rect595"
+   style="fill:none;stroke:none;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+			<text
+   x="45.849998"
+   y="555.34003"
+   class="st11"
+   v:langID="1036"
+   id="text599"
+   style="font-style:italic;font-weight:bold;font-size:18px;font-family:Arial;fill:#000000"><v:paragraph
+   v:horizAlign="1" /><v:tabList />I<tspan
+   class="st4"
+   id="tspan597"
+   style="font-size:14.39978313px">NTERNE</tspan></text>
+		</g>
+		<g
+   id="shape63-214"
+   v:mID="63"
+   v:groupContext="shape"
+   v:layerMember="0"
+   transform="translate(81.5074,-54.223931)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title602">Lien dynamique.63</title>
+			<path
+   d="m 7.09,573.33 v 4.25"
+   class="st12"
+   id="path604"
+   inkscape:connector-curvature="0"
+   style="stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="shape58-217"
+   v:mID="58"
+   v:groupContext="shape"
+   transform="translate(177.177,-6.7200018)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title607">Feuille.58</title>
+			<rect
+   x="0"
+   y="540.02301"
+   width="49.6063"
+   height="28.3465"
+   class="st5"
+   id="rect609"
+   style="fill:#9dbb61;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="shape53-219"
+   v:mID="53"
+   v:groupContext="shape"
+   transform="translate(394.736,-6.7200018)"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+			<title
+   id="title612">Feuille.53</title>
+			<rect
+   x="0"
+   y="540.02301"
+   width="56.692902"
+   height="28.3465"
+   class="st8"
+   id="rect614"
+   style="fill:#da9792;stroke:#000000;stroke-width:0.72000003;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+	</g>
+</svg>

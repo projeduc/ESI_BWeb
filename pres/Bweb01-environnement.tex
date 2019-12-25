@@ -16,6 +16,7 @@
 \usepackage{multirow}
 \usepackage{hyperref}
 
+
 \hypersetup{
 	colorlinks,
 	urlcolor = blue
@@ -24,6 +25,24 @@
 %\renewcommand{\baselinestretch}{1.5}
 
 \def\supit#1{\raisebox{0.8ex}{\small\it #1}\hspace{0.05em}}
+
+\AtBeginSection{%
+	\begin{frame}
+		\sectionpage
+	\end{frame}
+}
+
+\newcommand{\rottext}[2]{%
+	\rotatebox{90}{%
+	\begin{minipage}{#1}%
+		\raggedleft#2%
+	\end{minipage}%
+	}%
+}
+
+\usepackage{longtable}
+\usepackage{tabu}
+
 
 \title[BWEB: 01- Environnement] %
 {Bureautique et Web \\Chapitre 01: Environnement de travail} 
@@ -56,32 +75,45 @@
 \frametitle{Introduction aux environnements de travail}
 
 Un environnement de travail doit avoir:
-\begin{itemize}
-	\item un poste de travail: l'ordinateur et ses périphériques
-	\item des applications: 
-	\item espaces de stockage
-\end{itemize}
+%\begin{itemize}
+%	\item un poste de travail: l'ordinateur et ses périphériques
+%	\item des applications
+%	\item espaces de stockage
+%\end{itemize}
+
+\begin{center}
+	\begin{tabular}{p{.3\textwidth}p{.3\textwidth}p{.3\textwidth}}
+	un poste de travail & des applications & espace de stockage \\
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/poste-travail.png}&
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/applications.jpg}&
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/stockage.jpg}\\
+	
+	&&\\
+	
+	matériel (Processeur, RAM, périphériques, etc.) et logiciel (système d'exploitation et pilotes) &
+	logiciels applicatifs & 
+	disque dur, stockage en ligne, etc. \\
+	\end{tabular}
+\end{center}
 
 \end{frame}
 
-\subsection{Composition d'un environnement de travail}
-
-\begin{frame}
-\frametitle{Introduction aux environnements de travail}
-\framesubtitle{Composition d'un environnement de travail}
-%TODO schéma
-\begin{itemize}
-	\item Processeur 
-	\item RAM 
-	\item Stockage
-	\item Périphériques 
-	\item Système d'exploitation
-	\item Applications 
-\end{itemize}
-
-\end{frame}
-
-\subsection{Types d'environnements de travail}
+%\subsection{Composition d'un environnement de travail}
+%
+%\begin{frame}
+%\frametitle{Introduction aux environnements de travail}
+%\framesubtitle{Composition d'un environnement de travail}
+%%TODO schéma
+%\begin{itemize}
+%	\item Processeur 
+%	\item RAM 
+%	\item Stockage
+%	\item Périphériques 
+%	\item Système d'exploitation
+%	\item Applications 
+%\end{itemize}
+%
+%\end{frame}
 
 \begin{frame}
 \frametitle{Introduction aux environnements de travail}
@@ -97,20 +129,12 @@ Selon l'emplacement des données et des applications, un environnement de travai
 
 \section{Environnement de travail local}
 
+%\sectionpage
+
 \begin{frame}
 \frametitle{Environnement de travail local}
 
 \end{frame}
-
-\subsection{Matériel informatique}
-
-\begin{frame}
-\frametitle{Environnement de travail local}
-\framesubtitle{Matériel informatique}
-
-\end{frame}
-
-\subsection{Système d'exploitation}
 
 \begin{frame}
 \frametitle{Environnement de travail local}
@@ -125,25 +149,51 @@ Parmi les fonctions d'un système d'exploitation:
 
 \begin{frame}
 \frametitle{Environnement de travail local}
-\framesubtitle{Système d'exploitation}
+\framesubtitle{Système d'exploitation (Bureau)}
 
-SE de bureau (Desktop OS):
-\begin{itemize}
-	\item Windows (Microsoft)
-	\item MacOS (Apple)
-	\item Linux (Linux foundation)
-	\item Chrome OS (Google): basé sur Linux
-	\item BSD
-\end{itemize}
+\begin{tabular}{ll}
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/windows.png} 
+	Windows (Microsoft) &
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/mac-finder.png} 
+	Mac OS (Apple) \\
+	
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/tux.png} 
+	Linux &
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/chrome.png} 
+	Chrome OS (Google) \\
+	
+	\includegraphics[height=.25\textheight]{..//img/Bweb01-environnement/freebsd.png} 
+	Free BSD &
+	\\
+	
+\end{tabular}
 
-SE de mobiles (Mobile OS): 
-\begin{itemize}
-	\item Android (Google)
-	\item iOS (Apple)
-	\item Windows 10 Mobile (Microsoft) 
-	\item Chrome OS (Google)
-	\item BSD
-\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Environnement de travail local}
+\framesubtitle{Système d'exploitation (Mobile)}
+
+\begin{center}
+	\footnotesize\bfseries
+	\begin{tabular}{llllll}
+	\rottext{.35\textheight}{Android 10 (Google)} &
+	\includegraphics[height=.4\textheight]{..//img/Bweb01-environnement/AndroidQ.png} & 
+	\rottext{.35\textheight}{iOS 13 (Apple)} &
+	\includegraphics[height=.4\textheight]{..//img/Bweb01-environnement/iOS13.png} &
+%	\rotatebox[origin=c]{90}{Windows 10 Mobile (Microsoft)} &
+	\rottext{.35\textheight}{Windows 10 Mobile (Microsoft)} &
+	\includegraphics[height=.4\textheight]{..//img/Bweb01-environnement/Windows10Mobile.png} \\
+	
+	\rottext{.35\textheight}{Tizen 2.2 (Tizen Association)} &
+	\includegraphics[height=.4\textheight]{..//img/Bweb01-environnement/Tizen.png} & 
+	\rottext{.35\textheight}{Ubuntu Touch (Canonical)} &
+	\includegraphics[height=.4\textheight]{..//img/Bweb01-environnement/UbuntuTouch.png} &
+	\rottext{.35\textheight}{Plasma Phone (KDE et Blue systems)} &
+	\includegraphics[height=.4\textheight]{..//img/Bweb01-environnement/plasmaphone.png} \\
+\end{tabular}
+\end{center}
 
 \end{frame}
 
@@ -158,21 +208,25 @@ SE de mobiles (Mobile OS):
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Environnement de travail local: Windows}
-\framesubtitle{Système d'exploitation: Windows}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Environnement de travail local: Windows}
-\framesubtitle{Système d'exploitation: Windows}
-
-\end{frame}
+\subsection{Windows}
 
 \begin{frame}
 \frametitle{Environnement de travail local}
-\framesubtitle{Système d'exploitation: Linux}
+\framesubtitle{Windows}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Windows}
+\framesubtitle{Système d'exploitation: Windows}
+
+\end{frame}
+
+\subsection{Linux}
+
+\begin{frame}
+\frametitle{Environnement de travail local}
+\framesubtitle{Linux}
 
 \end{frame}
 
@@ -269,9 +323,11 @@ Quelques distributions:
 
 \end{frame}
 
+\subsection{Machine virtuelle}
+
 \begin{frame}
 \frametitle{Environnement de travail local}
-\framesubtitle{Machine virtuelle (Virtual Box}
+\framesubtitle{Machine virtuelle (Virtual Box)}
 
 \begin{center}
 	\includegraphics[height=
@@ -286,12 +342,26 @@ Quelques distributions:
 \begin{frame}
 \frametitle{Environnement de travail distant}
 
+\begin{itemize}
+	\item Les données et/ou les applications sont accessibles via un réseau
+	\item Le service d'hébergement est fourni par des serveurs
+	\item On doit avoir une machine (ordinateur ou mobile) accéder ces services
+	\item En général, on utilise un navigateur web ou des applications dédiées pour ce faire
+\end{itemize}
+
+D'après Larousse, un serveur informatique est:
+\begin{definition}
+	Ensemble matériel et logiciel, branché sur un réseau télématique et mettant à la disposition des utilisateurs de ce réseau des banques de données ou de programmes spécialisées ; organisme qui assure ce service.
+\end{definition}
+
 \end{frame}
 
-\begin{frame}
-\frametitle{Environnement de travail distant}
-
-\end{frame}
+%\begin{frame}
+%\frametitle{Environnement de travail distant}
+%
+%Selon l'emplacement du serveur, le réseau 
+%
+%\end{frame}
 
 \subsection{Accès à l'environnement de travail distant}
 
@@ -299,15 +369,70 @@ Quelques distributions:
 \frametitle{Environnement de travail distant}
 \framesubtitle{Accès à l'environnement de travail distant}
 
+Selon l'emplacement du serveur, le réseau peut être:
+\begin{itemize}
+	\item local (LAN: Local Area Network): au seine d'une même entité (entreprise, administration, etc.)
+	\item internet (international network): un réseau mondial
+\end{itemize}
+
+Pour se connecter à un réseau:
+
+\begin{tabular}{ccc}
+	\includegraphics[height=2cm]{../img/Bweb01-environnement/ethernet.jpg} &
+	\includegraphics[height=2cm]{../img/Bweb01-environnement/wifi.png} &
+	\includegraphics[height=2cm]{../img/Bweb01-environnement/4g.jpeg} \\
+	
+	Cable ethernet &
+	WI-FI &
+	4G \\
+\end{tabular}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Environnement de travail distant: Accès}
 \framesubtitle{Adressage (IP)}
 
-Adresse IP
+\begin{itemize}
+	\item IP: Internet Protocol (anglais)
+	\item utilisée pour identifier une machine sur un réseau
+	\item attribuée d'une manière permanente (ex. les entreprises) ou provisoire (ex. modem de votre maison). 
+	\item deux versions:  version 4 et 6. 
+	\item version 4: notée avec quatre nombres compris entre 0 et 255, séparés par des points
+	\item exemple: 192.168.1.9
+	\item deux parties: 
+	\begin{itemize}
+		\item gauche et fixe (ne se change pas), représentant le sous réseau 
+		\item droite et variable, représentant le hôte
+	\end{itemize}
+\end{itemize}
 
-Local et Internet
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail distant: Accès}
+\framesubtitle{Adressage (Masque)}
+
+\begin{itemize}
+	\item représenté comme l'adresse IP (sur 4 nombres)
+	\item utilisé pour spécifier la partie sous-réseau et la partie hôte
+	\item une version simple du masque: là où il y a un 255 (sous réseau), là où il y a 0 (hôte)
+	\item exemple: 255.255.255.0; Les trois premiers nombres dans l'adresse IP représentent le sous réseau, le dernier représente l'hôte 
+	\item une version plus détaillée sera entamée dans le module réseau.
+\end{itemize}
+
+Par exemple: 
+\begin{itemize}
+	\item On veut créer un sous réseau pour la bibliothèque de l'école. 
+	\item On définit l'adresse IP de la bibliothèque comme 10.0.7.1 
+	\item On définit le masque de ce sous-réseau comme 255.255.255.0 
+	\item Lorsqu'un étudiant se connecte à ce sous-réseau, il/elle aura une adresse IP entre 10.0.7.2 et 10.0.7.254 
+	\item La partie 10.0.7 ne se change pas 
+\end{itemize}
+
+
+
 
 \end{frame}
 
@@ -315,17 +440,47 @@ Local et Internet
 \frametitle{Environnement de travail distant: Accès}
 \framesubtitle{Adressage (MAC)}
 
-Adresse MAC
-
-http://standards-oui.ieee.org/oui.txt
-
-
+\begin{itemize}
+	\item MAC: Media Access Control (anglais)
+	\item un identifiant physique de la carte réseau 
+	\item unique pour chaque carte réseau  
+	\item représentée par 6 nombres hexadécimaux, compris entre 00 et FF, séparés par des double points
+	\item exemple: CA:B2:34:A4:DC:57
+	\item deux parties (3 nombres chacune): 
+	\begin{itemize}
+		\item OUI (Organizationally Unique Identifier): réservée aux fabricants. 
+		Liste des fabriquants: \url{http://standards-oui.ieee.org/oui.txt}
+		\item NIC (Network Interface Controller): numéro de série des cartes réseaux d'un même fabriquant
+	\end{itemize}
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Environnement de travail distant: Accès}
-\framesubtitle{Adressage}
+\framesubtitle{Adressage (URL)}
+
+\begin{itemize}
+	\item URL: Uniform Resource Locator (anglais)
+	\item identifier une ressource sur le web en utilisant une chaine de caractères
+	\item unique pour chaque carte réseau  
+	\item composée de plusieurs parties; une version simple: 
+	\begin{itemize}
+		\item protocole, suivie par \textbf{://}
+		\item nom de domaine, indiquant l'adresse du serveur
+		\item chemin absolu par rapport au serveur 
+		\item le fichier 
+	\end{itemize}
+\end{itemize}
+
+\includegraphics[width=
+\textwidth]{../img/Bweb01-environnement/url.pdf}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail distant: Accès}
+\framesubtitle{Exercice: adressage}
 
 Comparaison IP vs. MAC
 
@@ -336,25 +491,17 @@ Comparaison IP vs. MAC
 
 \begin{frame}
 \frametitle{Environnement de travail distant: Accès}
-\framesubtitle{Site web}
+\framesubtitle{Le web}
 
-
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Environnement de travail distant: Accès}
-\framesubtitle{URL (Uniform Resource Locator)}
-
-Traduite: \textit{localisateur uniforme de ressource}, appelée \textit{adresse web}
-
-{\huge \bfseries \textcolor{red}{https}://\textcolor{green}{www.w3schools.com}/browsers/browsers\_os.asp}
+Abréviation de \textbf{World Wide Web}, définit par Larousse comme:
+\begin{definition}
+	Système hypermédia permettant d'accéder aux ressources du réseau Internet.
+\end{definition}
 
 \begin{itemize}
-	\item \textcolor{red}{protocole}
-	\item \textcolor{green}{nom de domaine}
-	\item 
+	\item un site web se compose de plusieurs pages web
+	\item une page web est un fichier texte écrit en langage HTML et accompagné par d'autres ressources comme les images. 
+	\item une page web peut se référer à une autre en utilisant des \textbf{liens hypertextes} 
 \end{itemize}
 
 \end{frame}
@@ -380,22 +527,72 @@ Traduite: \textit{localisateur uniforme de ressource}, appelée \textit{adresse 
 \frametitle{Environnement de travail distant: Accès}
 \framesubtitle{Serveurs}
 
+\begin{tabular}{p{.10\textwidth}p{.45\textwidth}p{.35\textwidth}}
+	\hline\hline
+	Serveur & Utilisation & exemple \\
+	\hline\hline
+	Web & accès au web (HTTP, HTTPS) & 
+	\includegraphics[height=.8cm]{../img/Bweb01-environnement/apache.png} Apache, 
+	
+	\includegraphics[height=.8cm]{../img/Bweb01-environnement/iis.png} IIS (Windows) \\
+	\hline
+	FTP & transfert des fichiers & 
+	\includegraphics[height=.8cm]{../img/Bweb01-environnement/filezilla.png} FileZilla (Windows), 
+	VsFTPd (Unix-like) \\
+	\hline
+	SMTP & gestion de messagerie & 
+	\includegraphics[height=.8cm]{../img/Bweb01-environnement/exim.png} exim \\
+	\hline
+	DNS & avoir un IP à partir d'une URL & \\
+	\hline
+	DHCP & fournir des adresse IP & \\\hline
+	Proxy & cache, filtrage, log & 
+	\includegraphics[height=.8cm]{../img/Bweb01-environnement/squid.jpg} Squid, Apache, IIS \\
+	\hline\hline
+\end{tabular}
+
 
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Environnement de travail distant: Accès}
-\framesubtitle{Serveurs (Proxy}
+\framesubtitle{Serveurs (DNS)}
 
+\begin{minipage}{0.65\textwidth}
+	\includegraphics[width=\textwidth]{../img/Bweb01-environnement/dns.png}
+\end{minipage}
+%
+\begin{minipage}{0.30\textwidth}
+	DNS de Google
+	\begin{itemize}
+		\item 8.8.8.8
+		\item 8.8.4.4
+	\end{itemize}
 
+	OpenDNS
+	\begin{itemize}
+		\item 208.67.222.222
+		\item 208.67.220.220
+	\end{itemize}
+
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail distant: Accès}
+\framesubtitle{Exemple d'accès au Web}
+
+\includegraphics[width=
+\textwidth]{../img/Bweb01-environnement/access-web.pdf}
 
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Environnement de travail distant: Accès}
-\framesubtitle{Exercice: créer un serveur HTTP adhoc sous Windows}
+\framesubtitle{Exercice: créer un serveur HTTP sous Windows avec réseau adhoc}
 
 
 
@@ -431,21 +628,6 @@ Le cloud est définit selon le NIST (National Institute of Standards and Technol
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Environnement de travail distant: Le cloud}
-\framesubtitle{Caractéristiques}
-
-\begin{itemize}
-	\item Un service à la demande
-	\item Un accès aux ressources par le réseau
-	\item Mise en commun des ressources
-	\item Flexibilité des ressources
-	\item Un service mesuré
-\end{itemize}
-
-
-\end{frame}
-
 
 \begin{frame}
 \frametitle{Environnement de travail distant: Le cloud}
@@ -453,6 +635,14 @@ Le cloud est définit selon le NIST (National Institute of Standards and Technol
 
 \includegraphics[width=
 \textwidth]{../img/Bweb01-environnement/cloud-types.png}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail distant: Le cloud}
+\framesubtitle{Exemples}
+
 
 
 \end{frame}
