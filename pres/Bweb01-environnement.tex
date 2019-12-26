@@ -117,35 +117,88 @@ Un environnement de travail doit avoir:
 
 \begin{frame}
 \frametitle{Introduction aux environnements de travail}
+\framesubtitle{Système d'exploitation}
+
+\begin{itemize}
+\item Le système d'exploitation est une couche logiciel entre le matériel et les applications installées sur la machine.
+
+\item Il sert à cacher la complexité du matériel à l'utilisateur.
+
+\item Parmi ses fonctions: 
+\begin{itemize}
+	\item gérer les périphériques (écran, imprimante, clavier, souris, etc.) via des pilotes
+	\item exécuter les applications et définir comment chacune doit accéder aux ressources (mémoire, processeur, périphériques)
+	\item fournir une interface utilisateur (ligne de commande ou interface graphique)
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction aux environnements de travail}
 \framesubtitle{Types d'environnements de travail}
 
 Selon l'emplacement des données et des applications, un environnement de travail peut être: 
-\begin{itemize}
-	\item local
-	\item distant
-\end{itemize}
+
+\begin{tabular}{p{.08\textwidth}p{.41\textwidth}p{.41\textwidth}}
+	\hline\hline
+	& Local & Distant \\
+	\hline\hline
+	
+	Gain &
+	+ contrôle et accès personnel 
+	
+	+ accès sans internet
+
+	 & 
+	+ maintenance et mise à jours faciles des applications et ressources
+	
+	+ partage et travaille en équipe
+	
+	+ accessible partout (internet et navigateur)
+	 \\
+	
+	\hline
+	Perte &
+	- installation et configuration des applications
+	
+	- perte des données
+	&
+	- nécessité d'accès internet
+	
+	- données personnelles chez une autre entité 
+	\\
+	\hline\hline
+\end{tabular}
+%\begin{itemize}
+%	\item local
+%	\item distant
+%\end{itemize}
 
 \end{frame}
 
 \section{Environnement de travail local}
 
-%\sectionpage
-
 \begin{frame}
 \frametitle{Environnement de travail local}
 
-\end{frame}
-
-\begin{frame}
-\frametitle{Environnement de travail local}
-\framesubtitle{Système d'exploitation}
-
-Parmi les fonctions d'un système d'exploitation: 
 \begin{itemize}
-	\item 
+	\item Applications et données à la porté de l'utilisateur 
+	\item Gérées par un système d'exploitation (SE) de bureau ou mobile 
+	\item En BWeb, on s'intéresse par l'aspect utilisation des SE. 
+	\item L'aspect technique (composants) sera entamé dans d'autres modules. 
+	\item Les points suivants serons présentés:
+	\begin{itemize}
+		\item L'interface graphique et facilité d'utilisation 
+		\item Gestion des utilisateurs
+		\item Gestion des fichiers
+		\item Gestion des applications
+	\end{itemize}
+	
 \end{itemize}
 
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Environnement de travail local}
@@ -199,12 +252,44 @@ Parmi les fonctions d'un système d'exploitation:
 
 \begin{frame}
 \frametitle{Environnement de travail local}
-\framesubtitle{Système d'exploitation}
+\framesubtitle{Système d'exploitation (Windows vs. Linux)}
 
 %D'après \url{https://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201901-201911}
 % https://www.w3schools.com/browsers/browsers_os.asp
+% https://www.ionos.com/digitalguide/server/know-how/linux-vs-windows/
 
-%\includegraphics[width=\textwidth]{imagefile}
+\begin{tabular}{p{.20\textwidth}p{.35\textwidth}p{.35\textwidth}}
+	\hline\hline
+	& Windows & Linux \\
+	\hline\hline
+	
+	Popularité & > 70\% & < 5\% \\
+	\hline
+	
+	Type usagers & tous & avoir un peu d'expertise \\
+	\hline
+	
+	Cout & payant & gratuit (la plupart de distributions) \\
+	\hline
+	
+	GUI & standard & plusieurs choix \\
+	\hline
+	
+	Applications & beaucoup & peu\\
+	\hline
+	
+	Support & bon (Microsoft) & selon la distribution (communauté) \\
+	\hline
+	
+	Attaques & régulières & rares\\
+	\hline
+	
+	Installation & autonome & répertoires avec outil de paquetage \\
+	\hline
+	
+	Personnalisation & limitée & personnalisable \\
+	\hline\hline
+\end{tabular}
 
 \end{frame}
 
@@ -214,11 +299,78 @@ Parmi les fonctions d'un système d'exploitation:
 \frametitle{Environnement de travail local}
 \framesubtitle{Windows}
 
+On utilise Windows pour ces raisons:
+\begin{itemize}
+	\item Installation facile des applications
+	\item Disponibilité des applications 
+	\item Support: beaucoup d'utilisateurs implique plusieurs gens peuvent aider lors d'un problème
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Environnement de travail local: Windows}
-\framesubtitle{Système d'exploitation: Windows}
+\framesubtitle{Environnements de bureau (Luna: XP)}
+
+\begin{center}
+	\includegraphics[height=
+	.8\textheight]{../img/Bweb01-environnement/xp.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Windows}
+\framesubtitle{Environnements de bureau (Aero: Windows 7)}
+
+\begin{center}
+	\includegraphics[height=
+	.8\textheight]{../img/Bweb01-environnement/win7.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Windows}
+\framesubtitle{Environnements de bureau (Fluent: Windows 10)}
+
+\begin{center}
+	\includegraphics[height=
+	.8\textheight]{../img/Bweb01-environnement/win10.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Windows}
+\framesubtitle{Configuration (Windows 7)}
+
+\begin{center}
+	\includegraphics[height=
+	.8\textheight]{../img/Bweb01-environnement/win7-config.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Windows}
+\framesubtitle{Gestion de fichiers (Windows 7)}
+
+\begin{center}
+	\includegraphics[height=
+	.8\textheight]{../img/Bweb01-environnement/win7-files.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Windows}
+\framesubtitle{Gestion des utilisateurs (Windows 7)}
+
+\begin{center}
+	\includegraphics[height=
+	.8\textheight]{../img/Bweb01-environnement/win7-users.png}
+\end{center}
 
 \end{frame}
 
@@ -227,6 +379,13 @@ Parmi les fonctions d'un système d'exploitation:
 \begin{frame}
 \frametitle{Environnement de travail local}
 \framesubtitle{Linux}
+
+On utilise Linux pour ces raisons:
+\begin{itemize}
+	\item Personnalisation: on peut personnaliser Linux selon nous besoins
+	\item Cout: la plupart des distributions sont gratuites
+	\item Sécurité: la plupart des logiciels sont open sources. Donc, on peut savoir ce qu'un logiciel fait.
+\end{itemize}
 
 \end{frame}
 
@@ -247,12 +406,6 @@ Quelques distributions:
 	\includegraphics[width=.2\textwidth]{..//img/Bweb01-environnement/fedora-logo.png} \\
 	
 \end{tabular}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Environnement de travail local: Linux}
-\framesubtitle{Environnements de bureau}
 
 \end{frame}
 
@@ -323,16 +476,78 @@ Quelques distributions:
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Environnement de travail local: Linux}
+\framesubtitle{Configuration (KDE)}
+
+\begin{center}
+	\includegraphics[height=
+	.8\textheight]{../img/Bweb01-environnement/kde-config.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Linux}
+\framesubtitle{Gestion de fichiers (KDE)}
+
+\begin{center}
+\includegraphics[height=
+.8\textheight]{../img/Bweb01-environnement/kde-files.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Linux}
+\framesubtitle{Gestion des utilisateurs (KDE)}
+
+\begin{center}
+\includegraphics[height=
+.8\textheight]{../img/Bweb01-environnement/kde-users.png}
+\end{center}
+
+\end{frame}
+
 \subsection{Machine virtuelle}
 
 \begin{frame}
 \frametitle{Environnement de travail local}
-\framesubtitle{Machine virtuelle (Virtual Box)}
+\framesubtitle{Machine virtuelle}
+
+On utilise une machine virtuelle pour ces raisons:
+\begin{itemize}
+	\item Expérimenter avec d'autre systèmes d'exploitation (SE)
+	\item Utiliser des logiciels non existants sur notre SE principal
+	\item Sécurité: si une machine virtuelle est compromise, on la supprime et remplace
+	\item Réutilisation: on peut installer plusieurs applications sur une machine virtuelle pour la diffuser sur plusieurs utilisateurs 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Machine virtuelle}
+\framesubtitle{VirtualBox}
 
 \begin{center}
 	\includegraphics[height=
 .8\textheight]{../img/Bweb01-environnement/vbox.png}
 \end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Environnement de travail local: Machine virtuelle}
+\framesubtitle{VirtualBox: créer une nouvelle machine}
+
+\begin{itemize}
+	\item Dans la Bios, activer les options de la virtualisation (VT et AMD-V)
+	\item Créer une nouvelle machine: donner un nom, choisir l'emplacement, le type et la version. 
+	\item Spécifier la taille de RAM pour la machine. Il faut laisser de la RAM pour votre système principale 
+	\item Spécifier la taille du disque dur virtuel et son nom. Il faut avoir de l'espace sur votre disque
+	\item Vous pouvez spécifier les périphériques dans les paramètres de la machine 
+	\item Lors de la première ouverture, on vous demande d'insérer un CD virtuel. Dans ce cas, c'est un fichier (.iso). 
+\end{itemize}
 
 \end{frame}
 
@@ -482,7 +697,6 @@ Par exemple:
 \frametitle{Environnement de travail distant: Accès}
 \framesubtitle{Exercice: adressage}
 
-Comparaison IP vs. MAC
 
 
 
@@ -643,6 +857,41 @@ Le cloud est définit selon le NIST (National Institute of Standards and Technol
 \frametitle{Environnement de travail distant: Le cloud}
 \framesubtitle{Exemples}
 
+\begin{tabular}{p{.27\textwidth}p{.27\textwidth}p{.27\textwidth}}
+	\hline\hline
+	IaaS  & PaaS & SaaS \\
+	\hline
+	
+	* \href{http://azure.microsoft.com/}{Microsoft Azure}
+	
+	* \href{https://aws.amazon.com}{Amazon Web Services}
+	
+	* \href{https://cloud.google.com/compute/}{Google Compute Engine}
+	
+	&
+	
+	* \href{https://www.heroku.com}{Heroku}
+	
+	* \href{https://www.ibm.com/cloud-computing/bluemix/}{IBM Bluemix}
+	
+	* \href{https://www.openshift.org/}{OpenShift de RedHat}
+	
+	&
+	
+	* \href{https://www.google.com/drive/}{Google Drive}
+	
+	* \href{https://www.dropbox.com/}{DropBox}
+	
+	* \href{https://onedrive.live.com/}{Microsoft OneDrive}
+	
+	* \href{http://one.ubuntu.com/}{Ubuntu One}
+	 
+	* \href{https://docs.google.com/}{Google Docs}
+	
+	* \href{https://microsoftonline.com}{Microsoft Office}
+	\\
+	\hline\hline
+\end{tabular}
 
 
 \end{frame}
