@@ -1,0 +1,291 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass{beamer}
+%\usepackage{fullpage}
+%\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
+\setbeamersize{text margin left=10pt,text margin right=10pt}
+\usepackage{amsmath,amssymb} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,french]{babel}
+\usepackage{txfonts}
+\usepackage[]{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{listings}
+
+
+\hypersetup{
+	colorlinks,
+	urlcolor = blue
+}
+
+%\renewcommand{\baselinestretch}{1.5}
+
+\def\supit#1{\raisebox{0.8ex}{\small\it #1}\hspace{0.05em}}
+
+\AtBeginSection{%
+	\begin{frame}
+		\sectionpage
+	\end{frame}
+}
+
+\newcommand{\rottext}[2]{%
+	\rotatebox{90}{%
+	\begin{minipage}{#1}%
+		\raggedleft#2%
+	\end{minipage}%
+	}%
+}
+
+\usepackage{longtable}
+\usepackage{tabu}
+
+
+\title[BWEB: 01- RI et Gmail] %
+{Bureautique et Web \\Chapitre 02: Recherche d'information et messagerie} 
+\institute{ %
+École  nationale Supérieure d'Informatique (ESI, ex. INI), Algérie
+}
+\author[ \textbf{\footnotesize  \insertframenumber/\inserttotalframenumber} \hspace*{\fill} ESI (2019-2020)] %
+{ARIES Abdelkrime}
+%\titlegraphic{\includegraphics[height=1cm]{../img/esi-logo.png}%\hspace*{4.75cm}~
+
+
+\date{Année unniversitaire: 2019/2020} %\today
+
+\usetheme{Warsaw} % Antibes Boadilla Warsaw
+
+\beamertemplatenavigationsymbolsempty
+
+%\setbeamertemplate{headline}{}
+
+
+\begin{document}
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+\section{Recherche d'information}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\frametitle{Moteur de recherche}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\frametitle{Moteur de recherche}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\framesubtitle{Quelque moteurs de recherche}
+
+\begin{itemize}
+	\item Google
+	\item Bing 
+	\item Yahoo
+	\item DuckDuckGo
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\framesubtitle{Exploration: points négatifs}
+
+Les explorateurs (spiders) ont quelques points négatifs; ils:
+\begin{itemize}
+	\item peuvent télécharger des informations privées ou classifiées
+	\item ne prennent pas en considération les termes d'utilisation des sites web. 
+	Par exemple, un site web qui donne droit de lecture sans recopier les informations. 
+	\item surchargent les serveurs par des requêtes, ce qui entraine leur plantage ou les rend lourds.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Recherche d'information}
+\framesubtitle{Exploration: Bloquer l'accès à votre contenu}
+
+% https://support.google.com/webmasters/answer/6062608?hl=fr
+
+En créant un fichier texte "\textbf{robot.txt}" dans la racine de votre site web, on peut bloquer des agents (robots) d'exploration.
+
+%\begin{block}{Syntaxe simple de "robot.txt"}
+%	\scriptsize\bfseries
+%	\begin{lstlisting}
+%	# commentaire
+%	User-agent: [nom d'agent]
+%	Disallow: [URL de ce qu'on veut bloquer] 
+%	
+%	# il faut laisser une ligne vide pour un autre groupe
+%	\end{lstlisting}
+%\end{block}
+
+\begin{exampleblock}{exemple d'un fichier "robot.txt"}
+	\scriptsize\bfseries
+	\begin{lstlisting}
+	# empecher Google a explorer un dossier et un fichier
+	User-agent: Googlebot
+	Disallow: /spam/ 
+	Disallow: /utilisateurs.html
+	
+	# empecher Google a explorer les fichiers .doc 
+	User-agent: Bingbot
+	Disallow: /*.doc$ 
+	
+	# empecher tous les agents a explorer un dossier
+	User-agent: *
+	Disallow: /prive/
+	\end{lstlisting}
+\end{exampleblock}
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Recherche d'information}
+\frametitle{Exploration: Bloquer l'accès à votre contenu}
+
+% https://developers.google.com/search/reference/robots_meta_tag
+En l'indiquant dans le code HTML de nos pages
+
+\begin{exampleblock}{exemple d'un fichier HTML qui bloque tous les robots}
+	\scriptsize\bfseries
+	\begin{lstlisting}
+	<!DOCTYPE html>
+	<html>
+	    <head>
+	        <meta name="robots" content="noindex" />
+	    </head>
+	    <body>
+	    </body>
+	</html>
+	\end{lstlisting}
+\end{exampleblock}
+
+\begin{exampleblock}{exemple d'un meta qui bloque Google}
+	\scriptsize\bfseries
+	\begin{lstlisting}
+	<meta name="googlebot" content="noindex" />
+	\end{lstlisting}
+\end{exampleblock}
+
+\end{frame}
+
+
+\section{Rechercher avec Google}
+
+\begin{frame}
+\frametitle{Rechercher avec Google}
+
+\end{frame}
+
+\section{Messagerie électronique}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Caractéristique d'un moteur de recherche}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Aspect légal en Algérie}
+
+
+\begin{block}{Article 323 du code civil}
+	L'écrit sous forme électronique est admis en tant que preuve au même titre que l'écrit sur support papier, à la condition que puisse être dûment identifiée la personne dont il émane et qu’il soit établi et conservé dans des conditions de nature à en garantir l'intégrité.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Accès à la messagerie (Navigateur)}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Accès à la messagerie (Client de messagerie)}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Accès à la messagerie (comparaison)}
+
+\begin{tabular}{p{.08\textwidth}p{.41\textwidth}p{.41\textwidth}}
+	\hline\hline
+	& Navigateur web & Client de messagerie \\
+	\hline\hline
+	
+	Gain &
+	+  
+	
+	+ 
+	
+	& 
+	+ 
+	
+	+ 
+	\\
+	
+	\hline
+	Perte &
+	- 
+	
+	- 
+	&
+	- 
+	
+	- 
+	\\
+	\hline\hline
+\end{tabular}
+
+\end{frame}
+
+
+
+\section{Messagerie Gmail}
+
+\begin{frame}
+\frametitle{Messagerie Gmail}
+
+\end{frame}
+
+
+
+%\subsection{Bibliography}
+%\frame[allowframebreaks]%
+%{\frametitle{Bibliography}
+%\tiny
+%\bibliography{biblio}
+%\bibliographystyle{apalike} 
+%}
+
+
+\end{document}
+
