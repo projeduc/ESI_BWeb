@@ -27,6 +27,8 @@
 
 \def\supit#1{\raisebox{0.8ex}{\small\it #1}\hspace{0.05em}}
 
+
+
 \AtBeginSection{%
 	\begin{frame}
 		\sectionpage
@@ -50,7 +52,7 @@
 \institute{ %
 École  nationale Supérieure d'Informatique (ESI, ex. INI), Algérie
 }
-\author[ \textbf{\footnotesize  \insertframenumber/\inserttotalframenumber} \hspace*{\fill} ESI (2019-2020)] %
+\author[ \textbf{\footnotesize  \insertframenumber/\inserttotalframenumber} \hspace*{\fill} ESI - ARIES Abdelkrime (2019-2020)] %
 {ARIES Abdelkrime}
 %\titlegraphic{\includegraphics[height=1cm]{../img/esi-logo.png}%\hspace*{4.75cm}~
 
@@ -65,6 +67,11 @@
 
 
 \begin{document}
+	
+	\newcolumntype{L}[2]{%
+		>{\vbox to #2\bgroup\vfill\flushleft}%
+		p{#1}%
+		<{\egroup}} 
 
 \begin{frame}[plain]
 	\maketitle
@@ -75,37 +82,275 @@
 \begin{frame}
 \frametitle{Recherche d'information}
 
-\end{frame}
-
-\begin{frame}
-\frametitle{Recherche d'information}
-\frametitle{Moteur de recherche}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Recherche d'information}
-\frametitle{Moteur de recherche}
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Recherche d'information}
-\framesubtitle{Quelque moteurs de recherche}
-
+Pour préparer un rapport ou une présentation: 
 \begin{itemize}
-	\item Google
-	\item Bing 
-	\item Yahoo
-	\item DuckDuckGo
+	\item Cerner le sujet 
+	\item Localiser l'information 
+	\item Collecter les informations 
+	\item Traiter l'information 
+	\item Restituer l'information 
+	\item Rédiger le travail
+\end{itemize} 
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+
+Afin de localiser l'information: 
+\begin{itemize}
+	\item Exploration des ressources 
+	\item Recherche par mots clés
+\end{itemize} 
+
+\end{frame}
+
+\subsection{Moteurs de recherche}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\frametitle{Moteurs de recherche}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\frametitle{Moteur de recherche}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\framesubtitle{Quelque moteurs de recherche web (génériques)}
+
+\def\arraystretch{0}
+
+\begin{tabular}{L{.3\textwidth}{.8cm}cp{.6\textwidth}}%p{.3\textwidth}
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/google-logo.png} &
+	& 
+	\url{https://www.google.com/}  \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/bing-logo.png} &
+	& 
+	\url{https://www.bing.com/} \\
+	
+	\hline
+	
+	\includegraphics[height=.4cm]{..//img/Bweb02-ri-gmail/yahoo-logo.png} & 
+	& 
+	\url{https://search.yahoo.com/} \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/baidu-logo.png} & 
+	& 
+	\url{https://www.baidu.com/} \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/yandex-logo.png} & 
+	& 
+	\url{https://yandex.com/} \\
+	
+	\hline
+	
+\end{tabular}
+
+%\begin{itemize}
+%	\item Google
+%	\item Bing 
+%	\item Yahoo
+%	\item DuckDuckGo
+%\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\framesubtitle{Quelque moteurs de recherche académique}
+
+%\begin{tabular}{p{.4\textwidth}cp{.4\textwidth}}
+%	Google Scholar && Microsoft Academic \\
+%	\url{https://scholar.google.com/} && \url{https://academic.microsoft.com/}  \\
+%	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/gscholar-logo.png} && 
+%	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/msacademic-logo.jpg} \\
+%	&& \\ 
+%	
+%	BASE && CORE \\
+%	\url{https://www.base-search.net/} && \url{https://core.ac.uk/}  \\
+%	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/base-logo.png} && 
+%	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/core-logo.png} \\
+%	
+%\end{tabular}
+
+\def\arraystretch{0}
+\begin{tabular}{L{.3\textwidth}{1cm}cp{.6\textwidth}}%p{.3\textwidth}
+	
+	\hline
+	
+	\includegraphics[height=.6cm]{..//img/Bweb02-ri-gmail/gscholar-logo.png} &
+	&
+	\url{https://scholar.google.com/} \\
+	
+	\hline
+	
+	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/msacademic-logo.png} &
+	& 
+	\url{https://academic.microsoft.com/}  \\
+	
+	\hline
+	
+	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/base-logo.png} &
+	& 
+	\url{https://www.base-search.net/} \\
+	
+	\hline
+	
+	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/core-logo.png} & 
+	& 
+	\url{https://core.ac.uk/} \\
+	
+	\hline
+	
+\end{tabular}
+
+%\begin{itemize}
+%	\item Google Scholar 
+%	\item Microsoft Academic
+%	\item BASE
+%	\item CORE
+%\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\framesubtitle{Quelque bibliothèques de recherche d'information}
+
+\begin{tabular}{p{.3\textwidth}cp{.6\textwidth}}
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/solr-logo.png} &
+	& 
+	\url{https://academic.microsoft.com/}  \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/elastic-logo.png} &
+	& 
+	\url{https://www.elastic.co/products/elasticsearch} \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/sphinx-logo.png} & 
+	& 
+	\url{http://sphinxsearch.com/} \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/xapian-logo.png} & 
+	& 
+	\url{https://core.ac.uk/} \\
+	
+	\hline
+	
+\end{tabular}
+
+%\begin{itemize}
+%	\item Lucene
+%	\item Solr 
+%	\item Elasticsearch
+%	\item Sphinx
+%	\item Xapian
+%\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\framesubtitle{Quelque moteurs de recherche de bureau}
+
+\begin{tabular}{p{.3\textwidth}cp{.6\textwidth}}
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/solr-logo.png} &
+	& 
+	\url{https://academic.microsoft.com/}  \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/elastic-logo.png} &
+	& 
+	\url{https://www.elastic.co/products/elasticsearch} \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/sphinx-logo.png} & 
+	& 
+	\url{http://sphinxsearch.com/} \\
+	
+	\hline
+	
+	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/xapian-logo.png} & 
+	& 
+	\url{https://core.ac.uk/} \\
+	
+	\hline
+	
+\end{tabular}
+
+%\begin{itemize}
+%	\item Lucene
+%	\item Solr 
+%	\item Elasticsearch
+%	\item Sphinx
+%	\item Xapian
+%\end{itemize}
+
+\end{frame}
+
+\subsection{Structure d'un moteur de recherche}
+
+\begin{frame}
+\frametitle{Recherche d'information}
+\framesubtitle{Structure d'un moteur de recherche}
+
+%TODO architecture dessin 
+\begin{itemize}
+	\item indexation 
+	\begin{itemize}
+		\item Acquisition (Exploration et ...)
+		\item Transformation 
+		\item Création d'index
+	\end{itemize}
+	\item interrogation
+	\begin{itemize}
+		\item Interaction avec l'utilisateur
+		\item Classement 
+		\item Évaluation
+	\end{itemize}
 \end{itemize}
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Recherche d'information: Structure}
+\framesubtitle{Exploration}
+
+\end{frame}
 
 \begin{frame}
-\frametitle{Recherche d'information}
+\frametitle{Recherche d'information: Structure}
 \framesubtitle{Exploration: points négatifs}
 
 Les explorateurs (spiders) ont quelques points négatifs; ils:
@@ -188,6 +433,41 @@ En l'indiquant dans le code HTML de nos pages
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Recherche d'information: Structure}
+\framesubtitle{Transformation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information: Structure}
+\framesubtitle{Création d'index}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information: Structure}
+\framesubtitle{Création d'index}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information: Structure}
+\framesubtitle{Interaction avec l'utilisateur}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information: Structure}
+\framesubtitle{Classement}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recherche d'information: Structure}
+\framesubtitle{Évaluation}
+
+\end{frame}
 
 \section{Rechercher avec Google}
 
