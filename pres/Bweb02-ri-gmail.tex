@@ -16,6 +16,7 @@
 \usepackage{multirow}
 \usepackage{hyperref}
 \usepackage{listings}
+\usepackage{wrapfig}
 
 
 \hypersetup{
@@ -27,7 +28,10 @@
 
 \def\supit#1{\raisebox{0.8ex}{\small\it #1}\hspace{0.05em}}
 
-
+\makeatletter
+\newcommand\mysphere{%
+	\parbox[t]{10pt}{\raisebox{0.2pt}{\beamer@usesphere{item projected}{bigsphere}}}}
+\makeatother
 
 \AtBeginSection{%
 	\begin{frame}
@@ -77,7 +81,9 @@
 	\maketitle
 \end{frame}
 
+%===================================================================================
 \section{Recherche d'information}
+%===================================================================================
 
 \begin{frame}
 \frametitle{Recherche d'information}
@@ -97,34 +103,147 @@
 
 \end{frame}
 
+\subtitle{Localiser l'information sur le web}
+
 \begin{frame}
 \frametitle{Recherche d'information}
+\framesubtitle{Localiser l'information sur le web}
 
-Afin de localiser l'information: 
+Afin de localiser l'information sur le web: 
 \begin{itemize}
 	\item Exploration des ressources 
+	\begin{itemize}
+		\item On doit savoir exactement les sites web utiles pour son sujet 
+		\item On suit les liens des sites similaires
+	\end{itemize}
 	\item Recherche par mots clés
+	\begin{itemize}
+		\item On définit des mots clés relatifs a son sujet  
+		\item On utilise des moteurs de recherche pour trouver les ressources nécessaire
+	\end{itemize}
 \end{itemize} 
 
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information: Localiser l'information sur le web}
+\framesubtitle{Exploration des ressources}
+
+\begin{itemize}
+	\item Avantages
+	\begin{itemize}
+		\item Un site spécifique à un domaine ne contient que des informations utiles (pour un sujet de ce domaine) 
+		\item Sauver le temps de recherche et de sélections des sites 
+	\end{itemize}
+	\item Inconvénients
+	\begin{itemize}
+		\item On doit être familier avec les sites de chaque domaine 
+		\item Les liens peuvent êtres obsolètes (ne marchent plus)
+	\end{itemize}
+\end{itemize} 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information: Localiser l'information sur le web}
+\framesubtitle{Recherche par mots clés}
+
+\begin{itemize}
+	\item Avantages
+	\begin{itemize}
+		\item Rapide et n'exige pas une connaissance des ressources
+		\item Fournit beaucoup de résultats: diversité de ressources
+	\end{itemize}
+	\item Inconvénients
+	\begin{itemize}
+		\item Dépend des mots clés introduits; s'ils ne sont pas bons, les résultats le sont aussi
+		\item Fournit des résultats inutiles: trouver les bonnes ressources peut prendre du temps
+	\end{itemize}
+\end{itemize} 
+
+\end{frame}
+
 
 \subsection{Moteurs de recherche}
 
 \begin{frame}
 \frametitle{Recherche d'information}
-\frametitle{Moteurs de recherche}
+\framesubtitle{Moteurs de recherche}
+
+\begin{definition}
+	Un moteur de recherche est une application informatique permettant de localiser des ressources en utilisant des mots clés.
+\end{definition}
+
+Mesurer l'efficacité d'un moteur de recherche:
+\begin{itemize}
+	\item Pertinence de résultats: parmi les résultats fournis par le moteur, le nombre de résultats utiles à l'utilisateur doit être grand. Un métrique pour mesurer la qualité est \textcolor{red}{Recouvrement}.
+	{\scriptsize \[ Recouvrement = \frac{nombre\ des\ résultats\ utiles\ parmi\ ceux\ fournis\ par\ le\ moteur}{nombre\ total\ des\ résultats\ fournis\ par\ le\ moteur} \]}
+	\item Temps de réponse: Un moteur de recherche doit être rapide
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Recherche d'information}
-\frametitle{Moteur de recherche}
+\frametitle{Recherche d'information: Moteurs de recherche}
+\framesubtitle{Types des moteurs de recherche}
+
+Un moteur de recherche peut être:
+\begin{itemize}
+	\item Selon le fonctionnement
+	\begin{itemize}
+		\item annuaire
+		\item explorateur
+		\item méta-moteur
+	\end{itemize}
+
+	\item Selon la spécialité
+	\begin{itemize}
+		\item générique
+		\item académique
+		\item de bureau 
+		\item de développement
+		\item ...
+	\end{itemize}
+\end{itemize} 
 
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Recherche d'information}
+\frametitle{Recherche d'information: Moteurs de recherche}
+\framesubtitle{Types des moteurs de recherche selon le fonctionnement}
+
+
+\begin{itemize}
+	\item Annuaires
+	\begin{itemize}
+		\item Les liens sont introduit manuellement, et validés par un administrateur
+		\item La recherche se fait sur la description (manuelle) de la ressource 
+		\item Les ressources sont organisées en catégories 
+	\end{itemize}
+	
+	\item Explorateurs
+	\begin{itemize}
+		\item Les liens sont introduits automatiquement en utilisant l'exploration 
+		\item La recherche se fait sur le contenu des ressources
+		\item Les résultats sont organisées selon la pertinence à la requête (ou selon d'autres critères)
+	\end{itemize}
+
+	\item Méta-moteurs
+	\begin{itemize}
+		\item Ne sauvegardent pas les liens 
+		\item La recherche se fait en utilisant d'autres moteurs de recherche
+		\item Les résultats sont organisées selon la pertinence à la requête (ou selon d'autres critères)
+	\end{itemize}
+\end{itemize} 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information: Moteurs de recherche}
 \framesubtitle{Quelque moteurs de recherche web (génériques)}
 
 \def\arraystretch{0}
@@ -176,7 +295,7 @@ Afin de localiser l'information:
 
 
 \begin{frame}
-\frametitle{Recherche d'information}
+\frametitle{Recherche d'information: Moteurs de recherche}
 \framesubtitle{Quelque moteurs de recherche académique}
 
 %\begin{tabular}{p{.4\textwidth}cp{.4\textwidth}}
@@ -235,7 +354,51 @@ Afin de localiser l'information:
 
 
 \begin{frame}
-\frametitle{Recherche d'information}
+\frametitle{Recherche d'information: Moteurs de recherche}
+\framesubtitle{Quelque moteurs de recherche de bureau}
+
+\begin{tabular}{p{.3\textwidth}cp{.6\textwidth}}
+	
+	\hline
+	
+	\href{https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview}{Windows search} &
+	& 
+	Fait partie du système d'exploitation Windows  \\
+	
+	\hline
+	
+	\href{https://gitlab.gnome.org/GNOME/tracker}{Tracker} &
+	& 
+	Adopté par l'environnement de bureau GNOME \\
+	
+	\hline
+	
+	\href{https://community.kde.org/Baloo}{Baloo} & 
+	& 
+	Fait partie de l'environnement de bureau KDE \\
+	
+	\hline
+	
+	\href{https://support.apple.com/en-us/HT204014}{Spotlight} & 
+	& 
+	Fait partie des systèmes d'exploitation iOS et macOS \\
+	
+	\hline
+	
+	\href{https://www.lesbonscomptes.com/recoll/}{Recoll} & 
+	& 
+	Projet open source pour la recherche dans Windows et Unix-like \\
+	
+	\hline
+	
+\end{tabular}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Recherche d'information: Moteurs de recherche}
 \framesubtitle{Quelque bibliothèques de recherche d'information}
 
 \begin{tabular}{p{.3\textwidth}cp{.6\textwidth}}
@@ -244,7 +407,7 @@ Afin de localiser l'information:
 	
 	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/solr-logo.png} &
 	& 
-	\url{https://academic.microsoft.com/}  \\
+	\url{https://lucene.apache.org/solr/}  \\
 	
 	\hline
 	
@@ -262,51 +425,7 @@ Afin de localiser l'information:
 	
 	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/xapian-logo.png} & 
 	& 
-	\url{https://core.ac.uk/} \\
-	
-	\hline
-	
-\end{tabular}
-
-%\begin{itemize}
-%	\item Lucene
-%	\item Solr 
-%	\item Elasticsearch
-%	\item Sphinx
-%	\item Xapian
-%\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Recherche d'information}
-\framesubtitle{Quelque moteurs de recherche de bureau}
-
-\begin{tabular}{p{.3\textwidth}cp{.6\textwidth}}
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/solr-logo.png} &
-	& 
-	\url{https://academic.microsoft.com/}  \\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/elastic-logo.png} &
-	& 
-	\url{https://www.elastic.co/products/elasticsearch} \\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/sphinx-logo.png} & 
-	& 
-	\url{http://sphinxsearch.com/} \\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb02-ri-gmail/xapian-logo.png} & 
-	& 
-	\url{https://core.ac.uk/} \\
+	\url{https://xapian.org/} \\
 	
 	\hline
 	
@@ -543,11 +662,19 @@ En l'indiquant dans le code HTML de vos pages
 
 \end{frame}
 
-
+%===================================================================================
 \section{Rechercher avec Google}
+%===================================================================================
 
 \begin{frame}
 \frametitle{Rechercher avec Google}
+
+\begin{itemize}
+	\item Moteur de recherche web (explorateur)
+	\item Développé en 1997
+	\item Le plus utilisé parmi les moteurs de recherche
+	\item \url{https://www.google.com/}
+\end{itemize}
 
 \end{frame}
 
@@ -557,11 +684,35 @@ En l'indiquant dans le code HTML de vos pages
 \frametitle{Rechercher avec Google}
 \framesubtitle{Effectuer une recherche}
 
+% https://support.google.com/websearch/answer/134479?hl=fr 
+Quelques conseils pour rechercher avec Google: 
+\begin{enumerate}
+	\item Commencez par une recherche simple. \textcolor{red}{où est l'aéroport le plus proche?}.
+	
+	\item Lancez une recherche vocale. Si vous ne voulez pas saisir manuellement.
+	
+	\item Utilisez des mots adaptés au Web. A la place de \textcolor{red}{j'ai mal à la tête}, saisissez \textcolor{red}{mal de tête} qui est l'expression la plus utilisée.
+	
+	\item Ne vous souciez pas des détails. Même avec des erreurs d'orthographe, Google propose automatiquement un correction. Aussi, ce n'ai pas nécessaire de respecter le majuscule: rechercher \textcolor{red}{Alger} est le même que rechercher \textcolor{red}{alger}.
+	
+	\item Découvrez les réponses rapides (seront présentées après)
+\end{enumerate}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Rechercher avec Google: Effectuer une recherche}
-\framesubtitle{Types de requêtes}
+\framesubtitle{Auto-complétion}
+
+\begin{center}
+	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/google-autocomplete.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Rechercher avec Google: Effectuer une recherche}
+\framesubtitle{Entrer une requête}
 %\def\arraystretch{2}
 \begin{tabular}{p{.7\textwidth}cp{.2\textwidth}}
 	
@@ -762,35 +913,26 @@ En plus de la recherche normale, Google offre d'autres services de recherche:
 
 \end{frame}
 
-\subsection{Services supplémentaires}
+\subsection{Réponses rapides}
 
 \begin{frame}
 \frametitle{Rechercher avec Google}
-\framesubtitle{Services supplémentaires}
+\framesubtitle{Réponses rapides}
 
-En plus de la recherche, Google offre d'autres services:
+En plus de la recherche, Google offre des réponses rapides:
 \begin{itemize}
-	\item Auto-complétion
 	\item Calculatrice 
 	\item Convertisseur d'unités
 	\item Météo 
+	\item Sport
+	\item Dictionnaire
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Rechercher avec Google: Services supplémentaires}
-\framesubtitle{Services supplémentaires: Auto-complétion}
-
-\begin{center}
-	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/google-autocomplete.png}
-\end{center}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Rechercher avec Google: Services supplémentaires}
-\framesubtitle{Services supplémentaires: Calculatrice}
+\frametitle{Rechercher avec Google: Réponses rapides}
+\framesubtitle{Calculatrice}
 
 \begin{center}
 	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/google-calc.png}
@@ -799,8 +941,8 @@ En plus de la recherche, Google offre d'autres services:
 \end{frame}
 
 \begin{frame}
-\frametitle{Rechercher avec Google: Services supplémentaires}
-\framesubtitle{Services supplémentaires: Convertisseur d'unités (ex. devises)}
+\frametitle{Rechercher avec Google: Réponses rapides}
+\framesubtitle{Convertisseur d'unités (ex. devises)}
 
 \begin{center}
 	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/google-money.png}
@@ -809,8 +951,8 @@ En plus de la recherche, Google offre d'autres services:
 \end{frame}
 
 \begin{frame}
-\frametitle{Rechercher avec Google: Services supplémentaires}
-\framesubtitle{Services supplémentaires: Météo}
+\frametitle{Rechercher avec Google: Réponses rapides}
+\framesubtitle{Météo}
 
 \begin{center}
 	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/google-weather.png}
@@ -818,10 +960,37 @@ En plus de la recherche, Google offre d'autres services:
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Rechercher avec Google: Réponses rapides}
+\framesubtitle{Sport}
+
+\begin{center}
+	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/google-sport.png}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Rechercher avec Google: Réponses rapides}
+\framesubtitle{Dictionnaire}
+
+\begin{center}
+	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/google-definition.png}
+\end{center}
+
+\end{frame}
+
+
+%===================================================================================
 \section{Messagerie électronique}
+%===================================================================================
 
 \begin{frame}
 \frametitle{Messagerie électronique}
+
+\begin{center}
+	\includegraphics[height=.87\textheight]{..//img/Bweb02-ri-gmail/mail.pdf}
+\end{center}
 
 \end{frame}
 
@@ -836,27 +1005,139 @@ En plus de la recherche, Google offre d'autres services:
 
 Un message électronique est une preuve, si on peut prouver: 
 \begin{itemize}
-	\item ...: on peut identifier l'expéditeur 
-	\item Intégrité: le message n'a pas été modifié 
+	\item l'identité de l'expéditeur 
+	\item l'intégrité du message: qu'il n'a pas été modifié 
+\end{itemize} 
+
+\end{frame}
+
+\subsection{Accès à la messagerie}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Accès à la messagerie}
+
+Pour accéder à la messagerie électronique, il faut avoir:
+\begin{itemize}
+	\item accès à l'internet
+	\item un compte dans un service de messagerie.  
+	\begin{itemize}
+		\item On va avoir une adresse de messagerie.
+		\item L'adresse se compose de deux parties séparée par @
+		\item \textcolor{red}{nom-de-l'utilisateur}@\textcolor{red}{nom-de-domaine}
+	\end{itemize}
+	\item un moyen pour ouvrir le compte
+	\begin{itemize}
+		\item Navigateur web
+		\item Client de messagerie 
+	\end{itemize}
 \end{itemize}
 
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Messagerie électronique}
-\framesubtitle{Accès à la messagerie (Navigateur)}
+\frametitle{Messagerie électronique: Accès à la messagerie}
+\framesubtitle{Quelques services de messagerie web}
+
+\begin{tabular}{L{.3\textwidth}{1cm}cp{.6\textwidth}}%p{.3\textwidth}
+	
+	\hline
+	
+	\includegraphics[height=.6cm]{..//img/Bweb02-ri-gmail/gmail-logo.png} &
+	&
+	Gmail \\
+	
+	\hline
+	
+	\includegraphics[height=1cm]{..//img/Bweb02-ri-gmail/outlook-logo.png} &
+	& 
+	Outlook.com (Hotmail, Live)  \\
+	
+	\hline
+	
+	\includegraphics[height=.7cm]{..//img/Bweb02-ri-gmail/yahoomail-logo.png} &
+	& 
+	Yahoo mail \\
+	
+	\hline
+	
+	\includegraphics[height=.7cm]{..//img/Bweb02-ri-gmail/mailcom-logo.jpg} & 
+	& 
+	Mail.com \\
+	
+	\hline
+	
+\end{tabular}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Messagerie électronique}
-\framesubtitle{Accès à la messagerie (Client de messagerie)}
+\frametitle{Messagerie électronique: Accès à la messagerie}
+\framesubtitle{Accès via le service WebMail}
+
+\begin{wrapfigure}{r}{0.61\textwidth}
+	\vspace{-1cm}
+	\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/webmail.png}
+	\vspace{-1cm}
+\end{wrapfigure}
+
+%Pour accéder à la messagerie électronique:
+
+\mysphere utiliser n'importe quelle machine
+
+\mysphere se connecter à l'internet
+
+\mysphere ouvrir un navigateur: Google Chrome, Mozilla Firefox, Microsoft Edge, etc.  
+
+\mysphere accéder en utilisant l'adresse webMail de votre fournisseur. 
+Par exemple: \textcolor{red}{https://mail.google.com}
+
+\mysphere n'oublier pas de fermer le compte si la machine n'est pas la votre
+
+
+%\begin{itemize}
+%	\item utiliser n'importe quel machine
+%	\item se connecter à l'internet
+%	\item ouvrir un navigateur: Google Chrome, Mozilla Firefox, Microsoft Edge, etc.  
+%	\item accéder en utilisant l'adresse webMail de votre fournisseur. 
+%	Par exemple: \textcolor{red}{https://mail.google.com}
+%	\item n'oublier pas de fermer le compte si la machine n'est pas la votre
+%\end{itemize}
+
+
+
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Messagerie électronique}
-\framesubtitle{Accès à la messagerie (comparaison)}
+\frametitle{Messagerie électronique: Accès à la messagerie}
+\framesubtitle{Accès via un client de messagerie}
+
+\begin{wrapfigure}{r}{0.61\textwidth}
+	\vspace{-1cm}
+	\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/thunderbird4.png}
+%	\vspace{-1cm}
+\end{wrapfigure}
+
+\mysphere utiliser votre machine
+
+\mysphere installer un client de messagerie. Exemple: Mozilla Thunderbird, Microsoft Outlook (Bureau), Gmail pour Andoid (Mobile)
+
+\mysphere Ajouter un nouveau compte et suivre les instructions 
+
+%Pour accéder à la messagerie électronique:
+%\begin{itemize}
+%	\item utiliser votre machine
+%	\item installer un client de messagerie. Exemple: Mozilla Thunderbird, Microsoft Outlook (Bureau), Gmail pour Andoid (Mobile).
+%	\item Ajouter un nouveau compte et suivre les instructions  
+%\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique: Accès à la messagerie}
+\framesubtitle{Comparaison}
 
 \begin{tabular}{p{.08\textwidth}p{.41\textwidth}p{.41\textwidth}}
 	\hline\hline
@@ -889,9 +1170,159 @@ Un message électronique est une preuve, si on peut prouver:
 
 \end{frame}
 
+\subsection{Envoyer un message}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Envoyer un message}
+
+Lorsqu'on veut envoyer un message, il contient les éléments suivants: 
+\begin{itemize}
+	\item les adresses de destinataires 
+	\item l'objet du message (facultatif, mais important)
+	\item le contenu et parfois des attachements
+\end{itemize}
+
+Ce message peut être localisé dans les dossiers suivants:
+\begin{itemize}
+	\item \textcolor{red}{Brouillon}: contient, temporairement, les messages en cours de rédaction.
+	\item \textcolor{red}{Massages envoyés}: contient les messages envoyés
+	\item \textcolor{red}{Corbeille}: contient les messages supprimés.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique: Envoyer un message}
+\framesubtitle{Types de destinataires}
+
+\begin{itemize}
+	\item \textcolor{red}{A}: Destinataires principaux
+	\begin{itemize}
+		\item ceux concernés directement par le message 
+		\item visible par tous les destinataires
+	\end{itemize}
+
+	\item \textcolor{red}{CC}: Copie carbone
+	\begin{itemize}
+		\item ceux qu'on veut informer par ce message 
+		\item visible par tous les destinataires
+		\item Exemple: envoyer les notes aux étudiants en utilisant le champ "A", et informer l'administration en utilisant le champ "CC".
+	\end{itemize}
+
+	\item \textcolor{red}{CCi}: Copie carbone invisible
+	\begin{itemize}
+		\item ceux qu'on veut cacher l'identité 
+		\item non visible par les autres destinataires
+		\item utile pour protéger le carnet d'adresses: personne ne peut savoir la liste de vos contactes
+	\end{itemize}
+
+\end{itemize}
 
 
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique: Envoyer un message}
+\framesubtitle{Objet et contenu d'un message}
+
+\begin{itemize}
+	\item \textcolor{red}{Objet}: Si vous voulez qu'on vous prend au sérieux
+	\begin{itemize}
+		\item on doit fournir un objet (même s'il n'est pas obligatoire)
+		\item il doit être clair et court 
+	\end{itemize}
+	
+	\item \textcolor{red}{Contenu}: Il faut fournir un contenu et pas seulement un objet long 
+	\begin{itemize}
+		\item salutation: Bonjour, Bonsoir, etc.
+		\item se présenter, si le destinataire ne vous connait pas. 
+		\item le message: il doit être clair, regroupé en paragraphes s'il est long et lisible (utiliser les puces, les numérotations, les couleurs, etc.)
+		\item formule de politesse: Cordialement, Respectueusement, etc.
+	\end{itemize}
+	
+	\item \textcolor{red}{Pièce jointe}: pas obligatoire, mais utile 
+	\begin{itemize}
+		\item appelé, aussi, attachement
+		\item transmettre des documents
+	\end{itemize}
+	
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique: Envoyer un message}
+\framesubtitle{Signature}
+
+\begin{itemize}
+	\item lorsqu'on envoie un message, on est toujours obligé de se présenter 
+	\item la solution est d'utiliser une signature 
+	\item à chaque fois qu'on écrive un message, la signature sera insérée automatiquement à la fin de ce message
+	\item elle peut être utilisée, aussi, pour faire de la publicité à votre site, votre blog et les différentes moyennes de contacte
+\end{itemize}
+
+
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Messagerie électronique: Envoyer un message}
+%\framesubtitle{Gestion de contactes}
+%
+%
+%\end{frame}
+
+
+\subsection{Recevoir un message}
+
+\begin{frame}
+\frametitle{Messagerie électronique}
+\framesubtitle{Recevoir un message}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique: Recevoir un message}
+\framesubtitle{Les informations}
+
+De: 
+
+A/CC/CCi
+
+Date 
+
+Objet
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique: Recevoir un message}
+\framesubtitle{Les actions}
+
+
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie électronique: Recevoir un message}
+\framesubtitle{Filtrage de messages}
+
+Spam
+
+Virus 
+
+Fishing 
+
+
+\end{frame}
+
+
+%===================================================================================
 \section{Messagerie Gmail}
+%===================================================================================
 
 \begin{frame}
 \frametitle{Messagerie Gmail}
@@ -899,6 +1330,29 @@ Un message électronique est une preuve, si on peut prouver:
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Références}
+
+\tiny
+
+\begin{itemize}
+	\item Felix Naumann (2011). 
+	"\textit{Chapter 2 – Architecture}". 
+	Search Engines. 
+	Universität Potsdam, Allemagne. Présentation.
+	\url{https://hpi.de/fileadmin/user_upload/fachgebiete/naumann/folien/SS11/Search_Engines/SearchEngines_02_Architecture.pdf}
+	
+	\item Raghu Ramakrishnan (date-indéfinie).
+	"\textit{Chapter 27: Information Retrieval and XML Data Management (Web search engines}". 
+	Database Management Systems. 
+	University of Wisconsin-Madison, Etats unis. Présentation.
+	\url{http://pages.cs.wisc.edu/~dbbook/openAccess/thirdEdition/slides/slides3ed-english/Ch27c_ir3-websearch-95.pdf}
+	
+	\item \url{https://support.google.com/websearch/answer/134479?hl=fr}
+	
+\end{itemize}
+
+\end{frame}
 
 %\subsection{Bibliography}
 %\frame[allowframebreaks]%
