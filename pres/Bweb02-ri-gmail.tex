@@ -1104,10 +1104,6 @@ Par exemple: \textcolor{red}{https://mail.google.com}
 %	Par exemple: \textcolor{red}{https://mail.google.com}
 %	\item n'oublier pas de fermer le compte si la machine n'est pas la votre
 %\end{itemize}
-
-
-
-
 \end{frame}
 
 \begin{frame}
@@ -1145,25 +1141,25 @@ Par exemple: \textcolor{red}{https://mail.google.com}
 	\hline\hline
 	
 	Gain &
-	+  
+	+ Accessible par n'importe quelle machine
 	
-	+ 
+	+ Pas besoin de configuration
 	
 	& 
-	+ 
+	+ Lire les messages hors-ligne
 	
-	+ 
+	+ Pas besoin de s'identifier à chaque fois
 	\\
 	
 	\hline
 	Perte &
-	- 
+	- Disponibilité de l'internet
 	
-	- 
+	- Oublie de se déconnecter d'une machine publique
 	&
-	- 
+	- Travailler avec plusieurs machines
 	
-	- 
+	- La machine personnel est accessible par d'autres
 	\\
 	\hline\hline
 \end{tabular}
@@ -1176,7 +1172,7 @@ Par exemple: \textcolor{red}{https://mail.google.com}
 \frametitle{Messagerie électronique}
 \framesubtitle{Envoyer un message}
 
-Lorsqu'on veut envoyer un message, il contient les éléments suivants: 
+Lorsqu'on veut envoyer un message, ceci contient les éléments suivants: 
 \begin{itemize}
 	\item les adresses de destinataires 
 	\item l'objet du message (facultatif, mais important)
@@ -1279,6 +1275,19 @@ Ce message peut être localisé dans les dossiers suivants:
 \frametitle{Messagerie électronique}
 \framesubtitle{Recevoir un message}
 
+Lorsqu'on reçoit un message, ceci contient les éléments suivants: 
+\begin{itemize}
+	\item des informations sur le message
+	\item l'objet du message
+	\item le contenu et parfois des attachements
+\end{itemize}
+
+Ce message peut être localisé dans les dossiers suivants:
+\begin{itemize}
+	\item \textcolor{red}{Boîte de réception}: contient les messages reçus.
+	\item \textcolor{red}{Spam}: contient les messages non désirés.
+	\item \textcolor{red}{Corbeille}: contient les messages supprimés.
+\end{itemize}
 
 \end{frame}
 
@@ -1286,13 +1295,17 @@ Ce message peut être localisé dans les dossiers suivants:
 \frametitle{Messagerie électronique: Recevoir un message}
 \framesubtitle{Les informations}
 
-De: 
-
-A/CC/CCi
-
-Date 
-
-Objet
+\begin{itemize}
+	\item \textcolor{red}{De}: l'expéditeur du message
+	
+	\item \textcolor{red}{A/CC/CCi}: les destinataires du message 
+	\begin{itemize}
+		\item lorsque CCi existe, on ne peut voir que notre adresse 
+	\end{itemize}
+	
+	\item \textcolor{red}{Date}: la date et l'heur d'envoie  
+	
+\end{itemize}
 
 
 \end{frame}
@@ -1301,20 +1314,50 @@ Objet
 \frametitle{Messagerie électronique: Recevoir un message}
 \framesubtitle{Les actions}
 
-
+\begin{itemize}
+	\item \textcolor{red}{Répondre}: renvoyer un message à l'expéditeur
+	\begin{itemize}
+		\item l'objet du nouveau message sera: \textcolor{red}{RE : objet initial}
+	\end{itemize}
+	\item \textcolor{red}{Répondre à tous}: renvoyer un message à l'expéditeur et les autres destinataires non cachés
+	\begin{itemize}
+		\item l'objet du nouveau message sera: \textcolor{red}{RE : objet initial}
+		\item l'adresse de l'expéditeur sera dans \textcolor{red}{A} et le reste dans \textcolor{red}{CC}
+	\end{itemize}
+	
+	\item \textcolor{red}{Transférer}: envoyer une copie de ce message à une autre destinataire  
+	\begin{itemize}
+		\item l'objet du nouveau message sera: \textcolor{red}{TR : objet initial}
+		\item On peut ajouter du texte au message original
+	\end{itemize}
+	
+	\item \textcolor{red}{Supprimer}: envoyer le message vers la corbeille 
+	
+\end{itemize}
 
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Messagerie électronique: Recevoir un message}
-\framesubtitle{Filtrage de messages}
+\framesubtitle{Messages indésirés}
 
-Spam
+Appelés, aussi, spam ou pourriel. D'après Larousse, un spam est:
+\begin{definition}
+	Courrier électronique non sollicité envoyé en grand nombre à des boîtes aux lettres électroniques ou à des forums, dans un but publicitaire ou commercial.
+\end{definition}
 
-Virus 
-
-Fishing 
+%https://support.google.com/mail/answer/1366858?co=GENIE.Platform%3DAndroid&hl=fr
+\begin{itemize}
+	\item publicité
+	\item messages vides ou répétitifs
+	\item fraude
+	\begin{itemize}
+		\item demande d'aide
+		\item usurpation d'identité (spoofing)
+		\item hameçonnage (phishing)
+	\end{itemize}
+\end{itemize}
 
 
 \end{frame}
@@ -1325,7 +1368,184 @@ Fishing
 %===================================================================================
 
 \begin{frame}
-\frametitle{Messagerie Gmail}
+\frametitle{Messagerie GMail}
+
+\begin{minipage}{0.48\textwidth}
+	\begin{itemize}
+%		\item \url{https://mail.google.com}
+		\item Formater le message
+		\item Vérifier l'orthographe
+		\item Joindre des fichiers (moins de 25MO)
+		\item Partager des fichiers Drive
+		\item Envoi programmé
+	\end{itemize}
+	\includegraphics[width=.6\textwidth]{..//img/Bweb02-ri-gmail/gmail-sendlater.png}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+	\includegraphics[width=\textwidth]{..//img/Bweb02-ri-gmail/gmail-new.png}
+\end{minipage}
+
+%\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/gmail-sendlater.png}
+
+\end{frame}
+
+\subsection{Paramètres}
+
+\begin{frame}
+\frametitle{Messagerie GMail}
+\framesubtitle{Paramètres}
+
+\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/gmail-parametre.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Paramètres}
+\framesubtitle{Signature}
+
+\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/gmail-parametre-signature.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Paramètres}
+\framesubtitle{Réponse automatique}
+
+\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/gmail-parametre-reponse.png}
+
+\end{frame}
+
+\subsection{Organisation et recherche}
+
+\begin{frame}
+\frametitle{Messagerie GMail}
+\framesubtitle{Organisation et recherche}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+%		\item Les dossiers standards
+		\item Messages suivis: marqués comme important par l'utilisateur
+		\item En attente: masqués jusqu'à une date spécifiée
+		\item Important: marqués automatiquement 
+		\item Catégories: GMail classe les messages dans des catégories, automatiquement
+		\item Planifié: marqués pour être envoyés automatiquement
+	\end{itemize}
+	\textcolor{red}{On peut faire la recherche dans chaque dossier}
+\end{minipage}
+\begin{minipage}{0.26\textwidth}
+	\includegraphics[width=\textwidth]{..//img/Bweb02-ri-gmail/gmail-folders.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Organisation et recherche}
+\framesubtitle{Nouveaux dossiers (libellés)}
+\includegraphics[width=4cm]{..//img/Bweb02-ri-gmail/gmail-label1.png}
+\includegraphics[width=4cm]{..//img/Bweb02-ri-gmail/gmail-label2.png}
+\includegraphics[width=8cm]{..//img/Bweb02-ri-gmail/gmail-label3.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Organisation et recherche}
+\framesubtitle{Options sur les messages}
+
+\includegraphics[width=8cm]{..//img/Bweb02-ri-gmail/gmail-options.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Organisation et recherche}
+\framesubtitle{Options sur les messages}
+
+\includegraphics[width=4cm]{..//img/Bweb02-ri-gmail/gmail-attente.png}
+\includegraphics[width=3cm]{..//img/Bweb02-ri-gmail/gmail-deplacer.png}
+\includegraphics[width=3cm]{..//img/Bweb02-ri-gmail/gmail-libeller.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Organisation et recherche}
+\framesubtitle{Rechercher}
+\includegraphics[width=.80\textwidth]{..//img/Bweb02-ri-gmail/gmail-search.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Organisation et recherche}
+\framesubtitle{Créer un filtre à partir de la recherche}
+\includegraphics[width=.80\textwidth]{..//img/Bweb02-ri-gmail/gmail-filter.png}
+\end{frame}
+
+\subsection{Gestion de contacts}
+
+\begin{frame}
+\frametitle{Messagerie GMail}
+\framesubtitle{Gestion de contacts}
+
+%\begin{itemize}
+%	\item \url{https://contacts.google.com }
+%\end{itemize}
+
+\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/gmail-contacts.png}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Messagerie GMail: Gestion de contacts}
+\framesubtitle{Nouveau contact}
+
+%\begin{itemize}
+%	\item \url{https://contacts.google.com }
+%\end{itemize}
+
+\includegraphics[width=.60\textwidth]{..//img/Bweb02-ri-gmail/gmail-contacts-new.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Gestion de contacts}
+\framesubtitle{Importer et exporter des contacts}
+
+\begin{tabular}{p{5.1cm}p{5.1cm}}
+	\includegraphics[width=5cm]{..//img/Bweb02-ri-gmail/gmail-contacts-import.png} & 
+	\includegraphics[width=5cm]{..//img/Bweb02-ri-gmail/gmail-contacts-export.png} \\
+	
+	Importer & 
+	Exporter
+	
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Messagerie GMail: Gestion de contacts}
+\framesubtitle{Groupe de contacts}
+
+Pour envoyer un message à un groupe de contacts sans insérer leurs adresse, on crée des groupes.
+
+\begin{tabular}{p{4.1cm}p{7.1cm}}
+	\includegraphics[width=4cm]{..//img/Bweb02-ri-gmail/gmail-contacts-label1.png} & 
+	\includegraphics[width=7cm]{..//img/Bweb02-ri-gmail/gmail-contacts-label2.png} \\
+	
+	1) Créer un label & 
+	2) Sélectionner les contacts et affecter les à ce label
+	
+\end{tabular}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Messagerie GMail: Gestion de contacts}
+\framesubtitle{Annuaire}
+
+Dans GMail pour entreprises, on peut trouver les profiles de tous les utilisateurs ainsi que les groupes d'une organisation. 
+
+\begin{center}
+	\includegraphics[height=.6\textheight]{..//img/Bweb02-ri-gmail/gmail-annuaire.png}
+\end{center}
+
 
 \end{frame}
 
