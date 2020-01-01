@@ -3,65 +3,12 @@
 % !TEX encoding = UTF-8
 % !TEX spellcheck = fr
 
-\documentclass{beamer}
-%\usepackage{fullpage}
-%\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
-\setbeamersize{text margin left=10pt,text margin right=10pt}
-\usepackage{amsmath,amssymb} 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[english,french]{babel}
-\usepackage{txfonts}
-\usepackage[]{graphicx}
-\usepackage{multirow}
-\usepackage{hyperref}
+\documentclass[xcolor=table]{beamer}
 
-
-\hypersetup{
-	colorlinks,
-	urlcolor = blue
-}
-
-%\renewcommand{\baselinestretch}{1.5}
-
-\def\supit#1{\raisebox{0.8ex}{\small\it #1}\hspace{0.05em}}
-
-\AtBeginSection{%
-	\begin{frame}
-		\sectionpage
-	\end{frame}
-}
-
-\newcommand{\rottext}[2]{%
-	\rotatebox{90}{%
-	\begin{minipage}{#1}%
-		\raggedleft#2%
-	\end{minipage}%
-	}%
-}
-
-\usepackage{longtable}
-\usepackage{tabu}
-
+\input{options}
 
 \title[BWEB: 01- Environnement] %
 {Bureautique et Web \\Chapitre 01: Environnement de travail} 
-\institute{ %
-École  nationale Supérieure d'Informatique (ESI, ex. INI), Algérie
-}
-\author[ \textbf{\footnotesize  \insertframenumber/\inserttotalframenumber} \hspace*{\fill} ESI (2019-2020)] %
-{ARIES Abdelkrime}
-%\titlegraphic{\includegraphics[height=1cm]{../img/esi-logo.png}%\hspace*{4.75cm}~
-
-
-\date{Année unniversitaire: 2019/2020} %\today
-
-\usetheme{Warsaw} % Antibes Boadilla Warsaw
-
-\beamertemplatenavigationsymbolsempty
-
-%\setbeamertemplate{headline}{}
-
 
 \begin{document}
 
@@ -140,10 +87,13 @@ Un environnement de travail doit avoir:
 
 Selon l'emplacement des données et des applications, un environnement de travail peut être: 
 
+\rowcolors{2}{lightblue}{lightyellow}
+
 \begin{tabular}{p{.08\textwidth}p{.41\textwidth}p{.41\textwidth}}
-	\hline\hline
-	& Local & Distant \\
-	\hline\hline
+%	\hline\hline
+	\rowcolor{darkblue}
+	& \textcolor{white}{Local} & \textcolor{white}{Distant} \\
+%	\hline\hline
 	
 	Gain &
 	+ contrôle et accès personnel 
@@ -158,7 +108,7 @@ Selon l'emplacement des données et des applications, un environnement de travai
 	+ accessible partout (internet et navigateur)
 	 \\
 	
-	\hline
+%	\hline
 	Perte &
 	- installation et configuration des applications
 	
@@ -168,7 +118,7 @@ Selon l'emplacement des données et des applications, un environnement de travai
 	
 	- données personnelles chez une autre entité 
 	\\
-	\hline\hline
+%	\hline\hline
 \end{tabular}
 %\begin{itemize}
 %	\item local
@@ -257,38 +207,40 @@ Selon l'emplacement des données et des applications, un environnement de travai
 %D'après \url{https://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201901-201911}
 % https://www.w3schools.com/browsers/browsers_os.asp
 % https://www.ionos.com/digitalguide/server/know-how/linux-vs-windows/
-
-\begin{tabular}{p{.20\textwidth}p{.35\textwidth}p{.35\textwidth}}
-	\hline\hline
-	& Windows & Linux \\
-	\hline\hline
+\rowcolors{2}{lightblue}{lightyellow}
+	
+\begin{tabular}{p{.20\textwidth}p{.20\textwidth}p{.5\textwidth}}
+%	\hline\hline
+	\rowcolor{darkblue}
+	& \textcolor{white}{Windows} & \textcolor{white}{Linux} \\
+%	\hline\hline
 	
 	Popularité & > 70\% & < 5\% \\
-	\hline
+%	\hline
 	
 	Type usagers & tous & avoir un peu d'expertise \\
-	\hline
+%	\hline
 	
 	Cout & payant & gratuit (la plupart de distributions) \\
-	\hline
+%	\hline
 	
 	GUI & standard & plusieurs choix \\
-	\hline
+%	\hline
 	
 	Applications & beaucoup & peu\\
-	\hline
+%	\hline
 	
 	Support & bon (Microsoft) & selon la distribution (communauté) \\
-	\hline
+%	\hline
 	
 	Attaques & régulières & rares\\
-	\hline
+%	\hline
 	
 	Installation & autonome & répertoires avec outil de paquetage \\
-	\hline
+%	\hline
 	
 	Personnalisation & limitée & personnalisable \\
-	\hline\hline
+%	\hline\hline
 \end{tabular}
 
 \end{frame}
@@ -632,18 +584,18 @@ Pour se connecter à un réseau:
 \begin{itemize}
 	\item représenté comme l'adresse IP (sur 4 nombres)
 	\item utilisé pour spécifier la partie sous-réseau et la partie hôte
-	\item une version simple du masque: là où il y a un 255 (sous réseau), là où il y a 0 (hôte)
-	\item exemple: 255.255.255.0; Les trois premiers nombres dans l'adresse IP représentent le sous réseau, le dernier représente l'hôte 
+	\item une version simple du masque: là où il y a un \keyword{255} (sous réseau), là où il y a 0 (hôte)
+	\item exemple: \expword{255.255.255.0}; Les trois premiers nombres dans l'adresse IP représentent le sous réseau, le dernier représente l'hôte 
 	\item une version plus détaillée sera entamée dans le module réseau.
 \end{itemize}
 
 Par exemple: 
 \begin{itemize}
 	\item On veut créer un sous réseau pour la bibliothèque de l'école. 
-	\item On définit l'adresse IP de la bibliothèque comme 10.0.7.1 
-	\item On définit le masque de ce sous-réseau comme 255.255.255.0 
-	\item Lorsqu'un étudiant se connecte à ce sous-réseau, il/elle aura une adresse IP entre 10.0.7.2 et 10.0.7.254 
-	\item La partie 10.0.7 ne se change pas 
+	\item On définit l'adresse IP de la bibliothèque comme \expword{10.0.7.1}
+	\item On définit le masque de ce sous-réseau comme \expword{255.255.255.0}
+	\item Lorsqu'un étudiant se connecte à ce sous-réseau, il/elle aura une adresse IP entre \expword{10.0.7.2} et \expword{10.0.7.254} 
+	\item La partie \expword{10.0.7} ne se change pas 
 \end{itemize}
 
 
@@ -656,16 +608,16 @@ Par exemple:
 \framesubtitle{Adressage (MAC)}
 
 \begin{itemize}
-	\item MAC: Media Access Control (anglais)
+	\item \keyword{MAC}: Media Access Control (anglais)
 	\item un identifiant physique de la carte réseau 
 	\item unique pour chaque carte réseau  
 	\item représentée par 6 nombres hexadécimaux, compris entre 00 et FF, séparés par des double points
-	\item exemple: CA:B2:34:A4:DC:57
+	\item exemple: \expword{CA:B2:34:A4:DC:57}
 	\item deux parties (3 nombres chacune): 
 	\begin{itemize}
-		\item OUI (Organizationally Unique Identifier): réservée aux fabricants. 
+		\item \keyword{OUI} (Organizationally Unique Identifier): réservée aux fabricants. 
 		Liste des fabriquants: \url{http://standards-oui.ieee.org/oui.txt}
-		\item NIC (Network Interface Controller): numéro de série des cartes réseaux d'un même fabriquant
+		\item \keyword{NIC} (Network Interface Controller): numéro de série des cartes réseaux d'un même fabriquant
 	\end{itemize}
 \end{itemize}
 
@@ -676,12 +628,12 @@ Par exemple:
 \framesubtitle{Adressage (URL)}
 
 \begin{itemize}
-	\item URL: Uniform Resource Locator (anglais)
+	\item \keyword{URL}: Uniform Resource Locator (anglais)
 	\item identifier une ressource sur le web en utilisant une chaine de caractères
 	\item unique pour chaque carte réseau  
 	\item composée de plusieurs parties; une version simple: 
 	\begin{itemize}
-		\item protocole, suivie par \textbf{://}
+		\item protocole, suivie par \keyword{://}
 		\item nom de domaine, indiquant l'adresse du serveur
 		\item chemin absolu par rapport au serveur 
 		\item le fichier 
@@ -707,7 +659,7 @@ Par exemple:
 \frametitle{Environnement de travail distant: Accès}
 \framesubtitle{Le web}
 
-Abréviation de \textbf{World Wide Web}, définit par Larousse comme:
+Abréviation de \keyword{World Wide Web}, définit par Larousse comme:
 \begin{definition}
 	Système hypermédia permettant d'accéder aux ressources du réseau Internet.
 \end{definition}
@@ -715,7 +667,7 @@ Abréviation de \textbf{World Wide Web}, définit par Larousse comme:
 \begin{itemize}
 	\item un site web se compose de plusieurs pages web
 	\item une page web est un fichier texte écrit en langage HTML et accompagné par d'autres ressources comme les images. 
-	\item une page web peut se référer à une autre en utilisant des \textbf{liens hypertextes} 
+	\item une page web peut se référer à une autre en utilisant des \keyword{liens hypertextes} 
 \end{itemize}
 
 \end{frame}
@@ -726,12 +678,12 @@ Abréviation de \textbf{World Wide Web}, définit par Larousse comme:
 \framesubtitle{Protocoles}
 
 \begin{itemize}
-	\item \textbf{HTTP (Hypertext Transfer Protocol)}: transfert hypertexte pour naviguer sur le web  (HTTPS pour la
+	\item \keyword{HTTP} (Hypertext Transfer Protocol): transfert hypertexte pour naviguer sur le web  (HTTPS pour la
 	version sécurisée)
-	\item \textbf{FTP (File Transfer Protocol)}: transfert des fichiers
-	\item \textbf{SMTP (Simple Mail Transport Protocol)}: envoi et réception du courrier électronique
-	\item \textbf{DNS (Domain Name System)}: transformation d'un URL vers une adresse IP
-	\item \textbf{DHCP (Dynamic Host Configuration protocol)}: affectation des adresses IP à des clients (hôtes)
+	\item \keyword{FTP} (File Transfer Protocol): transfert des fichiers
+	\item \keyword{SMTP} (Simple Mail Transport Protocol): envoi et réception du courrier électronique
+	\item \keyword{DNS} (Domain Name System): transformation d'un URL vers une adresse IP
+	\item \keyword{DHCP} (Dynamic Host Configuration protocol): affectation des adresses IP à des clients (hôtes)
 \end{itemize}
 
 \end{frame}
@@ -741,28 +693,39 @@ Abréviation de \textbf{World Wide Web}, définit par Larousse comme:
 \frametitle{Environnement de travail distant: Accès}
 \framesubtitle{Serveurs}
 
+\rowcolors{2}{lightblue}{lightyellow}
+	
 \begin{tabular}{p{.10\textwidth}p{.45\textwidth}p{.35\textwidth}}
-	\hline\hline
-	Serveur & Utilisation & exemple \\
-	\hline\hline
+%	\hline\hline
+	\rowcolor{darkblue}
+	\textcolor{white}{Serveur} & \textcolor{white}{Utilisation} & \textcolor{white}{Exemple} \\
+	
+%	\hline\hline
 	Web & accès au web (HTTP, HTTPS) & 
 	\includegraphics[height=.8cm]{../img/Bweb01-environnement/apache.png} Apache, 
 	
 	\includegraphics[height=.8cm]{../img/Bweb01-environnement/iis.png} IIS (Windows) \\
-	\hline
+%	\hline
+	
 	FTP & transfert des fichiers & 
 	\includegraphics[height=.8cm]{../img/Bweb01-environnement/filezilla.png} FileZilla (Windows), 
 	VsFTPd (Unix-like) \\
-	\hline
+	
+%	\hline
 	SMTP & gestion de messagerie & 
 	\includegraphics[height=.8cm]{../img/Bweb01-environnement/exim.png} exim \\
-	\hline
+	
+%	\hline
 	DNS & avoir un IP à partir d'une URL & \\
-	\hline
-	DHCP & fournir des adresse IP & \\\hline
+	
+%	\hline
+	DHCP & fournir des adresse IP & \\
+	
+%	\hline
 	Proxy & cache, filtrage, log & 
 	\includegraphics[height=.8cm]{../img/Bweb01-environnement/squid.jpg} Squid, Apache, IIS \\
-	\hline\hline
+	
+%	\hline\hline
 \end{tabular}
 
 
@@ -857,10 +820,12 @@ Le cloud est définit selon le NIST (National Institute of Standards and Technol
 \frametitle{Environnement de travail distant: Le cloud}
 \framesubtitle{Exemples}
 
+\rowcolors{2}{lightblue}{lightyellow}
 \begin{tabular}{p{.27\textwidth}p{.27\textwidth}p{.27\textwidth}}
-	\hline\hline
-	IaaS  & PaaS & SaaS \\
-	\hline
+%	\hline\hline
+	\rowcolor{darkblue}
+	\textcolor{white}{IaaS}  & \textcolor{white}{PaaS} & \textcolor{white}{SaaS} \\
+%	\hline
 	
 	* \href{http://azure.microsoft.com/}{Microsoft Azure}
 	
@@ -890,7 +855,7 @@ Le cloud est définit selon le NIST (National Institute of Standards and Technol
 	
 	* \href{https://microsoftonline.com}{Microsoft Office}
 	\\
-	\hline\hline
+%	\hline\hline
 \end{tabular}
 
 

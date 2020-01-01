@@ -1,0 +1,80 @@
+
+%\usepackage{fullpage}
+%\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
+\setbeamersize{text margin left=10pt,text margin right=10pt}
+\usepackage{amsmath,amssymb} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,french]{babel}
+\usepackage{txfonts}
+\usepackage[]{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{wrapfig}
+
+\hypersetup{
+	colorlinks,
+	urlcolor = blue
+}
+
+%\renewcommand{\baselinestretch}{1.5}
+
+\def\supit#1{\raisebox{0.8ex}{\small\it #1}\hspace{0.05em}}
+
+\AtBeginSection{%
+	\begin{frame}
+		\sectionpage
+	\end{frame}
+}
+
+\newcommand{\rottext}[2]{%
+	\rotatebox{90}{%
+	\begin{minipage}{#1}%
+		\raggedleft#2%
+	\end{minipage}%
+	}%
+}
+
+\usepackage{longtable}
+\usepackage{tabu}
+
+
+\institute{ %
+École  nationale Supérieure d'Informatique (ESI, ex. INI), Algérie
+}
+\author[ \textbf{\footnotesize  \insertframenumber/\inserttotalframenumber} \hspace*{\fill} ESI (2019-2020)] %
+{ARIES Abdelkrime}
+%\titlegraphic{\includegraphics[height=1cm]{../img/esi-logo.png}%\hspace*{4.75cm}~
+
+
+\date{Année unniversitaire: 2019/2020} %\today
+
+\usetheme{Warsaw} % Antibes Boadilla Warsaw
+
+\beamertemplatenavigationsymbolsempty
+
+%\setbeamertemplate{headline}{}
+
+\definecolor{lightblue}{HTML}{D0D2FF}
+\definecolor{lightyellow}{HTML}{FFFFAA}
+\definecolor{darkblue}{HTML}{0000BB}
+\definecolor{olivegreen}{HTML}{006600}
+\definecolor{violet}{HTML}{6600CC}
+
+\newcommand{\keyword}[1]{\textcolor{red}{\bfseries\itshape #1}}
+\newcommand{\expword}[1]{\textcolor{olivegreen}{#1}}
+\newcommand{\optword}[1]{\textcolor{violet}{\bfseries #1}}
+
+\makeatletter
+\newcommand\mysphere{%
+	\parbox[t]{10pt}{\raisebox{0.2pt}{\beamer@usesphere{item projected}{bigsphere}}}}
+\makeatother
+
+%\let\oldtabular\tabular
+%\let\endoldtabular\endtabular
+%\renewenvironment{tabular}{\rowcolors{2}{white}{lightblue}\oldtabular\rowcolor{blue}}{\endoldtabular}
+
+
+\NoAutoSpacing %french autospacing after ":"
