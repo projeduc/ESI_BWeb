@@ -206,7 +206,6 @@ Selon l'emplacement des données et des applications, un environnement de travai
 
 %D'après \url{https://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-201901-201911}
 % https://www.w3schools.com/browsers/browsers_os.asp
-% https://www.ionos.com/digitalguide/server/know-how/linux-vs-windows/
 \rowcolors{2}{lightblue}{lightyellow}
 	
 \begin{tabular}{p{.20\textwidth}p{.20\textwidth}p{.5\textwidth}}
@@ -561,12 +560,12 @@ Pour se connecter à un réseau:
 \framesubtitle{Adressage (IP)}
 
 \begin{itemize}
-	\item IP: Internet Protocol (anglais)
+	\item \keyword{IP}: Internet Protocol (anglais)
 	\item utilisée pour identifier une machine sur un réseau
 	\item attribuée d'une manière permanente (ex. les entreprises) ou provisoire (ex. modem de votre maison). 
 	\item deux versions:  version 4 et 6. 
-	\item version 4: notée avec quatre nombres compris entre 0 et 255, séparés par des points
-	\item exemple: 192.168.1.9
+	\item version 4: notée avec quatre nombres compris entre \keyword{0} et \keyword{255}, séparés par des points
+	\item exemple: \expword{192.168.1.9}
 	\item deux parties: 
 	\begin{itemize}
 		\item gauche et fixe (ne se change pas), représentant le sous réseau 
@@ -678,12 +677,12 @@ Abréviation de \keyword{World Wide Web}, définit par Larousse comme:
 \framesubtitle{Protocoles}
 
 \begin{itemize}
-	\item \keyword{HTTP} (Hypertext Transfer Protocol): transfert hypertexte pour naviguer sur le web  (HTTPS pour la
+	\item \optword{HTTP (Hypertext Transfer Protocol)}: transfert hypertexte pour naviguer sur le web  (HTTPS pour la
 	version sécurisée)
-	\item \keyword{FTP} (File Transfer Protocol): transfert des fichiers
-	\item \keyword{SMTP} (Simple Mail Transport Protocol): envoi et réception du courrier électronique
-	\item \keyword{DNS} (Domain Name System): transformation d'un URL vers une adresse IP
-	\item \keyword{DHCP} (Dynamic Host Configuration protocol): affectation des adresses IP à des clients (hôtes)
+	\item \optword{FTP (File Transfer Protocol)}: transfert des fichiers
+	\item \optword{SMTP (Simple Mail Transport Protocol)}: envoi et réception du courrier électronique
+	\item \optword{DNS (Domain Name System)}: transformation d'un \keyword{URL} vers une adresse \keyword{IP}
+	\item \optword{DHCP (Dynamic Host Configuration protocol)}: affectation des adresses \keyword{IP} à des clients (hôtes)
 \end{itemize}
 
 \end{frame}
@@ -951,14 +950,20 @@ Le cloud est définit selon le NIST (National Institute of Standards and Technol
 
 \end{frame}
 
-
+\nocite{*}
 %\subsection{Bibliography}
 %\frame[allowframebreaks]%
-%{\frametitle{Bibliography}
+%{\frametitle{Références}
 %\tiny
-%\bibliography{biblio}
-%\bibliographystyle{apalike} 
+%\bibliography{Bweb01}
+%\bibliographystyle{plain} 
 %}
+
+\begin{multicols*}{2}[\frametitle{Références}\usebeamertemplate*{frametitle}]%
+	\tiny
+	\bibliography{Bweb01}
+	\bibliographystyle{acm}
+\end{multicols*}
 
 
 \end{document}
