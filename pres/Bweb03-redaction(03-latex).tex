@@ -1,0 +1,43 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[xcolor=table]{beamer}
+
+\input{options}
+
+\title[BWEB: 03- Rédaction (\LaTeX)] %
+{Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique \\ \LaTeX}  
+
+\changegraphpath{..//img/Bweb03-redaction/}
+
+\begin{document}
+	
+	\newcolumntype{L}[2]{%
+		>{\vbox to #2\bgroup\vfill\flushleft}%
+		p{#1}%
+		<{\egroup}} 
+
+\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+\nocite{*}
+%\subsection{Bibliography}
+%\frame[allowframebreaks]%
+%{\frametitle{Références}
+%\tiny
+%\bibliography{Bweb01}
+%\bibliographystyle{plain} 
+%}
+
+\begin{multicols*}{2}[\usebeamertemplate*{frametitle}\frametitle{Références}]%
+	\tiny
+	\bibliography{Bweb03}
+	\bibliographystyle{acm}
+\end{multicols*}
+
+
+\end{document}
+
