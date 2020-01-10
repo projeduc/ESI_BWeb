@@ -10,6 +10,8 @@
 \title[BWEB: 03- Rédaction] %
 {Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique}  
 
+\changegraphpath{..//img/Bweb03-redaction/}
+
 \begin{document}
 	
 	\newcolumntype{L}[2]{%
@@ -63,6 +65,12 @@
 \frametitle{Structure d'un rapport}
 \framesubtitle{Pages préliminaires}
 
+\begin{itemize}
+	\item Pages qui précèdent le développement du rapport
+	\item Toutes les pages sont numérotées, sauf la page de garde
+	\item Les numéros de pages sont en chiffres romains (I, II, III, IV, V, etc.) 
+\end{itemize}
+
 \end{frame}
 
 
@@ -98,10 +106,10 @@
 		\item Personnes ayant contribué au travail (aide financière, révision, etc.) en mentionnant la nature de l'aide.
 		\item Famille pour soutien
 		\item ...
-		\item Elles doit être:
+		\item Elles doivent être:
 		\begin{itemize}
-			\item \optword{simple}: pas d'exagération
-			\item \optword{professionnel}: moins de familiarité
+			\item \optword{simples}: pas d'exagération
+			\item \optword{professionnelles}: moins de familiarité
 		\end{itemize}
 	\end{itemize}
 \end{minipage}
@@ -157,6 +165,42 @@
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Structure d'un rapport: Pages préliminaires}
+\framesubtitle{Liste des illustrations (tableaux et figures)}
+
+\begin{minipage}{0.52\textwidth}
+	\begin{itemize}
+		\item Une liste des tableaux et une autre pour les figures
+		\item Utile pour chercher les illustrations dans le document
+		\item Formée des légendes des illustrations et leurs pages
+		\item La légende se forme du numéro d'apparition (soit dans le rapport entier ou dans chaque chapitre) et le titre de l'illustration.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.42\textwidth}
+	\includegraphics[width=\textwidth]{..//img/Bweb03-redaction/table-lst.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Structure d'un rapport: Pages préliminaires}
+\framesubtitle{Liste des abréviations}
+
+\begin{minipage}{0.52\textwidth}
+	\begin{itemize}
+		\item Abréviation: forme réduite d'un mot
+		\item Exemple: \expword{ESI}
+		\item Facilite la lecture du document 
+		\item Liste des termes et leurs définitions
+		\item Ordre alphabétique des termes
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.42\textwidth}
+	\includegraphics[width=\textwidth]{..//img/Bweb03-redaction/abbrv-lst.png}
+\end{minipage}
+
+\end{frame}
 
 \subsection{Corps du texte}
 
@@ -319,27 +363,203 @@
 
 \end{frame}
 
+
+%===================================================================================
+\section{Outils de rédaction}
+%===================================================================================
+
 \begin{frame}
-\frametitle{Références}
+\frametitle{Outils de rédaction}
 
-\tiny
 
-%\begin{itemize}
-%	\item Felix Naumann (2011). 
-%	"\textit{Chapter 2 – Architecture}". 
-%	Search Engines. 
-%	Universität Potsdam, Allemagne. Présentation.
-%	\url{https://hpi.de/fileadmin/user_upload/fachgebiete/naumann/folien/SS11/Search_Engines/SearchEngines_02_Architecture.pdf}
-%	
-%	\item Raghu Ramakrishnan (date-indéfinie).
-%	"\textit{Chapter 27: Information Retrieval and XML Data Management (Web search engines}". 
-%	Database Management Systems. 
-%	University of Wisconsin-Madison, Etats unis. Présentation.
-%	\url{http://pages.cs.wisc.edu/~dbbook/openAccess/thirdEdition/slides/slides3ed-english/Ch27c_ir3-websearch-95.pdf}
-%	
-%	\item \url{https://support.google.com/websearch/answer/134479?hl=fr}
+\end{frame}
+
+\subsection{Logiciels de traitement de texte}
+
+\begin{frame}
+\frametitle{Outils de rédaction}
+\framesubtitle{Logiciels de traitement de texte}
+
+
+\def\arraystretch{.5}
+
+\begin{tabular}{p{.3\textwidth}cp{.5\textwidth}}%p{.3\textwidth}
 	
-%\end{itemize}
+	\hline
+	
+	\graphintable{.8cm}{freeoffice-logo.png} &
+	\graphintable{.8cm}{freeoffice-textmaker-logo.png} &
+	FreeOffice TextMaker  
+	
+	\url{https://www.freeoffice.com/}  \\
+	\hline
+	
+	\graphintable{.8cm}{libreoffice-logo.png} &
+	\graphintable{.8cm}{libreoffice-writer-logo.png} & 
+	LibreOffice Writer 
+	
+	\url{https://www.libreoffice.org/}  \\
+	\hline
+	
+	\graphintable{.8cm}{msoffice-logo.png} &
+	\graphintable{.8cm}{msoffice-word-logo.png} & 
+	Microsoft office Word 
+	
+	\url{https://www.office.com/}  \\
+	\hline
+	
+	\graphintable{.7cm}{onlyoffice-logo.png} & &
+%	\graphintable{.8cm}{onlyoffice-documents-logo.png} & 
+	OnlyOffice Documents 
+	
+	\url{https://www.onlyoffice.com/}  \\
+	\hline
+	
+	\graphintable{.8cm}{wps-logo.png} & 
+	\graphintable{.8cm}{wps-writer-logo.png} & 
+	WPS Writer
+	
+	\url{https://www.wps.com/}  \\
+	\hline
+	
+	
+\end{tabular}
+ 
+\end{frame}
+
+\subsection{\LaTeX}
+
+\begin{frame}
+\frametitle{Outils de rédaction}
+\framesubtitle{\LaTeX}
+
+\def\arraystretch{.5}
+
+Des distributions \LaTeX :
+
+\begin{tabular}{p{.1\textwidth}cp{.7\textwidth}}%p{.3\textwidth}
+	
+	\hline
+	
+	\graphintable{.8cm}{texlive-logo.png} &
+	&
+	TexLive  
+	
+	\url{https://www.tug.org/texlive/}
+	
+	Ubuntu: \expword{apt install texlive-full}\\
+	\hline
+	
+	\graphintable{.8cm}{miktex-logo.png} &
+	& 
+	MiKTex 
+	
+	\url{https://miktex.org/download}  \\
+	\hline
+	
+\end{tabular}
+
+\vspace{\fill}
+
+Des éditeurs \LaTeX :
+
+\begin{tabular}{p{.1\textwidth}cp{.7\textwidth}}%p{.3\textwidth}
+	
+	\hline
+	
+	\graphintable{.8cm}{texstudio-logo.png} &
+	&
+	TexStudio  
+	
+	\url{http://www.texstudio.org/}  \\
+	\hline
+	
+	\graphintable{.8cm}{lyx-logo.png} &
+	& 
+	LyX (WYSIWYM)
+	
+	\url{https://www.lyx.org/}  \\
+	\hline
+	
+\end{tabular}
+
+\end{frame}
+
+
+\subsection{Rédaction en ligne}
+
+
+\begin{frame}
+\frametitle{Outils de rédaction}
+\framesubtitle{Rédaction en ligne}
+
+\def\arraystretch{.5}
+
+\begin{tabular}{p{.1\textwidth}cp{.7\textwidth}}%p{.3\textwidth}
+	
+	\hline
+	
+	\graphintable{.8cm}{google-docs-logo.png} &
+	&
+	Google Docs  
+	
+	\url{http://docs.google.com/document/}  \\
+	\hline
+	
+	\graphintable{.8cm}{msoffice-word-logo.png} &
+	&
+	Microsoft Office Word 
+	
+	\url{https://www.office.com/launch/word}  \\
+	\hline
+	
+	\graphintable{.8cm}{icloud-pages-logo.png} &
+	&
+	iCloud Pages 
+	
+	\url{https://www.icloud.com/pages/}  \\
+	\hline
+	
+	\graphintable{.8cm}{overleaf-logo.png} &
+	&
+	Overleaf (\LaTeX) 
+	
+	\url{https://www.overleaf.com/}  \\
+	\hline
+	
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Outils de rédaction: Rédaction en ligne}
+\framesubtitle{Google Docs Document}
+
+\vgraphpage{google-docs-preview.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Outils de rédaction: Rédaction en ligne}
+\framesubtitle{Microsoft Office Word}
+
+\vgraphpage{msoffice-word-preview.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Outils de rédaction: Rédaction en ligne}
+\framesubtitle{iCloud Pages}
+
+\vgraphpage{icloud-pages-preview.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Outils de rédaction: Rédaction en ligne}
+\framesubtitle{Overleaf}
+
+\vgraphpage{overleaf-preview.png}
 
 \end{frame}
 

@@ -14,6 +14,7 @@
 \usepackage{listings}
 \usepackage{wrapfig}
 \usepackage{multicol}
+\usepackage[export]{adjustbox} %for images in table
 
 \hypersetup{
 	colorlinks,
@@ -79,3 +80,18 @@
 
 
 \NoAutoSpacing %french autospacing after ":"
+
+\def\graphpath{}
+
+\newcommand{\changegraphpath}[1]{\def\graphpath{#1}}
+
+\newcommand{\graphintable}[2]{%
+	\includegraphics[height=#1,valign=t]{\graphpath #2}%
+}
+
+\newcommand{\vgraphpage}[1]{%
+	\begin{center}%
+		\includegraphics[height=.85\textheight]{\graphpath #1}%
+	\end{center}%
+}
+
