@@ -89,9 +89,9 @@
 	\includegraphics[height=#1,valign=t]{\graphpath #2}%
 }
 
-\newcommand{\vgraphpage}[1]{%
+\newcommand{\vgraphpage}[2][.85\textheight]{%
 	\begin{center}%
-		\includegraphics[height=.85\textheight]{\graphpath #1}%
+		\includegraphics[height=#1]{\graphpath #2}%
 	\end{center}%
 }
 
