@@ -6,6 +6,7 @@
 \documentclass[xcolor=table]{beamer}
 
 \input{options}
+\usepackage{lstautogobble}
 
 \title[BWEB: 03- Rédaction (\LaTeX)] %
 {Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique \\ \LaTeX}  
@@ -50,17 +51,37 @@
 
 \begin{frame}[fragile]
 \frametitle{Préparer un document}
+Un document \LaTeX se compose de ces parties :
+\begin{itemize}
+	\item préambule, contenant la la classe du document et des commandes
+	\item contenu entre \keyword{\textbackslash begin\{document\}} et \keyword{\textbackslash end\{document\}}
+\end{itemize}
 
+\begin{minipage}{0.60\textwidth} 
+	Parmi les classes disponibles
+	\begin{itemize}
+		\item book
+		\item memoir
+		\item report 
+		\item article
+		\item letter 
+		\item beamer
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
 \begin{exampleblock}{exemple: hello.tex}
-	\scriptsize\bfseries
-	\begin{lstlisting}
-	\documentclass{book}
-	
-	\begin{document}
-		Hello World!
-	\end{document}
-	\end{lstlisting}
+\scriptsize\bfseries
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\documentclass{book}
+% espace pour les packages
+\begin{document}
+    % le contenu
+    Hello World!
+\end{document}
+\end{lstlisting}
 \end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
@@ -70,32 +91,56 @@
 \frametitle{Préparer un document}
 \framesubtitle{Sections}
 
-\end{frame}
+\rowcolors{2}{lightblue}{lightyellow}
 
-\begin{frame}[fragile]
-\frametitle{Préparer un document: Sections}
-\framesubtitle{Parties et Chapitres}
-
-\begin{exampleblock}{exemple: titre.tex}
-\scriptsize\bfseries
-\begin{lstlisting}
-\documentclass{article}
-
-\title{Introduction LaTeX}
-\author{Abdelkrime Aries}
-\date{2020}
-
-\begin{document}
-
-	\maketitle
-
-	Hello World!
-
-\end{document}
-\end{lstlisting}
-\end{exampleblock}
+\begin{tabular}{p{.3\textwidth}cp{.6\textwidth}}
+	%	\hline\hline
+	\rowcolor{darkblue}
+	\textcolor{white}{Section} && \textcolor{white}{Fonction} \\
+	%	\hline\hline
+	\textbackslash part\{...\} && \\
+	\textbackslash chapter\{...\} && \\
+	\textbackslash section\{...\} && \\
+	\textbackslash subsection\{...\} && \\
+	\textbackslash subsubsection\{...\} && \\
+\end{tabular}
 
 \end{frame}
+
+%\begin{frame}[fragile]
+%\frametitle{Préparer un document: Sections}
+%\framesubtitle{Parties et Chapitres}
+%
+%\begin{exampleblock}{exemple: titre.tex}
+%\scriptsize\bfseries
+%\begin{lstlisting}
+%\documentclass{book}
+%
+%\title{Introduction LaTeX}
+%\author{Abdelkrime Aries}
+%\date{2020}
+%
+%\begin{document}
+%
+%    \maketitle
+%	\chapter*{Introduction}
+%	mot mot mot mot
+%
+%    \chapter{Un chapite numerote}
+%    mot mot mot mot
+%    
+%    \section{une section}
+%	
+%    \chapter{Un chapite numerote}
+%    mot mot mot mot
+%    
+%    
+%
+%\end{document}
+%\end{lstlisting}
+%\end{exampleblock}
+%
+%\end{frame}
 
 \subsection{Pages}
 
@@ -154,12 +199,11 @@
 \framesubtitle{Marges}
 
 \begin{exampleblock}{exemple: les marges de la page}
-	\scriptsize\bfseries
-	\begin{lstlisting}
-	\documentclass[a4paper, 12pt]{article}
-	\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
-	
-	\end{lstlisting}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass[a4paper, 12pt]{article}
+\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
+\end{lstlisting}
 \end{exampleblock}
 
 \end{frame}
