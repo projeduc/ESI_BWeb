@@ -101,3 +101,15 @@
 %	\end{center}%
 }
 
+\newcommand{\insertbibliography}[2]{
+	\appendix
+	\section*{Bibliographie}
+	\nocite{#2}
+	
+	\begin{multicols*}{2}[\frametitle{\insertsection} \usebeamertemplate{frametitle}]%\usebeamertemplate*{frametitle}\frametitle{Références}
+		\tiny
+		\bibliography{#1}
+		\bibliographystyle{acm}
+	\end{multicols*}
+}
+
