@@ -105,8 +105,11 @@
 	\appendix
 	\section*{Bibliographie}
 	\nocite{#2}
-	
-	\begin{multicols*}{2}[\frametitle{\insertsection} \usebeamertemplate{frametitle}]%\usebeamertemplate*{frametitle}\frametitle{Références}
+%	\makeatletter % to change template
+%	\setbeamertemplate{headline}[default] % not mandatory, but I though it was better to set it blank
+%	\def\beamer@entrycode{\vspace*{-\headheight}} % here is the part we are interested in :)
+%	\makeatother
+	\begin{multicols*}{2}[\frametitle{\insertsection} \usebeamertemplate*{frametitle}]%\usebeamertemplate*{frametitle}\frametitle{Références}
 		\tiny
 		\bibliography{#1}
 		\bibliographystyle{acm}
