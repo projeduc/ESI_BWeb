@@ -1,0 +1,25 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass{article}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[arabic,french]{babel}
+
+\begin{document}
+	
+	Les caractères é, è, à, ô, etc. ne causeront aucun problème. 
+	
+	\selectlanguage{arabic}
+	هذا نص بالعربية
+	\selectlanguage{french}
+	
+	Un texte en français avec un autre en arabe 
+	
+	\begin{otherlanguage}{arabic}
+		هذا نص بالعربية
+	\end{otherlanguage}
+	
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage[pages=some]{background}
+
+\backgroundsetup{
+	scale=1, % echel 
+	color=black, % couleur de l'ecriture
+	opacity=0.4, % la transparence de l'image
+	%position={0,0}, % la position de l'image 
+	angle=0, % la rotation de l'image
+	contents={% 
+		\includegraphics[width=\paperwidth, height=\paperheight]{banner.jpg}
+	}%
+}
+
+\begin{document}
+	
+	\BgThispage % pour dire que cette page doit avoir un arriere plan
+	
+	Page avec arriere plan
+	
+	
+	\clearpage
+	
+	Page sans arriere plan
+	
+
+\end{document}

@@ -9,7 +9,7 @@
 \usepackage{lstautogobble}
 
 \title[BWEB: 03- Rédaction (\LaTeX)] %
-{Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique \\ \LaTeX}  
+{Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique \\ Introduction au \LaTeX}  
 
 \changegraphpath{..//img/Bweb03-redaction/}
 
@@ -53,19 +53,19 @@
 \frametitle{Préparer un document}
 Un document \LaTeX se compose de ces parties :
 \begin{itemize}
-	\item préambule, contenant la la classe du document et des commandes
+	\item préambule, contenant la classe du document (comme un modèle), appels des extensions et des commandes
 	\item contenu entre \keyword{\textbackslash begin\{document\}} et \keyword{\textbackslash end\{document\}}
 \end{itemize}
 
 \begin{minipage}{0.60\textwidth} 
 	Parmi les classes disponibles
 	\begin{itemize}
-		\item book
-		\item memoir
-		\item report 
-		\item article
-		\item letter 
-		\item beamer
+		\item \optword{book} : pour rédiger des livres
+%		\item memoir
+		\item \optword{report} : pour rédiger des rapports
+		\item \optword{article} : pour rédiger des articles
+		\item \optword{letter} : pour rédiger des lettres
+		\item \optword{beamer} : pour créer des présentations (comme celle-ci)
 	\end{itemize}
 \end{minipage}
 %
@@ -98,13 +98,29 @@ Un document \LaTeX se compose de ces parties :
 	\rowcolor{darkblue}
 	\textcolor{white}{Section} && \textcolor{white}{Fonction} \\
 	%	\hline\hline
-	\textbackslash part\{...\} && \\
-	\textbackslash chapter\{...\} && \\
-	\textbackslash section\{...\} && \\
-	\textbackslash subsection\{...\} && \\
-	\textbackslash subsubsection\{...\} && \\
+	\textbackslash part\{...\} && La partie; ex. \expword{\'Etude bibliographique}. 
+	
+	Elle n'existe pas dans \optword{letter}.\\
+	
+	\textbackslash chapter\{...\} && Un chapitre; 
+	
+	Elle existe seulement dans \optword{book} et \optword{report}.\\
+	
+	\textbackslash section\{...\} && Une section (un titre de niveau 1); 
+	
+	Elle n'existe pas dans \optword{letter}.\\
+	
+	\textbackslash subsection\{...\} && Une sous-section (un titre de niveau 2); 
+	
+	Elle n'existe pas dans \optword{letter}.\\
+	
+	\textbackslash subsubsection\{...\} && Une subdivision (un titre de niveau 3); 
+	
+	Elle n'existe pas dans \optword{letter}.\\
 \end{tabular}
 
+Si on ajoute un étoile, la section ne sera pas numérotée. 
+Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 \end{frame}
 
 %\begin{frame}[fragile]
@@ -144,73 +160,197 @@ Un document \LaTeX se compose de ces parties :
 
 \subsection{Pages}
 
-\begin{frame}
-\frametitle{Préparer un document}
-\framesubtitle{Pages}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
-\framesubtitle{Titre (Page de garde)}
-
-\begin{exampleblock}{exemple: titre.tex}
-	\scriptsize\bfseries
-	\begin{lstlisting}
-	\documentclass{article}
-	
-	\title{Introduction LaTeX}
-	\author{Abdelkrime Aries}
-	\date{2020}
-	
-	\begin{document}
-	
-		\maketitle
-	
-		Hello World!
-	
-	\end{document}
-	\end{lstlisting}
-\end{exampleblock}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
-\framesubtitle{Taille}
-
-\begin{exampleblock}{exemple: la taille de la page}
-	\scriptsize\bfseries
-	\begin{lstlisting}
-	\documentclass[a4paper, 12pt]{article}
-	\end{lstlisting}
-\end{exampleblock}
-
-\end{frame}
-
 %\begin{frame}
-%\frametitle{Préparer un document: Pages}
-%\framesubtitle{Orientation}
+%\frametitle{Préparer un document}
+%\framesubtitle{Pages}
 %
 %\end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Préparer un document: Pages}
-\framesubtitle{Marges}
+\framesubtitle{Titre (Page de garde)}
 
-\begin{exampleblock}{exemple: les marges de la page}
+\begin{minipage}{0.59\textwidth} 
+	\begin{itemize}
+		\item On doit introduire le titre, le nom de l'auteur, la date et d'autres informations selon la classe utilisée. 
+		\item Pour générer le titre à partir de ces informations, on utilise la commande \keyword{\textbackslash maketitle}
+		\item Dans \optword{book} et \optword{report}, \LaTeX\ crée une page de garde (une nouvelle page avec les informations). 
+		Dans \optword{article}, \LaTeX\ insère ces informations en première page suivies par un texte 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.40\textwidth}
+\begin{exampleblock}{exemple: titre.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
-\documentclass[a4paper, 12pt]{article}
-\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
+\documentclass{article}
+	
+\title{Introduction LaTeX}
+\author{Abdelkrime Aries}
+\date{2020}
+	
+\begin{document}
+	
+    \maketitle
+	
+    Hello World!
+	
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Pages}
+\framesubtitle{Taille et format}
+
+\begin{itemize}
+	\item Dans les options de la classe, on peut définir la taille de la page. 
+	Parmi les tailles, on peut citer: \optword{a4paper}, \optword{a5paper} et \optword{letterpaper}.
+	\item On peut, aussi, définir la taille des caractères pour le texte normal. 
+	Dans les rapports de l'ESI, la taille utilisée est \optword{12pt}.
+	\item Si on veut que le document soit recto-verso, on utilise l'option \optword{twoside}
+\end{itemize}
+
+\begin{exampleblock}{exemple: la taille de la page}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass[a4paper, 12pt, twoside]{book}
 \end{lstlisting}
 \end{exampleblock}
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Préparer un document: Pages}
-\framesubtitle{Colonnes}
+\framesubtitle{Orientation (tout le document)}
+
+\begin{itemize}
+	\item Par défaut, l'orientation \optword{Portrait}
+	\item Pour utiliser l'orientation \optword{Paysage}, on fait appel à l'extension \optword{geometry} avec l'option \optword{landscape}
+\end{itemize}
+
+\begin{exampleblock}{exemple: orientation paysage}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass[a4paper, 12pt]{book}
+\usepackage[landscape]{geometry}
+\end{lstlisting}
+\end{exampleblock}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Pages}
+\framesubtitle{Orientation (une partie du document)}
+
+\begin{minipage}{0.30\textwidth} 
+\begin{itemize}
+	\item Importer l'extension \optword{pdflscape}
+	\item Mettre le contenu dans l'environnement \optword{landscape}
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.69\textwidth}
+\begin{exampleblock}{exemple: paysage.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass[a4, 12pt]{article}
+\usepackage{pdflscape}
+
+\begin{document}
+    page 1 avec orientation portrait
+
+    \begin{landscape}
+        page 2 avec orientation paysage 
+        \newpage
+        page 3 avec orientation paysage
+    \end{landscape}
+
+    page 4 avec orientation portrait
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Pages}
+\framesubtitle{Marges}
+
+\begin{itemize}
+	\item On définit les marges en utilisant l'extension \optword{geometry}.
+	\item Dans ces options, on peut fixer les marges gauche (\optword{left}), droite (\optword{right}), tête (\optword{top}) et pied (\optword{bottom}).
+	\item Si on veut appliquer la même marge pour les quatre coins: \optword{margin}
+	\item Si le document est recto-verso, on utilise \optword{inner} pour la marge intérieure (envers le reliure) et \optword{outer} pour la marge extérieure.
+\end{itemize}
+
+\begin{exampleblock}{exemple: les marges de la page}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass[a4paper, 12pt]{book}
+\usepackage[left=2.8cm, right=2.2cm, top=2cm, bottom=2cm]{geometry}
+\end{lstlisting}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Pages}
+\framesubtitle{Colonnes (tout le document)}
+
+\begin{itemize}
+	\item Il existe des articles avec deux colonnes
+	\item Utiliser l'option \optword{twocolumn} de la classe.
+\end{itemize}
+
+\begin{exampleblock}{exemple: les marges de la page}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass[a4paper, 12pt, twocolumn]{article}
+\end{lstlisting}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Pages}
+\framesubtitle{Colonnes (une partie du document)}
+
+\begin{minipage}{0.30\textwidth} 
+\begin{itemize}
+	\item Importer l'extension \optword{multicol}
+	\item Mettre le texte dans l'environnement \optword{multicols} en spécifiant le nombre des colonnes
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.69\textwidth}
+\begin{exampleblock}{exemple: colonnes.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{multicol}
+	
+\begin{document}
+\begin{multicols}{3}
+[Un texte qui s'affiche sur une seule colonne.]
+Ceci est la premiere phrase. Ceci est la phrase 2.
+Ceci est la phrase 3. Ceci est la phrase 4.
+Ceci est la phrase 5. Ceci est la phrase 6.
+Ceci est la phrase 7. Ceci est la phrase 8.
+Ceci est la phrase 9. Ceci est la phrase 10.
+\end{multicols}
+Un texte qui s'affiche sur une seule colonne.
+	
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
@@ -218,16 +358,23 @@ Un document \LaTeX se compose de ces parties :
 \frametitle{Préparer un document: Pages}
 \framesubtitle{Saute de page}
 
+Pour insérer un saut de page
+\begin{itemize}
+	\item on utilise la commande \keyword{\textbackslash newpage}
+	\item avant un chapitre, on utilise la commande \keyword{\textbackslash clearpage}
+	\item avant un chapitre dans un document recto-verso, on utilise la commande \keyword{\textbackslash cleardoublepage}
+\end{itemize}
+
 \begin{exampleblock}{exemple: nouvpage.tex}
-	\scriptsize\bfseries
-	\begin{lstlisting}
-	\documentclass{article}
-	\begin{document}
-	Avant la nouvelle page
-	\newpage
-	Apres la nouvelle page
-	\end{document}
-	\end{lstlisting}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\begin{document}
+    Avant la nouvelle page
+    \newpage
+    Apres la nouvelle page
+\end{document}
+\end{lstlisting}
 \end{exampleblock}
 
 \end{frame}
@@ -248,21 +395,34 @@ Un document \LaTeX se compose de ces parties :
 \frametitle{Préparer un document: Pages}
 \framesubtitle{Arrière-plan}
 
-\begin{exampleblock}{exemple: nouvpage.tex}
-	\scriptsize\bfseries
-	\begin{lstlisting}
-	\documentclass{article}
-	\usepackage{xcolor}
+\begin{minipage}{0.49\textwidth}
+Pour définir une couleur d'arrière plan
+\begin{itemize}
+	\item on utilise la commande \keyword{\textbackslash pagecolor} de l'extension \optword{xcolor}
+	\item pour utiliser une image comme arrière-plan, on fait appel à l'extension \optword{background} (voir le document \expword{pageimage.tex})
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.50\textwidth}
+\begin{exampleblock}{exemple: pagecouleur.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{xcolor}
 	
-	\begin{document}
+\begin{document}
+    \pagecolor{yellow}
+    Je suis une page jaune
+
+    \newpage
+
+    \pagecolor{green}
+    Je suis une page verte
 	
-	\pagecolor{yellow}
-	
-	Hello World!
-	
-	\end{document}
-	\end{lstlisting}
+\end{document}
+\end{lstlisting}
 \end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
@@ -277,11 +437,76 @@ Un document \LaTeX se compose de ces parties :
 
 \subsection{Paragraphes}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Préparer un document}
 \framesubtitle{Paragraphes}
 
+\begin{minipage}{0.49\textwidth}
+	\begin{itemize}
+		\item ...
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.50\textwidth}
+\begin{exampleblock}{exemple: paragraphes.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+	
+\begin{document}
+    Phrase 1 Paragraphe 1. 
+    Phrase 2 Paragraphe 1. 
+    
+    Phrase 1 Paragraphe 2. 
+    Phrase 2 Paragraphe 2.		
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
 \end{frame}
+
+
+%\begin{frame}[fragile]
+%\frametitle{Préparer un document: Paragraphes}
+%\framesubtitle{Internationalisation}
+%
+%\begin{minipage}{0.49\textwidth}
+%	\begin{itemize}
+%		\item ...
+%		\item 
+%	\end{itemize}
+%\end{minipage}
+%%
+%\begin{minipage}{0.50\textwidth}
+%\begin{exampleblock}{exemple: i18n.tex}
+%\lstset{escapeinside=``}
+%\scriptsize\bfseries
+%\begin{lstlisting}
+%\documentclass{article}
+%\usepackage[utf8]{inputenc}
+%\usepackage[arabic,french]{babel}
+%
+%\begin{document}
+%Les caractères é, è, à, ô, etc. ne causeront aucun problème. 
+%
+%\selectlanguage{arabic}`\<
+%هذا نص بالعربية
+%>`\selectlanguage{french}`\<
+%
+%Un texte en français avec un autre en arabe 
+%
+%>`\begin{otherlanguage}{arabic}
+%هذا نص بالعربية
+%\end{otherlanguage}
+%
+%\end{document}
+%\end{lstlisting}
+%\end{exampleblock}
+%\end{minipage}
+%
+%\end{frame}
 
 \begin{frame}
 \frametitle{Préparer un document: Paragraphes}
@@ -313,11 +538,6 @@ Un document \LaTeX se compose de ces parties :
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Préparer un document: Paragraphes}
-\framesubtitle{Orientation du texte}
-
-\end{frame}
 
 \begin{frame}
 \frametitle{Préparer un document: Paragraphes}
