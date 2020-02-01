@@ -11,7 +11,7 @@
 \title[BWEB: 03- Rédaction (\LaTeX)] %
 {Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique \\ Introduction au \LaTeX}  
 
-\changegraphpath{..//img/Bweb03-redaction/}
+\changegraphpath{../img/Bweb03-redaction/latex/}
 
 %\lstset{
 %	basicstyle=\scriptsize\ttfamily,language=[LaTeX]Tex,breaklines=true,
@@ -28,6 +28,8 @@
 \begin{frame}[plain]
 	\maketitle
 \end{frame}
+
+\insertlicence
 
 \begin{frame}
 \frametitle{Rédaction d'un document numérique}
@@ -258,7 +260,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 \begin{exampleblock}{exemple: paysage.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
-\documentclass[a4, 12pt]{article}
+\documentclass[a4paper, 12pt]{article}
 \usepackage{pdflscape}
 
 \begin{document}
@@ -430,6 +432,11 @@ Pour définir une couleur d'arrière plan
 \frametitle{Préparer un document: Pages}
 \framesubtitle{En-tête et pied de page}
 
+\begin{itemize}
+	\item Pour définir l'entête et les pied d'une page comme vide, utiliser la commande \keyword{\textbackslash pagestyle\{empty\}}
+	\item Utiliser l'extension \optword{fancyhdr}
+	\item 
+\end{itemize}
 
 
 \end{frame}
@@ -443,8 +450,9 @@ Pour définir une couleur d'arrière plan
 
 \begin{minipage}{0.49\textwidth}
 	\begin{itemize}
-		\item ...
-		\item 
+		\item Si on laisse une ligne vide, \LaTeX créera un nouveau paragraphe. 
+		\item On peut écrire les phrases d'un même paragraphe sur multiples lignes.
+		\item Pour sauter la ligne sans créer un nouveau paragraphe, utiliser la commande \keyword{\textbackslash newline} ou simplement \keyword{\textbackslash \textbackslash}
 	\end{itemize}
 \end{minipage}
 %
@@ -459,7 +467,9 @@ Pour définir une couleur d'arrière plan
     Phrase 2 Paragraphe 1. 
     
     Phrase 1 Paragraphe 2. 
-    Phrase 2 Paragraphe 2.		
+    Phrase 2 Paragraphe 2.	
+    \newline	
+    Phrase 3 Paragraphe 2.
 \end{document}
 \end{lstlisting}
 \end{exampleblock}
@@ -508,79 +518,247 @@ Pour définir une couleur d'arrière plan
 %
 %\end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Préparer un document: Paragraphes}
 \framesubtitle{Alignement}
 
+\begin{minipage}{0.49\textwidth}
+	Les environnements:
+	\begin{itemize}
+		\item \optword{flushleft} pour aligner à gauche
+		\item \optword{center} pour centrer
+		\item \optword{flushright} pour aligner à droite
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.50\textwidth}
+\begin{exampleblock}{exemple: alignement.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+
+\begin{document}
+    \begin{flushleft}
+        Aligner a gauche
+    \end{flushleft}
+
+    \begin{center}
+        Centrer
+    \end{center} 
+
+    \begin{flushright}
+        Aligner a droite
+    \end{flushright}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
 \end{frame}
 
-\begin{frame}
+
+\begin{frame}[fragile]
 \frametitle{Préparer un document: Paragraphes}
-\framesubtitle{Espacement vertical}
+\framesubtitle{Espacement vertical, interligne et retrait de 1ère ligne}
+
+\begin{minipage}{0.49\textwidth}
+	Les paramètres :
+	\begin{itemize}
+		\item \keyword{\textbackslash parskip} : espacement entre deux paragraphes
+		\item \keyword{\textbackslash parindent} : retrait de 1ère ligne
+		\item \keyword{\textbackslash baselineskip} : interligne
+	\end{itemize}
+
+	Avant un paragraphe :
+	\begin{itemize}
+		\item \keyword{\textbackslash indent} : forcer le retrait
+		\item \keyword{\textbackslash noindent} : ignorer le retrait
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.50\textwidth}
+\begin{exampleblock}{exemple: espacement.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+
+\setlength{\parskip}{1cm}
+\setlength{\baselineskip}{12pt}
+\setlength{\parindent}{2cm}
+
+\begin{document}
+
+    Phrase 1 Paragraphe 1. \newline
+    Phrase 2 Paragraphe 1. 
+
+    Phrase 1 Paragraphe 2. 
+    Phrase 2 Paragraphe 2.		
+
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Préparer un document: Paragraphes}
-\framesubtitle{Interligne}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Préparer un document: Paragraphes}
-\framesubtitle{Retrait}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Préparer un document: Paragraphes}
-\framesubtitle{Retrait de 1ère ligne}
-
-\end{frame}
-
-
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Préparer un document: Paragraphes}
 \framesubtitle{Listes}
 
+\begin{minipage}{0.49\textwidth}
+	Les environnements :
+	\begin{itemize}
+		\item \optword{itemize} : listes à puces
+		\item \optword{enumerate} : listes numérotées
+	\end{itemize}
+	
+	caractérisés par :
+	\begin{itemize}
+		\item un élément est défini par \keyword{\textbackslash item}
+		\item on peut créer des sous-listes
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.50\textwidth}
+\begin{exampleblock}{exemple: listes.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+
+\begin{document}
+    \begin{enumerate}
+        \item etape 1
+        \item etape 2:
+        \begin{itemize}
+            \item un element
+            \item un autre element
+        \end{itemize}
+    \end{enumerate}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
 \end{frame}
 
 
-\subsection{Mise en forme et styles}
+\subsection{Mise en forme}
 
-\begin{frame}
-\frametitle{Préparer un document}
-\framesubtitle{Mise en forme et styles}
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Mise en forme}
+\framesubtitle{Styles de la police}
+
+\begin{minipage}{0.49\textwidth}
+	Les commandes :
+	\begin{itemize}
+		\item \keyword{\textbackslash textbf} : gras
+		\item \keyword{\textbackslash textit} : italique
+		\item \keyword{\textbackslash underline} : souligné
+		\item \keyword{\textbackslash uppercase} : majuscule
+		\item \keyword{\textbackslash lowercase} : minuscule
+		\item \keyword{\textbackslash textrm} : famille roman 
+		\item \keyword{\textbackslash textsf} : famille sans serif
+		\item \keyword{\textbackslash texttt} : famille teletype
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.50\textwidth}
+\begin{exampleblock}{exemple: styles.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+		
+\begin{document}
+    \textbf{Texte En Gras}. 
+    \textit{Texte En Italique}. 
+    \underline{Texte Souligne}. 
+    \uppercase{Texte En Majuscule}. 
+    \lowercase{Texte En Minuscule}.
+    \textrm{texte en roman}. 
+    \textsf{texte en sans serif}. 
+    \texttt{texte en teletype}. 
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Préparer un document: Mise en forme et styles}
-\framesubtitle{Police}
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Mise en forme}
+\framesubtitle{Tailles de la police}
+
+\begin{minipage}{0.39\textwidth}
+	\begin{itemize}
+		\item \keyword{\textbackslash tiny}
+		\item \keyword{\textbackslash scriptsize}
+		\item \keyword{\textbackslash footnotesize}
+		\item \keyword{\textbackslash small}
+		\item \keyword{\textbackslash normalsize}
+		\item \keyword{\textbackslash large}
+		\item \keyword{\textbackslash Large}
+		\item \keyword{\textbackslash LARGE}
+		\item \keyword{\textbackslash huge}
+		\item \keyword{\textbackslash Huge}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.60\textwidth}
+\begin{exampleblock}{exemple: taillespolice.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass[12pt]{article}
+		
+\begin{document}
+    {\tiny texte en tiny.} 
+    {\scriptsize texte en scriptsize.} 
+    {\footnotesize texte en footnotesize.} 
+    {\small texte en small.} 
+    {\normalsize texte en normalsize.} 
+    {\large texte en large.} 
+    {\Large texte en Large.} 
+    {\LARGE texte en LARGE.} 
+    {\huge texte en huge.} 
+    {\Huge texte en Huge.} 
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Préparer un document: Mise en forme et styles}
-\framesubtitle{Couleur}
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Mise en forme}
+\framesubtitle{Couleur du texte}
 
-\end{frame}
+\begin{minipage}{0.39\textwidth}
+	\begin{itemize}
+		\item utiliser la commande \keyword{\textbackslash textcolor} de l'extension \optword{xcolor}
+		\item les couleurs prédéfinies sont: black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
+		\item pour définir d'autres couleurs, utiliser la commande \keyword{\textbackslash definecolor}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.60\textwidth}
+\begin{exampleblock}{exemple: taillespolice.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{xcolor}
+\definecolor{couleur1}{RGB}{180, 80, 255}
+\begin{document}
 
-\begin{frame}
-\frametitle{Préparer un document: Mise en forme et styles}
-\framesubtitle{Casse}
+    Un texte normal. 
 
-\end{frame}
+    \textcolor{red}{Un texte en rouge}
 
-\begin{frame}
-\frametitle{Préparer un document: Mise en forme et styles}
-\framesubtitle{Style des caractères}
+    \textcolor{couleur1}{Un texte en couleur1}
 
-\end{frame}
-
-\begin{frame}
-\frametitle{Préparer un document: Mise en forme et styles}
-\framesubtitle{Effets de texte}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
@@ -596,78 +774,209 @@ Pour définir une couleur d'arrière plan
 
 \subsection{Tableaux}
 
-\begin{frame}
-\frametitle{Enrichir un document}
-\framesubtitle{Tableaux}
+\begin{frame}[fragile]
+\frametitle{Enrichir un document : Tableaux}
+\framesubtitle{Insérer un tableau}
+
+\begin{minipage}{0.59\textwidth}
+	\begin{itemize}
+		\item utiliser l'environnement \optword{tabular}
+		\item l'argument définit le nombre des colonnes en utilisant les lettres: \optword{l} (aligner à gauche), \optword{c} (center) et \optword{r} (aligner à droite).
+		\item la barre (\optword{|}) trace un trait vertical  
+		\item \keyword{\textbackslash hline} trace un trait horizontal
+		\item les colonnes sont séparés par \optword{\&} et les lignes par \optword{\textbackslash \textbackslash}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.40\textwidth}
+\begin{exampleblock}{exemple: tableaux1.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+
+\begin{document}
+    \begin{tabular}{|l|c|r|}
+        \hline
+        l1c1 & l1c2 & l1c3 \\
+        \hline 
+        l2c1 & l2c2 & l2c3 \\
+        \hline
+    \end{tabular}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Enrichir un document: Tableaux}
-\framesubtitle{Formatage: Bordures}
+
+\begin{frame}[fragile]
+\frametitle{Enrichir un document : Tableaux}
+\framesubtitle{Positionner un tableau}
+
+\begin{minipage}{0.59\textwidth}
+	\begin{itemize}
+		\item utiliser l'environnement \optword{table}
+		\item l'argument définit le positionnement en utilisant les lettres:
+		\begin{itemize}
+			\item \optword{!} demande à \LaTeX\ de faire tout son possible pour respecter l'ordre indiqué
+			ensuite ;
+			\item \optword{h} (here) ici, si possible ;
+			\item \optword{t} (top) en haut d’une page (celle-ci ou la suivante) ;
+			\item \optword{b} (bottom) en bas d’une page (celle-ci ou la suivante) ;
+			\item \optword{p} (page of floats) sur une page spéciale ne contenant pas de texte mais
+			uniquement des tableaux et des figures.
+			
+		\end{itemize}
+		
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.40\textwidth}
+\begin{exampleblock}{exemple: tableaux2.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+		
+\begin{document}
+   \begin{table}[!htp]
+      \begin{tabular}{|l|c|r|}
+         \hline
+         l1c1 & l1c2 & l1c3 \\
+         \hline 
+         l2c1 & l2c2 & l2c3 \\
+         \hline
+      \end{tabular}
+   \end{table}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
+\subsection{Images}
 
-\subsection{Images et dessins}
-
-\begin{frame}
-\frametitle{Enrichir un document}
-\framesubtitle{Images}
-
-\end{frame}
-
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Enrichir un document: Images}
 \framesubtitle{Insérer une image}
 
+\begin{itemize}
+	\item utiliser la commande \keyword{\textbackslash includegraphics} de l'extension \optword{graphicx}
+	\item on peut fixer la largeur (\optword{width}) et la hauteur (\optword{height})
+	\item pour récupérer la largeur du texte, utiliser la commande \keyword{\textbackslash textwidth}
+	\item pour récupérer la hauteur du texte, utiliser la commande \keyword{\textbackslash textheight}
+\end{itemize}
+
+\begin{exampleblock}{exemple: image1.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+    \includegraphics[width=4cm, height=2cm]{banner.jpg}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+
 \end{frame}
 
-\begin{frame}
-\frametitle{Enrichir un document: Images et dessins}
-\framesubtitle{Modifier une image}
-
-\end{frame}
-
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Enrichir un document: Images}
-\framesubtitle{Habillage}
+\framesubtitle{Positionner une figure}
 
-\end{frame}
+\begin{minipage}{0.54\textwidth}
+	\begin{itemize}
+		\item utiliser l'environnement \optword{figure}
+		\item l'argument définit le positionnement en utilisant les lettres:
+		\begin{itemize}
+			\item \optword{!} demande à \LaTeX\ de faire tout son possible pour respecter l'ordre indiqué
+			ensuite ;
+			\item \optword{h} (here) ici, si possible ;
+			\item \optword{t} (top) en haut d’une page (celle-ci ou la suivante) ;
+			\item \optword{b} (bottom) en bas d’une page (celle-ci ou la suivante) ;
+			\item \optword{p} (page of floats) sur une page spéciale ne contenant pas de texte mais
+			uniquement des tableaux et des figures.
+			
+		\end{itemize}
+		
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.45\textwidth}
+\begin{exampleblock}{exemple: image2.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{graphicx}
 
-\begin{frame}
-\frametitle{Enrichir un document: Images}
-\framesubtitle{Positionnement}
+\begin{document}
+   \begin{figure}[!htp]
+      \includegraphics{banner.jpg}
+   \end{figure}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
 \subsection{Liens et renvoi}
 
-\begin{frame}
-\frametitle{Enrichir un document}
-\framesubtitle{Liens et renvoi}
-
-\end{frame}
-
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Enrichir un document: Liens et renvoi}
 \framesubtitle{Insérer un lien hypertexte}
 
+\begin{itemize}
+	\item importer l'extension \optword{hyperref}
+	\item utiliser la commande \keyword{\textbackslash url} pour afficher un URL
+	\item utiliser la commande \keyword{\textbackslash href} pour afficher une description avec un lien vers un URL
+\end{itemize}
+
+\begin{exampleblock}{exemple: liens.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{hyperref}
+		
+\begin{document}
+   Le site de l'ESI : \url{http://esi.dz/}
+   
+   \href{http://esi.dz/}{Cliquer ici pour ouvrir le site de l'ESI}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+
+
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Enrichir un document: Liens et renvoi}
 \framesubtitle{Renvoi vers un emplacement dans le document}
+
+\begin{itemize}
+	\item importer l'extension \optword{hyperref}
+	\item utiliser la commande \keyword{\textbackslash hypertarget} pour marquer la destination
+	\item utiliser la commande \keyword{\textbackslash hyperlink} pour ajouter un lien vers la destination
+\end{itemize}
+
+\begin{exampleblock}{exemple: liens.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{hyperref}
+
+\begin{document}
+    Aller vers \hyperlink{mapage2}{la page suivante}
+    \newpage
+    \hypertarget{mapage2}{Ici} c'est la destination
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
 
 \end{frame}
 
 \subsection{Formules et symboles}
-
-\begin{frame}
-\frametitle{Enrichir un document}
-\framesubtitle{Formules et symboles}
-
-\end{frame}
 
 \begin{frame}
 \frametitle{Enrichir un document: Formules et symboles}
@@ -789,20 +1098,15 @@ Pour définir une couleur d'arrière plan
 %
 %\end{frame}
 
-\nocite{*}
-%\subsection{Bibliography}
-%\frame[allowframebreaks]%
-%{\frametitle{Références}
-%\tiny
-%\bibliography{Bweb01}
-%\bibliographystyle{plain} 
-%}
+\begin{frame}
+\frametitle{Rédaction d'un document numérique: \LaTeX}
+\framesubtitle{Un peu d'humeur}
 
-\begin{multicols*}{2}[\usebeamertemplate*{frametitle}\frametitle{Références}]%
-	\tiny
-	\bibliography{Bweb03}
-	\bibliographystyle{acm}
-\end{multicols*}
+\vgraphpage{latex-humour.png}
+
+\end{frame}
+
+\insertbibliography{Bweb03}{*}
 
 
 \end{document}
