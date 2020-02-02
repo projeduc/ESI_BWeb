@@ -1,0 +1,56 @@
+\documentclass{book}
+\usepackage{graphicx}
+\begin{document}
+	\listoffigures
+	\listoftables
+	
+	\clearpage
+	
+	Dans Tableau~\ref{tab-comp}
+	\begin{table}[!ht]
+		\caption{Comparaison entre A et B}
+		\label{tab-comp}
+		\centering
+		\begin{tabular}{lll}
+			\hline \hline 
+			& A & B \\
+			\hline 
+			ASCII & 65 & 66 \\
+			\hline \hline 
+		\end{tabular}
+	\end{table}
+
+	\clearpage
+	
+	Dans Figure~\ref{fig-exemp}, un exemple de ...
+	\begin{figure}[!ht]
+		\caption{Un exemple d'image}
+		\label{fig-exemp}
+		\includegraphics{banner.jpg}
+	\end{figure}
+
+	\clearpage
+	
+	Dans Tableau~\ref{tab-comp2}
+	\begin{table}[!ht]
+		\caption{Comparaison entre C et D}
+		\label{tab-comp2}
+		\centering
+		\begin{tabular}{lll}
+			\hline \hline 
+			& A & B \\
+			\hline 
+			ASCII & 67 & 68 \\
+			\hline \hline 
+		\end{tabular}
+	\end{table}
+
+	Dans Figure~\ref{fig-exemp2}, un exemple de ...
+	\begin{figure}[!ht]
+		\caption{Un autre exemple d'image}
+		\label{fig-exemp2}
+		\includegraphics{banner.jpg}
+	\end{figure}
+
+	
+\end{document}

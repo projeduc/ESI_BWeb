@@ -3,9 +3,9 @@
 %\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
 \setbeamersize{text margin left=10pt,text margin right=10pt}
 \usepackage{amsmath,amssymb} 
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english,french]{babel}
+\usepackage[french]{babel}
 \usepackage{arabtex}
 \usepackage{txfonts}
 \usepackage[]{graphicx}
@@ -47,7 +47,7 @@
 \institute{ %
 École  nationale Supérieure d'Informatique (ESI, ex. INI), Algérie
 }
-\author[ \textbf{\footnotesize  \insertframenumber/\inserttotalframenumber} \hspace*{\fill} ESI (2019-2020)] %
+\author[ \textbf{\footnotesize\insertframenumber/\inserttotalframenumber} \hspace*{1.5cm} ESI - ARIES Abdelkrime (2019-2020)] %
 {ARIES Abdelkrime}
 %\titlegraphic{\includegraphics[height=1cm]{../img/esi-logo.png}%\hspace*{4.75cm}~
 
@@ -118,8 +118,9 @@
 }
 
 \newcommand{\insertlicence}{
-	\begin{frame}
+	\begin{frame}[plain]
 	\frametitle{Licence: CC-BY-NC 4.0}
+%	\framesubtitle{Licence: CC-BY-NC 4.0}
 	\begin{center}
 		\bfseries Attribution - Pas d’Utilisation Commerciale 4.0 International 
 		\url{https://creativecommons.org/licenses/by-nc/4.0/deed.fr}
@@ -143,3 +144,15 @@
 	\end{frame}
 }
 
+\settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmargini}{\labelsep}
+
+\AtBeginDocument{
+	\newcolumntype{L}[2]{>{\vbox to #2\bgroup\vfill\flushleft}p{#1}<{\egroup}} 
+	
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+
+	\insertlicence
+}

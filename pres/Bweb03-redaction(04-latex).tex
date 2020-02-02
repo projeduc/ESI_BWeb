@@ -13,27 +13,22 @@
 
 \changegraphpath{../img/Bweb03-redaction/latex/}
 
-%\lstset{
-%	basicstyle=\scriptsize\ttfamily,language=[LaTeX]Tex,breaklines=true,
-%	breakautoindent=true,breakindent=2ex,
-%}
 
 \begin{document}
-	
-	\newcolumntype{L}[2]{%
-		>{\vbox to #2\bgroup\vfill\flushleft}%
-		p{#1}%
-		<{\egroup}} 
-
-\begin{frame}[plain]
-	\maketitle
-\end{frame}
-
-\insertlicence
 
 \begin{frame}
 \frametitle{Rédaction d'un document numérique}
 \framesubtitle{\LaTeX}
+
+\begin{itemize}
+	\item un formateur de texte ; pas un logiciel de traitement de texte comme Word et Writer
+	\item très utilisé dans les articles de recherche (surtout ceux contenant beaucoup d'équations)
+	\item il sépare le contenu du format: on peut facilement appliquer des modèles sur un même document
+	\item un fichier \LaTeX\ est un fichier texte simple ayant l'extension \optword{.tex}
+	\item ce fichier contient des commandes et peut être lu par n'importe quel éditeur de texte
+	\item les compilateurs \LaTeX, comme \expword{pdflatex} ou \expword{xelatex}, génèrent des PDF
+	
+\end{itemize}
 
 \end{frame}
 
@@ -430,17 +425,58 @@ Pour définir une couleur d'arrière plan
 
 \begin{frame}
 \frametitle{Préparer un document: Pages}
-\framesubtitle{En-tête et pied de page}
+\framesubtitle{En-tête et pied de page: fancyhdr}
+
 
 \begin{itemize}
-	\item Pour définir l'entête et les pied d'une page comme vide, utiliser la commande \keyword{\textbackslash pagestyle\{empty\}}
-	\item Utiliser l'extension \optword{fancyhdr}
-	\item 
+	\item utiliser l'extension \optword{fancyhdr}
+	\item utiliser la commande \keyword{\textbackslash pagestyle}:
+	\begin{itemize}
+		\item \optword{empty} l'entête et le pied sont vides
+		\item \optword{fancy} entête et le pied de \optword{fancyhdr}
+	\end{itemize}
+	\item configurer l'entête par \keyword{\textbackslash fancyhead} et le pied par \keyword{\textbackslash fancyfoot}
+	\item la syntaxe est \expword{\textbackslash fancyhead[sélecteurs]\{le texte à écrire\}}
+	\item les sélecteurs sont
+	\begin{itemize}
+		\item \optword{E} page paire, \optword{O} page impaire 
+		\item \optword{L} gauche, \optword{C} centre, \optword{R} droit 
+	\end{itemize}
+	\item utiliser \expword{\textbackslash fancyhf\{\}} pour remettre à zéro
+	\item exemple \expword{\textbackslash fancyhead[LE]\{Intro à LaTeX\}}: écrire ce titre dans l'entête gauche des pages paires
 \end{itemize}
-
 
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Pages}
+\framesubtitle{En-tête et pied de page: exemple}
+
+\begin{exampleblock}{exemple: paragraphes.tex}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}
+\documentclass{book}
+\usepackage{fancyhdr}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{2pt}
+
+\fancyhf{}
+\fancyhead[R]{ARIES Abdelkrime}
+\fancyhead[LE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\fancyfoot[RO, LE]{\thepage}
+
+\begin{document}
+    ...
+    \pagestyle{fancy}
+    ...
+\end{document}
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+
+\end{frame}
 
 \subsection{Paragraphes}
 
@@ -478,45 +514,47 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 
-%\begin{frame}[fragile]
-%\frametitle{Préparer un document: Paragraphes}
-%\framesubtitle{Internationalisation}
-%
-%\begin{minipage}{0.49\textwidth}
-%	\begin{itemize}
-%		\item ...
-%		\item 
-%	\end{itemize}
-%\end{minipage}
-%%
-%\begin{minipage}{0.50\textwidth}
-%\begin{exampleblock}{exemple: i18n.tex}
-%\lstset{escapeinside=``}
-%\scriptsize\bfseries
-%\begin{lstlisting}
-%\documentclass{article}
-%\usepackage[utf8]{inputenc}
-%\usepackage[arabic,french]{babel}
-%
-%\begin{document}
-%Les caractères é, è, à, ô, etc. ne causeront aucun problème. 
-%
-%\selectlanguage{arabic}`\<
-%هذا نص بالعربية
-%>`\selectlanguage{french}`\<
-%
-%Un texte en français avec un autre en arabe 
-%
-%>`\begin{otherlanguage}{arabic}
-%هذا نص بالعربية
-%\end{otherlanguage}
-%
-%\end{document}
-%\end{lstlisting}
-%\end{exampleblock}
-%\end{minipage}
-%
-%\end{frame}
+\begin{frame}
+\frametitle{Préparer un document: Paragraphes}
+\framesubtitle{Internationalisation}
+
+\begin{itemize}
+	\item pour rédiger avec d'autres langues, on utilise l'extension \optword{babel} avec une liste des langues comme option
+	\item la dernière langue dans les options est celle activée au départ
+	\item pour utiliser l'encodage \keyword{UTF-8} comme méthode d'entrée, on utilise l'extension \optword{inputenc}
+	\item pour sélectionner une langue, on utilise la commande \keyword{\textbackslash selectlanguage}
+	\item pour écrire un texte avec une autre langue sans changer celle activée, on utilise l'environnement \optword{otherlanguage}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Préparer un document: Paragraphes}
+\framesubtitle{Internationalisation (exemple)}
+
+\begin{exampleblock}{exemple: i18n.tex}
+\lstset{escapeinside=**}\novocalize
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[arabic, french]{babel}
+
+\begin{document}
+    *Les caractères é, è, à, ô, etc. ne causeront aucun problème. *
+    \selectlanguage{arabic}
+    *\<h_dA n.s bAl`rbyT>*
+    \selectlanguage{french}
+    *Un texte en français avec un autre en arabe*
+
+    \begin{otherlanguage}{arabic}
+       *\<h_dA n.s bAl`rbyT>*
+    \end{otherlanguage}
+\end{document}
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Préparer un document: Paragraphes}
@@ -767,10 +805,10 @@ Pour définir une couleur d'arrière plan
 \section{Enrichir un document}
 %===================================================================================
 
-\begin{frame}
-\frametitle{Enrichir un document}
-
-\end{frame}
+%\begin{frame}
+%\frametitle{Enrichir un document}
+%
+%\end{frame}
 
 \subsection{Tableaux}
 
@@ -978,125 +1016,400 @@ Pour définir une couleur d'arrière plan
 
 \subsection{Formules et symboles}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Enrichir un document: Formules et symboles}
 \framesubtitle{Insérer une formule}
+
+\begin{minipage}{0.45\textwidth}
+	Trois types de formules: 
+	\begin{itemize}
+		\item avec le texte: \optword{\$<formule>\$}
+		\item nouvelle ligne sans numérotation: \optword{\textbackslash [<formule>\textbackslash ]}
+		\item environnements: le plus utilisé est \optword{equation}
+		\item pour capter le numéro d'une équation, on l'affecte une étiquette en utilisant la commande \keyword{\textbackslash label} 
+		\item pour faire référence à cette équation, on utilise la commande \keyword{\textbackslash ref} 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.54\textwidth}
+\begin{exampleblock}{exemple: equation1.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\begin{document}
+   La probabilite conditionnelle 
+   $ P(A/B) = \frac{P(A \cap B)}{P(B)} $
+   ce qui veut dire 
+   \[ P(A \cap B) = P(A/B) P(B) \]
+   Si A et B sont independants, 
+   cette probabilite se calcule 
+   par l'equation \ref{eq-indep}
+   \begin{equation}
+      \label{eq-indep}
+      P(A \cap B) = P(A) P(B)
+   \end{equation}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Enrichir un document: Formules et symboles}
-\framesubtitle{Insérer des symboles}
+\framesubtitle{Symboles mathématiques}
 
+symboles d'opérateurs
+
+\keyword{\textbackslash times} ($ \times $), 
+\keyword{\textbackslash div} ($ \div $), 
+\keyword{\textbackslash cup} ($ \cup $), 
+\keyword{\textbackslash cap} ($ \cap $), 
+\keyword{\textbackslash wedge} ($ \wedge $), 
+\keyword{\textbackslash vee} ($ \vee $ ),
+\keyword{\textbackslash prod} ($ \prod $),
+\keyword{\textbackslash sum} ($ \sum $),
+\keyword{\textbackslash int} ($ \int $)
+
+\vfill
+
+symboles de relation
+
+\keyword{\textbackslash propto} ($ \propto $), 
+\keyword{\textbackslash equiv} ($ \equiv $), 
+\keyword{\textbackslash neq} ($ \neq $), 
+\keyword{\textbackslash approx} ($ \approx $), 
+\keyword{\textbackslash sim} ($ \sim $), 
+\keyword{\textbackslash perp} ($ \perp $ ),
+\keyword{\textbackslash geq} ($ \geq $),
+\keyword{\textbackslash leq } ($ \leq  $),
+\keyword{\textbackslash subset } ($ \subset$),
+\keyword{\textbackslash subseteq } ($\subseteq$),
+\keyword{\textbackslash supset } ($ \supset$),
+\keyword{\textbackslash supseteq } ($ \supseteq$)
+
+\vfill
+
+symboles de flèches
+
+\keyword{\textbackslash rightarrow} ($ \rightarrow $), 
+\keyword{\textbackslash leftarrow} ($ \leftarrow $),
+\keyword{\textbackslash leftrightarrow} ($ \leftrightarrow $),
+\keyword{\textbackslash Longrightarrow} ($ \Longrightarrow $),
+\keyword{\textbackslash Longleftarrow} ($ \Longrightarrow $),
+\keyword{\textbackslash Longleftrightarrow} ($ \Longleftrightarrow $)
+
+\vfill
+
+Lettres grecques 
+
+\keyword{\textbackslash alpha} ($ \alpha $), 
+\keyword{\textbackslash beta} ($ \beta $),
+\keyword{\textbackslash gamma} ($ \gamma $),
+\keyword{\textbackslash delta} ($ \delta $),
+\keyword{\textbackslash epsilon} ($ \epsilon $),
+\keyword{\textbackslash varepsilon} ($ \varepsilon $),
+\keyword{\textbackslash theta} ($ \theta $),
+\keyword{\textbackslash kappa} ($ \kappa $),
+\keyword{\textbackslash pi} ($ \pi $),
+\keyword{\textbackslash sigma} ($ \sigma $)
+ 
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Enrichir un document: Formules et symboles}
+\framesubtitle{Quelques équations mathématiques}
+
+Pour avoir d'autres symboles et fonctions, importer les extensions \optword{amsmath} et \optword{amssymb}
+
+\vfill
+
+{\scriptsize \verb|\int_{0}^{\pi}\cos(mt)\cos(nt)\mathrm{d}t=0|} \hfill
+$ \int_{0}^{\pi}\cos(mt)\cos(nt)\mathrm{d}t=0 $
+
+{\scriptsize \verb|\lim_{z\to 0}\frac{\sin z}{z}=1|} \hfill
+$ \lim_{z\to 0}\frac{\sin z}{z}=1 $
+
+{\scriptsize \verb|\lim\limits_{z\to 0}\frac{\sin z}{z}=1|} \hfill
+$ \lim\limits_{z\to 0}\frac{\sin z}{z}=1 $
+
+{\scriptsize \verb|i = \sqrt{-1}|} \hfill
+$ i = \sqrt{-1} $
+
+{\scriptsize \verb|\log_aN = x \Leftrightarrow N = a^x|} \hfill
+$ \log_aN = x \Leftrightarrow N = a^x $
+	
 \end{frame}
 
 %===================================================================================
 \section{Références}
 %===================================================================================
 
-\begin{frame}
-\frametitle{Références}
-
-\end{frame}
+%\begin{frame}
+%\frametitle{Références}
+%
+%\end{frame}
 
 \subsection{Notes de bas de page}
 
-\begin{frame}
-\frametitle{Références}
-\framesubtitle{Notes de bas de page}
+\begin{frame}[fragile]
+\frametitle{Références : Notes de bas de page}
+\framesubtitle{Insérer une note de bas de page}
+
+\begin{itemize}
+	\item utiliser la commande \keyword{\textbackslash footnote}
+\end{itemize}
+
+\begin{exampleblock}{exemple: footnote.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\begin{document}
+	Un livre contien une page de garde
+	\footnote{page de garde: premiere page dans le livre}. 
+	Il peut contenir un index
+	\footnote{l'index contient les mots cles}. 
+	\newpage
+	Il peut contenir un index
+	\footnote{l'index contient les mots cles}. 
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
 
 \end{frame}
 
-\subsection{Table de matières}
+\subsection{Tables (de matières et des illustrations)}
 
-\begin{frame}
-\frametitle{Références}
+\begin{frame}[fragile]
+\frametitle{Références : Tables (de matières et des illustrations)}
 \framesubtitle{Table de matières}
 
+\begin{itemize}
+	\item utiliser la commande \keyword{\textbackslash tableofcontents}
+\end{itemize}
+
+\begin{exampleblock}{exemple: table-matiere.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{book}
+\begin{document}
+    \tableofcontents
+    
+    \chapter{Microsoft Word} 
+    \section*{Introduction} \section{Installer Word} 
+    \section{Utiliser Word} \section*{Conclusion}
+	
+    \chapter{LaTeX} 
+    \section*{Introduction} \section{Installer LaTeX} 
+    \section{Utiliser LaTeX} \section*{Conclusion}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+
 \end{frame}
 
-\subsection{Légendes}
+\begin{frame}[fragile]
+\frametitle{Références : Tables (de matières et des illustrations)}
+\framesubtitle{Table des illustrations}
 
-\begin{frame}
-\frametitle{Références}
-\framesubtitle{Légendes}
+\begin{itemize}
+	\item dans les environnements \optword{table} et \optword{figure}
+	\item ajouter la légende en utilisant la commande \keyword{\textbackslash caption}
+	\item marquer l'illustration par une étiquette en utilisant la commande  \keyword{\textbackslash label}
+	\item on peut référencer une étiquette en utilisant la commande  \keyword{\textbackslash ref}
+	\item pour ajouter la liste des tableaux, utiliser la commande \keyword{\textbackslash listoftables}
+	\item pour ajouter la liste des figures, utiliser la commande \keyword{\textbackslash listoffigures}
+\end{itemize}
 
 \end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Références : Tables (de matières et des illustrations)}
+\framesubtitle{Table des illustrations (exemple)}
+
+\vspace{-6pt}
+\begin{exampleblock}{exemple: illustrations.tex}
+\scriptsize\bfseries
+\begin{lstlisting}[multicols=2]
+\documentclass{book}
+\usepackage{graphicx}
+\begin{document}
+  \listoffigures
+  \listoftables
+  \clearpage
+  Dans Tableau~\ref{tab-comp}
+  \begin{table}[!ht]
+    \caption{Comparaison entre A et B}
+    \label{tab-comp}
+    \centering
+    \begin{tabular}{lll}
+    ...
+    \end{tabular}
+  \end{table}
+
+  \clearpage
+  Dans Figure~\ref{fig-exemp}, 
+  \begin{figure}[!ht]
+    \caption{Un exemple d'image}
+    \label{fig-exemp}
+    \includegraphics{banner.jpg}
+  \end{figure}
+
+  \clearpage
+  Dans Tableau~\ref{tab-comp2}
+  \begin{table}[!ht]
+    \caption{Comparaison2}
+    \label{tab-comp2}
+    ...
+  \end{table}
+
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+
+\end{frame}
+
 
 \subsection{Index}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Références}
-\framesubtitle{Index}
+\framesubtitle{Insérer un index}
+
+\begin{minipage}{0.45\textwidth}
+	\begin{itemize}
+		\item importer l'extension \optword{makeidx}
+		\item appeler la commande \keyword{\textbackslash makeindex} dans la préambule
+		\item marquer une entrée avec \keyword{\textbackslash index}
+		\item afficher l'index avec \keyword{\textbackslash printindex} 
+		\item si l'index n'apparait pas, essayer d'exécuter \expword{makeindex <nomfichier>} et compiler une deuxième fois
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.54\textwidth}
+\begin{exampleblock}{exemple: index.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\usepackage{makeidx}
+\makeindex
+\begin{document}
+
+  Instruction Writeln\index{writeln} 
+  est ... 
+  \newpage
+  Un programme commence par 
+  Program\index{program}
+  \clearpage
+
+  \printindex
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
 
 \end{frame}
 
-%%===================================================================================
-%\section{Révision et partage}
-%%===================================================================================
+
+\subsection{Bibliographie}
+
+\begin{frame}[fragile]
+\frametitle{Références}
+\framesubtitle{Bibliographie}
+
+Il existe deux façons pour introduire une bibliographie :
+\begin{itemize}
+	\item en utilisant l'environnement \optword{thebibliography}
+	\item en utilisant BibTeX
+\end{itemize}
+
+On s'intéresse au deuxième, puisque: 
+\begin{itemize}
+	\item on peut facilement insérer une nouvelle source 
+	\item les citations Bibtex peuvent être trouvées sur le web pour un article ou un livre donné
+	\item on peut générer d'autres styles de bibliographie
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Références: Bibliographie}
+\framesubtitle{Gestion des sources}
+
+\begin{minipage}{0.45\textwidth}
+	\begin{itemize}
+		\item les sources sont des fichiers textes ayants l'extension \optword{.bib}
+		\item quelques types de sources: \optword{book}, \optword{inproceedings}, \optword{article}, \optword{patent}
+		\item fournir une étiquette pour référencer la source 
+		\item fournir des informations comme le titre, l'année, les auteurs, le lien, etc.
+	\end{itemize}
+
+\end{minipage}
 %
-%\begin{frame}
-%\frametitle{Révision et partage}
+\begin{minipage}{0.54\textwidth}
+\begin{block}{format d'une source}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}
+@type{etiquette,
+  author = {Pren1 Nom1 and Pren2 Nom2},
+  title = {le titre de l'ouvrage},
+  year = {l'anne de publication},
+  ... d'autres informations
+}
+\end{lstlisting}\vspace{-6pt}
+\end{block}
+
+
+\begin{exampleblock}{exemple: citation.bib}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}
+@book{2012-boudoin,
+  author = {Marc Baudoin},
+  title = {Apprends LaTeX},
+  year = {2012}
+}
+...
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Références: Bibliographie}
+\framesubtitle{Citer des sources et insérer la bibliographie}
+
+\begin{minipage}{0.45\textwidth}
+	\begin{itemize}
+		\item choisir un style en utilisant \keyword{\textbackslash bibliographystyle}
+		\item quelques styles: \optword{plain}, \optword{unsrt}, \optword{alpha} et \optword{abbrv} 
+		\item pour citer une source, utiliser \keyword{\textbackslash cite} avec son étiquette
+		\item pour insérer la bibliographie, utiliser \keyword{\textbackslash bibliography}
+	\end{itemize}
+\end{minipage}
 %
-%\end{frame}
-%
-%\subsection{Vérification}
-%
-%\begin{frame}
-%\frametitle{Révision et partage}
-%\framesubtitle{Vérification}
-%
-%\end{frame}
-%
-%\subsection{Commentaires et suivi}
-%
-%\begin{frame}
-%\frametitle{Révision et partage}
-%\framesubtitle{Commentaires et suivi}
-%
-%\end{frame}
-%
-%\subsection{Comparaison}
-%
-%\begin{frame}
-%\frametitle{Révision et partage}
-%\framesubtitle{Comparaison}
-%
-%\end{frame}
-%
-%\subsection{Partage}
-%
-%\begin{frame}
-%\frametitle{Révision et partage}
-%\framesubtitle{Partage}
-%
-%
-%\end{frame}
-%
-%\begin{frame}
-%\frametitle{Révision et partage: Partage}
-%\framesubtitle{Protection}
-%
-%\end{frame}
-%
-%\begin{frame}
-%\frametitle{Révision et partage: Partage}
-%\framesubtitle{Impression}
-%
-%\end{frame}
-%
-%\begin{frame}
-%\frametitle{Révision et partage: Partage}
-%\framesubtitle{Sauvegarde}
-%
-%\end{frame}
-%
-%\begin{frame}
-%\frametitle{Révision et partage: Partage}
-%\framesubtitle{Sauvegarde sur cloud}
-%
-%
-%\end{frame}
+\begin{minipage}{0.54\textwidth}
+\begin{exampleblock}{exemple: biblio.tex}
+\scriptsize\bfseries
+\begin{lstlisting}
+\documentclass{article}
+\bibliographystyle{abbrv}
+\begin{document}
+
+  LaTeX est un formateur 
+  de texte \cite{2012-boudoin}.
+  Exemple d'un article 
+  de recherche en LaTeX : 
+  \cite{2015-aries-al}
+  
+  \bibliography{citation}
+\end{document}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
 
 \begin{frame}
 \frametitle{Rédaction d'un document numérique: \LaTeX}
