@@ -3,7 +3,7 @@
 %\usepackage[left=2.8cm,right=2.2cm,top=2 cm,bottom=2 cm]{geometry}
 \setbeamersize{text margin left=10pt,text margin right=10pt}
 \usepackage{amsmath,amssymb} 
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage{arabtex}
@@ -86,14 +86,11 @@
 
 \newcommand{\changegraphpath}[1]{\def\graphpath{#1}}
 
-\newcommand{\graphintable}[2]{%
-	\includegraphics[height=#1,valign=t]{\graphpath #2}%
-}
 
 \newcommand{\vgraphpage}[2][.84\textheight]{%
-	\begin{center}%
+%	\begin{center}%
 		\includegraphics[height=#1]{\graphpath #2}%
-	\end{center}%
+%	\end{center}%
 }
 
 \newcommand{\hgraphpage}[2][\textwidth]{%

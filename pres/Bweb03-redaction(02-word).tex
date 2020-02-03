@@ -11,21 +11,9 @@
 {Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique \\ \slshape\small  Microsoft Word}  
 
 \changegraphpath{..//img/Bweb03-redaction/word/}
-%\setlength{\leftmargini}{2pt}
-
-\settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
-\addtolength{\leftmargini}{\labelsep}
 
 \begin{document}
-	
-	\newcolumntype{L}[2]{%
-		>{\vbox to #2\bgroup\vfill\flushleft}%
-		p{#1}%
-		<{\egroup}} 
 
-\begin{frame}[plain]
-	\maketitle
-\end{frame}
 
 \begin{frame}
 \frametitle{Rédaction d'un document numérique}
@@ -36,7 +24,6 @@
 	\item fait parti de la suite bureautique: Microsoft office
 	\item c'est le programme de traitement de texte le plus populaire au monde
 	\item facile à configurer et à utiliser 
-	\item 
 	
 \end{itemize}
 
@@ -46,7 +33,9 @@
 \frametitle{Rédaction d'un document numérique}
 \framesubtitle{Microsoft Word}
 
-\vgraphpage{word.png}
+\begin{center}
+	\vgraphpage{word.png}
+\end{center}
 
 \end{frame}
 
@@ -74,7 +63,6 @@
 \begin{frame}[t]
 \frametitle{Préparer un document: Pages}
 \framesubtitle{Taille}
-
 
 \begin{minipage}{0.44\textwidth}
 	\begin{itemize}
@@ -105,6 +93,7 @@
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
 	\hgraphpage{orientation.png}
+	\vspace{1cm}%pour pousser l'image vers le haut du slide
 \end{minipage}
 
 \end{frame}
@@ -249,7 +238,7 @@
 \frametitle{Préparer un document: Pages}
 \framesubtitle{Arrière-plan}
 
-\begin{minipage}{0.44\textwidth}
+\begin{minipage}{0.49\textwidth}
 	\begin{itemize}
 		\item Onglet: \optword{Création}
 		\item Groupe: \optword{Arrière-plan de la page}
@@ -258,8 +247,9 @@
 		\item ou, ajouter un effet de remplissage
 	\end{itemize}
 \end{minipage}
-\begin{minipage}{0.55\textwidth}
+\begin{minipage}{0.50\textwidth}
 	\hgraphpage{couleur.png}
+	\vspace{1cm}
 \end{minipage}
 
 \end{frame}
@@ -268,7 +258,7 @@
 \frametitle{Préparer un document: Pages}
 \framesubtitle{Arrière-plan}
 
-\begin{minipage}{0.44\textwidth}
+\begin{minipage}{0.49\textwidth}
 	\begin{itemize}
 		\item Onglet: \optword{Création}
 		\item Groupe: \optword{Arrière-plan de la page}
@@ -281,7 +271,7 @@
 		\end{itemize}
 	\end{itemize}
 \end{minipage}
-\begin{minipage}{0.55\textwidth}
+\begin{minipage}{0.50\textwidth}
 	\hgraphpage{remplissage.png}
 \end{minipage}
 
@@ -670,8 +660,11 @@ Si on double-clique sur l'entête, un onglet va s'apparaitre
 \end{minipage}
 \begin{minipage}{0.6\textwidth}	
 	\begin{flushright}
-		\hgraphpage[.40\textwidth]{liens-signet.png}
-		\hgraphpage[1cm]{liens.png}
+		\begin{tabular}{@{}lll@{}}
+		\hgraphpage[.40\textwidth, valign=t]{liens-signet.png} & 
+		&
+		\hgraphpage[1cm, valign=t]{liens.png} \\
+	\end{tabular}
 	\end{flushright}
 	
 	\vspace{-12pt}
@@ -875,8 +868,10 @@ Si on double-clique sur l'entête, un onglet va s'apparaitre
 \end{itemize}
 \end{minipage}
 \begin{minipage}{0.30\textwidth}
-\hgraphpage[.7\textwidth]{index-barre.png}
-
+\begin{flushright}
+	\hgraphpage[.7\textwidth]{index-barre.png}
+\end{flushright}
+\vspace{-6pt}
 \hgraphpage{entree.png}
 
 \end{minipage}
@@ -898,8 +893,10 @@ Si on double-clique sur l'entête, un onglet va s'apparaitre
 \end{itemize}
 \end{minipage}
 \begin{minipage}{0.38\textwidth}
-\hgraphpage[.6\textwidth]{index-barre.png}
-
+\begin{flushright}
+	\hgraphpage[.6\textwidth]{index-barre.png}
+\end{flushright}
+\vspace{-6pt}
 \hgraphpage{index.png}
 
 \end{minipage}
@@ -972,7 +969,7 @@ Si on double-clique sur l'entête, un onglet va s'apparaitre
 \end{minipage}
 \begin{minipage}{0.25\textwidth}
 	\hgraphpage{biblio-style.png}
-	
+	\vspace{1cm}
 \end{minipage}
 
 \end{frame}
@@ -1192,16 +1189,6 @@ Si on double-clique sur l'entête, un onglet va s'apparaitre
 \end{frame}
 
 \insertbibliography{Bweb03}{*}
-
-%\appendix
-%\section*{Bibliographie}
-%\nocite{*}
-%
-%\begin{multicols*}{2}[\frametitle{\insertsection} \usebeamertemplate{frametitle}]%\usebeamertemplate*{frametitle}\frametitle{Références}
-%	\tiny
-%	\bibliography{Bweb03}
-%	\bibliographystyle{acm}
-%\end{multicols*}
 
 
 \end{document}
