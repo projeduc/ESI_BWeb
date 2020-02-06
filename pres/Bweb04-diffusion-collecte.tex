@@ -1,0 +1,548 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[xcolor=table]{beamer}
+
+\input{options}
+
+\title[BWEB: 03- Diffusion et collecte] %
+{Bureautique et Web \\Chapitre 04: Diffusion et collecte d'informations}  
+
+\changegraphpath{../img/Bweb04-diffusion-collecte/}
+
+\begin{document}
+
+%\begin{frame}
+%\frametitle{Diffusion et collecte d'informations}
+%\framesubtitle{Introduction: Motivation}
+%
+%
+%\end{frame}
+
+%===================================================================================
+\section{Publipostage}
+%===================================================================================
+
+\begin{frame}
+\frametitle{Publipostage}
+\framesubtitle{Motivation}
+
+\begin{itemize}
+	\item Imaginez que vous avez réalisé un projet et vous voulez envoyer des messages à des testeurs
+	\item Supposons qu'il y a trois types de testeurs, pour : interface, fonctionnement et sécurité 
+	\item Vous voulez envoyer un message personnalisé à chacun d'eux (Car, les messages personnalisés ont un taux de réponse plus élevé que les messages généralisés) 
+	\item La première réflexion est de rédiger un message par personne 
+	\item Le problème est que cette approche consome du temps; or les messages sont presque identiques
+	\item La solution est d'utiliser le publipostage
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage}
+\framesubtitle{Définition}
+
+\begin{definition}
+	Le publipostage est une technique de marketing direct qui consiste à envoyer, par voie postale ou électronique, des informations ou un prospectus publicitaire afin de promouvoir un produit, un service, une marque, etc.
+\end{definition}
+
+Pour appliquer le publipostage : 
+\begin{itemize}
+	\item une base de données contenant les informations des destinataires. Par exemple, \expword{nom}, \expword{prénom}, \expword{email}, etc.
+	\item un document type appelé "masque de publipostage". Il contient du texte et les champs de remplacements	
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage}
+\framesubtitle{Microsoft Word}
+ 
+\begin{itemize}
+	\item Onglet : \optword{Publipostage}
+	\item Pour activer cet onglet : 
+	\begin{enumerate}
+		\item aller vers l'onglet \optword{Fichier}
+		\item puis le menu \optword{Options}
+		\item choisir la rubrique \optword{Personnaliser le ruban}
+		\item dans la partie droite de la fenêtre ensuite, dans la colonne de droite qui affiche la liste des onglets du ruban, cocher la case devant Publipostage
+	\end{enumerate}
+\end{itemize}
+
+
+\hgraphpage{publi-barre.png}
+
+\end{frame}
+
+\subsection{Les données}
+
+\begin{frame}
+\frametitle{Publipostage : Les données}
+\framesubtitle{Création d'une source de données}
+
+\begin{minipage}{0.40\textwidth}
+	\begin{itemize}
+		\item utiliser Excel pour créer une table de contactes
+		\item nommer les colonnes dans la première ligne
+		\item ces noms serons utilisés comme champs de fusion
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.59\textwidth}
+	\hgraphpage{publi-source.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage : Les données}
+\framesubtitle{Importer la source de données}
+
+\begin{minipage}{0.40\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+		\item Groupe : \optword{Démarrer la fusion et le publipostage}
+		\item Option : \optword{Sélection de destinataires}
+		\item on peut créer une nouvelle liste
+		\item ou importer la liste Excel qu'on a créé
+		\item utiliser la première ligne pour les noms des champs
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.59\textwidth}
+	\hgraphpage[.5\textwidth]{publi-source-creation.png}
+	
+	\hgraphpage{publi-source-importer.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage : Les données}
+\framesubtitle{Opérations sur la source de données}
+
+\begin{minipage}{0.53\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+		\item Groupe : \optword{Démarrer la fusion et le publipostage}
+		\item Option : \optword{Modifier la liste de destinataires}
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+	\hgraphpage{publi-source-operation.png}
+\end{minipage}
+
+\hgraphpage[.49\textwidth]{publi-source-filtrer.png}
+\hgraphpage[.49\textwidth]{publi-source-trier.png}
+
+\end{frame}
+
+\subsection{Masque de publipostage}
+
+\begin{frame}
+\frametitle{Publipostage : Masque de publipostage}
+\framesubtitle{Création du masque}
+
+\begin{minipage}{0.53\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+		\item Groupe : \optword{Démarrer la fusion et le publipostage}
+		\item Option : \optword{Modifier la liste de destinataires}
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+	\hgraphpage{publi-masque-type.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage : Masque de publipostage}
+\framesubtitle{Enveloppes}
+
+\begin{minipage}{0.53\textwidth}
+%	\begin{itemize}
+%		\item Onglet : \optword{Publipostage}
+%		\item Groupe : \optword{Démarrer la fusion et le publipostage}
+%		\item Option : \optword{Modifier la liste de destinataires}
+%	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+%	\hgraphpage{publi-masque-type.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage : Masque de publipostage}
+\framesubtitle{Étiquettes}
+
+\begin{minipage}{0.63\textwidth}
+%	\begin{itemize}
+%		\item Onglet : \optword{Publipostage}
+%		\item Groupe : \optword{Démarrer la fusion et le publipostage}
+%		\item Option : \optword{Modifier la liste de destinataires}
+%	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.36\textwidth}
+	\hgraphpage{publi-masque-etiquette1.png}
+	
+	\hgraphpage{publi-masque-etiquette2.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage : Masque de publipostage}
+\framesubtitle{Champs de fusion}
+
+\begin{minipage}{0.63\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+		\item Groupe : \optword{Champs d'écriture et d'insertion}
+		\item Option : \optword{Insérer un champs de diffusion}
+		\item Les titres de la première ligne de Excel s'apparaitrons 
+		\item On peut appliquer des styles sur ces champs comme si du texte normal
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.36\textwidth}
+	\hgraphpage[.5\textwidth]{publi-masque-champs.png}
+	
+	\hgraphpage{publi-masque-champs2.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage : Masque de publipostage}
+\framesubtitle{Bloc d'adresse et formule d'appel}
+
+\begin{minipage}{0.63\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+%		\item Groupe : \optword{Champs d'écriture et d'insertion}
+%		\item Option : \optword{Insérer un champs de diffusion}
+%		\item Les titres de la première ligne de Excel s'apparaitrons 
+%		\item On peut appliquer des styles sur ces champs comme si du texte normal
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.36\textwidth}
+	\hgraphpage[.5\textwidth]{publi-masque-champs.png}
+	
+	\hgraphpage{publi-masque-champs2.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage : Masque de publipostage}
+\framesubtitle{Règles}
+
+\begin{minipage}{0.63\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+		%		\item Groupe : \optword{Champs d'écriture et d'insertion}
+		%		\item Option : \optword{Insérer un champs de diffusion}
+		%		\item Les titres de la première ligne de Excel s'apparaitrons 
+		%		\item On peut appliquer des styles sur ces champs comme si du texte normal
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.36\textwidth}
+	\hgraphpage[.5\textwidth]{publi-masque-champs.png}
+	
+	\hgraphpage{publi-masque-champs2.png}
+\end{minipage}
+
+\end{frame}
+
+\subsection{Aperçu et Fusion}
+
+\begin{frame}
+\frametitle{Publipostage: Aperçu et Fusion}
+\framesubtitle{Aperçu}
+
+\begin{minipage}{0.63\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+		\item Groupe : \optword{Aperçu des résultats}
+		%		\item Option : \optword{Insérer un champs de diffusion}
+		%		\item Les titres de la première ligne de Excel s'apparaitrons 
+		%		\item On peut appliquer des styles sur ces champs comme si du texte normal
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.36\textwidth}
+	\hgraphpage[.8\textwidth]{publi-apercu.png}
+	
+%	\hgraphpage{publi-apercu2.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage: Aperçu et Fusion}
+\framesubtitle{Fusion}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Publipostage}
+		\item Groupe : \optword{Terminer \& fusionner}
+		%		\item Option : \optword{Insérer un champs de diffusion}
+		%		\item Les titres de la première ligne de Excel s'apparaitrons 
+		%		\item On peut appliquer des styles sur ces champs comme si du texte normal
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.30\textwidth}
+	\hgraphpage{publi-fusion.png}
+	
+	%	\hgraphpage{publi-apercu2.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Publipostage}
+\framesubtitle{Un peu d'humeur}
+\begin{center}
+	\vgraphpage{mailing-humour.jpg}
+\end{center}
+\end{frame}
+
+
+%===================================================================================
+\section{Formulaires}
+%===================================================================================
+
+\begin{frame}
+\frametitle{Formulaires}
+
+\begin{minipage}{0.50\textwidth}
+	D'après Larousse, un formulaire est 
+	{
+	\setlength{\textwidth}{.9\textwidth}%
+	\begin{definition}
+		Imprimé sur lequel figure une série de questions administratives auxquelles l'intéressé doit répondre ; questionnaire.
+	\end{definition}
+    }
+
+	Un formulaire électronique contient:
+	\begin{itemize}
+		\item du texte explicatif et des étiquettes
+		\item des champs à saisir 
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+	\hgraphpage{forms.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Formulaires}
+
+\begin{itemize}
+	\item supprimer les informations non nécessaires. Par exemple, le champs \expword{age} si le champs \expword{date de naissance} existe
+	\item toujours utiliser des étiquettes pour indiquer le sens des champs
+	\item l'insertion des étiquettes au dessus des champs améliore la lisibilité
+	\item éviter l'insertion d'une question à coté de l'autre
+	\item regrouper les champs en sections 
+	\item les tailles des champs doivent refléter la taille de leurs contenus. Par exemple, le champs \expword{code postal} doit être moins long que le champs \expword{adresse}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Les champs}
+
+%\begin{frame}
+%\frametitle{Formulaires}
+%\framesubtitle{Les champs}
+%
+%\begin{itemize}
+%	\item champs de texte 
+%	\item zone de texte
+%	\item bouton radio
+%	\item case à couché 
+%	\item liste déroulante  
+%	\item sélecteur de date 
+%\end{itemize}
+%
+%\end{frame}
+
+\begin{frame}
+\frametitle{Formulaires: Les champs}
+\framesubtitle{champs texte}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item pour saisir du texte
+		\item sur une seule ligne 
+		\item exemple: \expword{nom}, \expword{prénom}, \expword{adresse}, etc.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\hgraphpage{input.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Formulaires: Les champs}
+\framesubtitle{zone de texte}
+
+\begin{minipage}{0.50\textwidth}
+	\begin{itemize}
+		\item pour saisir du texte
+		\item sur plusieurs lignes
+		\item exemple: \expword{message}, \expword{commentaire}, etc.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+	\hgraphpage{zonetexte.png}
+\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Formulaires: Les champs}
+\framesubtitle{Bouton radio}
+
+\begin{minipage}{0.59\textwidth}
+	\begin{itemize}
+		\item pour choisir une seule option parmi plusieurs
+%		\item sur plusieurs lignes
+%		\item exemple: \expword{message}, \expword{commentaire}, etc.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.40\textwidth}
+	\hgraphpage{radiobutton.png}
+\end{minipage}
+
+\begin{itemize}
+	\item les boutons qui ont le même sens doivent avoir le même nom ou le même groupe
+	\item de préférence, ils sont alignés verticalement 
+	\item on les utilise : 
+	\begin{itemize}
+		\item lorsqu'il y a moins de 5 options 
+		\item quand on veut comparer les options. Par exemple, \expword{la liste des prix}
+		\item quand la visibilité et la rapidité de réponse sont prioritaires
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Formulaires: Les champs}
+\framesubtitle{Case à couché}
+
+\begin{minipage}{0.59\textwidth}
+	\begin{itemize}
+		\item pour choisir plusieurs options
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.40\textwidth}
+	\hgraphpage{checkbox.png}
+\end{minipage}
+
+\begin{itemize}
+	\item de préférence, elles sont alignées verticalement 
+	\item on les utilise : 
+	\begin{itemize}
+		\item lorsqu'il y a moins de 5 options 
+		\item quand la visibilité et la rapidité de réponse sont prioritaires
+		\item lorsqu'on a une question avec réponse booléenne (oui/non)
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Formulaires: Les champs}
+\framesubtitle{Liste déroulante}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item pour choisir une seule option parmi plusieurs
+		\item on les utilise : 
+		\begin{itemize}
+			\item lorsqu'il y a plus de 5 options 
+			\item quand la première option est celle par défaut
+		\end{itemize}
+		\item des fois, la liste déroulante avec plusieurs options est trop gênante. C'est mieux d'utiliser un champs de texte avec la auto-complétion. Par exemple, \expword{choix du pays}.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.30\textwidth}
+	\hgraphpage{combobox.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Formulaires: Les champs}
+\framesubtitle{Sélecteur de date}
+
+\begin{minipage}{0.50\textwidth}
+	\begin{itemize}
+		\item pour choisir une date
+		\item exemples, \expword{date de naissance}, \expword{date de départ}, etc.
+		\item par défaut, la date est celle d'aujourd'hui (du système)
+		\item on peut fixer une date par défaut et des dates limites
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+	\hgraphpage{date.png}
+\end{minipage}
+
+
+\end{frame}
+
+\subsection{Formulaires Word}
+
+\begin{frame}
+\frametitle{Formulaires}
+\framesubtitle{Formulaires Word}
+
+%\hgraphpage{publi-barre.png}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Formulaires}
+\framesubtitle{Formulaires Word}
+
+\end{frame}
+
+\subsection{Formulaires Google}
+
+\begin{frame}
+\frametitle{Formulaires}
+\framesubtitle{Formulaires Google}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Formulaires}
+\framesubtitle{Formulaires Google}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Formulaires}
+\framesubtitle{Un peu d'humeur}
+\begin{center}
+	\vgraphpage{forms-humour.jpg}
+\end{center}
+\end{frame}
+
+
+\insertbibliography{Bweb04}{*}
+
+
+\end{document}
+
