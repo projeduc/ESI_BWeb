@@ -104,6 +104,8 @@
 	\includegraphics[#1]{\graphpath #2}%
 }
 
+\bibliographystyle{acm}
+
 \newcommand{\insertbibliography}[2]{
 	\appendix
 	\section*{Bibliographie}
@@ -115,7 +117,6 @@
 	\begin{multicols*}{2}[\frametitle{\insertsection} \usebeamertemplate*{frametitle}]%\usebeamertemplate*{frametitle}\frametitle{Références}
 		\tiny
 		\bibliography{#1}
-		\bibliographystyle{acm}
 	\end{multicols*}
 }
 
