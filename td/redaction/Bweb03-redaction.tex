@@ -1,0 +1,103 @@
+\documentclass[11pt, a4paper]{article}
+%\usepackage{fullpage}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage{txfonts} 
+\usepackage[]{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\usepackage{turnstile}%Induction symbole
+
+\renewcommand{\baselinestretch}{1}
+
+\setlength{\parindent}{0pt}
+
+
+\begin{document}
+
+\selectlanguage {french}
+%\pagestyle{empty} 
+
+\noindent\rule{\textwidth}{1pt}\\[0.25cm]
+%\noindent
+%\begin{tabular}{ll}
+%\multirow{2}{*}{\includegraphics[width=2cm]{img/esi-logo.png}} & \'Ecole national Supérieure d'Informatique\\
+%& 3ième année cycle commun\\
+%\end{tabular}\\[.25cm]
+\noindent
+\begin{center}
+{\LARGE \textbf{T.D. sur les grammaires}}\\
+\begin{flushright}
+	Abdelkrime Aries
+\end{flushright}
+\end{center}
+\noindent\rule{\textwidth}{1pt}
+
+\section*{Exercice 1 : Rédaction d'un rapport avec Word}
+
+\subsection*{Préparation du document}
+
+\begin{enumerate}
+	\item Créer un nouveau document avec les marges : 3cm gauche et 2cm pour le reste 
+	\item Mettre à jour le style "Normal" selon cette spécification : La police utilisée par défaut est "Times New Roman", 12pt.
+	\item Ajouter un saut de section de page. La 1ère page sera la page de garde.  
+	\begin{itemize}
+		\item Elle doit contenir l'entête de l'ESI (entete.png). 
+		\item Le mot "Rapport" en gras, 16pt, centré. 
+		\item Ajouter le titre "Introduction à la programmation" dans un cadre (tableau avec une cellule), le titre doit être en gras, 18pt, centré. 
+		\item Insérer un tableau avec deux cellules: la première contient l'expression "Encadré par :" en gras, retour à la ligne et le nom de votre enseignant du TD ; la deuxième contient l'expréssion "Réalisé par :" en gras, retour à la ligne et les noms des étudiants. Effacer les bordures.
+		\item En bas écrire "Année : " suivi de l'année, en gras, 14 pt.
+	\end{itemize}
+
+	\item Ajouter des sauts de pages pour créer :  
+	\begin{itemize}
+		\item une page pour le remerciement, 
+		\item une pour la dédicace, 
+		\item une pour le résumé, 
+		\item une pour la table de matière, 
+		\item une pour la liste des figures, 
+		\item une pour la liste des tableaux 
+		\item et une pour la liste des abbréviations.
+	\end{itemize}
+
+	\item Numéroter les pages en utilisant les nombres romans (I, II, etc.). La première page ne doit pas être numérotée (différente).
+	\item Sauter la section (page suivante) et copier-coller le contenu du rapport (rapport.txt)
+	\item Dans la page où il y a "Introduction [CHAPITRE]", modifier le numéro de page de cette section : 
+	\begin{itemize}
+		\item Découcher "Lier au précédent" 
+		\item Laisser "Première page différente" couchée (pour ne pas avoir une entête dans la page du chapitre) 
+		\item Format des numéros de page : numéros arabes (1, 2, etc.) et numérotation à partir de 1.
+		\item Ajouter un numéro de page à la première page du chapitre (s'il n'existe pas)
+	\end{itemize}
+	
+	\item Les chapitres sont marqués par [CHAPITRE]. Insérer un saut de section (page suivante) avant le deuxième chapitre après l'introduction. 
+	\begin{itemize}
+		\item Format des numéros de page : numérotation à la suite de la section précédente
+		\item Insérer des sauts de section (page suivante) avant le reste des chapitres. 
+	\end{itemize}
+
+	\item Choisir Le premier paragraphe et appliquer les mises en forme suivantes : 
+	\begin{itemize}
+		\item Texte justifié 
+		\item Options paragraphe : interligne 1.5, retrait de première ligne 1cm, espacement avant et après 6pt
+	\end{itemize}
+
+	\item Mettre à jour le style "Paragraphe" selon ces mises en forme
+	\item Sélectionner le texte copié et appliquer le style "Paragraphe"  
+	\item Créer un style pour les chapitres. Pour ce faire, suivre les étapes suivantes :  
+	\begin{itemize}
+		\item Chercher "Notions [CHAPITRE]" et cliquer sur la ligne où il se trouve cette expression 
+		\item Cliquer sur "liste à plusieurs niveaux" (Onglet : Acceuil, Groupe : Paragraphe)
+		\item Choisir "définir un nouveau format de numérotation 
+	\end{itemize}
+\end{enumerate}
+
+
+\end{document}

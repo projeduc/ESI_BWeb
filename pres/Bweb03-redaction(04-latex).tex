@@ -8,8 +8,8 @@
 \input{options}
 \usepackage{lstautogobble}
 
-\title[BWEB: 03- Rédaction (\LaTeX)] %
-{Bureautique et Web \\Chapitre 03: Rédaction d'un document numérique \\ \slshape\small Introduction au \LaTeX}  
+\title[BWEB : 03- Rédaction (\LaTeX)] %
+{Bureautique et Web \\Chapitre 03 : Rédaction d'un document numérique \\ \slshape\small Introduction au \LaTeX}  
 
 \changegraphpath{../img/Bweb03-redaction/latex/}
 
@@ -23,7 +23,7 @@
 \begin{itemize}
 	\item un formateur de texte ; pas un logiciel de traitement de texte comme Word et Writer
 	\item très utilisé dans les articles de recherche (surtout ceux contenant beaucoup d'équations)
-	\item il sépare le contenu du format: on peut facilement appliquer des modèles sur un même document
+	\item il sépare le contenu du format : on peut facilement appliquer des modèles sur un même document
 	\item un fichier \LaTeX\ est un fichier texte simple ayant l'extension \optword{.tex}
 	\item ce fichier contient des commandes et peut être lu par n'importe quel éditeur de texte
 	\item les compilateurs \LaTeX, comme \expword{pdflatex} ou \expword{xelatex}, génèrent des PDF
@@ -164,7 +164,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 %\end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Titre (Page de garde)}
 
 \begin{minipage}{0.59\textwidth} 
@@ -200,12 +200,12 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Taille et format}
 
 \begin{itemize}
 	\item Dans les options de la classe, on peut définir la taille de la page. 
-	Parmi les tailles, on peut citer: \optword{a4paper}, \optword{a5paper} et \optword{letterpaper}.
+	Parmi les tailles, on peut citer : \optword{a4paper}, \optword{a5paper} et \optword{letterpaper}.
 	\item On peut, aussi, définir la taille des caractères pour le texte normal. 
 	Dans les rapports de l'ESI, la taille utilisée est \optword{12pt}.
 	\item Si on veut que le document soit recto-verso, on utilise l'option \optword{twoside}
@@ -221,7 +221,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Orientation (tout le document)}
 
 \begin{itemize}
@@ -241,7 +241,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Orientation (une partie du document)}
 
 \begin{minipage}{0.30\textwidth} 
@@ -277,7 +277,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Marges}
 
 \begin{itemize}
@@ -298,7 +298,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Colonnes (tout le document)}
 
 \begin{itemize}
@@ -306,7 +306,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 	\item Utiliser l'option \optword{twocolumn} de la classe.
 \end{itemize}
 
-\begin{exampleblock}{exemple: les marges de la page}
+\begin{exampleblock}{exemple : les marges de la page}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass[a4paper, 12pt, twocolumn]{article}
@@ -316,7 +316,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Colonnes (une partie du document)}
 
 \begin{minipage}{0.30\textwidth} 
@@ -327,7 +327,7 @@ Par exemple, \expword{\textbackslash chapter*\{Introduction\}}
 \end{minipage}
 %
 \begin{minipage}{0.69\textwidth}
-\begin{exampleblock}{exemple: colonnes.tex}
+\begin{exampleblock}{exemple : colonnes.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -352,7 +352,7 @@ Un texte qui s'affiche sur une seule colonne.
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Saute de page}
 
 Pour insérer un saut de page
@@ -362,7 +362,7 @@ Pour insérer un saut de page
 	\item avant un chapitre dans un document recto-verso, on utilise la commande \keyword{\textbackslash cleardoublepage}
 \end{itemize}
 
-\begin{exampleblock}{exemple: nouvpage.tex}
+\begin{exampleblock}{exemple : nouvpage.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -389,7 +389,7 @@ Pour insérer un saut de page
 %\end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
+\frametitle{Préparer un document : Pages}
 \framesubtitle{Arrière-plan}
 
 \begin{minipage}{0.49\textwidth}
@@ -401,7 +401,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.50\textwidth}
-\begin{exampleblock}{exemple: pagecouleur.tex}
+\begin{exampleblock}{exemple : pagecouleur.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -424,13 +424,13 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}
-\frametitle{Préparer un document: Pages}
-\framesubtitle{En-tête et pied de page: fancyhdr}
+\frametitle{Préparer un document : Pages}
+\framesubtitle{En-tête et pied de page : fancyhdr}
 
 
 \begin{itemize}
 	\item utiliser l'extension \optword{fancyhdr}
-	\item utiliser la commande \keyword{\textbackslash pagestyle}:
+	\item utiliser la commande \keyword{\textbackslash pagestyle} :
 	\begin{itemize}
 		\item \optword{empty} l'entête et le pied sont vides
 		\item \optword{fancy} entête et le pied de \optword{fancyhdr}
@@ -443,16 +443,16 @@ Pour définir une couleur d'arrière plan
 		\item \optword{L} gauche, \optword{C} centre, \optword{R} droit 
 	\end{itemize}
 	\item utiliser \expword{\textbackslash fancyhf\{\}} pour remettre à zéro
-	\item exemple \expword{\textbackslash fancyhead[LE]\{Intro à LaTeX\}}: écrire ce titre dans l'entête gauche des pages paires
+	\item exemple \expword{\textbackslash fancyhead[LE]\{Intro à LaTeX\}} : écrire ce titre dans l'entête gauche des pages paires
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Pages}
-\framesubtitle{En-tête et pied de page: exemple}
+\frametitle{Préparer un document : Pages}
+\framesubtitle{En-tête et pied de page : exemple}
 
-\begin{exampleblock}{exemple: paragraphes.tex}
+\begin{exampleblock}{exemple : paragraphes.tex}
 \scriptsize\bfseries\vspace{-6pt}
 \begin{lstlisting}
 \documentclass{book}
@@ -493,7 +493,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.50\textwidth}
-\begin{exampleblock}{exemple: paragraphes.tex}
+\begin{exampleblock}{exemple : paragraphes.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -515,7 +515,7 @@ Pour définir une couleur d'arrière plan
 
 
 \begin{frame}
-\frametitle{Préparer un document: Paragraphes}
+\frametitle{Préparer un document : Paragraphes}
 \framesubtitle{Internationalisation}
 
 \begin{itemize}
@@ -529,7 +529,7 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Paragraphes}
+\frametitle{Préparer un document : Paragraphes}
 \framesubtitle{Internationalisation (exemple)}
 
 \begin{exampleblock}{exemple: i18n.tex}
@@ -557,7 +557,7 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Paragraphes}
+\frametitle{Préparer un document : Paragraphes}
 \framesubtitle{Alignement}
 
 \begin{minipage}{0.49\textwidth}
@@ -570,7 +570,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.50\textwidth}
-\begin{exampleblock}{exemple: alignement.tex}
+\begin{exampleblock}{exemple : alignement.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -596,7 +596,7 @@ Pour définir une couleur d'arrière plan
 
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Paragraphes}
+\frametitle{Préparer un document : Paragraphes}
 \framesubtitle{Espacement vertical, interligne et retrait de 1ère ligne}
 
 \begin{minipage}{0.49\textwidth}
@@ -615,7 +615,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.50\textwidth}
-\begin{exampleblock}{exemple: espacement.tex}
+\begin{exampleblock}{exemple : espacement.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -640,7 +640,7 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Paragraphes}
+\frametitle{Préparer un document : Paragraphes}
 \framesubtitle{Listes}
 
 \begin{minipage}{0.49\textwidth}
@@ -658,7 +658,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.50\textwidth}
-\begin{exampleblock}{exemple: listes.tex}
+\begin{exampleblock}{exemple : listes.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -683,7 +683,7 @@ Pour définir une couleur d'arrière plan
 \subsection{Mise en forme}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Mise en forme}
+\frametitle{Préparer un document : Mise en forme}
 \framesubtitle{Styles de la police}
 
 \begin{minipage}{0.49\textwidth}
@@ -701,7 +701,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.50\textwidth}
-\begin{exampleblock}{exemple: styles.tex}
+\begin{exampleblock}{exemple : styles.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -724,7 +724,7 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Mise en forme}
+\frametitle{Préparer un document : Mise en forme}
 \framesubtitle{Tailles de la police}
 
 \begin{minipage}{0.39\textwidth}
@@ -743,7 +743,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.60\textwidth}
-\begin{exampleblock}{exemple: taillespolice.tex}
+\begin{exampleblock}{exemple : taillespolice.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass[12pt]{article}
@@ -767,19 +767,19 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Préparer un document: Mise en forme}
+\frametitle{Préparer un document : Mise en forme}
 \framesubtitle{Couleur du texte}
 
 \begin{minipage}{0.39\textwidth}
 	\begin{itemize}
 		\item utiliser la commande \keyword{\textbackslash textcolor} de l'extension \optword{xcolor}
-		\item les couleurs prédéfinies sont: black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
+		\item les couleurs prédéfinies sont : black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
 		\item pour définir d'autres couleurs, utiliser la commande \keyword{\textbackslash definecolor}
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.60\textwidth}
-\begin{exampleblock}{exemple: taillespolice.tex}
+\begin{exampleblock}{exemple : taillespolice.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -819,7 +819,7 @@ Pour définir une couleur d'arrière plan
 \begin{minipage}{0.59\textwidth}
 	\begin{itemize}
 		\item utiliser l'environnement \optword{tabular}
-		\item l'argument définit le nombre des colonnes en utilisant les lettres: \optword{l} (aligner à gauche), \optword{c} (center) et \optword{r} (aligner à droite).
+		\item l'argument définit le nombre des colonnes en utilisant les lettres : \optword{l} (aligner à gauche), \optword{c} (center) et \optword{r} (aligner à droite).
 		\item la barre (\optword{|}) trace un trait vertical  
 		\item \keyword{\textbackslash hline} trace un trait horizontal
 		\item les colonnes sont séparés par \optword{\&} et les lignes par \optword{\textbackslash \textbackslash}
@@ -827,7 +827,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.40\textwidth}
-\begin{exampleblock}{exemple: tableaux1.tex}
+\begin{exampleblock}{exemple : tableaux1.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -855,7 +855,7 @@ Pour définir une couleur d'arrière plan
 \begin{minipage}{0.59\textwidth}
 	\begin{itemize}
 		\item utiliser l'environnement \optword{table}
-		\item l'argument définit le positionnement en utilisant les lettres:
+		\item l'argument définit le positionnement en utilisant les lettres :
 		\begin{itemize}
 			\item \optword{!} demande à \LaTeX\ de faire tout son possible pour respecter l'ordre indiqué
 			ensuite ;
@@ -871,7 +871,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.40\textwidth}
-\begin{exampleblock}{exemple: tableaux2.tex}
+\begin{exampleblock}{exemple : tableaux2.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -896,7 +896,7 @@ Pour définir une couleur d'arrière plan
 \subsection{Images}
 
 \begin{frame}[fragile]
-\frametitle{Enrichir un document: Images}
+\frametitle{Enrichir un document : Images}
 \framesubtitle{Insérer une image}
 
 \begin{itemize}
@@ -906,7 +906,7 @@ Pour définir une couleur d'arrière plan
 	\item pour récupérer la hauteur du texte, utiliser la commande \keyword{\textbackslash textheight}
 \end{itemize}
 
-\begin{exampleblock}{exemple: image1.tex}
+\begin{exampleblock}{exemple : image1.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -920,7 +920,7 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Enrichir un document: Images}
+\frametitle{Enrichir un document : Images}
 \framesubtitle{Positionner une figure}
 
 \begin{minipage}{0.54\textwidth}
@@ -942,7 +942,7 @@ Pour définir une couleur d'arrière plan
 \end{minipage}
 %
 \begin{minipage}{0.45\textwidth}
-\begin{exampleblock}{exemple: image2.tex}
+\begin{exampleblock}{exemple : image2.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -962,7 +962,7 @@ Pour définir une couleur d'arrière plan
 \subsection{Liens et renvoi}
 
 \begin{frame}[fragile]
-\frametitle{Enrichir un document: Liens et renvoi}
+\frametitle{Enrichir un document : Liens et renvoi}
 \framesubtitle{Insérer un lien hypertexte}
 
 \begin{itemize}
@@ -971,7 +971,7 @@ Pour définir une couleur d'arrière plan
 	\item utiliser la commande \keyword{\textbackslash href} pour afficher une description avec un lien vers un URL
 \end{itemize}
 
-\begin{exampleblock}{exemple: liens.tex}
+\begin{exampleblock}{exemple : liens.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -989,7 +989,7 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Enrichir un document: Liens et renvoi}
+\frametitle{Enrichir un document : Liens et renvoi}
 \framesubtitle{Renvoi vers un emplacement dans le document}
 
 \begin{itemize}
@@ -998,7 +998,7 @@ Pour définir une couleur d'arrière plan
 	\item utiliser la commande \keyword{\textbackslash hyperlink} pour ajouter un lien vers la destination
 \end{itemize}
 
-\begin{exampleblock}{exemple: liens.tex}
+\begin{exampleblock}{exemple : liens.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -1017,22 +1017,22 @@ Pour définir une couleur d'arrière plan
 \subsection{Formules et symboles}
 
 \begin{frame}[fragile]
-\frametitle{Enrichir un document: Formules et symboles}
+\frametitle{Enrichir un document : Formules et symboles}
 \framesubtitle{Insérer une formule}
 
 \begin{minipage}{0.45\textwidth}
-	Trois types de formules: 
+	Trois types de formules : 
 	\begin{itemize}
-		\item avec le texte: \optword{\$<formule>\$}
+		\item avec le texte : \optword{\$<formule>\$}
 		\item nouvelle ligne sans numérotation: \optword{\textbackslash [<formule>\textbackslash ]}
-		\item environnements: le plus utilisé est \optword{equation}
+		\item environnements : le plus utilisé est \optword{equation}
 		\item pour capter le numéro d'une équation, on l'affecte une étiquette en utilisant la commande \keyword{\textbackslash label} 
 		\item pour faire référence à cette équation, on utilise la commande \keyword{\textbackslash ref} 
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.54\textwidth}
-\begin{exampleblock}{exemple: equation1.tex}
+\begin{exampleblock}{exemple : equation1.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -1056,7 +1056,7 @@ Pour définir une couleur d'arrière plan
 \end{frame}
 
 \begin{frame}
-\frametitle{Enrichir un document: Formules et symboles}
+\frametitle{Enrichir un document : Formules et symboles}
 \framesubtitle{Symboles mathématiques}
 
 symboles d'opérateurs
@@ -1118,7 +1118,7 @@ Lettres grecques
 
 
 \begin{frame}[fragile]
-\frametitle{Enrichir un document: Formules et symboles}
+\frametitle{Enrichir un document : Formules et symboles}
 \framesubtitle{Quelques équations mathématiques}
 
 Pour avoir d'autres symboles et fonctions, importer les extensions \optword{amsmath} et \optword{amssymb}
@@ -1161,7 +1161,7 @@ $ \log_aN = x \Leftrightarrow N = a^x $
 	\item utiliser la commande \keyword{\textbackslash footnote}
 \end{itemize}
 
-\begin{exampleblock}{exemple: footnote.tex}
+\begin{exampleblock}{exemple : footnote.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -1189,7 +1189,7 @@ $ \log_aN = x \Leftrightarrow N = a^x $
 	\item utiliser la commande \keyword{\textbackslash tableofcontents}
 \end{itemize}
 
-\begin{exampleblock}{exemple: table-matiere.tex}
+\begin{exampleblock}{exemple : table-matiere.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{book}
@@ -1229,7 +1229,7 @@ $ \log_aN = x \Leftrightarrow N = a^x $
 \framesubtitle{Table des illustrations (exemple)}
 
 \vspace{-6pt}
-\begin{exampleblock}{exemple: illustrations.tex}
+\begin{exampleblock}{exemple : illustrations.tex}
 \scriptsize\bfseries
 \begin{lstlisting}[multicols=2]
 \documentclass{book}
@@ -1288,7 +1288,7 @@ $ \log_aN = x \Leftrightarrow N = a^x $
 \end{minipage}
 %
 \begin{minipage}{0.54\textwidth}
-\begin{exampleblock}{exemple: index.tex}
+\begin{exampleblock}{exemple : index.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -1324,7 +1324,7 @@ Il existe deux façons pour introduire une bibliographie :
 	\item en utilisant BibTeX
 \end{itemize}
 
-On s'intéresse au deuxième, puisque: 
+On s'intéresse au deuxième, puisque : 
 \begin{itemize}
 	\item on peut facilement insérer une nouvelle source 
 	\item les citations Bibtex peuvent être trouvées sur le web pour un article ou un livre donné
@@ -1334,7 +1334,7 @@ On s'intéresse au deuxième, puisque:
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Références: Bibliographie}
+\frametitle{Références : Bibliographie}
 \framesubtitle{Gestion des sources}
 
 \begin{minipage}{0.45\textwidth}
@@ -1361,7 +1361,7 @@ On s'intéresse au deuxième, puisque:
 \end{block}
 
 
-\begin{exampleblock}{exemple: citation.bib}
+\begin{exampleblock}{exemple : citation.bib}
 \scriptsize\bfseries\vspace{-6pt}
 \begin{lstlisting}
 @book{2012-boudoin,
@@ -1377,20 +1377,20 @@ On s'intéresse au deuxième, puisque:
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Références: Bibliographie}
+\frametitle{Références : Bibliographie}
 \framesubtitle{Citer des sources et insérer la bibliographie}
 
 \begin{minipage}{0.45\textwidth}
 	\begin{itemize}
 		\item choisir un style en utilisant \keyword{\textbackslash bibliographystyle}
-		\item quelques styles: \optword{plain}, \optword{unsrt}, \optword{alpha} et \optword{abbrv} 
+		\item quelques styles : \optword{plain}, \optword{unsrt}, \optword{alpha} et \optword{abbrv} 
 		\item pour citer une source, utiliser \keyword{\textbackslash cite} avec son étiquette
 		\item pour insérer la bibliographie, utiliser \keyword{\textbackslash bibliography}
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.54\textwidth}
-\begin{exampleblock}{exemple: biblio.tex}
+\begin{exampleblock}{exemple : biblio.tex}
 \scriptsize\bfseries
 \begin{lstlisting}
 \documentclass{article}
@@ -1412,8 +1412,8 @@ On s'intéresse au deuxième, puisque:
 \end{frame}
 
 \begin{frame}
-\frametitle{Rédaction d'un document numérique: \LaTeX}
-\framesubtitle{Un peu d'humeur}
+\frametitle{Rédaction d'un document numérique : \LaTeX}
+\framesubtitle{Un peu d'humour}
 
 \begin{center}
 	\vgraphpage{latex-humour.png}
