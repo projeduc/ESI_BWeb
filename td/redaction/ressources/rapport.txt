@@ -1,77 +1,44 @@
-
-Introduction 
-
-Contexte 
-
+Introduction [CHAPITRE*]
+Contexte [TITRE1*]
 En 1946, lorsque fut créé le premier calculateur électronique, l'ENIAC, on ne pouvait guère parler d'ordinateur : la logique du système était directement câblée dans les composants, et la machine n'était donc pas programmable.
-
 Il fallut attendre 1948 et le Mark I pour voir apparaître le premier ordinateur au sens où l'entendait Von Neumann : un calculateur doté d'une logique programmable, ce qui veut dire une machine capable d'exécuter différents programmes sans intervention sur le matériel. Ce n'est toutefois qu'en 1971 que l'invention du processeur permettra la programmation d'applications complexes.
-
-Les principes logiques et mathématiques nécessaires à la programmation étaient déjà établis depuis longtemps : le binaire fut inventé par les Chinois il y a plusieurs millénaires, et fut introduit en Europe en 1697 par Leibniz, le principe du calcul par itération successive fut inventé par Ada Lovelace en 1843 (elle avait déjà eu l'idée d'une machine capable de calculer en 1840) et l'algèbre binaire fut inventée par Boole en 1854.
-
-Problématique 
-
-Objectifs 
-
-Plan 
-
-
-
+Les principes logiques et mathématiques nécessaires à la programmation étaient déjà établis depuis longtemps : le binaire fut inventé par les Chinois il y a plusieurs millénaires, et fut introduit en Europe en 1697 par Leibniz, le principe du calcul par itération successive fut inventé par Ada Lovelace [NOTEBP][Ada Lovelace, de son nom complet Augusta Ada King, comtesse de Lovelace, née Ada Byron le 10 décembre 1815 à Londres et morte le 27 novembre 1852 à Marylebone dans la même ville, est une pionnière de la science informatique.] en 1843 (elle avait déjà eu l'idée d'une machine capable de calculer en 1840) et l'algèbre binaire fut inventée par Boole en 1854.
+Problématique [TITRE1*]
+Plusieurs personnes veulent apprendre à programmer. Mais, ils ne sachent pas comment commencer. En plus, il faut apprendre quelques notions avant d'apprendre un langage de programmation spécifique.
+Objectifs [TITRE1*]
+Dans ce rapport notre objectif est d'introduire la programmation aux débutants. 
+Plan [TITRE1*]
+Dans le chapitre 1, on présentra des notions nécessaires pour comprendre la programmation tel que le bit. Quelques représentations des nombres et du texte seront entamées. En plus, les technologies de langages et d'exécusion seront présentées. 
+Le chapitre 2 est réservé pour les concepts de base de la programmaion. Les commentaires, les variables et les instructions sont parmi les concepts présentés dans ce chapitre.
 
 Notions [CHAPITRE]
-
 Introduction [TITRE1]
-
 Un programme à son niveau le plus fondamental est une suite de 0 et de 1, que le système interprète grâce au processeur qui effectue les opérations correspondantes : lecture et écriture de données (mémoire, fichier, ...), calculs, transfert de données, ...
-
 Mais entre les composants électroniques au cœur du système et le mode de pensée du cerveau humain, il y a une succession de couches développées tout au long de l'histoire informatique destinées à traduire dans sa globalité nos pensées (abstraites) en instructions (concrètes) au sein de ce système de manière fiable et intuitive.
-
-Dans ce chapitre, quelques notions de base auront 
-
+Dans ce chapitre, quelques notions de base seront présentées avant d'introduire les concepts de la programmation.
 Le bit [TITRE1]
-
 Le terme bit est la contraction du terme anglais binary digit (nombre binaire). En électronique numérique les signaux et les composants ne peuvent généralement se stabiliser que sur 2 états, habituellement 0 et 5 volts, auxquels on attribue arbitrairement la valeur 0 pour l'un et 1 pour l'autre. Ainsi, les composants informatiques rassemblent des millions de transistors qui ne peuvent fonctionner que selon une logique à deux états. Pour simplifier si on applique une tension de valeur binaire 1 à un transistor, celui-ci laisse passer le courant, si on lui applique une tension correspondant à la valeur binaire 0, il bloquera le courant. Le rôle des transistors est, rappelons-le, de contrôler le courant afin de l'utiliser précisément là où on en a besoin. Le courant lui même, s'il véhicule une information est bi-stable (stable sur deux états).
-
 De même pour la représentation et stockage de données, toute image, toute information doit d'abord être convertie en une succession de 0 et de 1 pour que l'information puisse circuler dans les systèmes électroniques d'abord, puis stockée ou rendue.
-
 Notion de "mot binaire" [TITRE2] 
-
 Un mot binaire est un ensemble de bits qui sera interprété par le microprocesseur ou stocké dans une mémoire. Ces mots sont quantifiés par le nombre de bits que peut contenir un mot binaire. Par exemple 10110101 est un mot de 8 bits. Par définition un mot binaire de 8 bits est appelé octet. Cette façon d'assembler ces bits rend plus rapide le traitement et la circulation des données dans un calculateur. Chaque organe du calculateur est relié par un bus de données où circulent ces mots binaires de façon parallèle.
-
 Notion de poids [TITRE2]
-
 En base 10 (décimal) le nombre 2453 est composé de différents chiffres ayant des valeurs différentes. Le 3 représente les unités, le 5 les dizaines, le 4 les centaines et le 2 les milliers. On peut dire que le 2 sur ce nombre en base 10 a plus de valeur (poids) que le 3.
-
 En binaire c'est pareil : dans 100101010, le 1 est appelé MSB pour Most Signifiant Bit qui est le bit représentant le poids le plus fort du mot. Ainsi le 0 est appelé LSB pour Least Signifiant Bit le bit à la valeur la plus faible.
-
 Représentation des nombres [TITRE1] 
-
 Historiquement on a utilisé les ordinateurs pour manipuler des nombres décimaux, autrement dit pour faire des calculs. Le bit étant lui même un nombre, la conversion entre un nombre décimal (en base 10) en un nombre binaire (en base 2) peut se faire avec des procédures relativement simples.
-
 La notion de base arithmétique [TITRE2] 
-
-Dans un système numérique « basé », chaque chiffre d'un nombre est multiplié par la valeur de sa base, valeur qui elle-même est mise à une puissance correspondant à sa position dans le nombre par rapport au séparateur « décimal ». Ainsi le nombre 765 en base 10 veut dire [EQ:equation1].
-
+Dans un système numérique « basé », chaque chiffre d'un nombre est multiplié par la valeur de sa base, valeur qui elle-même est mise à une puissance correspondant à sa position dans le nombre par rapport au séparateur « décimal ». Ainsi le nombre 765 en base 10 veut dire [EQ1].
 Le binaire [TITRE2] 
-
-La base utiisée est 2 et les nombres sont représentés par des 0 et des 1. Ainsi le nombre 1011111101 en base 2 veut dire [EQ:equation2]. Pour transformer un nombre de la base 10 vers la base 2, on applique des divisions successives par 2 en retenant la présence d'une partie fractionnée.
-
-
+La base utiisée est 2 et les nombres sont représentés par des 0 et des 1. Ainsi le nombre 11101 en base 2 veut dire [EQ2]. Pour transformer un nombre de la base 10 vers la base 2, on applique des divisions successives par 2 en retenant la présence d'une partie fractionnée.
 Représentation du texte [TITRE1] 
-
 L'esprit humain retient mieux des bouts de textes que des suites de chiffres, si bien que même dans les endroits les plus arides de l'informatique on en a tendance à en mettre partout : dans les codes source des programmes pour les rendre plus lisibles, dans les bulles d'aide, les interfaces... L'ordinateur est également utilisé pour contenir des documents écrits, qu'on a rédigé au moyen d'un clavier ou numérisé avec un scanner et un logiciel ocr. Une fois numérisée il devient possible de modifier le texte, de l'imprimer, de le dupliquer à l'infini...
-
 ASCII [TITRE2] 
-
 Pour restituer un texte, la quasi-totalité des système informatiques utilisent le standard ASCII, ou un dérivé de celui-ci. Constitué en 1963 puis complété en 1967 il permet de coder sur 7 bits l'alphabet latin sans les diacritiques, en majuscules et en minuscules, les 10 chiffres du système décimal, des caractères de ponctuation, des symboles mathématiques et financiers ($%&), et des codes de contrôle destinées à superviser la communication.
-
 L'Unicode [TITRE2] 
-
 L'Unicode définit actuellement plus de 120 000 caractères en utilisant jusqu'à 31 bits pour chacun.
+L'UTF-8 (Unicode Transformation Format - 8 bits) permet d'encoder les caractères par groupe de 8 bits (un octet). Le nombre de bits employé pour chaque caractère est fonction de son numéro. Il existe 6 plages, la première occupant 1 octet, la dernière en utilisant 6. La première plage se reconnaît à ce que le premier bit de l'octet est positionné à 0, les 7 bits suivants respectent la norme ASCII. Un caractère Unicode de cette plage est donc de la forme 0xxxxxxx et se trouve entièrement compatible avec un système ASCII. Les plages suivantes se reconnaissant à ce que le bit de poids fort de chaque octet est positionné à 1, les bits de poids fort du premier octet permettent de connaître la plage (110xxxxx pour la plage à deux octets, 1110xxxx pour celle à 3, 11110xxx pour 4, 111110xx pour 5 et 1111110x pour 6), et les deux bits de poids fort des octets suivant sont systématiquement positionnés à 10 afin d'indiquer leur appartenance à une suite d'octets Unicode. Un caractère de la deuxième plage est donc de la forme suivante : 110xxxxx 10xxxxxx ; et propose donc 11 bits utiles, ce qui permet 2^{11}=2048 caractères différents. Les plages Unicode sont représentées en [REF].
 
-L'UTF-8 (Unicode Transformation Format - 8 bits) permet d'encoder les caractères par groupe de 8 bits (un octet). Le nombre de bits employé pour chaque caractère est fonction de son numéro. Il existe 6 plages, la première occupant 1 octet, la dernière en utilisant 6. La première plage se reconnaît à ce que le premier bit de l'octet est positionné à 0, les 7 bits suivants respectent la norme ASCII. Un caractère Unicode de cette plage est donc de la forme 0xxxxxxx et se trouve entièrement compatible avec un système ASCII. Les plages suivantes se reconnaissant à ce que le bit de poids fort de chaque octet est positionné à 1, les bits de poids fort du premier octet permettent de connaître la plage (110xxxxx pour la plage à deux octets, 1110xxxx pour celle à 3, 11110xxx pour 4, 111110xx pour 5 et 1111110x pour 6), et les deux bits de poids fort des octets suivant sont systématiquement positionnés à 10 afin d'indiquer leur appartenance à une suite d'octets Unicode. Un caractère de la deuxième plage est donc de la forme suivante : 110xxxxx 10xxxxxx ; et propose donc 11 bits utiles, ce qui permet 2^{11}=2048 caractères différents.
-
-[TABLEAU][Les plages unicode]
+[TABLEAU][Les plages Unicode]
 Plage	Octets en UTF-8	Nombre de caractères codés
 1	0xxxxxxx	128
 2	110xxxxx 10xxxxxx	2^{11}=2 048
@@ -81,89 +48,59 @@ Plage	Octets en UTF-8	Nombre de caractères codés
 6	1111110x 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx 10xxxxxx	2^{31}=2 147 483 648
 
 Technologies de langages [TITRE1]
-
 Il existe de très nombreux langages de programmation différents qui obéissent chacun à une syntaxe et à une logique propres. Certains langages sont conçus pour être accessibles et pédagogiques, d'autres pour être efficaces et fiables, d'autres pour être rapides à l'exécution. Selon le programme que l'on souhaite réaliser, le choix du langage peut être un critère décisif.
-
 Langage machine [TITRE2]
-
 Il s'agit du niveau d'abstraction le plus bas que peut appréhender le programmeur, si on excepte les premiers ordinateurs où un groupe de personnes salariées modifiaient elles-mêmes le contexte électronique de l'ordinateur selon les instructions qu'on leur communiquait. Il s'agit d'une suite de bits? que comprend le processeur?. Par exemple l'équivalent binaire de la suite de chiffres telle que 12 003 peut être comprise par le processeur comme la douzième instruction parmi les actions préimplantées par le constructeur que peut effectuer le processeur appliquée à l'élément situé à l'adresse numéro 3 du support visé par le processeur. De fait chaque instruction en langage machine correspond à une et une seule action du processeur et de fait l'augmentation de l'abstraction des langages de programmation correspond à l'augmentation du nombre d'actions du processeur correspondant à une instruction.
-
 Langages assemblés [TITRE2]
-
-Ce langage est une traduction mot à mot du langage machine en une suite d'instructions dont le premier mot est un mot mnémotechnique de l'opération effectuée, suivi des opérandes, c'est à dire des paramètres de l'opération. Ce langage est donc également spécifique à un modèle de processeur.
-
-La traduction est assurée par un programme d'assemblage appelé un assembleur.
-
+Ce langage est une traduction mot à mot du langage machine en une suite d'instructions dont le premier mot est un mot mnémotechnique de l'opération effectuée, suivi des opérandes, c'est à dire des paramètres de l'opération. Ce langage est donc également spécifique à un modèle de processeur. La traduction est assurée par un programme d'assemblage appelé un assembleur.
 Les langages assembleurs les plus évolués ont des fonctionnalités supplémentaires comme l'utilisation de labels pour les sauts, les adresses de variables, ce qui évite de calculer l'adresse exacte à utiliser ; l'utilisation de pseudo-instructions traduits en une séquence d'instructions équivalente, encore appelées macros? ; ou encore la définition de sections de code, de sections de données, afin d'organiser le programme en blocs spécialisés.
-
 Langages de haut niveau [TITRE2] 
-
 Les langages de haut niveau sont soit des langages compilés, soit des langages interprétés. Ils permettent de s'abstraire davantage voire complètement de l'implémentation bas niveau et de programmer sans trop se soucier de l'architecture cible. Le code source produit ne peut être interprété directement par la machine qui a besoin d'un compilateur le traduisant en langage compréhensible par la machine, ou d'un interpréteur exécutant les instructions directement.
-
-Différentes générations de langages haut niveau ont été créées :
-
+Différentes générations de langages haut niveau ont été créées : [PUCES]
     -. Les langages impératifs (C, Pascal, Ada, ...)
     -. Les langages orientés objet (C++, Java, Delphi, C#.Net, ...)
 
 Technologies d'exécution [TITRE1]
-
 Selon le langage, le code source rédigé par le programmeur peut être exécuté de différentes manières par l'ordinateur.
-
 Langages interprétés [TITRE2]
-
 Le code source d'un langage interprété est traduit en langage machine de manière éphémère lors de son exécution par un programme interpréteur qui lit le code source instruction après instruction et effectue la conversion à la volée. Un langage interprété est donc portable sur divers types de plateformes à condition qu'elles possèdent un interpréteur pour ce langage qui sache convertir le code source en langage machine compatible avec la plateforme.
-
 Certains langages interprétés modernes (Java, C#, et les autres langages .Net) possèdent un semi-compilateur traduisant le programme en un langage plus proche des machines en général. C'est-à-dire un langage pour une machine virtuelle dont l'interprétation par une machine concrète demande moins d'effort que l'interprétation directe.
+Dans l'interprétation (voir [REF]), le code source (celui que vous écrivez) est interprété, par un logiciel qu'on appelle interpréteur. Celui-ci va utiliser le code source et les données d'entrée pour calculer les données de sortie.
+
+[SCHEMA]
 
 Langages semi-interprétés [TITRE2]
-
 Également appelés langages semi-compilés, ils se caractérisent par une étape de compilation rapide du code source produisant du bytecode qui est ensuite exécuté par l'interpréteur de manière plus rapide que si il avait à interpréter le code source directement. Ces langages autorisent des possibilités inédites comme la modification du code source à la volée lors de l'exécution du programme et généralement une très grande abstraction des contraintes imputées à la programmation système, en pâtissant de performances moindres en terme de vitesse par rapport aux langages compilés. Ce sont les langages apparus le plus récemment.
-
 Langages compilés [TITRE2]
-
 Un langage compilé définit une syntaxe qui lui est propre et indépendante du processeur. Cette syntaxe peut permettre l'utilisation d'instructions plus complexes, de structures de code (condition, boucle), de structures de données complexes (tableaux, structures, listes, …) et peut fournir des types de données plus évolués (chaînes de caractères, dates, ...).
-
 Un programme dans un tel langage nécessite une phase de compilation pour valider la syntaxe et effectuer la traduction en langage machine. Cette phase est assurée par un compilateur qui traduit le programme pour un ou plusieurs modèles de processeur particuliers.
+[REF] représente les étape de compilation. Le code source (celui que vous écrivez) est tout d'abord compilé, par un logiciel qu'on appelle compilateur, en un code binaire qu'un humain ne peut pas lire mais qui est très facile à lire pour un ordinateur. C'est alors directement le système d'exploitation qui va utiliser le code binaire et les données d'entrée pour calculer les données de sortie. 
 
+[IMAGE]
 
 Conclusion [TITRE1]
-
-.... 
-
-
+Dans le chapitre précédent, on a vu des différentes notions qui nous aident à bien comprendre 
 Concepts de base [CHAPITRE]
-
 Introduction [TITRE1]
-
 Commentaires [TITRE1] 
-
 Un commentaire est un texte ajouté au code source d'un programme servant à décrire le code source, facilitant sa compréhension par les humains. Il est donc séparé du reste du code grâce à une syntaxe particulière, ce qui fait qu'en général, le commentaire est ignoré par le compilateur ou l'interpréteur du langage concerné.
-
 Pourquoi ajouter des commentaires ? [TITRE2]
-
 Ajouter des commentaires à un programme permet de décrire ce que fait le code, en utilisant un langage naturel. Il est important d'ajouter des commentaires pour les raisons suivantes : [PUCES]
     -. Expliquer le rôle d'une fonction
     -. Expliquer le fonctionnement d'un algorithme complexe
     -. Justifier certains choix techniques
 
 Syntaxe [TITRE2] 
-
 La syntaxe utilisée dépend du langage de programmation, ou du format de données. Dans les exemples qui suivent, l'élément de syntaxe caractéristique du commentaire est en vert. Lorsqu'il n'est pas présent à la fin du commentaire, il se termine implicitement à la fin de la ligne de code : 
-
 Java, C++, C#, Javascript : 
 /* Un commentaire ici */ [CODE] 
-
 Basic, Batch (pour DOS) : 
 REM Un commentaire ici [CODE]
-
 Shell unix, Python : 
 # Un commentaire ici [CODE]
-
 Pascal : 
 (* Un commentaire ici *) [CODE]
-
 Instructions [TITRE1]  
-
 Les instructions sont les commandes permettant de définir les actions, les calculs, bref le comportement d'un programme. Les chapitres suivants vont décrire les principales instructions que l'on retrouve dans la plupart des langages impératif, à savoir : [PUCES]
     -. la déclaration de variables,
     -. l'affectation, c'est-à-dire donner une valeur ou le résultat d'une expression à une variable déclarée,
@@ -171,17 +108,19 @@ Les instructions sont les commandes permettant de définir les actions, les calc
     -. les itérations, c'est-à-dire répéter une suite d'instructions tant qu'une certaine condition n'est pas vérifiée.
     
 Variables [TITRE1] 
-
 Une variable possède : [PUCES]
     -. Un nom : Un variable apparaît en programmation sous un nom de variable.
     -. Un type : Pour distinguer les uns des autres les divers contenus possibles, on utilise différents types de variables (entiers, réels, chaîne de caractères …).
     -. Une valeur : Une fois la variable définie, une valeur lui est assignée, ou affectée.
     -. Une adresse : C'est l'emplacement dans la mémoire de l'ordinateur, où est stockée la valeur de la variable.
 
-Il existe plusieurs types de variables. Quelque types sont indiqués dans le Tableau [REF][tab2]. 
-[TABLEAU][quelques types de variables] 
-Type    Description
-Entier  Un nombbre 
+Comparaison entre les langages de proggrammation [TITRE1] 
+[REF] représente une comparaison entre les langages de programmation.
 
+[GTABLEAU]
 
+Conclusion générale [CHAPITRE*]
 
+Dans le chapitre 1, Des notions nécessaires pour comprendre la programmation tel que le bit ont été présentées. Quelques représentations des nombres et du texte ont été entamées. En plus, les technologies de langages et d'exécusion ont été présentées. Le chapitre 2 est réservé pour les concepts de base de la programmaion. Les commentaires, les variables et les instructions sont parmi les concepts présentés dans ce chapitre.
+Notre objectif était d'introduire la programmation aux débutants. En présentant les notions de base ainsi que les concepts de la programmation, le lecteur aura la capacité de passer à des concepts plus avancés. On considère que l'objectif du rapport est atteint.
+Ce travail est loin d'être complet. Pour mieux améliorer ce travail, on pense que la présentation des concepts avec un langage de programmation bien défini peut aider à la compréhension de ces concepts.
