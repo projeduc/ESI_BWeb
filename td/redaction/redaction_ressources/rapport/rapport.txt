@@ -25,7 +25,7 @@ Notion de poids [TITRE2]
 En base 10 (décimal) le nombre 2453 est composé de différents chiffres ayant des valeurs différentes. Le 3 représente les unités, le 5 les dizaines, le 4 les centaines et le 2 les milliers. On peut dire que le 2 sur ce nombre en base 10 a plus de valeur (poids) que le 3.
 En binaire c'est pareil : dans 100101010, le 1 est appelé MSB pour Most Signifiant Bit qui est le bit représentant le poids le plus fort du mot. Ainsi le 0 est appelé LSB pour Least Signifiant Bit le bit à la valeur la plus faible.
 Représentation des nombres [TITRE1] 
-Historiquement on a utilisé les ordinateurs pour manipuler des nombres décimaux, autrement dit pour faire des calculs. Le bit étant lui même un nombre, la conversion entre un nombre décimal (en base 10) en un nombre binaire (en base 2) peut se faire avec des procédures relativement simples.
+Historiquement on a utilisé les ordinateurs pour manipuler des nombres décimaux, autrement dit pour faire des calculs. Le bit étant lui même un nombre, la conversion entre un nombre décimal (en base 10) en un nombre binaire (en base 2) peut se faire avec des procédures relativement simples [BIB][2]
 La notion de base arithmétique [TITRE2] 
 Dans un système numérique « basé », chaque chiffre d'un nombre est multiplié par la valeur de sa base, valeur qui elle-même est mise à une puissance correspondant à sa position dans le nombre par rapport au séparateur « décimal ». Ainsi le nombre 765 en base 10 veut dire [EQ1].
 Le binaire [TITRE2] 
@@ -50,7 +50,7 @@ Plage	Octets en UTF-8	Nombre de caractères codés
 Technologies de langages [TITRE1]
 Il existe de très nombreux langages de programmation différents qui obéissent chacun à une syntaxe et à une logique propres. Certains langages sont conçus pour être accessibles et pédagogiques, d'autres pour être efficaces et fiables, d'autres pour être rapides à l'exécution. Selon le programme que l'on souhaite réaliser, le choix du langage peut être un critère décisif.
 Langage machine [TITRE2]
-Il s'agit du niveau d'abstraction le plus bas que peut appréhender le programmeur, si on excepte les premiers ordinateurs où un groupe de personnes salariées modifiaient elles-mêmes le contexte électronique de l'ordinateur selon les instructions qu'on leur communiquait. Il s'agit d'une suite de bits? que comprend le processeur?. Par exemple l'équivalent binaire de la suite de chiffres telle que 12 003 peut être comprise par le processeur comme la douzième instruction parmi les actions préimplantées par le constructeur que peut effectuer le processeur appliquée à l'élément situé à l'adresse numéro 3 du support visé par le processeur. De fait chaque instruction en langage machine correspond à une et une seule action du processeur et de fait l'augmentation de l'abstraction des langages de programmation correspond à l'augmentation du nombre d'actions du processeur correspondant à une instruction.
+Il s'agit du niveau d'abstraction le plus bas que peut appréhender le programmeur, si on excepte les premiers ordinateurs où un groupe de personnes salariées modifiaient elles-mêmes le contexte électronique de l'ordinateur selon les instructions qu'on leur communiquait. Il s'agit d'une suite de bits? que comprend le processeur?. Par exemple l'équivalent binaire de la suite de chiffres telle que 12 003 peut être comprise par le processeur comme la douzième instruction parmi les actions préimplantées par le constructeur que peut effectuer le processeur appliquée à l'élément situé à l'adresse numéro 3 du support visé par le processeur. De fait chaque instruction en langage machine correspond à une et une seule action du processeur et de fait l'augmentation de l'abstraction des langages de programmation correspond à l'augmentation du nombre d'actions du processeur correspondant à une instruction [BIB][1].
 Langages assemblés [TITRE2]
 Ce langage est une traduction mot à mot du langage machine en une suite d'instructions dont le premier mot est un mot mnémotechnique de l'opération effectuée, suivi des opérandes, c'est à dire des paramètres de l'opération. Ce langage est donc également spécifique à un modèle de processeur. La traduction est assurée par un programme d'assemblage appelé un assembleur.
 Les langages assembleurs les plus évolués ont des fonctionnalités supplémentaires comme l'utilisation de labels pour les sauts, les adresses de variables, ce qui évite de calculer l'adresse exacte à utiliser ; l'utilisation de pseudo-instructions traduits en une séquence d'instructions équivalente, encore appelées macros? ; ou encore la définition de sections de code, de sections de données, afin d'organiser le programme en blocs spécialisés.
@@ -80,15 +80,14 @@ Un programme dans un tel langage nécessite une phase de compilation pour valide
 
 Conclusion [TITRE1]
 Dans le chapitre précédent, on a vu des différentes notions qui nous aident à bien comprendre 
+
 Concepts de base [CHAPITRE]
 Introduction [TITRE1]
+Dans ce chapitre, on présentera des notions de base de programmation.
 Commentaires [TITRE1] 
 Un commentaire est un texte ajouté au code source d'un programme servant à décrire le code source, facilitant sa compréhension par les humains. Il est donc séparé du reste du code grâce à une syntaxe particulière, ce qui fait qu'en général, le commentaire est ignoré par le compilateur ou l'interpréteur du langage concerné.
 Pourquoi ajouter des commentaires ? [TITRE2]
-Ajouter des commentaires à un programme permet de décrire ce que fait le code, en utilisant un langage naturel. Il est important d'ajouter des commentaires pour les raisons suivantes : [PUCES]
-    -. Expliquer le rôle d'une fonction
-    -. Expliquer le fonctionnement d'un algorithme complexe
-    -. Justifier certains choix techniques
+Ajouter des commentaires à un programme permet de décrire ce que fait le code, en utilisant un langage naturel. Il est important d'ajouter des commentaires pour les raisons suivantes : Expliquer le rôle d'une fonction ; Expliquer le fonctionnement d'un algorithme complexe ; Justifier certains choix techniques.
 
 Syntaxe [TITRE2] 
 La syntaxe utilisée dépend du langage de programmation, ou du format de données. Dans les exemples qui suivent, l'élément de syntaxe caractéristique du commentaire est en vert. Lorsqu'il n'est pas présent à la fin du commentaire, il se termine implicitement à la fin de la ligne de code : 
@@ -119,8 +118,12 @@ Comparaison entre les langages de proggrammation [TITRE1]
 
 [GTABLEAU]
 
+Conclusion [TITRE1] 
+
+Dans ce chapitre, quelques concepts on été présentés.
+
 Conclusion générale [CHAPITRE*]
 
 Dans le chapitre 1, Des notions nécessaires pour comprendre la programmation tel que le bit ont été présentées. Quelques représentations des nombres et du texte ont été entamées. En plus, les technologies de langages et d'exécusion ont été présentées. Le chapitre 2 est réservé pour les concepts de base de la programmaion. Les commentaires, les variables et les instructions sont parmi les concepts présentés dans ce chapitre.
 Notre objectif était d'introduire la programmation aux débutants. En présentant les notions de base ainsi que les concepts de la programmation, le lecteur aura la capacité de passer à des concepts plus avancés. On considère que l'objectif du rapport est atteint.
-Ce travail est loin d'être complet. Pour mieux améliorer ce travail, on pense que la présentation des concepts avec un langage de programmation bien défini peut aider à la compréhension de ces concepts.
+Ce travail est loin d'être complet. Pour mieux améliorer ce travail, on pense que la présentation des concepts avec un langage de programmation bien défini peut aider à la compréhension de ces concepts. Une fois avancé dans la programmation, on vous conseille de consulter [LIEN][Github][http://www.github.com/]

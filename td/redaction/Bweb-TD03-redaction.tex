@@ -37,8 +37,7 @@
 & 1ère année cycle préparatoire\\
 & Bureautique et Web
 \end{tabular}\\[.25cm]
-\noindent\rule{\textwidth}{1pt}\\ %[0.25cm]
-\hspace{-12pt}
+\noindent\rule{\textwidth}{1pt}\\%[-0.25cm]
 \begin{center}
 {\LARGE \textbf{T.D. Rédaction d'un document numérique}}
 %\begin{flushright}
@@ -48,6 +47,13 @@
 \noindent\rule{\textwidth}{1pt}
 
 \section*{Exercice 1 : Rédaction d'un rapport avec Word}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir utiliser Word pour rédiger un rapport complet \\\\
+	\hline
+\end{tabular}
 
 \subsection*{Préparation du document}
 
@@ -84,7 +90,7 @@
 	
 	\item Numéroter les pages en utilisant les nombres romans (I, II, etc.). La première page ne doit pas être numérotée (différente).
 	\item Sauter la section (page suivante) et copier-coller le contenu du rapport (rapport.txt)
-	\item Dans la page où il y a "Introduction [CHAPITRE]", modifier le numéro de page de cette section : 
+	\item Dans la page où il y a "Introduction [CHAPITRE*]", modifier le numéro de page de cette section : 
 	\begin{multicols}{2}
 	\begin{enumerate}
 		\item Découcher "Lier au précédent" 
@@ -94,7 +100,7 @@
 	\end{enumerate}
 	\end{multicols}
 	
-	\item Les chapitres sont marqués par [CHAPITRE]. Insérer un saut de section (page suivante) avant le deuxième chapitre après l'introduction. 
+	\item Les chapitres sont marqués par "[CHAPITRE]". Insérer un saut de section (page suivante) avant le deuxième chapitre après l'introduction. 
 	\begin{itemize}
 		\item Format des numéros de page : numérotation à la suite de la section précédente
 		\item Insérer des sauts de section (page suivante) avant le reste des chapitres. 
@@ -112,13 +118,13 @@
 	\begin{multicols}{2}
 	\begin{enumerate}
 		\item Sélectionner "[CHAPITRE]" et appliquer le style "Normal" 
-		\item Appliquer les options : 20pt, gras, centré, espacement avant 0pt après 24pt
+		\item Appliquer les options : Arial, 20pt, gras, centré, espacement avant 0pt après 24pt
 		\item Créer un nouveau style appelé : "monChapitre*", puis un autre : "monChapitre". Si on clique sur modifier le style, on remarque que "monChapitre" est basé sur "monChapitre*".
 		\item Sélectionner "[TITRE1]" et appliquer le style "Normal" 
-		\item Appliquer les options : 16pt, gras, aligné à gauche, espacement avant 12pt après 6pt
+		\item Appliquer les options : Arial, 16pt, gras, aligné à gauche, espacement avant 12pt après 6pt
 		\item Créer un nouveau style appelé : "maSection*", puis un autre : "maSection"
 		\item Chercher "[TITRE2]", sélectionner l'expression et appliquer le style "Normal"
-		\item Appliquer les options : 14pt, gras, aligné à gauche, espacement avant 6pt après 6pt
+		\item Appliquer les options : Arial, 14pt, gras, aligné à gauche, espacement avant 6pt après 6pt
 		\item Créer un nouveau style appelé : "maSousSection"
 	\end{enumerate}
 	\end{multicols}
@@ -188,7 +194,11 @@
 		\item Choisir la catégorie "Tableau", sélectionner la légende du tableau, insérer un renvoi à : Texte et numéro uniquement.
 	\end{enumerate}
 	\item Chercher "[GTABLEAU]" et le remplacer par le tableau dans "gtableau.docx"
-	\item Appliquer la même chose que "[TABLEAU]"
+	\begin{enumerate}
+		\item Fusionner les entêtes du tableau (ex. la cellule "Texte" doit être fusionnée avec la suivante)
+		\item Effacer les bordures en haut à gauche
+		\item Appliquer la même chose que "[TABLEAU]"
+	\end{enumerate}
 	\item Chercher "[IMAGE]" et insérer l'image "compile.png". 
 	\item Régler la luminosité de l'image afin que l'arrière plan soit en blanc.
 	\item Ajouter la légende "Les étapes de compilation". Elle doit être au-dessous de la figure. 
@@ -203,8 +213,87 @@
 	\item Chercher "[EQ1]" et remplacer ce texte par une équation $ (765)_{10} = 7 \times 10^2 + 6 \times 10^1 + 5 \times 10^0 $
 	\item Chercher "[EQ2]" et remplacer ce texte par une équation $ (11001)_{2} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = (29)_{10} $
 	\item Chercher "[NOTEBP]" et mettre ce qui est entre les deuxièmes crochets comme note de bas de page. 
-	
+	\item  Chercher "[LIEN]" et ajouter un lien hypertexte : le texte est dans les deuxièmes crochets et le lien est dans les troisièmes.
+	\item Dans la page "liste des abréviations", insérer un tableau de 2 colonnes et 5 lignes
+	\item Ajouter les abréviations suivantes : 
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item ENIAC : Electronic Numerical Integrator And Computer
+			\item UTF-8 : Unicode Transformation Format - 8 bits
+			\item ASCII : American Standard Code for Information Interchange
+			\item DOS : Disk Operating System
+		\end{itemize}
+	\end{multicols}
+	\item Trier le tableau selon la première colonne
 \end{enumerate}
 
+\subsection*{Références}
+
+\begin{enumerate}
+	\item Chercher "[NOTEBP]" et mettre ce qui est entre les deuxièmes crochets comme note de bas de page. 
+	\item Dans la page "liste des figures", insérer la liste des figures
+	\item Dans la page "liste des tableaux", insérer la liste des tableaux
+	\item Dans la page "table de matières", insérer une table de matière personnalisée
+	\begin{itemize}
+		\item Dans "Options" affecter le niveau 1 aux styles "monChapitre" et "monChapitre*" ; affecter le niveau 2 au style "maSection" ; affecter le niveau 3 au style "maSousSection"
+	\end{itemize}
+	\item Indexer les mots suivants : calculateur, processeur, programmation. Ajouter un renvoi pour avoir \textbf{UCT ... voir processeur}. Insérer l'index dans une page à part à la fin du rapport. 
+	\item Ajouter les ressources bibliographiques indiquées dans le fichier "bib.text"
+	\item Chercher "[BIB]" et insérer la citation référencée par un numéro (deuxièmes crochets)
+	\item Insérer une table bibliographique en fin du document (nouvelle page). 
+	\item Choisir le style "APA" 
+\end{enumerate}
+
+\subsection*{Finalisation}
+
+\begin{enumerate}
+	\item Si ce n'est pas déjà fait, nettoyer le document des marqueurs "[CHAPITRE]", "[CHAPITRE*]", "[TITRE1]", "[TITRE1*]", "[TITRE2]", "[REF]", etc. Utiliser l'outil de remplacement pour les remplacer par un vide. 
+	\item Choisir des remerciements depuis le fichier "remerciement.txt" et insérer les dans la page de remerciement (avec modification). 
+	\item Choisir des dédicaces depuis le fichier "dedicace.txt" et insérer les dans la page de dédicaces
+	\item Insérer le résumé depuis le fichier "resume.txt" dans la page de résumé 
+	\item Vérifier l'orthographe
+	\item Sauvegarder le document s'il n'est pas déjà sauvegardé et exporter le comme PDF.
+\end{enumerate}
+
+\newpage
+\section*{Exercice 2 : Rédaction d'un CV avec Word}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir rédiger son CV avec Word \\\\
+	\hline
+\end{tabular}
+
+\begin{enumerate}
+	\item Choisir un modèle de CV parmi ceux fournis avec ce TD, ou télécharger un autre 
+	\item Rédiger votre CV
+\end{enumerate}
+
+\section*{Exercice 3 : Rédaction d'un rapport avec \LaTeX}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir utiliser \LaTeX pour rédiger un rapport complet \\\\
+	\hline
+\end{tabular}
+
+\begin{enumerate}
+	\item L'exercice sera complété ultérieurement
+\end{enumerate}
+
+\section*{Exercice 4 : Rédaction d'un CV avec \LaTeX}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir rédiger son CV avec \LaTeX \\\\
+	\hline
+\end{tabular}
+
+\begin{enumerate}
+	\item Utiliser "moderncv" pour créer votre CV
+\end{enumerate}
 
 \end{document}

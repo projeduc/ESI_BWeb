@@ -1,0 +1,12 @@
+[BIB][1]
+========
+Auteurs : Nom : Wang, Prénom : Wallace ;
+Titre : Beggining programming for dummies 
+Année : 2007
+Maison d'édition : John Wiley & Sons
+
+[BIB][2]
+========
+Auteurs : Nom : Evans, Prénom : David ;  
+Titre : Introduction to Computing : Explorations in Language, Logic, and Machines
+Année : 2011
