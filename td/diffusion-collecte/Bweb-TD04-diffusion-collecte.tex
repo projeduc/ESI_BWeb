@@ -1,0 +1,183 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[11pt, a4paper]{article}
+%\usepackage{fullpage}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+%\usepackage{indentfirst}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage{txfonts} 
+\usepackage[]{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{wrapfig}
+
+\usepackage{turnstile}%Induction symbole
+
+\renewcommand{\baselinestretch}{1}
+
+\setlength{\parindent}{24pt}
+
+
+\begin{document}
+
+\selectlanguage {french}
+%\pagestyle{empty} 
+
+\noindent
+\begin{tabular}{ll}
+\multirow{3}{*}{\includegraphics[width=2cm]{../esi-logo.png}} & \'Ecole national Supérieure d'Informatique\\
+& 1ère année cycle préparatoire\\
+& Bureautique et Web
+\end{tabular}\\[.25cm]
+\noindent\rule{\textwidth}{1pt}\\%[-0.25cm]
+\begin{center}
+{\LARGE \textbf{T.D. Diffusion et collecte d'informations}}
+%\begin{flushright}
+%	ARIES Abdelkrime
+%\end{flushright}
+\end{center}
+\noindent\rule{\textwidth}{1pt}
+
+\section*{Exercice 1 : Formulaires}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir créer des formulaires afin de collecter les informations   \\\\
+	\hline
+\end{tabular}
+
+Après avoir publié votre rapport "Introduction à la programmation" sur les réseaux sociaux, plusieurs étudiants ont été intéressés par des formations dans cet axe. 
+Afin de satisfaire leurs demandes, vous avez décidé d'organiser une série de formations intitulé \textbf{ESI.prog} en collaboration avec un groupe de vos collègues.
+
+Pour bien organiser les formations, vous avez opté pour une inscription via des formulaires. 
+Vous vous êtes mis d'accord à utiliser des formulaires Google puisqu'ils sont plus pratiques lors de l'extraction des données. 
+Les formulaires Word sont une alternative au cas des exceptions. 
+
+Tout d'abord, vous devez collecter les informations personnelles et de contacte. 
+Vous voulez avoir le titre (M., Mme, Mlle.), le nom, le prénom, la date de naissance, l'age, l'adresse et l'émail du candidat. 
+Aussi, vous voulez savoir le niveau de l'étude : 1CP, 2CP, 1CS, 2CS, 3CS ou Autre.
+Ce dernier choix est réservé aux étudiants hors ESI. 
+Dans ce cas, vous devez récupérer le nom de l'université ou l'école d'origine. 
+
+Après avoir introduit ses information personnelles, le candidat passe vers les informations des formations. 
+Les formations proposées sont : Introduction à la programmation, C, C\#, Java, Javascript et Python. 
+Le candidat peut choisir plusieurs formations à la fois.
+Pour bien organiser des sessions de formation, le candidat doit fournir son niveau d'expérience : Débutant, Intermédiaire ou Avancé. 
+Pour ce faire : 
+\begin{itemize}
+	\item Si vous utilisez Word, vous devez seulement récupérer son niveau d'expérience dans la programmation en général.
+	\item Si vous utilisez Google Forms, vous devez récupérer son niveaux d'expérience dans chaque type de formation.
+\end{itemize}
+Vous voulez fournir une version papier de la formation où le candidat doit payer les frais d'impression. 
+Le formulaire doit donner la possibilité de choisir si on veut une version papier ou non.
+
+Vous voulez avoir des informations supplémentaires qui ne sont pas obligatoires. 
+Le formulaire doit permettre au candidat d'exprimer son opinion concernant le rapport (en terme de quantité d'information). 
+Vous devez fournir une échelle de 1 (insuffisant) jusqu'à 5 (très bon). 
+Aussi, vous devez fournir un moyen pour que le candidat puisse exprimer son opinion librement. 
+
+Avant d'envoyer le formulaire aux destinataires, vous devez le tester pour évaluer le temps de remplissage et la facilité d'usage. 
+Pour ce faire, il faut l'envoyer à quelques membres du groupe et récupérer leurs opinions pour mieux améliorer le formulaire. 
+
+\subsection*{Besoins fonctionnelles}
+
+\begin{multicols}{2}
+\begin{itemize}
+	\item Le formulaire doit être facile à utiliser : divisé en sections, avec moins de cliques, etc. 
+	\item Le formulaire doit utiliser les bons éléments et fournir des descriptions utiles
+	\item L'utilisateur doit pouvoir modifier sa réponse (en cas de Google Forms)
+	\item On doit recevoir une réponse par utilisateur (en cas de Google Forms)
+\end{itemize}
+\end{multicols}
+
+\subsection*{Besoins techniques}
+
+\begin{multicols}{2}
+\begin{itemize}
+	\item Le formulaire doit être implémenté en utilisant Google Forms
+	\item Si on ne peut pas utiliser Google Forms, on se contente par Word
+	\item On doit utiliser "nomUniv.xslx" pour la liste des universités (Pour le test, on peut insérer seulement 7 choix). \textbf{Astuce :} Vous pouvez copier la liste et coller dans la première option dans Google Forms.
+\end{itemize}
+\end{multicols}
+
+\section*{Exercice 2 : Publipostage}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir appliquer le publipostage afin de diffuser les informations   \\\\
+	\hline
+\end{tabular}
+
+Vous avez reçu plusieurs demandes de candidature pour les formations de programmation (\textbf{ESI.prog}). 
+Afin d'organiser une première session de formation, en tant que chargé de communication, vous avez préparé un fichier "formation.xlsx". 
+Ce fichier contient le titre, le nom, le prénom, l'émail, le niveau (ou l'université), l'adresse, le type de la formation et le niveau d'expérience. 
+Pour permettre aux externes de se préparer (voyage, etc.), vous voulez programmer cette première session seulement pour les étudiants de l'ESI.
+
+La journée de la formation, les étudiants doivent apporter la carte d'étudiant (ou une carte qui preuve l'identité) et une invitation. 
+Pour imprimer les différentes invitations, vous avez opté pour une solution par publipostage. 
+Aux début de la lettre on doit fournir les informations suivantes : 
+\begin{multicols}{2}
+\begin{itemize}
+	\item Les informations de l'expéditeur (le chargé de communication dans le groupe)
+	\item Les informations du destinataire (le candidat)
+	\item La date (Insertion -> Texte -> QuickPart -> Champ -> Date ) et lieu
+	\item L'objet de la lettre
+	\item Une formule d'appel: "\textbf{Cher NOM Prénom,}" ou "\textbf{Chère NOM Prénom,}"
+\end{itemize}
+\end{multicols}
+
+Les formations de cette session auront lieu la même journée (qui sera fixée lors de l'envoi), mais dans des heurs différentes selon le niveau d'expérience : 
+\begin{multicols}{3}
+\begin{itemize}
+	\item \textbf{Débutant} : 10h00-12h00
+	\item \textbf{Intermédiaire} : 13h30-15h30
+	\item \textbf{Avancé} : 16h30-18h30
+\end{itemize}
+\end{multicols}
+Les salles sont attribuées selon le type de formation : 
+\begin{multicols}{3}
+\begin{itemize}
+	\item \textbf{Introduction à la programmation} : CP1
+	\item \textbf{C} : CP2
+	\item \textbf{C\#} : CP3
+	\item \textbf{Java} : CP4
+	\item \textbf{Javascript} : CP5
+	\item \textbf{Python} : CP6
+\end{itemize}
+\end{multicols}
+
+Afin d'aider les étudiants des classes préparatoires à bien suivre la formation, vous leur fournissez des brochures à la rentré. Dans ce cas, on ajoute la phrase "\textbf{En tant que étudiant en classes préparatoires, vous pouvez demander vos brochures lors de l’enregistrement.}" à la lettre en cas des 1CP et des 2CP.
+
+\subsection*{Besoins fonctionnelles}
+
+\begin{itemize}
+	\item Les lettres doivent être envoyées seulement aux étudiants concernés
+	\item Lorsqu'on fusionne, Word doit vous demander la date qui sera inséré dans toutes les invitations (les deux emplacements dans la lettre)
+\end{itemize}
+
+\subsection*{Besoins techniques}
+
+\begin{itemize}
+	\item Le publipostage doit être implémenté en utilisant Word
+	\item On doit utiliser la première ligne du fichier "formation.xlsx" comme noms des champs
+\end{itemize}
+
+\subsection*{Modèle}
+
+\begin{center}
+	\fbox{\includegraphics[]{publi-example.pdf}}
+\end{center}
+
+
+\end{document}
