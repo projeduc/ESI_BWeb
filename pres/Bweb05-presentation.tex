@@ -1,0 +1,634 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[xcolor=table, usenames,dvipsnames]{beamer}
+
+\input{options}
+\usepackage{calligra}
+
+\title[BWEB : 05- Présentation] %
+{Bureautique et Web \\Chapitre 05 : Présentation}  
+
+\changegraphpath{../img/presentation/}
+
+\begin{document}
+
+\begin{frame}
+
+\frametitle{Présentation}
+\framesubtitle{Pourquoi faire une bonne présentation ?}
+	
+	\begin{itemize}
+		\item Communiquer ses idées : inutile de faire un bon travail sans que les autres le comprennent
+		\item Se présenter : avoir des bonnes impressions 
+		\item Discuter son travail : éduquer, inspirer, motiver et avoir du retour d'information (feedback)
+		\item Mieux comprendre son travail : Lorsqu'on présente son travail, on doit transmettre plus d'informations d'une façon simple (Apprendre par enseignement)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Présentation}
+\framesubtitle{Plan}
+
+\begin{multicols}{2}
+	%	\small
+	\tableofcontents
+\end{multicols}
+\end{frame}
+
+%===================================================================================
+\section{Préparation d'une présentation}
+%===================================================================================
+
+\subsection{Objectifs de la présentation}
+
+\begin{frame}
+\frametitle{Préparation}
+\framesubtitle{Objectif (Pourquoi?)}
+
+\hgraphpage{objectif.pdf}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Préparation Objectif}
+\framesubtitle{Information communiquée}
+
+\begin{itemize}
+	\item \optword{Présentation informative}
+	\begin{itemize}
+		\item fournir aux gens des informations sur un concept ou une idée 
+		\item exemple : \expword{cours}, \expword{tutoriel}
+	\end{itemize}
+
+	\item \optword{Présentation persuasive}
+	\begin{itemize}
+		\item influencer un changement dans la croyance, l'attitude ou le comportement d'une autre personne 
+		\item exemple : \expword{recherche}, \expword{produit}
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Préparation Objectif}
+\framesubtitle{Sens de communication}
+
+\begin{itemize}
+	\item \optword{Présentation linéaire}
+	\begin{itemize}
+		\item seul le présentateur parle lors de la présentation 
+		\item but : raconter des idées
+		\item exemple, \expword{PFE}, \expword{recherche}
+	\end{itemize}
+
+	\item \optword{Présentation interactive}
+	\begin{itemize}
+		\item l'audience participe lors de la présentation
+		\item but : découvrir les idées
+		\item exemple, \expword{certains cours}, \expword{démonstration d'un produit}
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Audience de la présentation}
+
+\begin{frame}
+\frametitle{Préparation}
+\framesubtitle{Audience (Qui?)}
+
+Il faut poser des questions sur les spectateurs : 
+\begin{itemize}
+	\item Qui sont-ils?
+	\begin{itemize}
+		\item Qu'est-ce qui offense l'audience? Comprendre la culture et le contexte dans lesquels l'audience opère
+		\item Qu'est-ce qui fait vibrer l'audience? Nouvelles idées, plus d'exemples, illustrations, etc.
+		\item Qu'est-ce qui ennuie l'audience? Raconter l'évidence, non maitrise du sujet, répétition, etc.
+	\end{itemize}
+	\item Que savent-ils?
+	\begin{itemize}
+		\item Est-ce qu'il y a des experts dans le domaine?
+		\item Est-ce qu'ils ont déjà vu une présentation similaire?
+	\end{itemize}
+	\item Que veulent-ils?
+	\begin{itemize}
+		\item Plus d'informations ou l'essentiel
+		\item Technique ou théorie
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Préparation : Audience}
+\framesubtitle{Types de présentations selon l'audience}
+
+\hgraphpage{audience.pdf}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Préparation : Audience}
+\framesubtitle{Expérience}
+
+\begin{itemize}
+	\item \optword{Présentation élémentaire}
+	\begin{itemize}
+		\item audience : non familière avec le thème
+		\item exemple : \expword{présenter un langage de programmation à des débutants}
+		\item Prévoir des définitions 
+		\item Inclure plus d'informations sur le thème
+	\end{itemize}
+	\item \optword{Présentation approfondie}
+	\begin{itemize}
+		\item audience : ayant une expérience sur le thème
+		\item exemple : \expword{présenter un projet devant un jury des experts}
+		\item Moins de définitions 
+		\item Moins de fond sur le thème (état de l'art)
+		\item Présenter le sujet d'un façon plus profonde (mettre l'accent sur votre travail plus que les travaux similaires)
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Préparation : Audience}
+\framesubtitle{Expérience (Exemple)}
+
+Prenons l'exemple de \cite{carlton-jacob}. Etant donnée la figure suivante, on compare les différents titres et le niveau de compréhension. 
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \expword{La technologie de synthèse d'ADN s'améliore
+			de façon exponentielle} : Sauf les intellos qui peuvent comprendre
+		\item \expword{La capacité à construire de l'ADN à partir de zéro s'améliore de façon exponentielle}
+		\item \expword{La capacité à construire de l'ADN à partir de zéro s'améliore plus rapidement que les ordinateurs} : Public moins expérimenté
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.39\textwidth}
+	\hgraphpage{audience-experience-exp.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Préparation : Audience}
+\framesubtitle{Métier}
+
+\begin{itemize}
+	\item \optword{Présentation académique}
+	\begin{itemize}
+		\item audience : étudiants, enseignants, chercheurs, apprentis, etc.
+		\item exemple : \expword{cours}, \expword{rapport d'un étudiant}, \expword{recherche}, \expword{séminaire}
+		\item but : améliorer le savoir
+		\item Plus formelle (exemple : utilisation de "nous" à la place de "je")
+	\end{itemize}
+	\item \optword{Présentation professionnelle}
+	\begin{itemize}
+		\item audience : client, investisseur, etc.
+		\item exemple : \expword{produit}, \expword{idée}
+		\item but : prendre de décisions
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Sujet de la présentation}
+
+\begin{frame}
+\frametitle{Préparation}
+\framesubtitle{Sujet (Quoi?)}
+
+\begin{itemize}
+	\item Comprendre son sujet : l'objectif, le fond et comment atteindre ces objectifs
+	\item Énumérer les concepts clés et les points à transmettre
+	\item Commencez à réfléchir aux moyens d'illustrer les points clés
+\end{itemize}
+
+\end{frame}
+
+%===================================================================================
+\section{Contenu d'une présentation}
+%===================================================================================
+
+\subsection{Structure d'une présentation}
+
+\begin{frame}
+\frametitle{Contenu}
+\framesubtitle{Structure}
+
+\begin{itemize}
+	\item \optword{Début} 
+	\begin{itemize}
+		\item expliquer le but de cette présentation
+		\item Qui? Quoi? Où? Quand? Pourquoi?
+	\end{itemize}
+	\item \optword{Corps}
+	\begin{itemize}
+		\item expliquer le sujet
+		\item Comment?
+	\end{itemize}
+	\item \optword{Conclusion}
+	\begin{itemize}
+		\item résumer le sujet
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Structure}
+\framesubtitle{Début}
+
+\begin{itemize}
+	\item Le début doit être bien fait
+	\item Il doit convaincre l'audience qu'on 
+	\begin{itemize}
+		\item ne va pas gaspiller son temps
+		\item est bien organisé
+		\item connait son audience
+		\item maitrise son sujet
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Structure}
+\framesubtitle{Début en détail}
+
+\begin{itemize}
+	\item Se présenter (première diapositive)
+	\begin{itemize}
+		\item Titre du sujet ; Nom et prénom ; Affiliation (école, université, laboratoire, entreprise, etc.) ; Date
+	\end{itemize}
+
+	\item Contexte du sujet (des fois, pas nécessaire)
+	\begin{itemize}
+		\item des informations qui aident l'audience à comprendre le thème du sujet
+		\item c-à-d, une introduction à la problématique 
+		\item exemple : \expword{décrire la façon de travail d'une bibliothèque }
+	\end{itemize}
+
+	\item Motivation
+	\begin{itemize}
+		\item pourquoi notre
+		\item la problématique du sujet
+		\item les objectifs du travail (présentation)
+		\item exemple : \expword{automatiser la gestion des livres dans cette bibliothèque}
+		\item Essayer de poser des questions pour stimuler la réflexion
+	\end{itemize}
+
+	\item Plan de la présentation
+	\begin{itemize}
+		\item Énumérer ce qu'on va présenter 
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Structure}
+\framesubtitle{Corps}
+
+\begin{itemize}
+	\item Présenter des données et des faits
+	\item Incorporer des citations d'experts
+	\item Racontez ses expériences personnelles
+	\item Être crédible
+	\begin{itemize}
+		\item être précis et exact avec les citations, les noms, les dates et les faits.
+		\item fournir des références qui supportent les idées présentées
+		\item insérer le contenu qu'on maitrise 
+		\item utiliser un langage approprié à l'audience
+	\end{itemize}
+	\item Les diapositives doivent être homogènes 
+	\item Il ne faut pas mettre trop d'informations sur une même diapositive
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Structure}
+\framesubtitle{Corps d'une présentation académique}
+
+\begin{itemize}
+	\item Travaux connexes
+	\begin{itemize}
+		\item Décrire des travaux similaires (les différentes méthodes pour répondre à la même problématique)
+	\end{itemize}
+	\item Méthodes
+	\begin{itemize}
+		\item Décrire son approche : les méthodes proposées 
+		\item Illustrer les méthodes par des schémas
+	\end{itemize}
+	\item Synthèse
+	\begin{itemize}
+		\item Décrire les tests et les méthodes de validation 
+		\item Essayer de présenter l'essentiel des résultats (pas le tout)
+		\item Synthétiser : pourquoi la méthode donne ces résultats 
+		\item Comparer son méthode avec des travaux similaires
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Structure}
+\framesubtitle{Conclusion}
+
+\begin{itemize}
+	\item Reprendre la motivation de cette présentation
+	\item Résumer les points principaux d'une façon simple
+	\item Discuter les résultats
+	\item Préciser comment les méthodes proposées ont réglées le problème
+	\item Énumérer les limites et comment améliorer le travail
+\end{itemize}
+
+\end{frame}
+
+\subsection{Esthétique d'une présentation}
+
+\begin{frame}
+\frametitle{Contenu}
+\framesubtitle{Esthétique}
+
+\begin{itemize}
+	\item Les illustrations
+	\item Les polices et texte
+	\item Les couleurs
+	\item Les animations 
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Contenu : Esthétique}
+\framesubtitle{Illustrations}
+
+\begin{minipage}{0.60\textwidth}
+\begin{itemize}
+	\item Enrichir la présentation par  des illustrations : images et tableaux
+	\item L'audience a tendance d'apprendre plus en entendant et regardant au même temps
+	\item Plus d'illustrations, moins de texte
+	\item Il faut :
+	\begin{itemize}
+		\item fournir des titre aux illustrations
+		\item s'assurer que les illustrations sont lisibles.
+		\item citer l'origine des illustrations
+	\end{itemize}
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.39\textwidth}
+	\begin{figure}
+		\hgraphpage{illustrations.pdf}
+		\caption{Pourcentage de rappel selon \cite{cipolla}}
+	\end{figure}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Esthétique}
+\framesubtitle{Polices et texte}
+
+\begin{itemize}
+	\item Utiliser des grandes tailles de police (plus de 18pt) afin d'améliorer la lisibilité 
+	\item Utiliser des tailles différentes pour les titres et les sous titres 
+	\item Utiliser une police standard comme \expword{Arial} ; n'utiliser pas des polices difficiles à lire
+	\item Le texte dans une diapositive : 
+	\begin{itemize}
+		\item sous forme de listes à puce
+		\item le minimum possible
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Esthétique}
+\framesubtitle{Polices et texte : exemple à ne pas faire}
+
+{\tiny 
+
+Ceci est un texte trop petit et difficile à lire par l'audience. 
+J'ai mis ce texte comme ça afin de vous torturer ; vous finissez par porter des lunettes. 
+Même en les portant, vous ne pouvez pas lire ce texte à distance puisque j'ai rempli cette diapositive par du n'importe quoi. 
+Ce texte est trop long, même moi j'avez du mal à l'écrire.
+
+Ceci est un texte trop petit et difficile à lire par l'audience. 
+J'ai mis ce texte comme ça afin de vous torturer ; vous finissez par porter des lunettes. 
+Même en les portant, vous ne pouvez pas lire ce texte à distance puisque j'ai rempli cette diapositive par du n'importe quoi. 
+Ce texte est trop long, même moi j'avez du mal à l'écrire.
+
+Ceci est un texte trop petit et difficile à lire par l'audience. 
+J'ai mis ce texte comme ça afin de vous torturer ; vous finissez par porter des lunettes. 
+Même en les portant, vous ne pouvez pas lire ce texte à distance puisque j'ai rempli cette diapositive par du n'importe quoi. 
+Ce texte est trop long, même moi j'avez du mal à l'écrire.
+
+Ceci est un texte trop petit et difficile à lire par l'audience. 
+J'ai mis ce texte comme ça afin de vous torturer ; vous finissez par porter des lunettes. 
+Même en les portant, vous ne pouvez pas lire ce texte à distance puisque j'ai rempli cette diapositive par du n'importe quoi. 
+Ce texte est trop long, même moi j'avez du mal à l'écrire.
+
+Ceci est un texte trop petit et difficile à lire par l'audience. 
+J'ai mis ce texte comme ça afin de vous torturer ; vous finissez par porter des lunettes. 
+Même en les portant, vous ne pouvez pas lire ce texte à distance puisque j'ai rempli cette diapositive par du n'importe quoi. 
+Ce texte est trop long, même moi j'avez du mal à l'écrire.
+
+}
+
+{\calligra Pour mieux vos torturer, j'ai écrit ce texte. En fin de compte, vous êtes fautifs pour atteindre ma présentation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Contenu : Esthétique}
+\framesubtitle{Couleurs}
+
+\begin{itemize}
+	\item La couleur de police doit être opposée à celle de l'arrière plan
+	\item Utilisez les couleurs pour renforcer la logique de votre structure
+	\item Les couleurs doivent être compatibles (si on utilise le rouge pour les mots clés, on ne doit pas utiliser une autre couleur)
+	\item Par exemple, dans cette présentation : 
+	\begin{itemize}
+		\item \expword{Ceci est un exemple}
+		\item \keyword{Ceci est un mot clé}
+		\item \optword{Ceci est un choix dans une liste} 
+	\end{itemize}
+	\item Il ne faut pas exagérer dans l'utilisation des couleurs 
+\end{itemize}
+
+\end{frame}
+
+{
+\setbeamercolor{background canvas}{bg=red}
+\begin{frame}
+\frametitle{Contenu : Esthétique}
+\framesubtitle{Couleurs : exemple à ne pas faire}
+
+\textcolor{yellow}{Pour détruire vos yeux, j'ai choisi ces belles couleurs. Du rouge comme fond pour inciter vos yeux et du jaune pour l'écriture afin que vous concentriez plus en la lisant. Une combinaison mortelle.}
+
+\vfill
+
+\textcolor{WildStrawberry}{J'ai même choisi une couleur presque identique à celle du fond pour les gens avec des yeux solides}
+
+\end{frame}
+}
+
+\begin{frame}
+\frametitle{Contenu : Esthétique}
+\framesubtitle{Animations}
+
+\begin{itemize}
+	\item L'intérêt : 
+	\begin{itemize}
+		\item présenter d'une façon séquentielle
+		\item éviter de dévoiler tout ce qu'on présente sur la même diapositive
+		\item guider l'œil 
+	\end{itemize}
+		\item Il ne faut pas utiliser des : 
+	\begin{itemize}
+		\item différentes animations au même type de texte (par exemple, titre)
+		\item animations complexes pour une présentation académique (\keyword{Keep it simple})
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%===================================================================================
+\section{Présentation orale}
+%===================================================================================
+
+\subsection{Avant la présentation}
+
+\begin{frame}
+\frametitle{Présentation orale}
+\framesubtitle{Avant la présentation}
+
+\begin{itemize}
+	\item S'entrainer sur la présentation
+	\begin{itemize}
+		\item En face ces amis pour avoir des avis
+		\item En utilisant un chronomètre pour mesurer le temps 
+		\item Anticiper des questions probables et préparer des réponses 
+	\end{itemize}
+	\item Tester la présentation sur un data-show 
+	\item Se préparer à sauter des diapositives si le temps ne sera pas suffisant
+\end{itemize}
+
+\end{frame}
+
+\subsection{Durant la présentation}
+
+\begin{frame}
+\frametitle{Présentation orale}
+\framesubtitle{Durant la présentation}
+
+\begin{itemize}
+	\item Énergie (pas au point d'être hyperactif)
+	\begin{itemize}
+		\item Utiliser un bon volume et intonation du son 
+		\item Être passionné par son sujet et avoir confiance en soi
+		\item Se déplacer. Ne rester pas au même endroit.
+	\end{itemize}
+	\item Attitude et langage du corps
+	\begin{itemize}
+		\item Contact visuel : Regarder l'audience dans les yeux
+		\item Utilisez des expressions faciales positives telles que les sourires, les yeux expressifs et les regards empathiques
+		\item Éviter des gestes comme les allers-retours, agiter les main, croiser les bras, etc. 
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Présentation orale : Durant la présentation}
+\framesubtitle{Un peu d'humour}
+
+\begin{center}
+	Si vous sentez que vous êtes entrain de perdre l'audience, utilisez cette technique
+
+\vgraphpage[.7\textheight]{puss-in-boots.jpg}
+\end{center}
+
+
+\end{frame}
+
+\subsection{Après la présentation}
+
+\begin{frame}
+\frametitle{Présentation orale}
+\framesubtitle{Après la présentation}
+
+\begin{itemize}
+	\item Réfléchir avant de répondre
+	\item Demander de clarification au cas où la question n'était pas claire 
+	\item Il ne faut pas répondre à une question inattendue par une réponse vague et hésitante.
+	Il faut mieux dire que c'est un point très intéressant sur lequel on devra enquêter, ou que c'est en dehors de son sujet 
+	\item Garder les réponses aux questions brèves
+\end{itemize}
+
+\end{frame}
+
+\subsection{Remarques à l'audience}
+
+\begin{frame}
+\frametitle{Présentation orale}
+\framesubtitle{Remarques à l'audience}
+
+\begin{itemize}
+	\item L'audience est un critère de la réussite d'une présentation
+	\item Participer à la conversation. On n'est pas entrain de regarder pas la télévision
+	\item Penser à la façon dont le matériel présenté remet en question ce qu'on sait déjà
+	\item Poser des questions
+	\item Suivre la présentation sans faire de bruit
+\end{itemize}
+
+\end{frame}
+
+%===================================================================================
+\section{Microsoft PowerPoint}
+%===================================================================================
+
+\begin{frame}
+\frametitle{Présentation}
+\framesubtitle{Microsoft PowerPoint}
+\begin{itemize}
+	\item logiciel de présentation
+	\item fait partit à la suite bureautique \optword{Microsoft office}
+	\item disponible sur Windows, Mac OS, iOS et Android
+	\item le programme de présentation le plus utilisé dans le monde
+\end{itemize}
+\end{frame}
+
+\subsection{Structure}
+
+
+\subsection{Transitions}
+
+
+\subsection{Animations}
+
+
+\begin{frame}
+\frametitle{Présentation}
+\framesubtitle{Un peu d'humour}
+
+\begin{center}
+	\vgraphpage{humour.jpg}
+\end{center}
+
+\end{frame}
+
+\insertbibliography{Bweb05}{*}
+
+
+\end{document}
+

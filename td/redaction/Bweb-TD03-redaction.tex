@@ -58,37 +58,42 @@
 \subsection*{Préparation du document}
 
 \begin{enumerate}
-	\item Créer un nouveau document avec les marges : 3cm gauche et 2cm pour le reste 
-	\item Mettre à jour le style "Normal" selon cette spécification : La police utilisée par défaut est "Times New Roman", 12pt.
-	\item Ajouter un saut de section de page. La 1ère page sera la page de garde.  
+	\item Créer un nouveau document avec les marges : 3cm gauche et 2cm pour le reste (sauf reliure qui doit être 0cm) 
+	\item Clique droite sur le style "Normal" et Choisir "Modifier". Appliquer ces spécifications : "Times New Roman", 12pt. 
+	\item Cette 1ère page qui sera considérée comme une page de garde.  Elle doit contenir : 
 	\begin{multicols}{2}
 	\begin{itemize}
-		\item Elle doit contenir l'entête de l'ESI (entete.png). 
+		\item L'image (entete.png) en haut (pas l'entête). 
 		\item Le mot "Rapport" en gras, 16pt, centré. 
-		\item Ajouter le titre "Introduction à la programmation" dans un cadre. 
+		\item Le titre "Introduction à la programmation" dans un cadre. 
 		\begin{itemize}
-			\item Le cadre est un tableau avec une cellule ayant des marges 0.25cm partout, et un contour de 1.25pt
+			\item Le cadre est un tableau avec une cellule ayant des marges 0.25cm partout, et un contour de 1.5pt
 			\item le titre doit être en gras, 20pt, centré.
 		\end{itemize}
-		\item Insérer un tableau avec deux cellules: la première contient l'expression "Encadré par :" en gras, retour à la ligne et le nom de votre enseignant du TD ; la deuxième contient l'expression "Réalisé par :" en gras, retour à la ligne et les noms des étudiants. Effacer les bordures.
-		\item En bas écrire "Année : " suivi de l'année, en gras, 14 pt.
+		\item Insérer un tableau avec une ligne et deux colonnes :
+		\begin{itemize}
+			\item la première  contient l'expression "Encadré par :" en gras, retour à la ligne et le nom de votre enseignant du TD ;
+			\item la deuxième contient l'expression "Réalisé par :" en gras, retour à la ligne et les noms des étudiants. Effacer les bordures.
+		\end{itemize}
+		  
+		\item En bas écrire "Année : " suivi de l'année, en gras, 14 pt, centré. 
 	\end{itemize}
 	\end{multicols}
-
-	\item Ajouter des sauts de pages pour créer :  
+	\item Ajouter un saut de section de page (page suivante). Le saut de section, nous permet d'appliquer des numéros de pages et des entêtes différentes de la section précédente.
+	\item Dans la deuxième page, écrire "remerciements"
+	\item Ajouter des sauts de pages pour créer des nouvelles pages vides (qui seront remplies ultérieurement), insérer seulement les titres pour y revenir après :  
 	\begin{multicols}{3}
 		\begin{enumerate}
-			\item une page pour le remerciement, 
-			\item une pour la dédicace, 
+			\item une pour la dédicace,
 			\item une pour le résumé, 
-			\item une pour la table de matière, 
+			\item une pour la table des matières, 
 			\item une pour la liste des figures, 
 			\item une pour la liste des tableaux 
 			\item et une pour la liste des abréviations.
 		\end{enumerate}
 	\end{multicols}
 	
-	\item Numéroter les pages en utilisant les nombres romans (I, II, etc.). La première page ne doit pas être numérotée (différente).
+	\item Numéroter les pages en utilisant les nombres romans (I, II, etc.). La première page ne doit pas être numérotée (différente). Aussi, décocher "Lier au précédent" pour que la page de garde soit différente des pages préliminaires.
 	\item Sauter la section (page suivante) et copier-coller le contenu du rapport (rapport.txt)
 	\item Dans la page où il y a "Introduction [CHAPITRE*]", modifier le numéro de page de cette section : 
 	\begin{multicols}{2}
@@ -100,27 +105,29 @@
 	\end{enumerate}
 	\end{multicols}
 	
-	\item Les chapitres sont marqués par "[CHAPITRE]". Insérer un saut de section (page suivante) avant le deuxième chapitre après l'introduction. 
+	\item Les chapitres sont marqués par "[CHAPITRE]". Insérer un saut de section (page suivante) avant le deuxième chapitre après l'introduction (Notions). 
 	\begin{itemize}
 		\item Format des numéros de page : numérotation à la suite de la section précédente
 		\item Insérer des sauts de section (page suivante) avant le reste des chapitres. 
 	\end{itemize}
 
-	\item Choisir Le premier paragraphe et appliquer les mises en forme suivantes : 
+	\item Choisir un paragraphe et appliquer les mises en forme suivantes : 
 	\begin{itemize}
 		\item Texte justifié 
 		\item Options paragraphe : interligne 1.5, retrait de première ligne 1cm, espacement avant et après 6pt
 	\end{itemize}
 
-	\item Mettre à jour le style "Paragraphe" selon ces mises en forme
+	\item Mettre à jour le style "Paragraphe" selon ces mises en forme : Clique droite sur le style "Paragraphe" et sélectionner la première option.
 	\item Sélectionner le texte copié et appliquer le style "Paragraphe"  
 	\item Créer des styles pour les chapitres, les sections et les sous section. Pour ce faire, suivre les étapes suivantes : 
 	\begin{multicols}{2}
 	\begin{enumerate}
-		\item Sélectionner "[CHAPITRE]" et appliquer le style "Normal" 
+		\item Sélectionner  la titre marqué par "[CHAPITRE]" et appliquer le style "Normal" 
 		\item Appliquer les options : Arial, 20pt, gras, centré, espacement avant 0pt après 24pt
 		\item Créer un nouveau style appelé : "monChapitre*", puis un autre : "monChapitre". Si on clique sur modifier le style, on remarque que "monChapitre" est basé sur "monChapitre*".
-		\item Sélectionner "[TITRE1]" et appliquer le style "Normal" 
+		\item Le style "monChapitre*" sera réservé pour les chapitres non numérotés comme l'introduction. 
+		\item Le style "monChapitre" est identique à "monChapitre*", sauf qu'il est numéroté.
+		\item Sélectionner un titre marqué par "[TITRE1]" et appliquer le style "Normal" 
 		\item Appliquer les options : Arial, 16pt, gras, aligné à gauche, espacement avant 12pt après 6pt
 		\item Créer un nouveau style appelé : "maSection*", puis un autre : "maSection"
 		\item Chercher "[TITRE2]", sélectionner l'expression et appliquer le style "Normal"
@@ -136,20 +143,18 @@
 		\item Choisir "définir un nouveau style de liste". Nommer le style "monStyleListe"
 		\item Cliquer sur "Format" et choisir "Numérotation"
 		\item Cliquer sur "Définir pour tous les niveaux" et mettre 0cm partout
-		\item Cliquer sur "Plus \textgreater \textgreater" pour afficher plus d'options
+		\item Cliquer sur "Plus \textgreater\ \textgreater" pour afficher plus d'options
 		\item Style de nombre pour ce niveau : I, II, III, ...
-		\item Mise en forme de la numérotation : supprimer le parenthèse pour avoir \textbf{I}
+		\item Mise en forme de la numérotation : supprimer le parenthèse et ajouter le texte "Chapitre " pour avoir \textbf{Chapitre I}.
 		\item Style à appliquer à ce niveau : monChapitre
 		\item Choisir le niveau 2
 		\item Style de nombre pour ce niveau : 1, 2, 3, ...
 		\item Mise en forme de la numérotation : supprimer le parenthèse pour avoir \textbf{1}
 		\item Style à appliquer à ce niveau : maSection
-		\item Niveau à afficher dans la galerie : Niveau 3
 		\item Choisir le niveau 3
 		\item Style de nombre pour ce niveau : 1, 2, 3, ...
 		\item Mise en forme de la numérotation : supprimer le parenthèse pour avoir \textbf{1} ; mettre le curseur avant le chiffre ; Inclure le numéro de niveau à partir de : Niveau 2 ; ajouter un point pour avoir \textbf{1.1}
 		\item Style à appliquer à ce niveau : maSousSection
-		\item Niveau à afficher dans la galerie : Niveau 3
 	\end{enumerate}
 	\end{multicols}
 
@@ -161,19 +166,24 @@
 		\item "[TITRE2]" appliquer le style "maSousSection"
 		\item "[CHAPITRE*]" appliquer le style "monChapitre*"
 		\item "[TITRE1*]" appliquer le style "maSection*"
+		\item Les titres des pages préliminaires : appliquer le style "monChapitre*"
 	\end{itemize}
 	\end{multicols}
 	
-	\item Cliquer sur la page du chapitre 1 et ajouter une entête vide 
+	\item Double clique sur l'entête de la première page de l'introduction (Introduction [CHAPITRE*])
+	\item Découcher "Lier au précédent" pour avoir des entêtes différentes des pages préliminaires, Coucher "Première page différente" pour ne pas afficher l'entête dans la première page du chapitre.
+	\item Cliquer sur "Suivant" pour passer à l'entête de la page suivante.
+	\item Ecrire "Introduction", retour à la ligne, ajouter un trait : écrire trois tirets "- - -" ; retour à la ligne. Si ça ne marche pas, dessiner le trait manuellement
+	\item Double clique sur l'entête de la première page du chapitre "Notions"
 	\item Découcher "Lier au précédent", Coucher "Première page différente" et "Pages paires et impaires différentes"
 	\item Cliquer sur "Suivant" pour passer à l'entête de la page suivante.
-	\item Cliquer sur "QuickPart" et sélectionner "Champs", ensuite chercher "RéfStyle" dans les noms des champs et sélectionner "maSection" dans le nom de style. Retour à la ligne ; écrire trois tirets "- - -" ; retour à la ligne pour avoir un trait.
-	\item Cliquer "Suivant ; écrire "Chapitre : " ; ajouter une référence style "monChapitre" (comme l'étape précédente) ; retour à la ligne ; écrire trois tirets ; retour à la ligne pour avoir un trait.
-	\item On remarque qu'il y a des pages qui n'ont pas des  numéros de pages. Choisir une et ajouter le numéro de page
+	\item Cliquer sur "QuickPart" et sélectionner "Champs", ensuite chercher "RéfStyle" dans les noms des champs et sélectionner "maSection" dans le nom de style. Cliquer "OK".  Ajouter un trait (comme dans l'introduction)
+	\item Cliquer "Suivant ; écrire "Chapitre : " ; ajouter une référence style "monChapitre" (comme l'étape précédente) ; cliquer "OK" ; ajouter un trait.
+	\item On remarque qu'il y a des pages qui n'ont pas des numéros de pages, puisque nous avons couché "Page paires et impaires différentes". Choisir une et ajouter le numéro de page
 	
 	\item Chercher "[GTABLEAU]" : c'est un grand tableau dont la page ne peut pas contenir. 
 	\begin{enumerate}
-		\item Avant ce tableau, ajouter un saut de section (Page suivante) et après aussi
+		\item Ajouter un saut de section (Page suivante) avant ce tableau et après aussi
 		\item Revenir à la page du tableau et sélectionner "Paysage" comme orientation.
 		\item Dans l'entête de cette page et celle suivante, découcher "Première page différente"
 	\end{enumerate}
@@ -186,8 +196,9 @@
 \subsection*{Enrichissement du document}
 
 \begin{enumerate}
-	\item Chercher "[TABLEAU]" et convertir le texte vers un tableau. 
-	\item Ajouter la légende indiquée entre les crochets. Elle doit être au-dessus du tableau. 
+	\item Chercher "[TABLEAU]" et convertir le texte après cette ligne vers un tableau. 
+	\item Couper le texte dans les deuxièmes crochets après "[TABLEAU]", et supprimer cette ligne
+	\item Sélectionner le tableau et ajouter une légende de type Tableau (coller le texte). Elle doit être au-dessus du tableau. 
 	\item Avant le tableau, il y a un texte "[REF]". Remplacer le par une renvoi vers ce tableau :
 	\begin{enumerate}
 		\item Aller vers l'onglet "Références", groupe "Légendes", et choisir "Renvoi"
@@ -197,24 +208,23 @@
 	\begin{enumerate}
 		\item Fusionner les entêtes du tableau (ex. la cellule "Texte" doit être fusionnée avec la suivante)
 		\item Effacer les bordures en haut à gauche
-		\item Appliquer la même chose que "[TABLEAU]"
+		\item Appliquer la même chose que "[TABLEAU]", la légende est "Comparaison entre les langages de programmation"
 	\end{enumerate}
 	\item Chercher "[IMAGE]" et insérer l'image "compile.png". 
 	\item Régler la luminosité de l'image afin que l'arrière plan soit en blanc.
-	\item Ajouter la légende "Les étapes de compilation". Elle doit être au-dessous de la figure. 
+	\item Ajouter la légende "Les étapes de compilation" de type "Figure". Elle doit être au-dessous de la figure. 
 	\item Avant la figure, il y a un texte "[REF]". Remplacer le par une renvoi vers cette figure :
 	\begin{enumerate}
 		\item Aller vers l'onglet "Références", groupe "Légendes", et choisir "Renvoi"
 		\item Choisir la catégorie "Figure", sélectionner la légende de la figure, insérer un renvoi à : Texte et numéro uniquement.
 	\end{enumerate}
 	\item Chercher "[SCHEMA]" et dessiner (insérer une zone de dessin pour contenir le schéma) le schéma indiqué par "interprete.png"
-	\item Ajouter la légende de figure "Les étapes de l'interprétation"
+	\item Ajouter la légende "Les étapes de l'interprétation" de type "Figure"
 	\item Avant la figure, il y a un texte "[REF]". Remplacer le par une renvoi vers cette figure
 	\item Chercher "[EQ1]" et remplacer ce texte par une équation $ (765)_{10} = 7 \times 10^2 + 6 \times 10^1 + 5 \times 10^0 $
 	\item Chercher "[EQ2]" et remplacer ce texte par une équation $ (11001)_{2} = 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = (29)_{10} $
-	\item Chercher "[NOTEBP]" et mettre ce qui est entre les deuxièmes crochets comme note de bas de page. 
-	\item  Chercher "[LIEN]" et ajouter un lien hypertexte : le texte est dans les deuxièmes crochets et le lien est dans les troisièmes.
-	\item Dans la page "liste des abréviations", insérer un tableau de 2 colonnes et 5 lignes
+	\item  Chercher "[LIEN]" et ajouter un lien hypertexte : le texte est dans les deuxièmes crochets et le lien est dans les troisièmes "[LIEN][Texte][URL]"
+	\item Dans la page "liste des abréviations", insérer un tableau de 2 colonnes et 4 lignes
 	\item Ajouter les abréviations suivantes : 
 	\begin{multicols}{2}
 		\begin{itemize}
@@ -225,20 +235,24 @@
 		\end{itemize}
 	\end{multicols}
 	\item Trier le tableau selon la première colonne
+	\item Sélectionner la première colonne et appliquer : texte en gras. 
+	\item Effacer les bordures de ce tableau
 \end{enumerate}
 
 \subsection*{Références}
 
 \begin{enumerate}
-	\item Chercher "[NOTEBP]" et mettre ce qui est entre les deuxièmes crochets comme note de bas de page. 
+	\item Chercher "[NOTEBP]" ; couper ce qui est entre les deuxièmes crochets ; Effacer "[NOTEBP][]" ; ajouter une note de bas de page ; Coller le texte 
 	\item Dans la page "liste des figures", insérer la liste des figures
 	\item Dans la page "liste des tableaux", insérer la liste des tableaux
 	\item Dans la page "table de matières", insérer une table de matière personnalisée
 	\begin{itemize}
 		\item Dans "Options" affecter le niveau 1 aux styles "monChapitre" et "monChapitre*" ; affecter le niveau 2 au style "maSection" ; affecter le niveau 3 au style "maSousSection"
 	\end{itemize}
-	\item Indexer les mots suivants : calculateur, processeur, programmation. Ajouter un renvoi pour avoir \textbf{UCT ... voir processeur}. Insérer l'index dans une page à part à la fin du rapport. 
-	\item Ajouter les ressources bibliographiques indiquées dans le fichier "bib.text"
+	\item Indexer les mots suivants (marquer comme entrée) : calculateur, processeur, programmation.
+	\item Ajouter un renvoi pour avoir \textbf{UCT ... voir processeur}. 
+	\item Insérer l'index dans une page à part à la fin du rapport. 
+	\item Ajouter les ressources bibliographiques indiquées dans le fichier "bib.text" (type "Livre")
 	\item Chercher "[BIB]" et insérer la citation référencée par un numéro (deuxièmes crochets)
 	\item Insérer une table bibliographique en fin du document (nouvelle page). 
 	\item Choisir le style "APA" 
@@ -248,14 +262,13 @@
 
 \begin{enumerate}
 	\item Si ce n'est pas déjà fait, nettoyer le document des marqueurs "[CHAPITRE]", "[CHAPITRE*]", "[TITRE1]", "[TITRE1*]", "[TITRE2]", "[REF]", etc. Utiliser l'outil de remplacement pour les remplacer par un vide. 
-	\item Choisir des remerciements depuis le fichier "remerciement.txt" et insérer les dans la page de remerciement (avec modification). 
-	\item Choisir des dédicaces depuis le fichier "dedicace.txt" et insérer les dans la page de dédicaces
+	\item Choisir des remerciements depuis le fichier "remerciement.txt" (il y a plusieurs modèles) et insérer les dans la page de remerciement (avec modification). 
+	\item Choisir des dédicaces depuis le fichier "dedicace.txt" (il y a plusieurs modèles) et insérer les dans la page de dédicaces
 	\item Insérer le résumé depuis le fichier "resume.txt" dans la page de résumé 
 	\item Vérifier l'orthographe
 	\item Sauvegarder le document s'il n'est pas déjà sauvegardé et exporter le comme PDF.
 \end{enumerate}
 
-\newpage
 \section*{Exercice 2 : Rédaction d'un CV avec Word}
 
 \vspace{-12pt}
@@ -279,8 +292,199 @@
 	\hline
 \end{tabular}
 
+\subsection*{Préparation du document}
+
 \begin{enumerate}
-	\item L'exercice sera complété ultérieurement
+	\item Créer un dossier "\textbf{rapport/}". Dans ce dossier, copier les images dans les ressources accompagnées avec cet exercice vers un dossier "\textbf{rapport/img/}". Aussi, créer un dossier "\textbf{rapport/chap/}" pour contenir les chapitres, et un dossier "\textbf{rapport/pre/}" pour contenir les pages préliminaires. 
+	\item Créer un nouveau document \LaTeX\ qui se base sur la classe \textbf{book} avec \textbf{12pt}, \textbf{a4paper} comme options. Dans TeXstudio, aller vers "Fichier -> Nouveau à partir d'un modèle".
+	\item Sauvegarder le  dans le dossier "\textbf{rapport/}" sous le nom de "\textbf{rapport.tex}"
+	\item Définir les marges 3cm gauche et 2cm pour haut, bas et droit ; en utilisant l'extension \textbf{geometry}. Aussi, passer l'option \textbf{asymmetric} à cette extension afin de ne pas avoir des pages recto-verso
+	\item Importer l'extension "\textbf{times}" pour appliquer la police "Times New Roman" sur le texte 
+	\item Spécifier la langue française comme langue d'écriture en utilisant l'extension "\textbf{babel}" et l'encodage \textbf{UTF-8} comme encodage de texte
+	\item On va créer une page de garde personnalisée (pas en utilisant la commande \textbf{maketitle}) : 
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item Importer l'extension \textbf{graphicx}
+			\item Juste après \textbackslash begin\{document\}, définir le style de la page comme vide
+			\item Ajouter l'image "\textbf{img/entete.png}", sa largeur est la largeur du texte (dans la page)
+			\item retour à la ligne avec 2cm (\textbf{\textbackslash\textbackslash[2cm]})
+			\item Le mot "Rapport" centré (environnement \textbf{center}), en gras, taille \textbf{Large}
+			\item Ajouter \textbf{\textbackslash vspace\{1cm\}} pour pousser le contenu qui vient après avec 1cm
+			\item Le titre "Introduction à la programmation" dans un cadre. 
+			\begin{itemize}
+				\item Le cadre est un tableau avec une seule cellule et des marges
+				\item le titre doit être en gras, taille \textbf{Huge}, centré.
+			\end{itemize}
+			\item Ajouter \textbf{\textbackslash vspace\{2cm\}} pour pousser le contenu qui vient après avec 2cm
+			\item Insérer un tableau sans bordures avec deux lignes et trois colonnes alignées à gauche :
+			\begin{itemize}
+				\item la première ligne "Encadré par :" en gras, vide,  "Réalisé par :" en gras 
+				\item la deuxième ligne le nom de votre enseignant du TD, vide, les noms des étudiants
+			\end{itemize}
+		
+			\item Après le tableau, ajouter \textbf{\textbackslash vfill} pour pousser le texte qui vient après vers le bas de page
+			
+			\item Ecrire "Année : " suivi de l'année, en gras, 14 pt, centré. 
+		\end{itemize}
+	\end{multicols}
+	\item Ajouter la commande \textbf{\textbackslash frontmatter} pour commencer les pages préliminaires
+	\item Créer les fichiers suivants dans le dossier \textbf{rapport/pre/} :  
+	\begin{enumerate}
+		\item \textbf{remerciements.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter*\{Remerciements\} } et copier des remerciements à partir de \textbf{remerciement.txt} (ressources)
+		\item \textbf{dedicace.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter*\{Dédicace\} }, ajouter \textbf{\textbackslash vfill}, et copier des remerciements à partir de \textbf{dedicace.txt} (ressources)
+		\item \textbf{resume.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter*\{Résumé\} }et copier des remerciements à partir de \textbf{resume.txt} (ressources) 
+	\end{enumerate}
+	\item Dans le fichier \textbf{rapport.tex}, importer ces pages après \textbf{\textbackslash frontmatter}. Par exemple, \textbf{\textbackslash include\{pre/remerciements.tex\}}
+	
+	\item Ajouter \textbf{\textbackslash tableofcontents} pour générer la table des matières
+	
+	\item Ajouter \textbf{\textbackslash listoffigures} pour générer la liste des figures
+	
+	\item Ajouter \textbf{\textbackslash listoftables} pour générer la liste des tableaux
+	
+	\item Ajouter le code suivant : 
+	\begin{verbatim}
+	\chapter*{Liste des abréviations}
+	\printacronyms[include-classes=abbrev,name=]
+	\end{verbatim}
+	
+	\item Il faut importer l'extension \textbf{acro} pour ça.
+	
+	\item Ajouter \textbf{\textbackslash cleardoublepage} pour laisser une page vide si les pages sont impaires
+
+	\item Ajouter \textbf{\textbackslash mainmatter} pour commencer le développement du rapport
+	
+	\item Ajouter \textbf{\textbackslash renewcommand\{\textbackslash baselinestretch\}\{1.5\} } pour définir l'interligne 
+	
+	\item Ajouter \textbf{\textbackslash setlength\{\textbackslash parskip\}\{6pt\} } pour définir l'espacement entre deux paragraphes 
+	
+	\item Ajouter \textbf{\textbackslash setlength\{\textbackslash parindent\}\{1cm\} } pour définir le retrait de première ligne d'un paragraphe
+	
+	\item Appliquer le style de pages \textbf{fancy}
+	
+	\item Il faut importer l'extension \textbf{fancyhdr}. Dans la préambule
+	\begin{itemize}
+		\item définir le titre de la section (\textbf{\textbackslash rightmark}) comme entête des pages paires 
+		\item définir le titre du chapitre (\textbf{\textbackslash leftmark}) comme entête des pages paires 
+		\item définir le numéro de page (\textbf{\textbackslash thepage})
+	\end{itemize}
+
+	\item Créer les fichiers suivants dans le dossier \textbf{rapport/chap/} :  
+	\begin{enumerate}
+		\item \textbf{intro.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter*\{Introduction\} } et copier le texte de l'introduction à partir de \textbf{rapport.txt} (ressources)
+		\item \textbf{notions.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter\{Notions\} } et copier le texte de ce chapitre à partir de \textbf{rapport.txt} (ressources)
+		\item \textbf{notions.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter\{Notions\} } et copier le texte de ce chapitre à partir de \textbf{rapport.txt} (ressources). Chercher les caractères (\$ \# \% et \&) et mettre un antislash avant chacun (puisque se sont des caractères réservés). Là où il y a un \textasciicircum , mettre l'expression entre deux \$ pour créer une équation. Exemple \$ 2\textasciicircum \{11\}=2 048 \$  va s'afficher $2^{11}=2 048$
+		\item \textbf{concepts.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter\{Concepts de base\} } et copier le texte de ce chapitre à partir de \textbf{rapport.txt} (ressources). Chercher le caractères (\#) et mettre un antislash avant chacun (puisque se sont des caractères réservés). 
+		\item \textbf{conc.tex} : Dans ce fichier ajouter \textbf{\textbackslash chapter*\{Conclusion\} } et copier le texte de la conclusion à partir de \textbf{rapport.txt} (ressources)
+	\end{enumerate}
+
+	\item Importer ces chapitres en utilisant \textbf{\textbackslash include}
+
+	\item Définir les sections (les chapitres ont été déjà créés). Les titres marqués par : 
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item "[TITRE1]" appliquer \textbackslash section\{\}
+			\item "[TITRE1*]" appliquer \textbackslash section*\{\}
+			\item "[TITRE2]" appliquer \textbackslash subsection\{\}
+			\item Séparer les paragraphes par une ligne vide
+		\end{itemize}
+	\end{multicols}
+	
+	\item Chercher "[PUCES]" et utiliser l'environnement \textbf{itemize} ; les lignes suivantes marquées par "-." sont des \textbf{item}
+	\item Chercher "[CODE]" ; sélectionner la ligne ; police "Courier New" ; créer un nouveau style appelé "monCode" ; appliquer le sur le reste des codes.
+	
+\end{enumerate}
+
+\subsection*{Enrichissement du document}
+
+\begin{enumerate}
+	\item Chercher "[TABLEAU]" dans \textbf{notions.tex} et convertir le texte après cette ligne vers un tableau, en utilisant l'environnement \textbf{tabular}.
+	\item Mettre le \textbf{tabular} dans un autre environnement \textbf{table}. Dans ce dernier environnement, ajouter la commande \textbf{\textbackslash centering} pour center le tableau
+	\item Couper le texte dans les deuxièmes crochets après "[TABLEAU]", et supprimer cette ligne
+	\item Dans l'environnement \textbf{table}, ajouter \textbf{\textbackslash caption\{\}} avec le texte copié. Aussi, ajouter \textbf{\textbackslash label \{tab:plages\}} pour capter le numéro du tableau.
+	\item Avant le tableau, il y a un texte "[REF]". Remplacer le texte "Tableau" suivi par une renvoi vers ce tableau : ajouter \textbf{\textbackslash ref \{tab:plages\}}
+	\item Chercher "[GTABLEAU]" dans \textbf{concepts.tex} et créer un tableau à partir de celui dans "gtableau.docx". N'oublier pas de mettre un antislash avant le \#
+	\begin{enumerate}
+		\item Fusionner les entêtes du tableau (ex. \textbf{\textbackslash multicolumn\{2\}\{c\}\{Entier 32bits\}}). 
+		\item Tracer les traits en utilisant \textbf{\textbackslash hline} pour trait horizontal sur le tableau entier, et \textbf{\textbackslash hline}
+		\item Appliquer la même chose que "[TABLEAU]", la légende est "Comparaison entre les langages de programmation" et le label est \textbf{tab:comp}
+	\end{enumerate}
+
+	\item Les deux tableaux prennent pleinement d'espace. Donc on veut les mettre dans des pages avec orientation Paysage en utilisant l'extension \textbf{pdflscape} et l'environnement \textbf{landscape}
+	\item Chercher "[IMAGE]" dans \textbf{notions.tex} et insérer l'image "compile.png" en utilisant \textbf{includegraphics}.
+	\item Insérer la figure dans un environnement \textbf{figure} et ajouter \textbf{\textbackslash centering} 
+	\item Ajouter la légende "Les étapes de compilation" et le label \textbf{fig:compile}
+	\item Avant la figure, il y a un texte "[REF]". Remplacer le par \textbf{Figure \textbackslash ref\{fig:compile\}}
+	\item Régler la luminosité de l'image afin que l'arrière plan soit en blanc.
+	\item Chercher "[SCHEMA]" et faire la même chose : l'image "interprete.png", la légende : "Les étapes de l'interprétation", le label \textbf{fig:inter}
+	\item Chercher "[EQ1]" et remplacer ce marqueur par \$ (765)\_\{10\} = 7 \textbackslash times 10\textasciicircum 2 + 6 \textbackslash times 10\textasciicircum 1 + 5 \textbackslash times 10\textasciicircum 0 \$
+	\item Chercher "[EQ2]" et remplacer ce texte par une équation \$ (11001)\_\{2\} = 1 \textbackslash times 2\textasciicircum 4 + 1 \textbackslash times 2\textasciicircum 3 + 0 \textbackslash times 2\textasciicircum 2 + 0 \textbackslash times 2\textasciicircum 1 + 1 \textbackslash times 2\textasciicircum 0 = (29)\_\{10\} \$
+	\item  Chercher "[LIEN]" dans \textbf{conc.tex} et ajouter un lien hypertexte en utilisant la commande \textbf{href} de l'extension \textbf{hyperref} : le texte est dans les deuxièmes crochets et le lien est dans les troisièmes "[LIEN][Texte][URL]"
+	
+	\item Importer l'extension \textbf{listings}. 
+	\item Aller vers \textbf{concepts.tex} et chercher \textbf{[CODE]}
+	\item Insérer chaque ligne dans un environnement \textbf{lstlisting}. 
+	\item Spécifier le langage dans les options de l'environnement : 
+	\begin{itemize}
+		\item language=Java
+		\item language=\{[Visual]Basic\}
+		\item language=Python
+		\item language=Pascal
+	\end{itemize}
+	
+\end{enumerate}
+
+\subsection*{Références}
+
+\begin{enumerate}
+	\item Chercher "[NOTEBP]" dans \textbf{intro.tex} ; couper ce qui est entre les deuxièmes crochets ; Effacer "[NOTEBP][]" ; ajouter une note de bas de page en utilisant la commande \textbf{footnote} ; Coller le texte 
+	
+	\item Indexer les mots suivants (marquer comme entrée) : calculateur, processeur, programmation en utilisant la commande \textbf{index}. Pour ce faire, il faut importer l'extension \textbf{makeidx}
+	\item Après \textbf{\textbackslash include\{chap/conc\}} insérer \textbf{\textbackslash backmatter} pour indiquer que ce qui vient après ce sont des pages supplémentaires
+	\item Insérer l'index \textbf{\textbackslash printindex}
+	\item Ajouter les ressources bibliographiques 
+	\begin{itemize}
+		\item Créer un fichier \textbf{cite.bib} et ajouter les deux livres dans le fichier "bib.text" selon la syntaxe de Bibtex
+	\end{itemize}
+	\item Chercher "[BIB]" et insérer la citation référencée par un numéro (deuxièmes crochets)
+	\item Appliquer le style de bibliographie "apalike"
+	\item Insérer une table bibliographique en indiquant le fichier bibtex \textbf{cite}
+	
+	\item Afin de créer les abréviations, dans la préambule définir les abréviations suivantes : 
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item ENIAC : Electronic Numerical Integrator And Computer
+			\item UTF-8 : Unicode Transformation Format - 8 bits
+			\item ASCII : American Standard Code for Information Interchange
+			\item DOS : Disk Operating System
+		\end{itemize}
+	\end{multicols}
+	
+	\item Un exemple comment définir une abréviation : 
+	\begin{verbatim}
+	\DeclareAcronym{eniac}{
+	short = ENIAC ,
+	long  = Electronic Numerical Integrator And Computer ,
+	class = abbrev
+	}
+	\end{verbatim} 
+	
+	\item Dans les différents chapitres, chercher ces abréviations et les remplacer par \textbf{\textbackslash ac\{reference\}}. Par exemple, dans \textbf{intro.tex}, remplacer \textbf{ENIAC} par \textbf{\textbackslash ac\{eniac\}}
+	
+	\item Les chapitres non numérotés ne s'affichent pas dans la table des matières. Vous pouvez ajouter la commande \textbf{addcontentsline} après ce chapitre. Par exemple : 
+	\begin{verbatim}
+	\chapter*{Introduction}
+	\addcontentsline{toc}{chapter}{Introduction}
+	...
+	\end{verbatim} 
+	
+	
+\end{enumerate}
+
+\subsection*{Finalisation}
+
+\begin{enumerate}
+	\item Si ce n'est pas déjà fait, nettoyer le document des marqueurs "[CHAPITRE]", "[CHAPITRE*]", "[TITRE1]", "[TITRE1*]", "[TITRE2]", "[REF]", etc. Utiliser l'outil de remplacement pour les remplacer par un vide. 
 \end{enumerate}
 
 \section*{Exercice 4 : Rédaction d'un CV avec \LaTeX}
