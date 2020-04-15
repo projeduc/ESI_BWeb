@@ -1,0 +1,110 @@
+﻿[DIAPO] Contexte
+----------------
+Il y a plusieurs millénaires, le binaire fut inventé par les Chinois
+En 1697, le binaire fut introduit en Europe par Leibniz
+En 1843, le calcul par itération successive fut inventé par Ada Lovelace
+En 1854, l'algèbre binaire fut inventée par Boole
+En 1946, le premier calculateur électronique fut créé
+La machine n'était donc pas programmable.
+En 1948, le premier ordinateur programmable fut créé
+En 1971, invention du processeur permettra la programmation d'applications complexes.
+
+[DIAPO] Problématique et objectif
+-----------------------------------
+Plusieurs personnes veulent apprendre à programmer. 
+Ils ne sachent pas comment commencer. 
+Il faut apprendre quelques notions avant d'apprendre un langage de programmation spécifique.
+Objectif : Introduire la programmation aux débutants. 
+
+[DIAPO] Plan
+-------------
+Notions 
+Concepts de base
+Conclusion
+
+==================
+[SECTION] Notions 
+==================
+
+[DIAPO] Représentation binaire
+------------------------------
+En électronique numérique les signaux se stabilisent sur 2 états, habituellement 0 et 5 volts
+   - La valeur binaire 1 veut dire : passer le courant
+   - La valeur binaire 0 veut dire : bloquer le courant
+   - Un bit prend une de ces deux valeurs
+
+Le mot binaire
+   - Un ensemble de bits interprété par le microprocesseur ou stocké dans une mémoire
+   - Par exemple, 10110101 est un mot de 8 bits (octet). 
+
+[DIAPO] Représentation du texte
+---------------------------------
+ASCII 
+   - Constitué en 1963 puis complété en 1967
+   - Un caractère est codé sur 7 bits 
+   - Alphabet latin sans les diacritiques, chiffres, etc.
+
+Unicode
+   - Permet d'encoder les caractères par groupe de 8 bits (un octet)
+   - Définit actuellement plus de 120 000 caractères en utilisant jusqu'à 31 bits pour chacun
+   - Il existe 6 plages, la première occupant 1 octet, la dernière en utilisant 6
+
+[DIAPO] Technologies de langages
+--------------------------------
+Langage machine
+   - Il s'agit d'une suite de bits
+   - Une instruction correspond à une seule action du processeur
+Langages assemblés
+   - Traduction mot à mot du langage machine en une suite d'instructions
+   - Spécifique à un modèle de processeur
+Langages de haut niveau
+   - Programmation indépendante de l'architecture cible. 
+   - Le code source produit ne peut être exécuté directement par la machine ; il faut un compilateur ou un interpréteur
+
+[DIAPO] Technologies d'exécution
+---------------------------------
+Comparaison entre Langages interprétés et Langages compilés
+<insérer les deux images>
+
+
+==========================
+[SECTION] Concepts de base
+==========================
+
+[DIAPO] Commentaires
+----------------------
+Java, C++, C#, Javascript : /* Un commentaire ici */
+Basic, Batch (pour DOS) : REM Un commentaire ici 
+Shell unix, Python : # Un commentaire ici
+Pascal : (* Un commentaire ici *)
+
+[DIAPO] Instructions
+---------------------
+La déclaration de variables,
+L'affectation, c'est-à-dire donner une valeur ou le résultat d'une expression à une variable déclarée,
+La conditionnelle, c'est-à-dire exécuter une suite d'instructions si une expression est vérifiée, et éventuellement une autre suite d'instructions si cette expression n'est pas vérifiée,
+Les itérations, c'est-à-dire répéter une suite d'instructions tant qu'une certaine condition n'est pas vérifiée.
+
+[DIAPO] Variables
+------------------
+Un nom : Un variable apparaît en programmation sous un nom de variable.
+Un type : Pour distinguer les uns des autres les divers contenus possibles, on utilise différents types de variables (entiers, réels, chaîne de caractères …).
+Une valeur : Une fois la variable définie, une valeur lui est assignée, ou affectée.
+Une adresse : C'est l'emplacement dans la mémoire de l'ordinateur, où est stockée la valeur de la variable.
+
+
+==============================
+[SECTION] Conclusion générale
+==============================
+
+[DIAPO] Conclusion 
+-------------------
+
+Des notions nécessaires pour comprendre la programmation
+Des concepts de base de la programmation : les commentaires, les instructions et les variables 
+
+[DIAPO] Perspectives 
+--------------------
+La présentation des concepts avec un langage de programmation bien défini
+Présentation des concepts plus avancés 
+Créer un tutoriel pour débutants sur Github : http://www.github.com/
