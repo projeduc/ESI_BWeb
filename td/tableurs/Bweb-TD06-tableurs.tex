@@ -1,0 +1,149 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[11pt, a4paper]{article}
+%\usepackage{fullpage}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+%\usepackage{indentfirst}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage{txfonts} 
+\usepackage[]{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{wrapfig}
+
+\usepackage{turnstile}%Induction symbole
+
+\renewcommand{\baselinestretch}{1}
+
+\setlength{\parindent}{24pt}
+
+
+\begin{document}
+
+\selectlanguage {french}
+%\pagestyle{empty} 
+
+\noindent
+\begin{tabular}{ll}
+\multirow{3}{*}{\includegraphics[width=2cm]{../esi-logo.png}} & \'Ecole national Supérieure d'Informatique\\
+& 1ère année cycle préparatoire\\
+& Bureautique et Web
+\end{tabular}\\[.25cm]
+\noindent\rule{\textwidth}{1pt}\\%[-0.25cm]
+\begin{center}
+{\LARGE \textbf{T.D. Présentation}}
+%\begin{flushright}
+%	ARIES Abdelkrime
+%\end{flushright}
+\end{center}
+\noindent\rule{\textwidth}{1pt}
+
+\section*{Exercice : Powerpoint}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir créer une présentation Powerpoint (temps estimé : 1h pour la réalisation et 15mn pour la présentation)   \\\\
+	\hline
+\end{tabular}
+
+Après avoir publié votre rapport "Introduction à la programmation" sur les réseaux sociaux, plusieurs étudiants ont été intéressés par des formations dans cet axe. 
+Afin de satisfaire leurs demandes, vous avez décidé d'organiser une série de formations intitulé \textbf{ESI.prog} en collaboration avec un groupe de vos collègues.
+
+\begin{enumerate}
+	\item Créer une présentation Powerpoint vide 
+	\item Modifier le diapositive de titre 
+	\begin{multicols}{3}
+	\begin{enumerate}
+		\item S'il n'existe pas, insérer le
+		\item Ajouter le titre "Introduction à la programmation"
+		\item Ajouter votre nom et prénom 
+		\item Ajouter la date de présentation : 18 Avril 2020
+	\end{enumerate}
+	\end{multicols}
+
+	\item Afficher le pied des diapositives 
+	\begin{multicols}{3}
+	\begin{enumerate}
+		\item Dans Acceuil, Texte, Entête/Pied
+		\item Fixer la date à 18/04/2020
+		\item Activer le numéro de diapositive
+		\item Ajouter un pied de page "ESI- " suivi de votre nom
+		\item Ne pas afficher sur la diapostive de titre
+		\item Appliquer partout
+	\end{enumerate}
+	\end{multicols}
+	
+	\item Créer 3 diapositives de type "Titre et contenu" avec les titres
+	\begin{multicols}{3}
+	\begin{enumerate}
+		\item Contexte
+		\item Problématique et objectif
+		\item Plan
+	\end{enumerate} 
+	\end{multicols}
+	
+	\item Ajouter le contenu à partir du fichier "diapostives.txt"
+	\begin{itemize}
+		\item Compléter les trois diapositives précédentes
+		\item Là où il y a \textbf{[SECTION]} créer un diapositive de type "Titre de section" avec le titre indiqué après \textbf{[SECTION]}
+		\item Là où il y a \textbf{[DIAPO]} créer un diapositive de type "Titre et contenu" avec le titre indiqué après \textbf{[DIAPO]} et insérer le contenu
+		\item Sauf \textbf{[DIAPO]} Technologies d'exécution. Insérer un diapositive de type "Comparaison", insérer les deux images "compile.png" et "interprete.png" et les titres "Compilation" et "Interprétation"
+	\end{itemize}
+	
+	\item Ajouter une transition aux diapositives
+	\begin{multicols}{3}
+	\begin{enumerate}
+		\item Aller à l'onglet "TRANSITIONS"
+		\item Choisir une transition de votre choix (elle doit être simple)
+		\item Dans le groupe "Minutage", appuyer sur "Appliquer partout" 
+	\end{enumerate}
+	\end{multicols}
+	
+	\newpage
+	\item Appliquer des animation
+	\begin{multicols}{3}
+	\begin{enumerate}
+		\item Aller vers le dernier diapostive
+		\item Sélectionner le contenu (les puces)
+		\item Aller vers l'onglet "ANIMATIONS"
+		\item Choisir une animation d'apparition (elle doit être simple)
+		\item Afficher le volet d'animation
+		\item Sélectionner la deuxième animation
+		\item Dans le groupe "minutage", Démarrer au clic
+		\item Refaire la même chose pour la troisième animation
+	\end{enumerate}
+	\end{multicols}
+	
+	\item Dans l'onglet "CREATION"
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Choisir un thème
+		\item Modifier la taille des diapositives (4:3)
+	\end{itemize}
+	\end{multicols}
+	
+	\item Modifier le masque de la diapositive 
+	%\begin{multicols}{3}
+	\begin{enumerate}
+		\item Onglet "AFFICHAGE" ; Masque des diapositives;
+		\item Mettre un petit logo de l'ESI dans le masque supérieure pour l'afficher sur le reste des masques
+		\item Dans le diapositive de titre, le logo doit être grand
+		\item Désactiver le mode Masque 
+	\end{enumerate}
+	%\end{multicols}
+	
+	\item Deux étudiants doivent passer au tableau et présenter (Pas applicable dans le cas d'apprentissage à distance)
+\end{enumerate}
+
+
+\end{document}

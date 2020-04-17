@@ -1,0 +1,864 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[xcolor=table, usenames,dvipsnames]{beamer}
+
+\input{options}
+%\usepackage{calligra}
+
+\title[BWEB : 06- Tableurs et Excel] %
+{Bureautique et Web \\Chapitre 06 : Tableurs \\ \slshape\small  Introduction \& Microsoft Excel}  
+
+\changegraphpath{../img/tableurs/}
+
+\begin{document}
+
+\begin{frame}
+\frametitle{Tableurs}
+\framesubtitle{Les utilisations des tableurs}
+	\begin{itemize}
+		\item Modélisation et planification
+		\item Comptes d'entreprise et budgétisation
+		\item Factures et Salaires
+		\item Prédictions / Simulations
+		\item Calculs et analyses statistiques
+		\item Création de graphiques
+		\item Collectez des données de différentes sources
+	\end{itemize}
+\end{frame}
+	
+\begin{frame}
+\frametitle{Tableurs}
+\framesubtitle{Les avantages des tableurs}
+\begin{itemize}
+	\item Les calculs sont corrects et automatiques
+	\item L'information est organisée et facile à accéder
+	\item Les données peuvent être facilement triées et filtrées
+	\item Les données peuvent être analysées rapidement
+	\item Les rapports peuvent être rendus plus visuels en utilisant des tableaux et des graphiques
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tableurs}
+\framesubtitle{Pourquoi ce cours}
+\begin{minipage}{0.64\textwidth}
+	\begin{itemize}
+		\item Il faut maitriser un outil de tableur à cause de ces avantages
+		\item Pour créer des statistiques sans erreurs 
+		\item Beaucoup d'utilisateurs gaspillent leurs temps à régler des problème : il faut savoir utiliser son outil
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.35\textwidth}
+	\begin{table}
+		\hgraphpage{pblm.pdf}
+		\caption{Les problèmes rencontrés par les utilisateurs de Excel d'après \cite{chambers}}
+	\end{table}
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Présentation}
+\framesubtitle{Tableurs}
+
+\begin{multicols}{2}
+	%	\small
+	\tableofcontents
+\end{multicols}
+\end{frame}
+
+%===================================================================================
+\section{Tableurs}
+%===================================================================================
+
+\subsection{Éléments d'un tableur}
+
+\begin{frame}
+\frametitle{Tableurs : Éléments d'un tableur}
+\framesubtitle{Structure}
+
+\begin{minipage}{0.49\textwidth}
+	\begin{itemize}
+		\item Un tableur contient une ou plusieurs feuilles de calcule 
+		\item Une feuille de calcule est un grand tableau avec des lignes et des colonnes 
+		\item Les lignes et les colonnes ont des références ; en général, les lignes sont référencées par des nombres et les colonnes par des lettres
+		\item L'intersection entre une ligne et une colonne est une cellule
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth} 
+	\hgraphpage{tableur.png} 
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tableurs : Éléments d'un tableur}
+\framesubtitle{Contenu des cellules}
+
+\begin{itemize}
+	\item Différents types de données : 
+	\begin{itemize}
+		\item Nombre
+		\item Texte
+		\item Date 
+		\item ...
+	\end{itemize}
+
+	\item Formules : en générale, se commencent par \keyword{=}. Contiennent :
+	\begin{itemize}
+		\item Constantes : une valeur parmi les différentes types de donnée
+		\item Références : pour récupérer le contenu d'une autre cellule
+		\item Fonctions : les tableurs fournissent des fonctions prédéfinies 
+	\end{itemize}
+	
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tableurs : Éléments d'un tableur}
+\framesubtitle{Références}
+
+\begin{itemize}
+	\item Référence d'une feuille : pour référencer une feuille de calcule ; en générale en utilisant le nom de la feuille suivi par \keyword{!}
+	\item Référence d'une cellule : Une cellule est référencée par la référence de sa colonne suivie par la référence de sa ligne ; exemple \expword{D3} pour dire colonne 4 ligne 3. Deux types de références : 
+	\begin{itemize}
+		\item Référence relative : si on recopie une formule vers une autre cellule, les références dans cette formule se misent à jours selon la cellule initiale et destinataire
+		\item Référence absolue : si on recopie une formule vers une autre cellule, les références dans cette formule restent les mêmes
+	\end{itemize}
+	\item Référence d'une plage : on peut référencer une plage de cellule ; en générale, on la référence de cellule de départ suivie par \keyword{:} suivie par le référence de cellule de destination (eg. \expword{C2:D6})
+\end{itemize}
+\end{frame}
+
+\subsection{Cas d'utilisation}
+
+
+\subsection{Outils}
+
+\begin{frame}
+\frametitle{Tableurs}
+\framesubtitle{Outils}
+
+\begin{itemize}
+	\item intégrés dans des suites bureautiques
+	\item spécialisés : pas beaucoup. \href{https://pyspread.gitlab.io/}{Pyspread} est un outil qui permet l'insertion des expressions Python dans le cellules.
+	\item sur le cloud : beaucoup d'outils de suites bureautiques fournissent un service cloud comme \expword{Microsoft Office}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tableurs : Outils}
+\framesubtitle{Suites bureautiques}
+
+\def\arraystretch{.5}
+
+\begin{tabular}{p{.3\textwidth}cp{.5\textwidth}}%p{.3\textwidth}
+
+\hline
+
+\vgraphpage[.8cm, valign=t]{freeoffice-logo.png} &
+\vgraphpage[.8cm, valign=t]{freeoffice-planmaker-logo.png} &
+FreeOffice PlanMaker  
+
+\url{https://www.freeoffice.com/}  \\
+\hline
+
+\vgraphpage[.8cm, valign=t]{libreoffice-logo.png} &
+\vgraphpage[.8cm, valign=t]{libreoffice-spreadsheet-logo.png} & 
+LibreOffice Spreadsheet 
+
+\url{https://www.libreoffice.org/}  \\
+\hline
+
+\vgraphpage[.8cm, valign=t]{msoffice-logo.png} &
+\vgraphpage[.8cm, valign=t]{msoffice-excel-logo.png} & 
+Microsoft Office Excel 
+
+\url{https://www.office.com/}  \\
+\hline
+
+\vgraphpage[.7cm, valign=t]{onlyoffice-logo.png} & &
+%	\graphintable{.8cm}{onlyoffice-documents-logo.png} & 
+OnlyOffice Spreadsheets 
+
+\url{https://www.onlyoffice.com/}  \\
+\hline
+
+\vgraphpage[.8cm, valign=t]{wps-logo.png} & 
+\vgraphpage[.8cm, valign=t]{wps-spreadsheets-logo.png} & 
+WPS Spreadsheets
+
+\url{https://www.wps.com/}  \\
+\hline
+
+
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tableurs : Outils}
+\framesubtitle{Services cloud}
+
+\def\arraystretch{.5}
+
+\begin{tabular}{p{.15\textwidth}p{.75\textwidth}}%p{.3\textwidth}
+
+\hline
+
+\vgraphpage[.9cm, valign=t]{google-sheets-logo.png} &
+Google Sheets 
+
+\url{https://docs.google.com/spreadsheets/}  \\
+\hline
+
+\vgraphpage[.9cm, valign=t]{airtable-logo.png} &
+Airtable
+
+\url{https://airtable.com/}  \\
+\hline
+
+
+\end{tabular}
+\end{frame}
+
+
+%===================================================================================
+\section{Microsoft Excel}
+%===================================================================================
+
+\begin{frame}
+\frametitle{Microsoft Excel}
+%\framesubtitle{}
+\begin{itemize}
+	\item logiciel de tableur
+	\item fait partit à la suite bureautique \optword{Microsoft office}
+	\item disponible sur Windows, Mac OS, iOS et Android
+	\item il contient des fonctionnalités de Word telles que la mise en forme, etc.
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Microsoft Excel}
+%\framesubtitle{Aperçu}
+%
+%\end{frame}
+
+\subsection{Données et opérations}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Opérations sur les feuilles, les lignes et les colonnes}
+
+\begin{minipage}{0.40\textwidth}
+	Les feuilles
+	
+	\vgraphpage[.6\textheight]{excel-feuille-op.png}
+\end{minipage}
+\begin{minipage}{0.28\textwidth}
+	Les lignes
+	
+	\vgraphpage[.6\textheight]{excel-ligne-op.png}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+	Les colonnes
+	
+	\vgraphpage[.6\textheight]{excel-col-op.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Excel : Données}
+\framesubtitle{Formats}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Accueil}
+		\item Groupe : \optword{Nombre}
+		\item Objectif : formater les cellule sous forme de texte, nombre, pourcentage, etc.
+		\item pour un nombre, on peut spécifier le nombre des chiffres après la virgule
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	\hgraphpage[.49\textwidth]{excel-donnees-formats-barre.png}
+	%
+	\hgraphpage[.49\textwidth]{excel-donnees-formats-types.png}
+	%
+%	\hgraphpage{excel-donnees-formats-options.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Séries de données}
+
+\begin{minipage}{0.34\textwidth}
+	\begin{itemize}
+		\item pour ne pas saisir les données une à une
+		\item utile pour les données séquentielles 
+		\item plusieurs types : \expword{numériques}, \expword{alpha-numériques} et \expword{chronologique}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.65\textwidth}
+	\hgraphpage{excel-series.png}
+\end{minipage}
+
+%\vgraphpage[2cm]{excel-series.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Séries de données (Comment saisir?)}
+
+\begin{tabular}{p{.6\textwidth}p{.35\textwidth}}
+	écrire la valeur dans une cellule et cliquer sur le coin bas à droite &
+	\hgraphpage[.25\textwidth, valign=t]{excel-series-etape1.png} \\
+	glisser en bas ou à gauche ; un menu s'apparaitra &
+	\hgraphpage[.25\textwidth, valign=t]{excel-series-etape2.png} \\
+	choisir \optword{Incrémenter une série} &
+	\hgraphpage[.35\textwidth, valign=t]{excel-series-etape3.png} \\
+\end{tabular}
+
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Excel : Données}
+%\framesubtitle{Importer les données}
+%
+%
+%
+%\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Trier et filtrer les colonnes (1)}
+
+\begin{minipage}{0.7\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Accueil}
+		\item Groupe : \optword{Édition}
+		\item Option : \optword{Trier et filtrer}
+		\item Objectif : trier ou filtrer les données selon les valeurs d'une ou plusieurs colonnes
+		\item Sélectionner une ou plusieurs colonnes consécutives et appliquer le trie ou le filtre
+		\item Si on applique le filtre, des petites flèches apparaitra en haut des colonnes
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.29\textwidth}
+	\hgraphpage{excel-trier-filtrer.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Trier et filtrer les colonnes (2)}
+
+\begin{minipage}{0.5\textwidth}
+	Filtrage des textes : 
+	
+	\hgraphpage{excel-filtrer-texte.png}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	Filtrage des nombres :
+	
+	\hgraphpage{excel-filtrer-num.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Validation des données}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Données}
+		\item Groupe : \optword{Outils de données}
+		\item Option : \optword{Validation des données}
+		\item Objectif : vérifier les données saisies par l'utilisateur
+		\item appliquée sur une ou plusieurs cellules
+		\item on peut ajouter un message de saisi
+		\item on peut ajouter un message d'erreur si la valeur introduite est erronée
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	\hgraphpage{excel-outils-data.png}
+	
+	\hgraphpage{excel-validation.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Validation des données : Listes de choix (1)}
+
+\begin{minipage}{0.60\textwidth}
+	Afin d'appliquer des listes de sélection sur des cellules
+	\begin{itemize}
+		\item Créer une liste des choix dans une colonne (exemple: \expword{colonne F})
+		\item Sélectionner les cellules sur lesquelles on veut appliquer cette liste (exemple: \expword{colonne C})
+		\item Appliquer l'option \optword{Validation des données}
+		\item Autoriser \optword{Liste}
+		\item Source : la liste de choix 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.39\textwidth}
+	\hgraphpage{excel-validation-liste1.png} 
+	
+	\hgraphpage{excel-validation-liste2.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Validation des données : Listes de choix (2)}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item On peut ajouter un message de saisi
+		\item Lorsqu'on clique sur la cellule ce message s'affichera 
+		\item Aussi, on peut ajouter un message d'erreur (si l'utilisateur insère une valeur hors les valeurs de la liste) 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.39\textwidth}
+	\hgraphpage{excel-validation-liste3.png} 
+	
+	\hgraphpage[.45\textwidth]{excel-validation-liste4.png}
+	\hgraphpage[.4\textwidth]{excel-validation-liste5.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Données}
+\framesubtitle{Représentation graphique}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Insertion}
+		\item Groupe : \optword{Graphiques}
+		\item Objectif : sélectionner des données et insérer des graphiques
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	\hgraphpage[.48\textwidth]{excel-graphiques.png}
+	\hgraphpage[.48\textwidth]{excel-graphiques2.png}
+	
+	\hgraphpage[.70\textwidth]{excel-graphiques3.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Représentation graphique}
+\framesubtitle{Un peu d'humour}
+
+\begin{center}
+	\vgraphpage{graphique-humour.png}
+\end{center}
+
+\end{frame}
+
+\subsection{Formules et Référencement}
+
+\begin{frame}
+\frametitle{Excel : Formules et Référencement}
+\framesubtitle{Formules}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item Cliquer sur une cellule 
+		\item Pour ajouter une formule, insérer \keyword{=}
+		\item Cliquer sur la première cellule 
+		\item Ajouter une opération ; par exemple : \expword{+}
+		\item Cliquer sur la deuxième cellule 
+		\item Appuyer sur Entrer
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.39\textwidth}
+	\hgraphpage{excel-formule.png} 
+\end{minipage}
+
+\begin{itemize}
+	\item Une formule se commence TOUJOURS par \keyword{=}, elle peut contenir :
+	\begin{itemize}
+		\item des adresses des cellules ; par exemple : \expword{C2}
+		\item des opérations ; par exemple : \expword{+}
+		\item des constantes ; par exemple : \expword{5}
+		\item des fonctions ; par exemple : \expword{SOMME} 
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Formules et Référencement}
+\framesubtitle{Référencement relatif}
+
+\begin{minipage}{0.40\textwidth}
+	\begin{itemize}
+		\item Si on glisse ou on recopie une cellule contenant une formule, on remarque que les adresses se changent dans les cellules destinataires
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.59\textwidth}
+	\hgraphpage{excel-adr-rel.png} 
+\end{minipage}
+
+\begin{itemize}
+%	\item Si on glisse ou on recopier une cellule avec une formule, on remarque que les adresses se changent dans les cellules destinataires
+	\item On appelle ça \keyword{adresse relative}
+	\item Par exemple, dans la cellule \expword{E2} on a la formule \expword{=C2+D2+5}
+	\item Si on recopie ça dans \expword{E3}, elle aura la formule \expword{=C3+D3+5} (décalage d'une ligne)
+	\item Si on recopie ça dans \expword{F3}, elle aura la formule \expword{=D3+E3+5} (décalage d'une ligne et d'une colonne)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Formules et Référencement}
+\framesubtitle{Référencement absolu}
+
+\begin{minipage}{0.40\textwidth}
+	\begin{itemize}
+		\item On veut fixer une adresse ; c-à-d, prévenir sa mise à jour lorsqu'on recopie la formule dans une autre cellule
+		%		\item On appelle ça \keyword{adresse relative}
+		%		\item Par exemple, dans la cellule \expword{}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.59\textwidth}
+	\hgraphpage{excel-adr-abs.png} 
+\end{minipage}
+
+\begin{itemize}
+	\item On doit utiliser une \keyword{adresse absolue}
+	\item Pour rendre une adresse absolue, on doit utiliser un dollar (\keyword{\$}) avant la colonne (\expword{\$D5}), avant la ligne (\expword{D\$5}) ou avant les deux (\expword{\$D\$5})
+	\item Une autre solution est de renommer une cellule ; par exemple, renomer la cellule \expword{D5} par \expword{\_bonus} et utiliser cette référence
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Formules et Référencement}
+\framesubtitle{Référencement d'une feuille de calcul}
+
+\begin{minipage}{0.40\textwidth}
+	\begin{itemize}
+		\item On veut référencer des cellules dans une autre feuille
+		\item Pour ce faire, on écrit le nom de la feuille suivi par point d'exclamation (\keyword{!}) suivi par l'adresse de la cellule (relative ou absolue)
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.59\textwidth}
+	\hgraphpage{excel-adr-feuille.png} 
+\end{minipage}
+
+\end{frame}
+
+\subsection{Fonctions}
+
+\begin{frame}
+\frametitle{Excel : Fonctions}
+\framesubtitle{Fonctions mathématiques (1)}
+\begin{minipage}{0.81\textwidth}
+\begin{itemize}
+	\item \optword{SOMME} : calcule la somme entre plusieurs valeurs (eg. \expword{SOMME(E3;E6;2)}) ou une plage de cellules (eg. \expword{SOMME(E3:E6)})
+	\item \optword{SOMME.SI} : calcule la somme avec une condition. Par exemple : 
+	\begin{itemize}
+		\item \expword{SOMME.SI(E3:E6;"<10")} calcule la somme des nombres inférieures à \expword{10} dans la plage \expword{E3:E6}
+		\item \expword{SOMME.SI(D3:D6;"BWEB";E3:E6)} calcule uniquement la somme des valeurs de la plage \expword{E3:E6}, dans laquelle les cellules correspondantes de la plage \expword{D3:D6} contiennent le mot « \expword{BWEB} ».
+	\end{itemize}
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.18\textwidth}
+	\hgraphpage{excel-somme.png} 
+	
+	\hgraphpage{excel-somme-si.png} 
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Fonctions}
+\framesubtitle{Fonctions mathématiques (2)}
+\begin{minipage}{0.81\textwidth}
+	\begin{itemize}
+		\item \optword{PRODUIT} : comme \optword{SOMME}, mais elle fait le produit.
+		\item \optword{ABS} : rend la valeur absolue d'un nombre
+		\item \optword{ARRONDI} : calcule l'arrondi d'un nombre à un nombre spécifié de chiffres.
+		\item \optword{RACINE} : donne la racine carrée d'un nombre. Si le nombre est négatif, elle rend une erreur \keyword{\#NOMBRE!}
+		\item \optword{PUISSANCE} : renvoie la valeur du nombre élevé à une puissance
+		\item Il y a d'autres fonctions mathématiques ...
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.18\textwidth}
+	\hgraphpage[.52\textwidth]{excel-produit.png} 
+	\hgraphpage[.38\textwidth]{excel-abs.png} 
+	
+	\hgraphpage[.60\textwidth]{excel-arrondi.png} 
+	\hgraphpage[.60\textwidth]{excel-racine.png}
+	\hgraphpage[.60\textwidth]{excel-puissance.png}
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Fonctions}
+\framesubtitle{Fonctions statistiques}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item \optword{MOYENNE} : calcule la moyenne entre plusieurs valeurs ou une plage
+		\item \optword{MOYENNE.SI} : comme \optword{SOMME.SI} mais pour la moyenne
+		\item \optword{MEDIANE} : renvoie la valeur médiane
+		\item \optword{MAX} : renvoie le plus grand nombre
+		\item \optword{MIN} : renvoie le plus petit nombre
+		\item \optword{VARA} : calcule la variance
+		\item \optword{NBVAL} : compte le nombre de cellules qui ne sont pas vides dans une plage.
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.3\textwidth} 
+	
+	\hgraphpage[.63\textwidth]{excel-moyenne-si.png} 
+	
+	\hgraphpage[.35\textwidth]{excel-mediane.png}
+	\hgraphpage[.29\textwidth]{excel-max.png}
+	
+	\hgraphpage[.29\textwidth]{excel-min.png}
+	\hgraphpage[.3\textwidth]{excel-vara.png}
+	\hgraphpage[.32\textwidth]{excel-nbval.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Fonctions}
+\framesubtitle{Fonctions logiques}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item \optword{SI} : permet d'établir des comparaisons logiques entre une valeur et le résultat attendu. Elle rend le deuxième argument si la condition est vrai ; le troisième argument sinon.
+		\item \optword{ET} : renvoie \keyword{VRAI} si tous ses arguments sont \keyword{VRAI}
+		\item \optword{OU} : renvoie \keyword{VRAI} si un des arguments est \keyword{VRAI}
+		\item \optword{NON} : inverse la logique de cet argument
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.3\textwidth} 
+	
+	\hgraphpage[.63\textwidth]{excel-si.png} 
+	
+	\hgraphpage[.48\textwidth]{excel-et.png}
+	\hgraphpage[.48\textwidth]{excel-ou.png}
+	
+	\hgraphpage[.35\textwidth]{excel-non.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Fonctions}
+\framesubtitle{Fonctions de texte}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item \optword{CONCATENER} : permet de joindre plusieurs chaînes au sein d’une seule chaîne
+		\item \optword{MINUSCULE} : convertit toutes les lettres majuscules d'une chaîne de texte en lettres minuscules
+		\item \optword{MAJUSCULE} : convertit toutes les lettres minuscules d'une chaîne de texte en lettres majuscules
+		\item \optword{SUBSTITUE} : remplace un sous-texte par un autre dans une chaîne de texte
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.3\textwidth} 
+	
+	\hgraphpage{excel-concatener.png} 
+	\hgraphpage[.48\textwidth]{excel-minuscule.png}
+	\hgraphpage[.48\textwidth]{excel-majuscule.png}
+	\hgraphpage{excel-substitue.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Fonctions}
+\framesubtitle{Fonctions de date}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item \optword{DATE} : renvoie le numéro de série séquentiel qui représente une date particulière
+		\item \optword{JOURS360} : renvoie le nombre de jours compris entre deux dates sur la base d’une année de 360 jours (12 mois de 30 jours)
+		\item \optword{AUJOURDHUI} : rend la date d'aujourd'hui
+		\item \optword{ANNEE} : rend l'année à partir d'une date
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.3\textwidth} 
+	
+	\hgraphpage[.48\textwidth]{excel-date.png} 
+	\hgraphpage[.48\textwidth]{excel-jours360.png}
+	\hgraphpage[.38\textwidth]{excel-aujourdhui.png}
+	\hgraphpage[.48\textwidth]{excel-annee.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Fonctions}
+\framesubtitle{Fonctions de recherche et de référence}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item \optword{RECHERCHEV} : rechercher des éléments dans un tableau ou une plage par ligne. Par exemple : 
+		\begin{itemize}
+			\item \expword{RECHERCHEV("ALGO";D2:F4;2)} sélectionne une matrice de \expword{D2} à \expword{F4}
+			\item elle cherche \expword{"ALGO"} dans la première  colonne ; c-à-d, dans la plage \expword{D2:D4}
+			\item elle rend la valeur correspondante dans la colonne \expword{2} ; c-à-d, dans la plage \expword{F2:F4}
+		\end{itemize} 
+		\item Il y a d'autres fonctions comme \optword{INDIRECT}, \optword{INDEX}, \optword{ADRESSE}, etc.
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.3\textwidth} 
+	
+	\hgraphpage{excel-recherchev.png} 
+\end{minipage}
+
+\end{frame}
+
+\subsection{Formatage, impression et protection}
+
+\begin{frame}
+\frametitle{Excel : Formatage et impression}
+\framesubtitle{Contenu d'une cellule}
+
+\begin{minipage}{0.49\textwidth}
+	\begin{itemize}
+		\item Problème : Le contenu de la cellule déborde ou il ne s'affiche pas complètement
+		\item Clique droite sur la cellule
+		\item Choisir \optword{Format de cellule}
+%		\item Dans \optword{}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth} 
+	
+	\hgraphpage{excel-cellule-format.png} 
+	
+%	\hgraphpage[.6\textwidth]{excel-mfc2.png} 
+\end{minipage}
+
+\begin{itemize}
+	\item Dans \optword{Contrôle du texte}, vous pouvez choisir : 
+	\begin{itemize}
+		\item Renvoyer à la ligne le reste du texte 
+		\item Ajuster la taille du texte 
+		\item Fusionner automatiquement avec la cellule suivante
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Formatage et impression}
+\framesubtitle{Mise en forme conditionnelle}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{ACCUEIL} 
+		\item Groupe : \optword{Style} 
+		\item Option : \optword{Mise en forme conditionnelle} 
+		\item Objectif : Changer le styles des cellules selon leurs valeurs
+		\item On peut appliquer plusieurs règles sur une plage de donnée
+		\item Par exemple, sur la plage \expword{E2:E5}, colorier la cellule en rouge si sa valeur est inférieure à \expword{10} et colorier la en vert si sa valeur est supérieure à \expword{15}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.3\textwidth} 
+	
+	\hgraphpage{excel-mfc.png} 
+	
+	\hgraphpage[.6\textwidth]{excel-mfc2.png} 
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Formatage et impression}
+\framesubtitle{Mise en page}
+
+\begin{minipage}{0.54\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Mise en page}
+		\item Groupe : \optword{Mise en page}
+		\item Définir la zone d'impression 
+		\begin{itemize}
+			\item Sélectionner la plage que vous veuillez imprimer
+			\item Choisir l'option \optword{ZoneImp} et sélectionner \optword{Définir}
+		\end{itemize}
+		\item Si la liste prend plusieurs pages et vous voulez répéter la ligne des titres sur chaque page 
+		\begin{itemize}
+			\item Choisir l'option \optword{Imprimer les titres}
+			\item Dans \optword{Lignes à répéter en haut} sélectionner une ou plusieurs lignes
+		\end{itemize}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.45\textwidth}
+	\hgraphpage{excel-mep-barre.png}
+	
+	\hgraphpage{excel-mep.png}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Excel : Formatage et impression}
+\framesubtitle{Protection}
+
+\begin{minipage}{0.54\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Révision}
+		\item Groupe : \optword{Modifications}
+		\item On peut protéger
+		\begin{itemize}
+			\item tout le classeur (le fichier)
+			\item une feuille de calcul
+		\end{itemize}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.45\textwidth}
+	\hgraphpage{excel-protection-barre.png}
+	
+	\hgraphpage{excel-protection.png}
+\end{minipage}
+
+\end{frame}
+
+
+\insertbibliography{Bweb06}{*}
+
+
+\end{document}
+
