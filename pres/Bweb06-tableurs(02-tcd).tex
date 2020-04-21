@@ -1,0 +1,350 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[xcolor=table, usenames,dvipsnames]{beamer}
+
+\input{options}
+%\usepackage{calligra}
+
+\title[BWEB : 06- Tableaux croisés dynamiques] %
+{Bureautique et Web \\Chapitre 06 : Tableurs \\ \slshape\small  Tableaux croisés dynamiques}  
+
+\changegraphpath{../img/tableurs/}
+
+\begin{document}
+
+\begin{frame}
+\frametitle{Tableaux croisés dynamiques}
+\framesubtitle{Définition}
+
+D'après le dictionnaire \href{http://dictionnaire.sensagent.leparisien.fr/Tableau\%20crois\%C3\%A9\%20dynamique/fr-fr/}{Sensagent Le Parisien} :
+
+\begin{definition}
+	\textbf{Un tableau croisé dynamique} (en anglais \textbf{\textit{pivot table}}), en abgrégé « TCD », est une fonctionnalité de certains tableurs qui permet de générer une synthèse d'une table de données brutes. Le « TCD » permet de regrouper des données selon une ou plusieurs de ses propres catégories (colonnes ou champs) et faire les opérations nécessaires entre les montants correspondants (sommes, moyennes, comptages, etc.). 
+\end{definition}
+
+\end{frame}
+	
+\begin{frame}
+\frametitle{Tableaux croisés dynamiques}
+\framesubtitle{Les avantages}
+\begin{itemize}
+	\item Utiliser les mêmes données pour faire des statistiques sous différents angles ou perspectives
+	\item Résumer rapidement de longues listes de données
+	\item Calculer des informations récapitulatives sans écrire de formules ni copier de cellules
+	\item Répondre aux questions spécifiques concernant les données. Par exemple, \expword{Quel est le nombre des travailleurs d'une entreprise par fonction ?}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tableaux croisés dynamiques}
+\framesubtitle{Plan}
+
+\begin{multicols}{2}
+	%	\small
+	\tableofcontents
+\end{multicols}
+\end{frame}
+
+%===================================================================================
+\section{Création}
+%===================================================================================
+
+\subsection{Les données}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Les données}
+
+\begin{minipage}{0.49\textwidth}
+	\begin{itemize}
+		\item Les données sont représentées par une table 
+		\item Les lignes représentent  les enregistrements. Par exemple, \expword{liste des étudiants}
+		\item Les colonnes représentent les champs(caractéristiques). Par exemple, \expword{nom}, \expword{note}, etc.
+		\item La première ligne doit contenir les titres des colonnes (champs)
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth} 
+	\hgraphpage{tcd-donnees.png} 
+\end{minipage}
+
+\end{frame}
+
+\subsection{Insertion d'un Tableau croisé dynamique}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Insertion d'un tableau croisé dynamique}
+
+\begin{minipage}{0.69\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Insertion}
+		\item Groupe : \optword{Tableaux}
+		\item Option : \optword{Tableaux}
+		\item C'est mieux de créer le TCD dans une nouvelle feuille 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.3\textwidth} 
+	\hgraphpage{tcd-barre.png}  
+\end{minipage}
+
+\begin{flushright}
+	\hgraphpage[.8\textwidth]{tcd-creer.png}
+\end{flushright}
+
+\end{frame}
+
+\subsection{Choisir les zones}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Choisir les zones}
+
+\begin{minipage}{0.39\textwidth}
+	\begin{itemize}
+		\item \optword{LIGNES} : afficher les différentes valeurs d'un champ dans les lignes
+		\item \optword{VALEURS} : faire des calculs sur les valeurs d'un champ
+		\item \optword{COLONNES} : afficher les différentes valeurs d'un champ dans les colonnes
+		\item \optword{FILTRES} : filtrer les enregistrements selon les valeurs d'un champ
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.6\textwidth} 
+	\hgraphpage{tcd-zones.png}  
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Choisir les zones : lignes}
+
+\begin{minipage}{0.39\textwidth}
+	\begin{itemize}
+		\item Afficher les différentes valeurs d'un champ dans les lignes
+		\item Exemple, \expword{Afficher les niveaux des étudiants}
+		\item Glisser le champ \expword{Niveau} vers la zone \optword{LIGNES}
+		\item Pour changer le titre des lignes : double clic sur lui
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.6\textwidth} 
+	\hgraphpage{tcd-ligne.png}  
+	
+	\hgraphpage[.3\textwidth]{tcd-ligne-renom.png} 
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Choisir les zones : valeurs}
+
+\begin{minipage}{0.39\textwidth}
+	\begin{itemize}
+		\item Faire des calculs sur les valeurs d'un champ selon les valeurs d'une ligne
+		\item Exemple, \expword{Calculer le nombre des étudiants dans chaque niveaux d'étude}
+		\item Glisser le champ \expword{Niveau} vers la zone \optword{VALEURS}
+%		\item Cela créera une colonne \expword{Nombre de Niveau} qui calcule le nombre des enregistrements pour chaque valeur du champ \expword{Niveau}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.6\textwidth} 
+	\hgraphpage{tcd-valeur.png}  
+\end{minipage}
+\begin{itemize}
+	%		\item Faire des calculs sur les valeurs d'un champ selon les valeurs d'une ligne
+	%		\item Exemple, \expword{Calculer le nombre des étudiants dans chaque niveaux d'étude}
+	%		\item Glisser le champ \expword{Niveau} vers la zone \optword{VALEURS}
+	\item Cela créera une colonne \expword{Nombre de Niveau} qui calcule le nombre des enregistrements pour chaque valeur du champ \expword{Niveau}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Choisir les zones : valeurs (2)}
+
+\begin{itemize}
+	\item On peut choisir d'autres fonctions à appliquer sur les valeurs
+	\item Exemple, \expword{Calculer la moyenne des notes de chaque niveau d'étude}
+	\item Cliquer sur la flèche sur le champs situé dans la zone \optword{VALEURS}
+	\item Choisir \optword{Paramètres des champs de valeurs ...}
+\end{itemize}
+
+\hgraphpage[.38\textwidth]{tcd-fonc.png}
+\hgraphpage[.59\textwidth]{tcd-fonc3.png}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Choisir les zones : colonnes}
+
+\begin{minipage}{0.39\textwidth}
+	\begin{itemize}
+		\item Afficher les différentes valeurs d'un champ dans les colonnes
+		\item L'intérêt est de détaillé les calculs
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.6\textwidth} 
+	\hgraphpage{tcd-colonne.png}  
+\end{minipage}
+\begin{itemize}
+	\item Exemple, \expword{Calculer le nombre des étudiants dans chaque niveaux d'étude avec le détail de Wilaya}
+	\item Glisser le champ \expword{Adresse} vers la zone \optword{COLONNES}
+	\item Cela créera autant de colonnes que le nombre des Wilayas dans nos données
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{TCD : Création}
+\framesubtitle{Choisir les zones : filtres}
+
+\begin{minipage}{0.39\textwidth}
+	\begin{itemize}
+		\item Filtrer les enregistrements selon les valeurs d'un champ
+		\item Exemple, \expword{Calculer le nombre des étudiants dans chaque niveaux d'étude avec la possibilité de sélectionner les Wilayas de ces étudiants}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.6\textwidth} 
+	\hgraphpage{tcd-filtre.png}  
+\end{minipage}
+
+\begin{minipage}{0.79\textwidth}
+	\begin{itemize}
+		\item Glisser le champ \expword{Adresse} vers la zone \optword{FILTRES}
+		\item Cela créera une liste déroulante de haut du TCD
+		\item On peut cocher quelques Wilayas 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.2\textwidth} 
+	\hgraphpage{tcd-filtre2.png}  
+\end{minipage}
+
+
+\end{frame}
+
+%===================================================================================
+\section{Outils}
+%===================================================================================
+
+\begin{frame}
+\frametitle{TCD}
+\framesubtitle{Outils}
+
+\begin{itemize}
+	\item Lorsqu'on clique sur le TCD, on aura deux onglets supplémentaires 
+	\item \optword{Analyse} : des outils pour manipuler le tableau 
+\end{itemize}
+
+\hgraphpage{tcd-barre-analyse.png} 
+
+\begin{itemize}
+	\item \optword{Création} : des outils de style et de disposition
+\end{itemize}
+
+\hgraphpage{tcd-barre-creation.png} 
+
+
+
+\end{frame}
+
+\subsection{Affichage des totaux}
+
+\begin{frame}
+\frametitle{TCD : Outils}
+\framesubtitle{Affichage des totaux}
+
+\begin{minipage}{0.59\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Création}
+		\item Groupe : \optword{Disposition}
+		\item Option : \optword{Totaux généraux}
+		\item On peut afficher ou cacher les totaux des lignes et des colonnes 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth} 
+	\hgraphpage{tcd-disposition1.png} 
+	\hgraphpage[.6\textwidth]{tcd-disposition2.png}
+	\hgraphpage{tcd-disposition3.png}
+\end{minipage}
+
+\end{frame}
+
+
+\subsection{Créer des groupes}
+
+\begin{frame}
+\frametitle{TCD : Outils}
+\framesubtitle{Créer des groupes}
+
+\begin{minipage}{0.49\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Analyse}
+		\item Groupe : \optword{Groupe}
+		\item Option : \optword{Grouper la sélection}
+		\item Sélectionner les lignes (en utilisant \keyword{CTRL} et clic)
+		\item Créer le groupe
+		\item Cliquer sur le nom du groupe et modifier son nom dans la barre de formule
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth} 
+	\hgraphpage[.45\textwidth]{tcd-groupe1.png} 
+	\hgraphpage[.35\textwidth]{tcd-groupe2.png}
+	\hgraphpage{tcd-groupe3.png}
+\end{minipage}
+
+\end{frame}
+
+
+\subsection{Graphiques croisés dynamiques}
+
+\begin{frame}
+\frametitle{TCD : Outils}
+\framesubtitle{Graphiques croisés dynamiques}
+
+\begin{minipage}{0.34\textwidth}
+	\begin{itemize}
+		\item Onglet : \optword{Analyse}
+		\item Groupe : \optword{Outils}
+		\item Option : \optword{Graphique croisé dynamique}
+		\item Si on change le tableau, le graphique changera
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.65\textwidth} 
+	\hgraphpage{tcd-graphique1.png} 
+	
+	\hgraphpage{tcd-graphique2.png} 
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{TCD}
+\framesubtitle{Un peu d'humour}
+
+\begin{center}
+	\vgraphpage{tcd-humour.jpg}
+\end{center}
+
+\end{frame}
+
+
+\insertbibliography{Bweb06}{*}
+
+
+\end{document}
+

@@ -110,7 +110,7 @@
 
 	\item Formules : en générale, se commencent par \keyword{=}. Contiennent :
 	\begin{itemize}
-		\item Constantes : une valeur parmi les différentes types de donnée
+		\item Constantes : une valeur parmi les différentes types de données
 		\item Références : pour récupérer le contenu d'une autre cellule
 		\item Fonctions : les tableurs fournissent des fonctions prédéfinies 
 	\end{itemize}
@@ -125,13 +125,13 @@
 \framesubtitle{Références}
 
 \begin{itemize}
-	\item Référence d'une feuille : pour référencer une feuille de calcule ; en générale en utilisant le nom de la feuille suivi par \keyword{!}
+	\item Référence d'une feuille : pour référencer une feuille de calcule ; en générale, on utilise le nom de la feuille suivi par \keyword{!}
 	\item Référence d'une cellule : Une cellule est référencée par la référence de sa colonne suivie par la référence de sa ligne ; exemple \expword{D3} pour dire colonne 4 ligne 3. Deux types de références : 
 	\begin{itemize}
-		\item Référence relative : si on recopie une formule vers une autre cellule, les références dans cette formule se misent à jours selon la cellule initiale et destinataire
+		\item Référence relative : si on recopie une formule vers une autre cellule, les références dans cette formule sont mises à jours selon la cellule initiale et destinataire
 		\item Référence absolue : si on recopie une formule vers une autre cellule, les références dans cette formule restent les mêmes
 	\end{itemize}
-	\item Référence d'une plage : on peut référencer une plage de cellule ; en générale, on la référence de cellule de départ suivie par \keyword{:} suivie par le référence de cellule de destination (eg. \expword{C2:D6})
+	\item Référence d'une plage : on peut référencer une plage de cellule ; en générale, on la référence de cellule de départ suivie par \keyword{:} suivie par le référence de cellule de destination (ex. \expword{C2:D6})
 \end{itemize}
 \end{frame}
 
@@ -237,7 +237,7 @@ Airtable
 %\framesubtitle{}
 \begin{itemize}
 	\item logiciel de tableur
-	\item fait partit à la suite bureautique \optword{Microsoft office}
+	\item fait partie de la suite bureautique \optword{Microsoft office}
 	\item disponible sur Windows, Mac OS, iOS et Android
 	\item il contient des fonctionnalités de Word telles que la mise en forme, etc.
 \end{itemize}
@@ -281,8 +281,8 @@ Airtable
 	\begin{itemize}
 		\item Onglet : \optword{Accueil}
 		\item Groupe : \optword{Nombre}
-		\item Objectif : formater les cellule sous forme de texte, nombre, pourcentage, etc.
-		\item pour un nombre, on peut spécifier le nombre des chiffres après la virgule
+		\item Objectif : formater les cellules sous forme de texte, nombre, pourcentage, etc.
+		\item pour un nombre, on peut spécifier le nombre de chiffres après la virgule
 	\end{itemize}
 \end{minipage}
 %
@@ -323,7 +323,7 @@ Airtable
 \begin{tabular}{p{.6\textwidth}p{.35\textwidth}}
 	écrire la valeur dans une cellule et cliquer sur le coin bas à droite &
 	\hgraphpage[.25\textwidth, valign=t]{excel-series-etape1.png} \\
-	glisser en bas ou à gauche ; un menu s'apparaitra &
+	glisser en bas ou à gauche ; un menu apparaitra &
 	\hgraphpage[.25\textwidth, valign=t]{excel-series-etape2.png} \\
 	choisir \optword{Incrémenter une série} &
 	\hgraphpage[.35\textwidth, valign=t]{excel-series-etape3.png} \\
@@ -350,7 +350,7 @@ Airtable
 		\item Option : \optword{Trier et filtrer}
 		\item Objectif : trier ou filtrer les données selon les valeurs d'une ou plusieurs colonnes
 		\item Sélectionner une ou plusieurs colonnes consécutives et appliquer le trie ou le filtre
-		\item Si on applique le filtre, des petites flèches apparaitra en haut des colonnes
+		\item Si on applique le filtre, des petites flèches apparaitront en haut des colonnes
 	\end{itemize}
 \end{minipage}
 %
@@ -502,7 +502,7 @@ Airtable
 	\item Une formule se commence TOUJOURS par \keyword{=}, elle peut contenir :
 	\begin{itemize}
 		\item des adresses des cellules ; par exemple : \expword{C2}
-		\item des opérations ; par exemple : \expword{+}
+		\item des opérateurs ; par exemple : \expword{+}
 		\item des constantes ; par exemple : \expword{5}
 		\item des fonctions ; par exemple : \expword{SOMME} 
 	\end{itemize}
@@ -516,7 +516,7 @@ Airtable
 
 \begin{minipage}{0.40\textwidth}
 	\begin{itemize}
-		\item Si on glisse ou on recopie une cellule contenant une formule, on remarque que les adresses se changent dans les cellules destinataires
+		\item Si on glisse ou on recopie une cellule contenant une formule, on remarque que les adresses sont mises à jour dans les cellules destinataires
 	\end{itemize}
 \end{minipage}
 %
@@ -582,7 +582,7 @@ Airtable
 \framesubtitle{Fonctions mathématiques (1)}
 \begin{minipage}{0.81\textwidth}
 \begin{itemize}
-	\item \optword{SOMME} : calcule la somme entre plusieurs valeurs (eg. \expword{SOMME(E3;E6;2)}) ou une plage de cellules (eg. \expword{SOMME(E3:E6)})
+	\item \optword{SOMME} : calcule la somme entre plusieurs valeurs (ex. \expword{SOMME(E3;E6;2)}) ou une plage de cellules (ex. \expword{SOMME(E3:E6)})
 	\item \optword{SOMME.SI} : calcule la somme avec une condition. Par exemple : 
 	\begin{itemize}
 		\item \expword{SOMME.SI(E3:E6;"<10")} calcule la somme des nombres inférieures à \expword{10} dans la plage \expword{E3:E6}
@@ -606,7 +606,7 @@ Airtable
 		\item \optword{PRODUIT} : comme \optword{SOMME}, mais elle fait le produit.
 		\item \optword{ABS} : rend la valeur absolue d'un nombre
 		\item \optword{ARRONDI} : calcule l'arrondi d'un nombre à un nombre spécifié de chiffres.
-		\item \optword{RACINE} : donne la racine carrée d'un nombre. Si le nombre est négatif, elle rend une erreur \keyword{\#NOMBRE!}
+		\item \optword{RACINE} : donne la racine carrée d'un nombre. Si le nombre est négatif, elle retourne une erreur \keyword{\#NOMBRE!}
 		\item \optword{PUISSANCE} : renvoie la valeur du nombre élevé à une puissance
 		\item Il y a d'autres fonctions mathématiques ...
 	\end{itemize}
@@ -658,7 +658,7 @@ Airtable
 
 \begin{minipage}{0.69\textwidth}
 	\begin{itemize}
-		\item \optword{SI} : permet d'établir des comparaisons logiques entre une valeur et le résultat attendu. Elle rend le deuxième argument si la condition est vrai ; le troisième argument sinon.
+		\item \optword{SI} : permet d'établir des comparaisons logiques entre une valeur et le résultat attendu. Elle retourne le deuxième argument si la condition est vrai ; le troisième argument sinon.
 		\item \optword{ET} : renvoie \keyword{VRAI} si tous ses arguments sont \keyword{VRAI}
 		\item \optword{OU} : renvoie \keyword{VRAI} si un des arguments est \keyword{VRAI}
 		\item \optword{NON} : inverse la logique de cet argument
@@ -708,8 +708,8 @@ Airtable
 	\begin{itemize}
 		\item \optword{DATE} : renvoie le numéro de série séquentiel qui représente une date particulière
 		\item \optword{JOURS360} : renvoie le nombre de jours compris entre deux dates sur la base d’une année de 360 jours (12 mois de 30 jours)
-		\item \optword{AUJOURDHUI} : rend la date d'aujourd'hui
-		\item \optword{ANNEE} : rend l'année à partir d'une date
+		\item \optword{AUJOURDHUI} : retourne la date d'aujourd'hui
+		\item \optword{ANNEE} : retourne l'année à partir d'une date
 	\end{itemize}
 \end{minipage}
 %
@@ -733,7 +733,8 @@ Airtable
 		\begin{itemize}
 			\item \expword{RECHERCHEV("ALGO";D2:F4;2)} sélectionne une matrice de \expword{D2} à \expword{F4}
 			\item elle cherche \expword{"ALGO"} dans la première  colonne ; c-à-d, dans la plage \expword{D2:D4}
-			\item elle rend la valeur correspondante dans la colonne \expword{2} ; c-à-d, dans la plage \expword{F2:F4}
+			\item elle retourne la valeur correspondante dans la colonne \expword{2} ; c-à-d, dans la plage \expword{F2:F4}
+			\item par défaut, cette fonction cherche une valeur approximative. Si on veut qu'elle cherche une valeur exacte, on doit ajouter \keyword{FAUX} aux arguments (ex. \expword{RECHERCHEV("ALGO";D2:F4;2;FAUX)})
 		\end{itemize} 
 		\item Il y a d'autres fonctions comme \optword{INDIRECT}, \optword{INDEX}, \optword{ADRESSE}, etc.
 	\end{itemize}
@@ -754,7 +755,7 @@ Airtable
 
 \begin{minipage}{0.49\textwidth}
 	\begin{itemize}
-		\item Problème : Le contenu de la cellule déborde ou il ne s'affiche pas complètement
+		\item Problème : le contenu de la cellule déborde ou il ne s'affiche pas complètement
 		\item Clique droite sur la cellule
 		\item Choisir \optword{Format de cellule}
 %		\item Dans \optword{}
