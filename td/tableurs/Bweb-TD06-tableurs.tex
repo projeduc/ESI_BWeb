@@ -89,4 +89,60 @@ Vous voulez organiser cette fiche et faire quelques statistiques.
 \end{enumerate}
 
 
+\section*{Exercice : TCD (analyse de participants)}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir répondre à des questions en utilisant les tableaux croisés dynamiques  \\\\
+	\hline
+\end{tabular}
+
+\textit{\textbf{Note : } les données accompagnées sont fictives ; elles sont générées automatiquement en utilisant un programme Python fourni avec les ressources. Toute ressemblance avec des personnes existantes ou ayant existé est purement fortuite.}
+
+Après avoir achevé les tests concernant la série de formations \textbf{ESI.prog}, votre tâche dans l'équipe est de faire des analyses sur les participants. 
+On vous a fourni un fichier \textbf{participants\_analyse.xlsx} contenant une liste de 200 participants dont 150 sont de l'ESI. 
+La liste contient les informations suivantes : le nom, le prénom, la wilaya, l'université, le niveaux (seulement au cas de \textit{École nationale supérieure d'informatique d'Alger}), le type de formation, l'expérience et la note finale. 
+
+Pour ce faire, vous avez pensé à utiliser les tableaux croisés dynamiques. 
+On vous a demandé de répondre aux questions suivantes, où le titre en gras est le nom de la feuille (chaque TCD dans une nouvelle feuille) : 
+
+\begin{enumerate}
+	\item \textbf{Wilaya-NBR} : cette feuille doit fournir le nombre des participants par wilaya. Elle doit, aussi, contenir un histogramme représentant le TCD. 
+	\item \textbf{Univ-NBR} : cette feuille doit fournir le nombre des participants par université. Les universités doivent être regroupées en : Centre, École, Faculté, Institue et Université.
+	\item \textbf{Type-NBR} : cette feuille doit fournir le nombre des participants par type de formation. Elle doit être accompagnée par un graphique de type "secteurs" indiquant le pourcentage des participants dans chaque formation.
+	\item \textbf{Niveau-Formation} : cette feuille doit fournir les moyennes de chaque type de formation par niveau. Puisque le niveau est fourni seulement pour l'ESI, donc on doit considérer seulement les participants de l'ESI.
+	Ce TCD doit être accompagné par un histogramme. 
+	\item \textbf{Formation-Experience} : cette feuille doit fournir les moyennes des notes et le nombre de participants par type de formation et expérience.
+\end{enumerate}
+
+
+\section*{Exercice : TCD (analyse des patients de COVID19)}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir répondre à des questions en utilisant les tableaux croisés dynamiques  \\\\
+	\hline
+\end{tabular}
+
+\textit{\textbf{Note : } les données accompagnées sont à l'origine de \url{https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset}}
+
+Vous voulez faire des analyses sur les patients de COVID19 de 3 pays : la Chine, la Singapour et la Corée du sud.
+Vous avez trouvé le fichier \textbf{covid19\_analyse.xlsx} contenant une liste de 404 patients. 
+La liste contient les informations suivantes : la date de déclaration, le pays, le sex, l'age, l'état (hospitalisé, mort, rétabli).
+
+Pour ce faire, vous avez pensé à utiliser les tableaux croisés dynamiques. 
+Vous avez l'intention de répondre au questions suivantes, où le titre en gras est le nom de la feuille (chaque TCD dans une nouvelle feuille) : 
+
+\begin{enumerate}
+	\item \textbf{Date-NBR} : cette feuille doit fournir le nombre des patients par date. Elle doit, aussi, contenir une courbe représentant le le nombre de cas par date. 
+	\item \textbf{Age-NBR} : cette feuille doit fournir le nombre des patients par age. Les ages doivent être regroupées en : Jeune(de 0 à 19 ans), Adulte (de 20 à 59 ans) et Vieux (de 60 ans et plus). Il faut filtrer les ages vides.
+	\item \textbf{Etat-NBR} : cette feuille doit fournir le nombre des patients par pays. Elle doit être accompagnée par un graphique de type "secteurs" indiquant le pourcentage des patients dans chaque pays.
+	\item \textbf{Etat-Pays} : cette feuille doit fournir les moyennes des ages de chaque état par pays. Puisque il y a des patients où on n'a pas fourni l'age, donc on doit considérer seulement les patients avec un age non vide.
+	Ce TCD doit être accompagné par un histogramme. 
+	\item \textbf{Sexe-Etat} : cette feuille doit fournir les moyennes des ages et le nombre des patients par sexe et état. Ici, ce n'ai pas la peine de filtrer l'age vide.
+\end{enumerate}
+
+
 \end{document}
