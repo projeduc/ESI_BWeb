@@ -16,13 +16,154 @@
 	
 \section{Généralités}
 
-\subsection{Site statique et site dynamique}
+%\begin{frame}
+%\frametitle{Développement Web}
+%\framesubtitle{Généralités}
+%
+%
+%\end{frame}
 
-\subsection{Héberger un site web}
+\subsection{Site web}
+
+\begin{frame}
+\frametitle{Développement Web : Généralités}
+\framesubtitle{Site web : Définitions}
+
+\begin{definition}[Site web]
+	Un ensemble de pages web et de ressources reliées par des hyperliens.
+	Un site web est défini et accessible par une adresse web.
+	
+	Un hyperlien est un lien associé à un élément d'un document hypertexte, qui pointe vers un autre élément textuel ou multimédia [Larousse]
+\end{definition}
+
+\begin{definition}[Page web]
+	Elle est constitué d'un document texte écrit en Hypertext Markup Language (\keyword{HTML}) pour la structure de base, d'images numériques, de feuilles de style en cascade (\keyword{CSS}) pour la mise en page, et de JavaScript pour des fonctionnalités plus avancées. 
+\end{definition}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Développement Web : Généralités}
+\framesubtitle{Site web : Fonctionnement}
+
+\begin{enumerate}
+	\item le navigateur demande au \keyword{DNS} l'adresse réelle du serveur contenant le site web.
+	\item le navigateur envoie une requête \keyword{HTTP} au serveur pour lui demander d'envoyer une copie du site web au client. 
+	\item si le serveur accepte la requête émise par le client, le serveur envoie un message « 200 OK » au client qui signifie : « Pas de problème, tu peux consulter ce site web, le voici ». 
+	\item Ensuite le serveur commence à envoyer les fichiers du site web au navigateur sous forme d'une série de petits morceaux nommés "paquet".
+	\item le navigateur assemble les différents morceaux pour recomposer le site web en entier puis l'affiche sur l'écran.
+\end{enumerate}
+
+\textbf{Remarque} : Veuillez consulter le chapitre \optword{Environnement de travail}
+
+\end{frame}
+
+\subsection{Environnement serveur-client}
+
+\begin{frame}
+\frametitle{Développement Web : Généralités}
+\framesubtitle{Environnement serveur-client : Statique ou dynamique}
+
+\begin{definition}[Page web statique]
+	Souvent, c'est un document \keyword{HTML}, qui peut contenir ou faire appel au \keyword{CSS} et \keyword{Javascript}.
+	Son contenu ne varie pas ; le serveur envoi cette page telle qu'elle est, sans modifications.
+\end{definition}
+
+\begin{definition}[Page web dynamique]
+	C'est une page web générée par un serveur à la demande. 
+	Son contenu peut donc varier selon la requête du client et selon les informations stockées dans le serveur. 
+\end{definition}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Développement Web : Généralités}
+\framesubtitle{Environnement serveur-client : Développement}
+
+\begin{itemize}
+	\item Dans le côté client 
+	\begin{itemize}
+		\item Les pages web sont exécutées sur un navigateur web 
+		\item Les navigateurs peuvent comprendre \keyword{HTML}, \keyword{HTML} et \keyword{Javascript}
+		\item Un développeur web spécialisé dans le côté client s'appelle \keyword{développeur front-end}
+	\end{itemize}
+	\item Dans le côté serveur
+	\begin{itemize}
+		\item Les pages web sont générées sur le serveur en se basant sur les requêtes du client et/ou les ressources stockées sur le serveur.
+		\item Les applications qui génèrent ces pages peuvent être implémentées en utilisant une variété de langages de programmation.
+		\item Un développeur web spécialisé dans le côté serveur s'appelle \keyword{développeur back-end}
+	\end{itemize}
+	\item Un développeur web spécialisé dans les deux côtés s'appelle \keyword{développeur full-stack}
+\end{itemize}
 
 
+\end{frame}
+
+
+\subsection{Développer un site web}
+
+\begin{frame}
+\frametitle{Développement Web : Généralités}
+\framesubtitle{Développer un site web : Conception et préparation}
+
+\begin{itemize}
+	\item Définir les principaux objectifs et public cible. 
+	Par exemple, \expword{Un portfolio dont l'objectif est de présenter l'expérience d'une personne}
+	\item Planifier le site : définir les différentes pages. 
+	Par exemple, dans un site d'un hôtel, on peut penser aux pages : \expword{Présentation},  \expword{Les services}, \expword{Réservation},  \expword{Contacter nous}, etc.
+	\item Définir la structure des pages et les liens entre elles. 
+	Par exemple, \expword{toutes les pages doivent avoir une entête avec le logo de l'hôtel, un menu à gauche et le contenu à droite}
+	\item Préparer le contenu et chercher les images. 
+	Il faut penser à utiliser des images de petites tailles. 
+	Par exemple, \expword{une page web avec plusieurs images de 4MO sera lente lors du chargement sur un réseaux internet faible}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Développement Web : Généralités}
+\framesubtitle{Développer un site : Réalisation}
+
+\begin{itemize}
+	\item Choisir les outils à utiliser (langages de programmation, frameworks, bibliothèques, éditeurs web, etc.) 
+	\item Implémenter la solution 
+	\item Si les pages sont statiques, tester directement sur un navigateur
+	\item S'il y a des traitements sur le côté serveur, installer un serveur \keyword{HTTP} sur votre machine pour les tester
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Développement Web : Généralités}
+\framesubtitle{Développer un site : Hébergement}
+
+\begin{itemize}
+	\item Penser à un nom du domaine non pris déjà. 
+	Par exemple, \expword{monsite.com} 
+	\item Chercher et acheter ce nom du domaine. Par exemple, en utilisant \url{https://www.name.com/domain/search} 
+	\item Choisir un hébergeur selon vos besoins (les langages de programmation, les outils proposés, les prix, etc.)
+	\item Vous pouvez envoyer vos pages web via une interface graphique ou d'autres moyens comme \keyword{FTP} (en utilisant \expword{filezilla} par exemple)
+	\item Il existe des hébergeurs gratuits où vous pouvez tester votre site. 
+	Par exemple, \url{https://www.000webhost.com/}, \url{https://sites.google.com/}, \url{https://www.freehostia.com/}, \url{https://wordpress.com/}, \url{https://www.pythonanywhere.com/}
+\end{itemize}
+
+\end{frame}
 
 \section{Front-End}
+
+\begin{frame}
+\frametitle{Développement Web}
+\framesubtitle{Front-End}
+
+\begin{itemize}
+	\item Cross-browser : le site doit supporter le maximum des navigateurs web
+	\item Site web réactif (\textit{responsive web design}) : affichage confortable du contenu selon la taille de l'écran
+	\item Accessibilité du web : accès aux contenus par les personnes handicapées (déficients visuels, sourds, malentendants, etc.) 
+	\item Interface utilisateur
+	\item La performance du site web : la rapidité de téléchargement et d'affichage du contenu
+\end{itemize}
+
+\end{frame}
 
 \begin{frame}
 \frametitle{Développement Web}
@@ -34,53 +175,204 @@
 
 \subsection{Les bases}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Les bases : HTML}
 
+\begin{tabular}{p{.05\textwidth}p{.85\textwidth}}
+	\hgraphpage[0.05\textwidth, valign=t]{HTML5-logo.png} & 
+	\mysphere\  \keyword{HTML} signifie « HyperText Markup Language »
+	
+	\mysphere\  traduit par « Langage de balises pour l'hypertexte »
+\end{tabular}
+\begin{minipage}{0.49\textwidth}
+\begin{itemize}
+%	\item \keyword{HTML} signifie « HyperText Markup Language »
+%	\item traduit par « langage de balises pour l'hypertexte »
+	\item utilisé afin de créer et de représenter le contenu d'une page web et sa structure
+	\item sa dernière version est HTML5 (2008)
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth}
+\begin{exampleblock}{Exemple d'un code HTML}
+\scriptsize\bfseries
+\lstset{escapeinside=**}\novocalize
+\begin{lstlisting}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Titre de la *fenêtre*</title>
+  </head>
+  <body>
+    <h1>Exemple d'un titre</h1>
+    <p>Exemple d'un paragraphe</p>
+    <p>Un *deuxième* paragraphe</p>
+  </body>
+</html>
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Les bases : CSS}
 
+\begin{tabular}{p{.05\textwidth}p{.85\textwidth}}
+	\hgraphpage[0.05\textwidth, valign=t]{CSS3-logo.png} & 
+	\mysphere\  \keyword{CSS} signifie « Cascading Style Sheets »
+	
+	\mysphere\  traduit par « Feuilles de style en cascade »
+\end{tabular}
+\begin{minipage}{0.59\textwidth}
+	\begin{itemize}
+		\item utilisé afin de décrire la présentation d'un document écrit en HTML
+		\item \keyword{CSS} décrit la façon dont les éléments doivent être affichés à l'écran, sur du papier, en vocalisation, ou sur d'autres supports.
+		\item sa dernière évolution est CSS3
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+\begin{exampleblock}{Exemple d'un code CSS}
+\scriptsize\bfseries
+\begin{lstlisting}
+h1 {
+  color: red; 
+  font-size: 20pt;
+  font-style: italic;
+}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Les bases : Javascript}
 
+\begin{tabular}{p{.07\textwidth}p{.85\textwidth}}
+	\hgraphpage[0.07\textwidth, valign=t]{Javascript-badge.png} & 
+	\mysphere\  \keyword{Javascript} est un langage de programmation
+	
+	\mysphere\  principalement employé dans les pages web
+\end{tabular}
+\begin{minipage}{0.49\textwidth}
+	\begin{itemize}
+		\item utilisé afin de permettre des pages web interactives
+		\item \keyword{Javascript} ajoute de l'interactivité aux pages web. 
+		Par exemple, \expword{Si on clique sur un bouton, une fonction peut faire la somme de deux nombres et écrire le résultat dans le premier élément de type "p"}
+%		\item sa dernière version est ES6 (ECMAScript 2015)
+%		\item la version en cours de rédaction, actuellement c'est ECMAScript 2020
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth}
+\begin{exampleblock}{Exemple d'un code Javascript}
+\tiny\bfseries
+\begin{lstlisting}
+function somme (a, b) {
+  let s = a + b;
+  let p = document.getElementsByTagName("p")[0];
+  p.innerHTML = "la somme est " + s;
+}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+	\begin{itemize}
+%	\item utilisé afin de permettre des pages web interactives
+%	\item \keyword{Javascript} ajoute de l'interactivité aux pages web. 
+%	Par exemple, \expword{Si on clique sur un bouton, une fonction peut faire la somme de deux nombres et écrire le résultat dans le premier élément de type "p"}
+	\item sa dernière version est ES6 (ECMAScript 2015)
+	\item la version en cours de rédaction, actuellement c'est ECMAScript 2020
+\end{itemize}
+
 \end{frame}
 
-\subsection{Les frameworks}
+\subsection{Les frameworks front-end}
 
 \begin{frame}
 \frametitle{Développement Web : Front-End}
-\framesubtitle{Les frameworks : CSS}
+\framesubtitle{Les frameworks front-end}
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Développement Web : Front-End}
-\framesubtitle{Les frameworks : Javascript}
-
-\end{frame}
 
 \subsection{Les préprocesseurs}
 
 \begin{frame}
 \frametitle{Développement Web : Front-End}
-\framesubtitle{Les préprocesseurs : CSS}
+\framesubtitle{Les préprocesseurs}
+
+\end{frame}
+
+
+\subsection{Générateurs des sites statiques}
+
+\begin{frame}
+\frametitle{Développement Web : Front-End}
+\framesubtitle{Générateurs des sites statiques}
+
+\end{frame}
+
+
+\section{Back-End}
+
+\begin{frame}
+\frametitle{Développement Web}
+\framesubtitle{Back-End}
+
+\begin{itemize}
+	\item Gestion des bases de données : stocker et de retrouver les informations dans le serveur
+	\item Extensibilité (scalabilité) : le site (serveur) doit pouvoir maintenir ses fonctionnalités et ses performances en cas des demandes d'un grand nombre de clients
+	\item Haute disponibilité du site
+	\item Sécurité : les données personnelles des clients doivent être sécurisées
+	\item Sauvegarde (\textit{backup}) : les données doivent être dupliquées pour éviter leur perte
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Développement Web : Front-End}
-\framesubtitle{Les préprocesseurs : Javascript}
+\frametitle{Développement Web}
+\framesubtitle{Back-End}
+
+\hgraphpage{backend.pdf}
 
 \end{frame}
 
-\section{Back-End}
+\subsection{Les langages de programmation}
+
+\begin{frame}
+\frametitle{Développement Web : Back-End}
+\framesubtitle{Les langages de programmation}
+
+\end{frame}
+
+\subsection{Les frameworks back-end}
+
+\begin{frame}
+\frametitle{Développement Web : Front-End}
+\framesubtitle{Les frameworks back-end}
+
+\end{frame}
+
+\subsection{Serveurs et plateformes}
+
+\begin{frame}
+\frametitle{Développement Web : Front-End}
+\framesubtitle{Serveurs et plateformes}
+
+\end{frame}
+
+\subsection{CMS}
+
+\begin{frame}
+\frametitle{Développement Web : Front-End}
+\framesubtitle{CMS}
+
+\end{frame}
 
 \section{Outils}
 
@@ -132,7 +424,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Développement Web (Introduction) : Outils}
+\frametitle{Développement Web : Outils}
 \frametitle{Éditeurs Web : Éditeurs WYSIWYG}
 
 \def\arraystretch{0}
@@ -168,6 +460,19 @@
 \end{tabular}
 
 \end{frame}
+
+\begin{frame}
+\frametitle{Développement Web}
+\framesubtitle{Un peu d'humour}
+
+\begin{center}
+	\vgraphpage{webdev-humour.jpg}
+	\vgraphpage{webdev-humour2.jpg}
+\end{center}
+
+\end{frame}
+
+\insertbibliography{Bweb07}{*}
 
 
 \end{document}
