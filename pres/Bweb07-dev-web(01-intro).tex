@@ -231,6 +231,7 @@
 		\item utilisé afin de décrire la présentation d'un document écrit en HTML
 		\item \keyword{CSS} décrit la façon dont les éléments doivent être affichés à l'écran, sur du papier, en vocalisation, ou sur d'autres supports.
 		\item sa dernière évolution est CSS3
+		\item CSS4 n'existe pas ; il y a des sélecteurs CSS niveau 4 qui font parti de CSS
 	\end{itemize}
 \end{minipage}
 %
@@ -297,14 +298,50 @@ function somme (a, b) {
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Les frameworks front-end}
 
+\begin{itemize}
+	\item un framework est un ensemble de composants logiciels, qui sert à créer les fondations de tout ou d'une partie d'un logiciel (architecture). 
+	\item les frameworks CSS : sont des fichiers CSS prédéfinis qui fournissent :
+	\begin{itemize}
+		\item esthétique (des styles des formulaires prédéfinis) 
+		\item prise en charge de la réactivité (responsive)
+		\item prise en charge des différents navigateurs
+	\end{itemize}
+	\item les frameworks Javascript sont des fichiers Javascript prédéfinis qui fournissent :
+	\begin{itemize}
+		\item synchronisation entre l'état et la vue
+		\item acheminement : lorsque l'utilisateur veut afficher d'autres informations, on met à jour la page sans faire appel à une autre
+		\item un système de modèles : des modèles HTML qu'on remplisse avec des données en utilisant Javascript
+		\item composants réutilisables : des boutons, etc. avec du comportement 
+	\end{itemize}
+\end{itemize}
+
 \end{frame}
 
 
 \subsection{Les préprocesseurs}
 
+
 \begin{frame}
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Les préprocesseurs}
+
+\begin{itemize}
+	\item Un préprocesseur HTML génère du HTML à partir d'une syntaxe
+	\begin{itemize}
+		\item la syntaxe peut être une forme simple pour rédaction des documents (comme Markdown). 
+		\item elle peut, aussi, être du HTML comme modèle (template) : avec des emplacements à remplir avec des données (comme Pug).
+	\end{itemize}
+	\item Un préprocesseur CSS génère du CSS
+	\begin{itemize}
+		\item il peut ajouter quelques fonctionnalités qui n'existent pas en CSS pur, telles que les variables, etc. 
+		\item ces fonctionnalités rendent la structure CSS plus lisible et plus facile à maintenir.
+	\end{itemize}
+	\item Un préprocesseur Javascript génère du Javascript
+	\begin{itemize}
+		\item il peut servir pour maintenir la compatibilité entre les versions de Javascript (comme Babel)
+		\item il peut ajouter des fonctionnalités non existantes dans Javascript (comme TypeScript)
+	\end{itemize}
+\end{itemize}
 
 \end{frame}
 
@@ -314,6 +351,13 @@ function somme (a, b) {
 \begin{frame}
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Générateurs des sites statiques}
+
+\begin{itemize}
+	\item des programmes qui génèrent des pages HTML statiques
+	\item il fournissent des modèles HTML prédéfinis qu'on remplisse avec du contenu
+	\item il fournissent des thèmes CSS 
+	\item Par exemple, \expword{Jekyll prend des pages en Markdown et génère des pages HTML en se basant sur des thèmes HTML et CSS choisis}
+\end{itemize}
 
 \end{frame}
 
@@ -346,7 +390,31 @@ function somme (a, b) {
 
 \begin{frame}
 \frametitle{Développement Web : Back-End}
-\framesubtitle{Les langages de programmation}
+\framesubtitle{Les langages de programmation (exemples des sites)}
+
+Une liste de \href{https://en.wikipedia.org/wiki/Programming_languages_used_in_most_popular_websites}{Wikipedia} :
+
+\scriptsize\bfseries
+\rowcolors{2}{lightblue}{lightyellow}
+\begin{center}
+	\begin{tabular}{llllllll}
+	\rowcolor{darkblue}
+	 & \color{white}C\# & \color{white}Java & \color{white}Javascript & \color{white}PHP & \color{white}Python & \color{white}Ruby & \color{white}Autres \\
+	Amazon.com &  & \checkmark &  &  &  &  & \checkmark \\
+	Bing & \checkmark  & &  &  &  &  & \checkmark \\
+	eBay.com &  & \checkmark & \checkmark  &  &  &  & \checkmark \\
+	Facebook.com &  & \checkmark &   & \checkmark & \checkmark &  & \checkmark \\
+	Google.com &  & \checkmark &  &  & \checkmark  &  & \checkmark \\
+	Linkedin.com &  & \checkmark & \checkmark  &  &  &  & \checkmark  \\
+	MSN.com & \checkmark  & &  &  &  &  &  \\
+	Pinterest &  & &  &  & \checkmark &  & \checkmark \\
+	Twitter.com &  & \checkmark &  &  &  & \checkmark & \checkmark  \\
+	Wikipedia.org &  & &  & \checkmark &  &  &  \\
+	WordPress.com &  & &  & \checkmark &  &  &  \\
+	Yahoo &  & &  & \checkmark &  &  &  \\
+	YouTube.com &  & \checkmark &  &  & \checkmark  &  & \checkmark \\
+\end{tabular}
+\end{center}
 
 \end{frame}
 
@@ -356,6 +424,23 @@ function somme (a, b) {
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Les frameworks back-end}
 
+\begin{itemize}
+	\item Les frameworks web côté serveur facilitent l'écriture, la maintenance et la mise à l'échelle d'applications web. 
+	\item Ils fournissent des outils et des bibliothèques pour :
+	\begin{itemize}
+		\item simplifier l'acheminement des URL vers les gestionnaires appropriés
+		\item gérer l'interaction avec les bases de données
+		\item définir les sessions et les autorisations des utilisateurs
+		\item améliorer de la sécurité contre les attaques web
+	\end{itemize}
+	\item Comment choisir un framework :
+	\begin{itemize}
+		\item Effort d'apprentissage : combien de temps pour l'apprendre
+		\item Productivité : la vitesse pour réaliser un projet en l'utilisant
+		\item Performance : vitesse d'exécution et support de la charge
+	\end{itemize}
+\end{itemize}
+
 \end{frame}
 
 \subsection{Serveurs et plateformes}
@@ -363,6 +448,23 @@ function somme (a, b) {
 \begin{frame}
 \frametitle{Développement Web : Front-End}
 \framesubtitle{Serveurs et plateformes}
+
+\begin{itemize}
+	\item Des plateformes d'exécution de quelques langages de programmation :
+	\begin{itemize}
+		\item \optword{Java Virtual Machine} pour java et d'autres langages
+		\item \optword{.NET Common Language Runtime} pour C\# et d'autres langages 
+		\item \optword{Node.js} pour Javascript
+	\end{itemize}
+	\item Les serveurs
+	\begin{itemize}
+		\item ont comme tâche d'accepter et de répondre aux demandes des clients
+		\item le client est presque toujours un navigateur ou une application mobile
+		\item la demande prend la forme d'un message HTTP
+		\item les pages livrées sont plus souvent des documents HTML, qui peuvent inclure des images, des feuilles de style et des scripts en plus du contenu texte.
+		\item Des frameworks, comme Django, peuvent fournir leur propre serveur HTTP
+	\end{itemize}
+\end{itemize}
 
 \end{frame}
 
@@ -372,14 +474,97 @@ function somme (a, b) {
 \frametitle{Développement Web : Front-End}
 \framesubtitle{CMS}
 
+\begin{itemize}
+	\item \keyword{CMS} : "content management system"
+	\item en français : "système de gestion de contenu"
+	\item Un CMS est un logiciel qui gère efficacement votre site web : vous pouvez ajouter et modifier du contenu et contrôler presque tous les aspects de votre site web
+	\item parmi ses fonctionnalités : 
+	\begin{itemize}
+		\item gestion des utilisateurs et leurs droits d'accès 
+		\item gestion de documents
+		\item création des forums, blogs, fil d'actualité, publicité sur le site, galeries (photos, vidéos, audio), etc.
+	\end{itemize}
+\end{itemize}
+
 \end{frame}
 
 \section{Outils}
 
+\subsection{Navigateurs}
+
+\begin{frame}
+\frametitle{Développement Web : Outils}
+\framesubtitle{Navigateurs : composants}
+
+\begin{itemize}
+	\item \optword{Interface utilisateur}
+	\item \optword{Composant réseau} : utilisé pour récupérer les fichiers / ressources du serveur
+	\item \optword{Composant de persistance des données} : pour conserver les données
+	\item \optword{Moteur de rendu HTML} : transforme HTML, ainsi que toutes les autres ressources associées à la page, en une représentation visuelle interactive. 
+	Parmi les moteurs : \expword{Blink}, \expword{Geko} et \expword{Webkit (Webcore)}.
+	\item \optword{Moteur Javascript} : interprète et exécute du code en langage JavaScript.
+	Parmi les moteurs : \expword{V8},  \expword{Webkit (JavaScriptCore)}, \expword{SpiderMonkey}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Développement Web : Outils}
+\framesubtitle{Navigateurs : exemple}
+
+\def\arraystretch{0}
+\small\bfseries
+\rowcolors{2}{lightblue}{lightyellow}
+\begin{tabular}{p{.15\textwidth}p{.1\textwidth}p{.2\textwidth}p{.4\textwidth}}%p{.3\textwidth}
+	
+	\rowcolor{darkblue}
+	\color{white}Navigateur & \color{white}Web & \color{white}Javascript & \color{white}URL\\
+	
+	\vgraphpage[.5cm, valign=t]{brave-logo.png} &
+	Blink* & V8 &
+	\url{https://brave.com/}\\
+	
+	\vgraphpage[.5cm, valign=t]{chrome-logo.png} &
+	Blink* & V8 &
+	\url{https://www.google.com/chrome/}\\
+	
+	\vgraphpage[.5cm, valign=t]{edge-logo.png} Edge&
+	Blink* & V8 &
+	\url{https://www.microsoft.com/edge}\\
+	
+	\vgraphpage[.5cm, valign=t]{firefox-logo.png} Firefox &
+	Gecko & SpiderMonkey &
+	\url{https://www.mozilla.org/firefox/}\\
+	
+	\vgraphpage[.5cm, valign=t]{midori-logo.png} Midori&
+	Webkit & Webkit &
+	\url{https://www.midori-browser.org/}\\
+	
+	\vgraphpage[.5cm, valign=t]{opera-logo.png} Opera&
+	Blink & V8 &
+	\url{https://www.microsoft.com/edge}\\
+	
+	\vgraphpage[.5cm, valign=t]{safari-logo.png} Safari&
+	Webkit & Webkit &
+	\url{https://www.apple.com/safari/}\\
+	
+	\vgraphpage[.5cm, valign=t]{vivaldi-logo.png} Vivaldi&
+	Blink & V8 &
+	\url{https://www.microsoft.com/edge}\\
+	
+
+\end{tabular}
+
+\begin{flushright}
+	\textit{\scriptsize * utilise Webkit pour la version iOS}
+\end{flushright}
+
+\end{frame}
+
 \subsection{Éditeurs Web}
 
 \begin{frame}
-\frametitle{Développement Web (Introduction) : Outils}
+\frametitle{Développement Web : Outils}
 \framesubtitle{Éditeurs Web : Éditeurs de texte}
 
 \def\arraystretch{0}
@@ -388,31 +573,31 @@ function somme (a, b) {
 	
 	\hline
 	
-	\vgraphpage[.8cm]{aptana-logo.png} &
+	\vgraphpage[.8cm, valign=t]{aptana-logo.png} &
 	& 
 	\url{http://www.aptana.com/}\\
 	
 	\hline
 	
-	\vgraphpage[.8cm]{atom-logo.png} &
+	\vgraphpage[.8cm, valign=t]{atom-logo.png} &
 	& 
 	\url{https://atom.io/}\\
 	
 	\hline
 	
-	\vgraphpage[.8cm]{bluefish-logo.png} &
+	\vgraphpage[.8cm, valign=t]{bluefish-logo.png} &
 	& 
 	\url{https://sourceforge.net/projects/bluefish/}\\
 	
 	\hline
 	
-	\vgraphpage[.8cm]{brackets-logo.png} &
+	\vgraphpage[.8cm, valign=t]{brackets-logo.png} &
 	& 
 	\url{http://brackets.io/}\\
 	
 	\hline
 	
-	\vgraphpage[.8cm]{visual-studio-code-logo.png} &
+	\vgraphpage[.8cm, valign=t]{visual-studio-code-logo.png} &
 	& 
 	\url{https://code.visualstudio.com/}\\
 	
@@ -425,7 +610,7 @@ function somme (a, b) {
 
 \begin{frame}
 \frametitle{Développement Web : Outils}
-\frametitle{Éditeurs Web : Éditeurs WYSIWYG}
+\framesubtitle{Éditeurs Web : Éditeurs WYSIWYG}
 
 \def\arraystretch{0}
 
@@ -433,27 +618,67 @@ function somme (a, b) {
 	
 	\hline
 	
-	\vgraphpage[.8cm]{bluegriffon-logo.png} &
+	\vgraphpage[.8cm, valign=t]{bluegriffon-logo.png} &
 	& 
 	\url{http://bluegriffon.org/}\\
 	
 	\hline
 	
-	\vgraphpage[.8cm]{google-web-designer-logo.png} &
+	\vgraphpage[.8cm, valign=t]{google-web-designer-logo.png} &
 	& 
 	\url{https://webdesigner.withgoogle.com/} \\
 	
 	\hline
 	
-	\vgraphpage[.8cm]{open-element-logo.png} &
+	\vgraphpage[.8cm, valign=t]{open-element-logo.png} &
 	& 
 	\url{https://www.openelement.com/}\\
 	
 	\hline
 	
-	\vgraphpage[.8cm]{dreamweaver-logo.png} &
+	\vgraphpage[.8cm, valign=t]{dreamweaver-logo.png} &
 	& 
 	\url{https://www.adobe.com/products/dreamweaver.html}\\
+	
+	\hline
+	
+\end{tabular}
+
+\end{frame}
+
+\subsection{Outils de conception graphique}
+
+\begin{frame}
+\frametitle{Développement Web : Outils}
+\framesubtitle{Outils de conception graphique}
+
+\def\arraystretch{0}
+
+\begin{tabular}{p{.2\textwidth}cp{.7\textwidth}}%p{.3\textwidth}
+	
+	\hline
+	
+	\vgraphpage[.8cm, valign=t]{photoshop-logo.png} &
+	& 
+	\url{https://www.adobe.com/products/photoshop.html}\\
+	
+	\hline
+	
+	\vgraphpage[.8cm, valign=t]{gimp-logo.png} &
+	& 
+	\url{https://gitlab.gnome.org/GNOME/gimp} \\
+	
+	\hline
+	
+	\vgraphpage[.8cm, valign=t]{illustrator-logo.png} &
+	& 
+	\url{http://adobe.com/products/illustrator/}\\
+	
+	\hline
+	
+	\vgraphpage[.8cm, valign=t]{inkscape-logo.png} &
+	& 
+	\url{https://inkscape.org/}\\
 	
 	\hline
 	
