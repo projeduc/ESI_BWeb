@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Exemple images</title>
+  </head>
+  <body>
+    Image <br>
+    <img src="img/orange.jpg"
+         width="200px" height="100px"
+         alt="Un oranger" title="Oranger et nuages" >
+
+    <br>
+    Image avec légende :
+    <figure>
+      <img src="img/orange.jpg"
+           width="200px" height="100px"
+           alt="Un oranger" title="Oranger et nuages" >
+      <figcaption>Oranger et nuages</figcaption>
+    </figure>
+
+    Image adaptative ;
+    pour les smartphones, il faut mieux élécharger des images de petites tailles.
+    Dans cet exemple, on va utiliser des images différentes pour voir la différence.
+    Dimunier la taille du navigateur.
+    <picture>
+      <source media="(max-width: 799px)" srcset="img/orange-petite.jpg">
+      <source media="(min-width: 800px)" srcset="img/orange.jpg">
+      <img src="img/orange.jpg" alt="Un oranger">
+    </picture>
+
+  </body>
+</html>

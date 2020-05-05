@@ -7,7 +7,7 @@
 
 \input{options}
 
-\title[BWEB : 07- Web (HTML)] %
+\title[BWEB : 07- HTML] %
 {Bureautique et Web \\Chapitre 07 : Développement Web\\ \slshape\small  HTML}  
 
 \changegraphpath{../img/dev-web/}
@@ -15,30 +15,32 @@
 \begin{document}
 
 \begin{frame}
-\frametitle{Développement Web : HTML}
-\framesubtitle{Microsoft Word}
+\frametitle{HTML}
+\framesubtitle{Introduction}
 
 \begin{itemize}
-	\item WYSIWYG : What You See Is What You Get
-	\item fait parti de la suite bureautique : Microsoft office
-	\item c'est le programme de traitement de texte le plus populaire au monde
-	\item facile à configurer et à utiliser 
+	\item HTML : HyperText Markup Language
+	\item un langage de balises  
+	\item 
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Rédaction d'un document numérique}
-\framesubtitle{Microsoft Word}
+\frametitle{HTML}
+\framesubtitle{Balise}
 
-\begin{center}
-\vgraphpage{word.png}
-\end{center}
+\begin{itemize}
+	\item Une balise dans HTML s'écrit comme 
+	\item   
+	\item 
+\end{itemize}
 
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Rédaction d'un document numérique : HTML}
+\frametitle{HTML}
 \framesubtitle{Plan}
 
 \begin{multicols}{2}
@@ -48,9 +50,583 @@
 \end{frame}
 
 %===================================================================================
-\section{Préparer un document}
+\section{Structure et éléments}
 %===================================================================================
 
+\subsection{Structure}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure}
+
+\begin{itemize}
+	\item Une balise dans HTML s'écrit comme 
+	\item   
+	\item 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure : Doctype}
+
+\begin{itemize}
+	\item Une balise dans HTML s'écrit comme 
+	\item   
+	\item 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure : Head}
+
+\begin{itemize}
+	\item Une balise dans HTML s'écrit comme 
+	\item   
+	\item 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure : Header}
+
+\begin{itemize}
+	\item Une balise dans HTML s'écrit comme 
+	\item Title
+	\item Méta
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure : Body}
+
+\begin{itemize}
+	\item  
+	\item 
+	\item 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure : Commentaires}
+
+\begin{itemize}
+	\item  
+	\item 
+	\item 
+\end{itemize}
+
+\end{frame}
+
+
+\subsection{Formatage de texte}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Formatage de texte : Balises de mise en forme}
+
+\begin{itemize}
+	\item  
+	\item 
+	\item 
+\end{itemize}
+
+\end{frame}
+
+%<b> et <strong>
+%<i> et <em>
+%<p> et <h1> à <h6>
+%<pre> et <code>
+%<blockquote> et <q>
+%<sub> et <sup>
+
+\subsection{Listes}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Listes : Liste à puces}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item définie par la balise \keyword{<ul>} (unordered list)
+		\item ses éléments sont définis par la balise \keyword{<li>}
+		\item on peut créer une liste à l'intérieur d'une autre
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{exampleblock}{exemple: liste.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<ul>
+  <li>*élément 1*</li>
+  <li>*élément 2* :
+    <ul>
+      <li>*élément 2-1*</li>
+      <li>*élément 2-2*</li>
+      <li>*élément 2-3*</li>
+    </ul>
+  </li>
+  <li>*élément 3*</li>
+</ul>
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Listes : Liste numérotée}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item définie par la balise \keyword{<ol>} (ordered list)
+		\item ses éléments sont définis par la balise \keyword{<li>}
+		\item on peut créer une liste à l'intérieur d'une autre
+		\item on peut commencer la numérotation à partir d'un nombre en utilisant l'attribut \keyword{start}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{exampleblock}{exemple: liste.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<ol start="5">
+  <li>*élément* 1</li>
+  <li>*élément* 2</li>
+  <li>*élément* 3</li>
+</ol>
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Listes : Liste de définition}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item définie par la balise \keyword{<dl>} (definition list)
+		\item dedans il y a une séquence de termes et descriptions
+		\item un terme est défini par la balise \keyword{<dt>} (definition term)
+		\item une description est définie par la balise \keyword{<dd>} (definition description)
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: liste.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+</dl>
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\subsection{Tableaux}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Tableaux : Éléments d'un tableau}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item un tableau est défini par la balise \keyword{<table>}
+		\item dans un tableau, il y a plusieurs lignes
+		\item une ligne est définie par la balise \keyword{<tr>}
+		\item chaque ligne contient des cellules
+		\item une cellule est définie par la balise \keyword{<td>}
+		\item dans la première ligne, on remplace \keyword{<td>} par \keyword{<th>} pour désigner qu'il s'agit des titres du tableau
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.39\textwidth}
+\begin{exampleblock}{exemple: tableau.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<table>
+  <tr>
+    <td>L1C1</td>
+    <td>L1C2</td>
+    <td>L1C3</td>
+  </tr>
+  <tr>
+    <td>L2C1</td>
+    <td>L2C2</td>
+    <td>L2C3</td>
+  </tr>
+</table>
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Tableaux : Accessibilité}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item pour décrire un tableau, on utilise une légende : la balise \keyword{<caption>}
+		\item on peut regrouper les lignes de l'entête d'un tableau dans une balise \keyword{<thead>}
+		\item le corps du tableau peut être regroupé dans la balise \keyword{<tbody>}
+		\item on peut spécifier le type du titre en utilisant l'attribut \keyword{scope} : un titre de colonnes (\keyword{scope="col"}) ou un titre des lignes (\keyword{scope="row"})
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: tableau.html}
+\lstset{escapeinside=**}
+\tiny\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<table>
+  <caption>Notes des *étudiants*</caption>
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">BWEB</th>
+      <th scope="col">ALSDS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Etudiant1</th>
+      <td>16</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row">Etudiant2</th>
+      <td>13</td>
+      <td>17</td>
+    </tr>
+  </tbody>
+</table>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Tableaux : Fusionner les cellules}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item l'attribut \keyword{rowspan} : une cellule prend plusieurs lignes 
+		\item l'attribut \keyword{colspan} : une cellule prend plusieurs colonnes
+		\item lorsqu'une cellule prend plusieurs lignes (colonnes), on doit la compter comme si plusieurs cellules
+		\item on peut omettre \keyword{rowspan="1"} et \keyword{colspan="1"}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: tableau.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<table>
+  <tr>
+    <td colspan="2">L1C1</td>
+    <!-- L1C2 est prise par L1C1 -->
+    <td rowspan="2">L1C3</td>
+  </tr>
+  <tr>
+    <td>L2C1</td>
+    <td>L2C2</td>
+    <!-- L2C3 est prise par L1C3 -->
+  </tr>    
+</table>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\hgraphpage[.5\textwidth]{html/table-fusionner.png}
+\end{minipage}
+
+\end{frame}
+
+%===================================================================================
+\section{Liens et multimédia}
+%===================================================================================
+
+\subsection{Liens et intégration}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Liens et intégration : Lien hypertexte}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item Un lien hypertexte est défini par la balise \keyword{<a>} 
+		\item la destination est spécifiée par l'attribut \keyword{href}
+		\item pour ouvrir la page dans une nouvelle onglet, on utilise \keyword{target="\_blank"}
+		\item pour spécifier que le lien est un émail, on utilise le mot clé \keyword{mailto:} avant l'adresse émail
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: lien.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<a href="liste.html">
+  Voir les listes
+</a>
+<br>
+<a href="https://www.google.com" 
+                target="_blank">
+  Aller vers Google
+</a>
+<br>
+<a href="mailto:ab_aries@esi.dz">
+  Envoyer un message
+</a>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Liens et intégration : Lien vers un emplacement dans la même page}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item on doit marquer l'emplacement dans le fichier HTML
+		\item on attribue un identifiant à un élément en utilisant l'attribut \keyword{id}
+		\item pour référencer cet identifiant dans un lien, on le précède par \keyword{\#}
+		\item pour référencer un élément dans une autre page, on met l'adresse de la page suivi par \keyword{\#} suivi par l'identifiant de cet élément
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: lien.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<a href="#def">
+  Aller vers la *définition*
+</a> 
+...
+<h1 id="def">*Définition*</h1>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Liens et intégration : Afficher une page dans une autre}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item Pour insérer une page dans une autre, on utilise la balise \keyword{<iframe>}
+		\item l'attribut \keyword{width} spécifie la longueur 
+		\item l'attribut \keyword{height} spécifie l'hauteur 
+		\item l'attribut \keyword{src} spécifie l'URL de la page à insérer
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: lien.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<iframe 
+      width="300" 
+      height="200" 
+      src="liste.html">
+</iframe>	
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\subsection{Images et graphiques}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Images et graphiques : Insérer une image}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item Pour insérer une image dans une page, on utilise la balise \keyword{<img>}
+		\item c'est une balise auto-fermante
+		\item \keyword{src} spécifie l'URL de l'image
+		\item \keyword{width} spécifie la longueur 
+		\item \keyword{height} spécifie l'hauteur
+		\item \keyword{alt} spécifie le texte à afficher si l'image est introuvable 
+		\item \keyword{title} spécifie le texte qui s'affiche lorsqu'on met le curseur de la souri sur l'image
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: image.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<img src="img/orange.jpg"
+     width="200px" height="100px"
+     alt="Un oranger" 
+     title="Oranger et nuages" >
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame} 
+
+% <figure> et <figcaption>
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Images et graphiques : Figures}
+
+\begin{minipage}{0.47\textwidth} 
+	\begin{itemize}
+		\item une figure est un région où on met des images ou des schémas 
+		\item elle est définie par la balise \keyword{<figure>}
+		\item elle peut contenir une légende, en utilisant la balise \keyword{<figcaption>}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.52\textwidth}
+\begin{exampleblock}{exemple: image.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<figure>
+  <img src="img/orange.jpg"
+       width="200px" height="100px"
+       alt="Un oranger" 
+       title="Oranger et nuages" >
+  <figcaption>
+    Oranger et nuages
+  </figcaption>
+</figure>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+% <picture> et <source>
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Images et graphiques : Images adaptatives}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item On veut insérer une image sur la page selon la taille de l'écran
+		\item une solution est d'utiliser la balise \keyword{<picture>}
+		\item dedans, on met les différentes sources en utilisant la balise \keyword{<source>}
+		\item pour chaque source, on peut spécifier la taille préférée en utilisant l'attribut \keyword{<media>}
+		\item on doit ajouter une balise \keyword{<img>} au cas où toutes les sources ne sont pas satisfaites
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: image.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<picture>
+  <source media="(max-width: 799px)" 
+      srcset="img/orange-petite.jpg">
+  <source media="(min-width: 800px)" 
+      srcset="img/orange.jpg">
+  <img src="img/orange.jpg" 
+      alt="Un oranger">
+</picture>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+%<map> et <area>
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Images et graphiques : Régions cliquables dans l'image}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item On peut définir des régions cliquables dans une image en utilisant la balise \keyword{<map>}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+	\begin{exampleblock}{exemple: lien.html}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries\vspace{-6pt}
+		\begin{lstlisting}[language={html}]
+		
+		\end{lstlisting}\vspace{-6pt}
+	\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+
+\subsection{Vidéos et audio}
+
+%Vidéo 
+%Audio
+
+%===================================================================================
+\section{Disposition}
+%===================================================================================
+
+\subsection{Type des éléments}
+
+%Block
+%Inline
+
+\subsection{Conteneurs}
+
+%<div>
+%<span>
+
+
+\subsection{Éléments sémantiques}
+
+%<header> - Defines a header for a document or a section
+%<nav> - Defines a container for navigation links
+%<section> - Defines a section in a document
+%<article> - Defines an independent self-contained article
+%<aside> - Defines content aside from the content (like a sidebar)
+%<footer> - Defines a footer for a document or a section
+%<details> - Defines additional details
+%<summary> - Defines a heading for the <details> element
+
+%===================================================================================
+\section{Formulaires}
+%===================================================================================
 
 
 \end{document}

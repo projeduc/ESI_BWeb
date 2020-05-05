@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Exemple tableaux</title>
+    <!-- Ce CSS est juste pour afficher les bordures des tableaux -->
+    <style type="text/css">
+    table, tr, td, th {
+      border: 1px solid black;
+    }
+    </style>
+  </head>
+  <body>
+
+    Un tableau simple :
+
+    <table>
+      <tr>
+        <td>L1C1</td>
+        <td>L1C2</td>
+        <td>L1C3</td>
+      </tr>
+      <tr>
+        <td>L2C1</td>
+        <td>L2C2</td>
+        <td>L2C3</td>
+      </tr>
+    </table>
+
+    Un tableau avec entête :
+
+    <table>
+      <tr>
+        <th>Nom</th>
+        <th>BWEB</th>
+        <th>ALSDS</th>
+      </tr>
+      <tr>
+        <td>Etudiant1</td>
+        <td>16</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>Etudiant2</td>
+        <td>13</td>
+        <td>17</td>
+      </tr>
+    </table>
+
+    Un tableau avec légende et titres :
+    <table>
+      <caption>Notes des étudiants</caption>
+      <thead>
+        <tr>
+          <th scope="col">Nom</th>
+          <th scope="col">BWEB</th>
+          <th scope="col">ALSDS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Etudiant1</th>
+          <td>16</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <th scope="row">Etudiant2</th>
+          <td>13</td>
+          <td>17</td>
+        </tr>
+      </tbody>
+    </table>
+
+    Fusionner les cellules :
+    <table>
+      <tr>
+        <td colspan="2">L1C1</td>
+        <!-- L1C2 est prise par L1C1 -->
+        <td rowspan="2">L1C3</td>
+      </tr>
+      <tr>
+        <td>L2C1</td>
+        <td>L2C2</td>
+        <!-- L2C3 est prise par L1C3 -->
+      </tr>    
+    </table>
+  </body>
+</html>
