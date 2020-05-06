@@ -21,7 +21,7 @@
 \begin{itemize}
 	\item HTML : HyperText Markup Language
 	\item un langage de balises  
-	\item 
+	\item il sert à structurer le contenu des pages web
 \end{itemize}
 
 \end{frame}
@@ -31,9 +31,11 @@
 \framesubtitle{Balise}
 
 \begin{itemize}
-	\item Une balise dans HTML s'écrit comme 
-	\item   
-	\item 
+	\item Une balise dans HTML s'écrit comme \expword{<nomBalise>}
+	\item Un élément HTML se compose d'une balise ouvrante ( \expword{<nomBalise>}), d'un contenu textuel et d'une balise fermante (\expword{</nomBalise>})
+	\item Il existe des balises auto-fermantes ; c-à-d, elles ne contiennent pas du contenu (pas de \expword{</nomBalise>})
+	\item Les balises peuvent avoir des attributs \\\expword{<nomBalise attribut1 = "valeur1" >}
+	\item HTML ne fait pas la différence entre majuscule et minuscule
 \end{itemize}
 
 \end{frame}
@@ -55,72 +57,101 @@
 
 \subsection{Structure}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{HTML : Structure et éléments}
 \framesubtitle{Structure}
 
+\begin{minipage}{0.60\textwidth} 
 \begin{itemize}
-	\item Une balise dans HTML s'écrit comme 
-	\item   
-	\item 
+	\item \optword{Le doctype} : marqué par \keyword{<!DOCTYPE html>}. Il indique que le document est écrit avec du HTML standard.
+	\item \optword{L'entête} : marquée par \keyword{<html>}. Elle fournit des informations générales (métadonnées) sur le document. Il ne peut y avoir qu'une seule entête par document
+	\item \optword{Le corps} : marqué par \keyword{<body>}. Il représente le contenu principal du document HTML. Il ne peut y avoir qu'un seul corps par document
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{Structure d'un document HTML}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Exemple de HTML
+    </title>
+  </head>
+  <body>
+    Bonjour tout le monde!
+  </body>
+</html>
+\end{lstlisting}
+\end{block}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure : Les commentaires}
+
+\begin{itemize}
+	\item ils commencent par \keyword{<!- -} et terminent par \keyword{- ->}
+	\item ils peuvent prendre plusieurs lignes
+	\item leur intérêt : 
+	\begin{itemize}
+		\item commenter le code non utiliser
+		\item ajouter des explications au code
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Structure : L'entête}
+
+\begin{minipage}{0.44\textwidth} 
+\begin{itemize}
+	\item \keyword{<title>} : le titre est affiché dans la barre de titre du navigateur ou dans l'onglet de la page.
+	\item \keyword{<link>} : définit la relation entre le document courant et une ressource externe (on va voir ça dans CSS)
+	
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.55\textwidth}
+\begin{exampleblock}{Exemple d'une entête}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<head>
+  <title>Titre</title>
+  <!-- *définir l'icon du site* -->
+  <link rel="icon" href="favicon.ico">
+  <!-- *encodage des caractères* -->
+  <meta charset="utf-8">
+  <!-- *Rediriger la page après 3 secondes* -->
+  <meta http-equiv="refresh" 
+        content="3;url=http://esi.dz/">
+</head>
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\begin{itemize}
+	\item \keyword{<meta>} : une donnée qui décrit une donnée. 
+	Par exemple, \expword{l'auteur de la page}, \expword{son encodage}, etc.
+	\item des scripts (\keyword{<script>}) et des styles (\keyword{<style>})
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{HTML : Structure et éléments}
-\framesubtitle{Structure : Doctype}
+\framesubtitle{Structure : Le corps}
 
 \begin{itemize}
-	\item Une balise dans HTML s'écrit comme 
-	\item   
-	\item 
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{HTML : Structure et éléments}
-\framesubtitle{Structure : Head}
-
-\begin{itemize}
-	\item Une balise dans HTML s'écrit comme 
-	\item   
-	\item 
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{HTML : Structure et éléments}
-\framesubtitle{Structure : Header}
-
-\begin{itemize}
-	\item Une balise dans HTML s'écrit comme 
-	\item Title
-	\item Méta
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{HTML : Structure et éléments}
-\framesubtitle{Structure : Body}
-
-\begin{itemize}
-	\item  
-	\item 
-	\item 
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{HTML : Structure et éléments}
-\framesubtitle{Structure : Commentaires}
-
-\begin{itemize}
-	\item  
+	\item Le corps 
 	\item 
 	\item 
 \end{itemize}
@@ -135,19 +166,55 @@
 \framesubtitle{Formatage de texte : Balises de mise en forme}
 
 \begin{itemize}
-	\item  
-	\item 
-	\item 
+	\item \keyword{<i>} : un texte en italique
+	\item \keyword{<b>} : un texte en gras
+	\item \keyword{<em>} : un texte en emphase (important). En général, italique
+	\item \keyword{<strong>} : un texte en emphase fort (très important). En général, gras
+	\item \keyword{<p>} : un paragraphe
+	\item \keyword{<h1>} jusqu'à \keyword{<h6>} : des titres de niveau 1 jusqu'à niveau 6
+	\item \keyword{<pre>} : un texte préformaté ; le texte reste tel qu'il est, avec les espaces et les retours à la ligne
+	\item \keyword{<sup>} : un exposant
+	\item \keyword{<sub>} : une indice
+	\item \textit{un exemple dans "formatage.html"}
 \end{itemize}
 
 \end{frame}
 
-%<b> et <strong>
-%<i> et <em>
-%<p> et <h1> à <h6>
-%<pre> et <code>
-%<blockquote> et <q>
-%<sub> et <sup>
+\begin{frame}[fragile]
+\frametitle{HTML : Structure et éléments}
+\framesubtitle{Formatage de texte : Citation}
+
+\begin{minipage}{0.44\textwidth} 
+	\begin{itemize}
+		\item \keyword{<q>} : une citation courte. 
+		La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation.
+		\item \keyword{<blockquote>} : une citation longue. 
+		Le texte est généralement affiché avec une indentation.
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.55\textwidth}
+\begin{exampleblock}{Exemple : formatage.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+Mahatma Gandhi a dit :
+<q>
+  Be the change that you wish to see 
+  in the world.
+</q>
+Albert Einstein a comment*é* sur 
+l'*ê*tre humain :
+<blockquote>
+  Two things are infinite: the universe 
+  and human stupidity; 
+  and I'm not sure about the universe.
+</blockquote>
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
 
 \subsection{Listes}
 
@@ -420,7 +487,7 @@
 		\item on doit marquer l'emplacement dans le fichier HTML
 		\item on attribue un identifiant à un élément en utilisant l'attribut \keyword{id}
 		\item pour référencer cet identifiant dans un lien, on le précède par \keyword{\#}
-		\item pour référencer un élément dans une autre page, on met l'adresse de la page suivi par \keyword{\#} suivi par l'identifiant de cet élément
+%		\item pour référencer un élément dans une autre page, on met l'adresse de la page suivi par \keyword{\#} suivi par l'identifiant de cet élément
 	\end{itemize}
 \end{minipage}
 %
@@ -438,6 +505,10 @@
 \end{exampleblock}
 \end{minipage}
 
+\begin{itemize}
+	\item pour référencer un élément dans une autre page, on met l'adresse de la page suivi par \keyword{\#} suivi par l'identifiant de cet élément
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}[fragile]
@@ -448,8 +519,8 @@
 	\begin{itemize}
 		\item Pour insérer une page dans une autre, on utilise la balise \keyword{<iframe>}
 		\item l'attribut \keyword{width} spécifie la longueur 
-		\item l'attribut \keyword{height} spécifie l'hauteur 
-		\item l'attribut \keyword{src} spécifie l'URL de la page à insérer
+		\item \keyword{height} spécifie l'hauteur 
+		\item \keyword{src} spécifie l'URL de la page à insérer
 	\end{itemize}
 \end{minipage}
 %
@@ -479,11 +550,11 @@
 	\begin{itemize}
 		\item Pour insérer une image dans une page, on utilise la balise \keyword{<img>}
 		\item c'est une balise auto-fermante
-		\item \keyword{src} spécifie l'URL de l'image
-		\item \keyword{width} spécifie la longueur 
-		\item \keyword{height} spécifie l'hauteur
-		\item \keyword{alt} spécifie le texte à afficher si l'image est introuvable 
-		\item \keyword{title} spécifie le texte qui s'affiche lorsqu'on met le curseur de la souri sur l'image
+		\item l'attribut \keyword{src} spécifie l'URL de l'image
+%		\item \keyword{width} spécifie la longueur 
+%		\item \keyword{height} spécifie l'hauteur
+%		\item \keyword{alt} spécifie le texte à afficher si l'image est introuvable 
+%		\item \keyword{title} spécifie le texte qui s'affiche lorsqu'on met le curseur de la souri sur l'image
 	\end{itemize}
 \end{minipage}
 %
@@ -499,6 +570,16 @@
 \end{lstlisting}\vspace{-6pt}
 \end{exampleblock}
 \end{minipage}
+
+\begin{itemize}
+%	\item Pour insérer une image dans une page, on utilise la balise \keyword{<img>}
+%	\item c'est une balise auto-fermante
+%	\item l'attribut \keyword{src} spécifie l'URL de l'image
+	\item \keyword{width} spécifie la longueur 
+	\item \keyword{height} spécifie l'hauteur
+	\item \keyword{alt} spécifie le texte à afficher si l'image est introuvable 
+	\item \keyword{title} spécifie le texte qui s'affiche lorsqu'on met le curseur de la souri sur l'image
+\end{itemize}
 
 \end{frame} 
 
@@ -545,8 +626,8 @@
 		\item On veut insérer une image sur la page selon la taille de l'écran
 		\item une solution est d'utiliser la balise \keyword{<picture>}
 		\item dedans, on met les différentes sources en utilisant la balise \keyword{<source>}
-		\item pour chaque source, on peut spécifier la taille préférée en utilisant l'attribut \keyword{<media>}
-		\item on doit ajouter une balise \keyword{<img>} au cas où toutes les sources ne sont pas satisfaites
+%		\item pour chaque source, on peut spécifier la taille préférée en utilisant l'attribut \keyword{<media>}
+%		\item on doit ajouter une balise \keyword{<img>} au cas où toutes les sources ne sont pas satisfaites
 	\end{itemize}
 \end{minipage}
 %
@@ -567,36 +648,77 @@
 \end{exampleblock}
 \end{minipage}
 
+\begin{itemize}
+%	\item On veut insérer une image sur la page selon la taille de l'écran
+%	\item une solution est d'utiliser la balise \keyword{<picture>}
+%	\item dedans, on met les différentes sources en utilisant la balise \keyword{<source>}
+	\item pour chaque source, on peut spécifier la taille préférée en utilisant l'attribut \keyword{<media>}
+	\item on doit ajouter une balise \keyword{<img>} au cas où toutes les sources ne sont pas satisfaites
+\end{itemize}
+
 \end{frame}
 
 %<map> et <area>
-\begin{frame}[fragile]
-\frametitle{HTML : Liens et multimédia}
-\framesubtitle{Images et graphiques : Régions cliquables dans l'image}
-
-\begin{minipage}{0.50\textwidth} 
-	\begin{itemize}
-		\item On peut définir des régions cliquables dans une image en utilisant la balise \keyword{<map>}
-	\end{itemize}
-\end{minipage}
+%\begin{frame}[fragile]
+%\frametitle{HTML : Liens et multimédia}
+%\framesubtitle{Images et graphiques : Régions cliquables dans l'image}
 %
-\begin{minipage}{0.49\textwidth}
-	\begin{exampleblock}{exemple: lien.html}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries\vspace{-6pt}
-		\begin{lstlisting}[language={html}]
-		
-		\end{lstlisting}\vspace{-6pt}
-	\end{exampleblock}
-\end{minipage}
-
-\end{frame}
+%\begin{minipage}{0.50\textwidth} 
+%	\begin{itemize}
+%		\item On peut définir des régions cliquables dans une image en utilisant la balise \keyword{<map>}
+%	\end{itemize}
+%\end{minipage}
+%%
+%\begin{minipage}{0.49\textwidth}
+%	\begin{exampleblock}{exemple: lien.html}
+%		\lstset{escapeinside=**}
+%		\scriptsize\bfseries\vspace{-6pt}
+%		\begin{lstlisting}[language={html}]
+%		
+%		\end{lstlisting}\vspace{-6pt}
+%	\end{exampleblock}
+%\end{minipage}
+%
+%\end{frame}
 
 
 \subsection{Vidéos et audio}
 
 %Vidéo 
 %Audio
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Vidéos et audios}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item Pour insérer une vidéo, on utilise la balise \keyword{<video>}
+		\item l'attribut \keyword{controls} indique que la vidéo inclue les contrôles par défaut du navigateur
+		\item pour indiquer l'URL de la vidéo, on peut utiliser l'attribut \keyword{src} ou l'élément \keyword{<source>}
+		\item l'attribut \keyword{loop} indique que la vidéo  joue en boucle
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: video\_audio.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<video controls>
+  <source src="maVideo.mp4" 
+     type="video/mp4">
+  <source src="maVideo.webm" 
+     type="video/webm">
+  <p>
+    Votre navigateur ne prend pas 
+    en charge les vid*é*os HTML5.
+  </p>
+</video>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
 
 %===================================================================================
 \section{Disposition}
