@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Exemple formulaires</title>
+  </head>
+  <body>
+    <form action="https://www.google.com/search" method="get">
+      <input type="text" name="q" >
+      <input type="submit">
+    </form>
+
+    <form action="https://www.google.com/search" method="post">
+      <h1>Exemple d'un formulaire</h1>
+      <section>
+        <h2>Informations personnelles</h2>
+        <p>
+          <label for="nom">Nom complet*</label>
+          <input type="text" name="nom" id="nom" placeholder="Insérer votre nom complet"
+                    minlength="2" required>
+        </p>
+        <p>
+          <label for="dn">Date de naissance</label>
+          <input type="date" name="dn" id="dn" min="1930-01-01" max="2002-12-31">
+        </p>
+        <p>
+          <label for="mail">Email</label>
+          <input type="email" name="mail" id="mail" placeholder="Insérer votre émail">
+        </p>
+        <p>
+          <label for="tel">Téléphone</label>
+          <input type="tel" name="tel" id="tel" placeholder="Insérer votre téléphone">
+        </p>
+        <p>
+          <label for="site">Votre site</label>
+          <input type="url" name="site" id="site" value="https://">
+        </p>
+        <p>
+          <label for="mdp">Mot de pass</label>
+          <input type="password" name="mdp" id="mdp" min="5" max="10">
+        </p>
+      </section>
+      <section>
+        <h2>Préférences</h2>
+        <p>
+          Votre saison préférée
+          <br>
+          <input type="radio" name="saison" id="shiv" value="hiv" checked>
+          <label for="shiv">Hiver</label>
+          <input type="radio" name="saison" id="spri" value="pri">
+          <label for="spri">Printemps</label>
+          <input type="radio" name="saison" id="sete" value="ete">
+          <label for="sete">Eté</label>
+          <input type="radio" name="saison" id="saut" value="aut">
+          <label for="saut">Automne</label>
+        </p>
+        <p>
+          Vos couleurs préférées? <br>
+          <input type="checkbox" name="colpref" id="cr" value="red">
+          <label for="cr">Rouge</label>
+          <input type="checkbox" name="colpref" id="cb" value="blue">
+          <label for="cb">Bleu</label>
+          <input type="checkbox" name="colpref" id="cj" value="yellow">
+          <label for="cj">Jaune</label>
+          <input type="checkbox" name="colpref" id="cv" value="green">
+          <label for="cv">Vert</label>
+        </p>
+        <p>
+          <label for="col">Sélectionner une couleur</label>
+          <input type="color" name="col" id="col" value="#ff0000">
+        </p>
+        <p>
+          Sélectionner un pays
+          <select name="pays">
+            <option disabled selected>Choisir un pays</option>
+            <optgroup label=" Afrique">
+              <option value="dz">Algérie</option>
+              <option value="ma">Maroc</option>
+              <option value="tn">Tunisie</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="fr">France</option>
+              </optgroup>
+            </select>
+        </p>
+        <p>
+          <label for="op">Votre opinion</label><br>
+          <textarea name="msg" id="op" size="20" rows="4"></textarea>
+        </p>
+      </section>
+      <section>
+        <h2>Devoir</h2>
+        <p>
+          <label for="note">Noter votre travail</label>
+          <input type="range" name="note" id="note" value="10"
+              min="0" max="20" step="0.25"
+              oninput="noteo.value = note.value">
+          <!--du javascript pour afficher la valeur-->
+          <output name="noteo" id="noteo">10</output>
+        </p>
+        <p>
+          <label for="col">Sélectionner une couleur</label>
+          <input type="file" name="devoir" id="devoir"
+            accept=".pdf, .doc, .docx" multiple>
+
+        </p>
+      </section>
+      <div>
+        <input type="submit" value="envoyer">
+        <input type="reset" value="réinitialiser">
+      </div>
+    </form>
+  </body>
+</html>

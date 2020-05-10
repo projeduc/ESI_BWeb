@@ -146,17 +146,17 @@
 
 \end{frame}
 
-\begin{frame}
-\frametitle{HTML : Structure et éléments}
-\framesubtitle{Structure : Le corps}
-
-\begin{itemize}
-	\item Le corps 
-	\item 
-	\item 
-\end{itemize}
-
-\end{frame}
+%\begin{frame}
+%\frametitle{HTML : Structure et éléments}
+%\framesubtitle{Structure : Le corps}
+%
+%\begin{itemize}
+%	\item Le corps 
+%	\item 
+%	\item 
+%\end{itemize}
+%
+%\end{frame}
 
 
 \subsection{Formatage de texte}
@@ -563,7 +563,7 @@ l'*ê*tre humain :
 \lstset{escapeinside=**}
 \scriptsize\bfseries\vspace{-6pt}
 \begin{lstlisting}[language={html}]
-<img src="img/orange.jpg"
+<img src="assets/orange.jpg"
      width="200px" height="100px"
      alt="Un oranger" 
      title="Oranger et nuages" >
@@ -602,7 +602,7 @@ l'*ê*tre humain :
 \scriptsize\bfseries\vspace{-6pt}
 \begin{lstlisting}[language={html}]
 <figure>
-  <img src="img/orange.jpg"
+  <img src="assets/orange.jpg"
        width="200px" height="100px"
        alt="Un oranger" 
        title="Oranger et nuages" >
@@ -638,10 +638,10 @@ l'*ê*tre humain :
 \begin{lstlisting}[language={html}]
 <picture>
   <source media="(max-width: 799px)" 
-      srcset="img/orange-petite.jpg">
+      srcset="assets/orange-petite.jpg">
   <source media="(min-width: 800px)" 
-      srcset="img/orange.jpg">
-  <img src="img/orange.jpg" 
+      srcset="assets/orange.jpg">
+  <img src="assets/orange.jpg" 
       alt="Un oranger">
 </picture>
 \end{lstlisting}\vspace{-6pt}
@@ -682,13 +682,13 @@ l'*ê*tre humain :
 %\end{frame}
 
 
-\subsection{Vidéos et audio}
+\subsection{Vidéo et audio}
 
 %Vidéo 
 %Audio
 \begin{frame}[fragile]
 \frametitle{HTML : Liens et multimédia}
-\framesubtitle{Vidéos et audios}
+\framesubtitle{Vidéo et audio : Vidéo}
 
 \begin{minipage}{0.50\textwidth} 
 	\begin{itemize}
@@ -705,15 +705,40 @@ l'*ê*tre humain :
 \scriptsize\bfseries\vspace{-6pt}
 \begin{lstlisting}[language={html}]
 <video controls>
-  <source src="maVideo.mp4" 
+  <source src="assets/chat.mp4" 
      type="video/mp4">
-  <source src="maVideo.webm" 
-     type="video/webm">
   <p>
     Votre navigateur ne prend pas 
     en charge les vid*é*os HTML5.
   </p>
 </video>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Liens et multimédia}
+\framesubtitle{Vidéo et audio : Audio}
+
+\begin{minipage}{0.50\textwidth} 
+	\begin{itemize}
+		\item Pour insérer un contenu audio, on utilise la balise \keyword{<audio>}
+		\item pour indiquer l'URL du contenu, on peut utiliser l'attribut \keyword{src} ou l'élément \keyword{<source>}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.49\textwidth}
+\begin{exampleblock}{exemple: video\_audio.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<audio controls loop 
+    src="assets/Night-bird-call.mp3">
+  Votre navigateur ne prend pas en 
+  charge les *éléments* audio
+</audio>
 \end{lstlisting}\vspace{-6pt}
 \end{exampleblock}
 \end{minipage}
@@ -728,28 +753,598 @@ l'*ê*tre humain :
 
 %Block
 %Inline
+\begin{frame}[fragile]
+\frametitle{HTML : Disposition}
+\framesubtitle{Type des éléments}
 
-\subsection{Conteneurs}
+\begin{itemize}
+	\item \optword{élément en ligne} [\textit{inline element}]
+	\begin{itemize}
+		\item occupe l'espace délimités par ses balises ;  prend uniquement la largeur qui lui est nécessaire 
+		\item ne commence pas sur une nouvelle ligne
+		\item par exemple, \keyword{<a>}, \keyword{<b>}, \keyword{<i>}, \keyword{<img>}, \keyword{<q>}, \keyword{<sub>}, \keyword{<sup>}, etc.
+	\end{itemize}
+	\item \optword{élément de bloc} [\textit{block element}]
+	\begin{itemize}
+		\item prend toute la largeur disponible 
+		\item commence toujours sur une nouvelle ligne
+		\item par exemple, \keyword{<dl>}, \keyword{<figure>}, \keyword{<h1>}, \keyword{<ol>}, \keyword{<p>}, \keyword{<pre>}, \keyword{<table>}, \keyword{<ul>}, etc.
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Conteneurs génériques}
 
 %<div>
 %<span>
+\begin{frame}[fragile]
+\frametitle{HTML : Disposition}
+\framesubtitle{Conteneurs génériques}
 
+\begin{itemize}
+	\item \keyword{<span>}
+	\begin{itemize}
+		\item conteneur générique en ligne
+		\item peut être utilisé pour grouper des éléments
+		\item BUT : mettre en forme plusieurs éléments en ligne à la fois
+		\item BUT : attribuer la même valeur d'un attribut à pluusieurs éléments. 
+		Pr exemple, l'attribut \keyword{lang}.
+	\end{itemize}
+	\item \keyword{<div>}
+	\begin{itemize}
+		\item conteneur générique en bloc
+		\item peut être utilisé pour grouper des éléments
+		\item BUT : même que \keyword{<span>}
+		\item BUT : organiser le contenu
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
 
 \subsection{Éléments sémantiques}
 
-%<header> - Defines a header for a document or a section
-%<nav> - Defines a container for navigation links
-%<section> - Defines a section in a document
-%<article> - Defines an independent self-contained article
-%<aside> - Defines content aside from the content (like a sidebar)
-%<footer> - Defines a footer for a document or a section
-%<details> - Defines additional details
-%<summary> - Defines a heading for the <details> element
+\begin{frame}[fragile]
+\frametitle{HTML : Disposition}
+\framesubtitle{Éléments sémantiques}
+
+\begin{itemize}
+	\item Des \keyword{<div>} destinés pour une fonctionnalité spécifique
+	\item \keyword{<header>} : L'entête de la page ou d'une section. Généralement une grande bande placée en travers au haut de la page avec un titre ou un logo.
+	\item \keyword{<nav>} : Barre de navigation (menu). Elle fait le lien vers les principales parties du site.
+	\item \keyword{<main>} : Contenu principal. Il contient des sections et des articles.
+	\item \keyword{<section>} : Une section générique d'un document ou d'une application. 
+	\item \keyword{<article>} : Un type spécifique de \keyword{<section>}. Représente du contenu autonome dans un document, une page, une application, ou un site.
+	\item \keyword{<footer>} : Pied de page. Une bande au bas de la page qui contient généralement, en petits caractères, des avis de droit d'auteur ou des coordonnées de contact.
+\end{itemize}
+
+\end{frame}
+
 
 %===================================================================================
 \section{Formulaires}
 %===================================================================================
 
+%\begin{frame}[fragile]
+%\frametitle{HTML : Formulaires}
+%
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+%
+%\end{frame}
+
+\subsection{Structure générale}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Structure générale}
+
+\begin{minipage}{0.44\textwidth} 
+	\begin{itemize}
+		\item Un formulaire est défini par un élément \keyword{<form>}
+		\item L'attribut \keyword{<action>} définit l'emplacement (une URL) où doivent être envoyées les données collectées par le formulaire
+		\item L'attribut \keyword{method} définit la méthode \keyword{HTTP} utilisée pour envoyer les données
+		\item Il contient des champs ; en générale, des éléments \keyword{<input>}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.55\textwidth}
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<form 
+    action="https://www.google.com/search" 
+    method="get">
+  <input type="text" name="q" >
+  <input type="submit">
+</form>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+\subsection{Envoi des données}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Envoi des données}
+
+\begin{itemize}
+	\item L'attribut \keyword{action} spécifie la destination des données
+	\item Si cet attribut n'ai pas spécifié, la page courante sera considérée comme destination
+	\item L'attribut \keyword{method} définit la méthode \keyword{HTTP} utilisée pour envoyer les données
+	\item Il existe deux méthodes 
+	\begin{itemize}
+		\item \keyword{get} c'est la valeur par défaut (au cas où cette attribut n'ai pas défini). 
+		Les informations sont envoyées dans l'URL comme suite: 
+		l'adresse de destination suivie par \keyword{?} suivie par \expword{nom\_champ1=valeur1\&nom\_champ2=valeur2}
+		\item \keyword{post} les données sont envoyées dans le corps de la requête HTTP
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Éléments d'un formulaire}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire}
+
+\begin{itemize}
+	\item \keyword{<input>}
+	\begin{itemize}
+		\item Balise auto-fermante 
+		\item \keyword{type} : Le type du champ de saisie
+		\item \keyword{required} : L'utilisateur doit nécessairement saisir une valeur afin de pouvoir envoyer le formulaire
+		\item \keyword{value} : La valeur du champ
+	\end{itemize}
+	\item \keyword{<textarea>}
+	\begin{itemize}
+		\item Utilisé pour contenir un paragraphe
+	\end{itemize}
+	\item \keyword{<select>} et \keyword{<option>}
+	\begin{itemize}
+		\item Utilisés pour créer des listes déroulantes
+	\end{itemize}
+	\item \keyword{<label>}
+	\begin{itemize}
+		\item Utilisés pour créer des listes déroulantes
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : les étiquettes}
+
+\begin{minipage}{0.64\textwidth} 
+	\begin{itemize}
+		\item l'intérêt d'utiliser une étiquette est d'associer un texte à un champs ; on peut cliquer sur le libellé pour passer le focus voire activer le champ. 
+		\item une étiquette est associée à ce champ en utilisant l'attribut \keyword{for}
+		\item la valeur \keyword{for} de l'étiquette est celle de \keyword{id} du champ
+%		\item on peut également créer un lien implicite en imbriquant l'élément \keyword{<input>} directement au sein d'un élément \keyword{<label>}.
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.35\textwidth}
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<label for="nom">
+  Nom : 
+</label>
+<input type="text" 
+    name="n" id="nom">
+<label>
+  Pr*é*nom : 
+  <input type="text" 
+        name="p">
+</label>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+\begin{itemize}
+%	\item l'intérêt d'utiliser une étiquette est d'associer un texte à un champs ; on peut cliquer sur le libellé pour passer le focus voire activer le champ. 
+%	\item une étiquette est associée à ce champ en utilisant l'attribut \keyword{for}
+%	\item la valeur \keyword{for} de l'étiquette est celle de \keyword{id} du champ
+	\item on peut également créer un lien implicite en imbriquant l'élément \keyword{<input>} directement au sein d'un élément \keyword{<label>}.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : les boutons d'envoi et de réinitialisation}
+
+\begin{minipage}{0.59\textwidth} 
+	\begin{itemize}
+		\item des éléments de type \keyword{<input>}
+		\item \keyword{<input type="submit">} : Un bouton qui nous permet d'envoyer le formulaire vers la destination
+		\item \keyword{<input type="reset">} : Un bouton qui nous permet de réinitialiser les champs du formulaire
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<form action="serveur">
+  <label for="nom">
+    Nom : 
+  </label>
+  <input type="text" 
+        name="nom" id="nom">
+  <br>
+  <input type="submit" 
+        value="envoyer">
+  <input type="reset" 
+        value="r*é*initialiser">
+</form>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : champ de texte sur une seule ligne}
+
+\begin{minipage}{0.59\textwidth} 
+	\begin{itemize}
+		\item \keyword{<input type="text">}
+		\item \keyword{maxlength} : Le nombre de caractères maximal qui peut être écrit dans ce champ.
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<input type="text" 
+  name="nom" id="nom"
+  minlength="2" 
+  size="20"
+  placeholder="Votre nom">
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\begin{itemize}
+	\item \keyword{minlength} : Le nombre de caractères minimal qui peut être écrit dans ce champ.
+	\item \keyword{placeholder} : Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.
+	\item \keyword{size} : Le nombre de caractères affichés par le champ.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : champ de texte sur plusieurs lignes}
+
+\begin{minipage}{0.59\textwidth} 
+	\begin{itemize}
+		\item \keyword{<textarea></textarea>}
+		\item la valeur par défaut est le contenu de cette élément
+		\item les attributs \keyword{maxlength}, \keyword{minlength}, \keyword{placeholder}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.4\textwidth}
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<textarea name="msg"
+  size="20" rows="4"
+  placeholder="Votre opinion">
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+
+\begin{itemize}
+	\item \keyword{cols}: La largeur visible du contrôle de saisie, exprimée en largeur moyenne de caractères (par défaut : 20).
+	\item \keyword{rows} : Le nombre de lignes de texte visibles.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : mot de passe}
+
+\begin{itemize}
+	\item \keyword{<input type="password">}
+	\item permettent à l'utilisateur de saisir un mot de passe sans que celui-ci ne soit lisible à l'écran. 
+	\item les attributs \keyword{maxlength}, \keyword{minlength}, \keyword{placeholder}, \keyword{size} 
+\end{itemize}
+
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<label for="mdp">Mot de passe : </label>
+<input type="password" name="pass" id="mdp" >
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : données cachées}
+
+\begin{itemize}
+	\item \keyword{<input type="hidden">}
+	\item permettent aux développeurs web d'inclure des données qui ne peuvent pas être vues ou modifiées lorsque le formulaire est envoyé. 
+	\item envoyer un identifiant d'une commande ou un jeton de sécurité unique  
+\end{itemize}
+
+\begin{exampleblock}{exemple d'une donnée cachée}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<input id="prodId" name="prodId" type="hidden" value="xm234jq">
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : joindre un fichier}
+
+\begin{itemize}
+	\item \keyword{<input type="file">}
+	\item permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les \textit{uploader} vers un serveur 
+	\item \keyword{accept} : la liste des types de fichiers à accepter. Exemple, \expword{.pdf, .doc, image/*}
+	\item \keyword{multiple} : un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés
+	\item \keyword{capture} : La source à utiliser pour capturer des images ou des vidéos. 
+	\keyword{capture="user"} : la caméra qui fait face à l'utilisateur. 
+	\keyword{capture="environment"} : la caméra qui est tournée vers l'extérieur. 
+\end{itemize}
+
+\begin{exampleblock}{exemple de jointure de fichiers}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<input type="file" name="devoir" accept=".pdf, .doc, .docx" multiple>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : les boutons radio}
+
+\begin{itemize}
+	\item \keyword{<input type="radio">}
+	\item les boutons du même groupe doivent avoir la même valeur \keyword{name}
+	\item \keyword{checked} : Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.
+\end{itemize}
+
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<input type="radio" name="sex" id="sm" value="M" >
+<label for="sm">Masculin</label>
+<input type="radio" name="sex" id="sf" value="F" >
+<label for="sf">F*é*minin</label>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : les boites à cocher}
+
+\begin{itemize}
+	\item \keyword{<input type="checkbox">}
+	\item les boutons du même groupe peuvent avoir la même valeur \keyword{name} ou des valeurs différentes
+	\item \keyword{checked} peut être spécifié à plusieurs champs
+\end{itemize}
+
+\begin{exampleblock}{exemple: formulaire.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+Quelles sont vos couleurs *préférées* ? <br>
+<input type="checkbox" name="colpref" value="red" id="r">
+<label for="r">Rouge</label><br>
+<input type="checkbox" name="colpref" value="blue" id="b">
+<label for="b">Bleu</label><br>
+<input type="checkbox" name="colpref" value="green" id="v">
+<label for="v">Vert</label>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : liste déroulante}
+
+\begin{itemize}
+	\item \keyword{<select>} défini par \keyword{name}
+	\item dedans, un ensemble de \keyword{<option>} et leurs valeurs \keyword{value}
+	\item on peut regrouper un ensemble d'options en utilisant \keyword{<optgroup>}
+\end{itemize}
+
+\begin{exampleblock}{exemple d'une liste déroulante}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<select name="pays">
+  <option disabled selected>Choisir</option>
+  <optgroup label="Afrique">
+    <option value="dz">Alg*é*rie</option>
+    <option value="ma">Maroc</option>
+    <option value="tn">Tunisie</option>
+  </optgroup>
+  <optgroup label="Europe">
+    <option value="fr">France</option>
+  </optgroup>
+</select>
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments d'un formulaire : liste déroulante (Humour)}
+
+\hgraphpage{select-humour.jpg}
+
+\end{frame}
+
+\subsection{Éléments HTML5}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments HTML5 : couleur et recherche}
+
+\begin{itemize}
+	\item \keyword{<input type="color">} : sélectionner une couleur
+	\begin{itemize}
+		\item sa valeur est stockée sous forme \expword{\#RRGGBB}
+	\end{itemize}
+	\item \keyword{<input type="search">}
+	\begin{itemize}
+		\item comme les zones de texte
+		\item les navigateurs modernes proposent souvent une auto-complétion basée sur les termes de recherche déjà utilisés sur le site
+	\end{itemize}
+\end{itemize}
+
+\begin{exampleblock}{exemple de la couleur et de recherche}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<label for="c">Couleur : </label>
+<input type="color" name="c" id="c" value="#ffffff">
+<br>
+<label for="s">Rechercher : </label>
+<input type="search" name="q" id="s">
+
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments HTML5 : date et heur}
+
+\begin{itemize}
+	\item \keyword{<input type="date">} : sélectionner une date 
+	\begin{itemize}
+		\item \keyword{max} : la valeur maximale, \keyword{min} : la valeur minimale 
+	\end{itemize}
+	\item \keyword{<input type="time">} : sélectionner l'heur
+	\begin{itemize}
+		\item \keyword{max}, \keyword{min}
+	\end{itemize}
+\end{itemize}
+
+\begin{exampleblock}{exemple de date et d'heur}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+Rendez-vous <br>
+<label for="d">Date</label>
+<input type="date" name="d" id="d" min="2020-05-31" ><br>
+<label for="h">Heur</label>
+<input type="time" name="h" id="h" min="8:30" max="15:30" >
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments HTML5 : nombres}
+
+\begin{itemize}
+	\item \keyword{<input type="number">} :  saisir des nombres
+	\begin{itemize}
+		\item \keyword{max}, \keyword{min}, \keyword{placeholder}
+		\item \keyword{step} : Le pas à utiliser pour incrémenter la valeur à l'aide du contrôle fourni par le navigateur
+	\end{itemize}
+	\item \keyword{<input type="range">} : nombre compris entre deux bornes
+	\begin{itemize}
+		\item \keyword{max}, \keyword{min}, \keyword{step}
+	\end{itemize}
+	\item \keyword{<input type="tel">} : numéro de téléphone
+	\begin{itemize}
+		\item \keyword{maxlength}, \keyword{minlength}, \keyword{placeholder}, \keyword{size}
+	\end{itemize}
+\end{itemize}
+
+\begin{exampleblock}{exemple de nombres}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<label for="age">Age</label>
+<input type="number" name="age" id="age" min="18" ><br>
+<label for="t">*Théléphone*</label>
+<input type="tel" name="t" id="t"><br>
+<label for="note">Note</label>
+<input type="range" name="age" id="age" min="0" max="20" step="0.25">
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{HTML : Formulaires}
+\framesubtitle{Éléments HTML5 : URL}
+
+\begin{itemize}
+	\item \keyword{<input type="url">} :  saisir un lien
+	\begin{itemize}
+		\item \keyword{maxlength}, \keyword{minlength}, \keyword{placeholder}, \keyword{size}
+	\end{itemize}
+	\item \keyword{<input type="email">} : saisir un émail
+	\begin{itemize}
+		\item \keyword{maxlength}, \keyword{minlength}, \keyword{placeholder}, \keyword{size}
+	\end{itemize}
+\end{itemize}
+
+\begin{exampleblock}{exemple des URL}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+<label for="site">Site</label>
+<input type="url" name="site" id="site" value="https://" ><br>
+<label for="mail">Email</label>
+<input type="email" name="mail" id="mail">
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{HTML}
+\framesubtitle{Un peu d'humour}
+
+\begin{center}
+	\vgraphpage{html-humour.jpg}
+\end{center}
+
+\end{frame}
+
+\insertbibliography{Bweb07}{*}
 
 \end{document}
 

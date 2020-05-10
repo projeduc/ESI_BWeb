@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Ceci est le titre qui apparait dans la barre de titre du navigateur -->
+    <title>Intro. à HTML</title>
+    <!-- Ceux-ci sont des informations sur la page web -->
+    <meta name="author" content="Abdelkrime Aries"/>
+    <meta name="Keywords" content="intro, HTML, CSS"/>
+    <meta name="language" content="fr"/>
+    <!-- L'encodage de la page: ici on utilise UTF-8;
+    essayer de désactiver ça pour voir la différence (les caractères Latins) -->
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <!--=====================================-->
+    <h1>1- Éléments textuels du corps</h1>
+    <hr><!-- ligne horizontale -->
+
+    <p>
+      Ceci est un paragraphe.
+      Il est très long, tellement long il va prendre plusieurs lignes.
+      Les phrases sont écrites chacune dans une            ligne.
+      Mais la balise P regroupe tous le texte dans une même ligne.
+      Donc, il ne prend pas en considération le retour à la ligne ou l'espacement multiple.
+    </p>
+    <p>
+      Ceci est un autre paragraphe.
+      Il prend une nouvelle ligne et il est séparé du premier paragraphe par un espacement.
+      On appelle ça un élément de type BLOCK.
+    </p>
+    <pre>
+      Si on veut un élément qui prend en considération le retour à la ligne et l'espacement, on utilise PRE.
+      Voici un texte              Voici un autre après plusieurs espacements.
+    </pre>
+
+    <br/> <!-- pour retour à la ligne -->
+    Si on veut citer quelqu'un, il y a deux types de citations: inline et block.
+    Un exemple de citation inline; Mahatma Gandhi a dit:
+    <q>Be the change that you wish to see in the world.</q>
+    Un autre exemple de citation block; Albert Einstein a commenté sur l'être humain:
+    <blockquote>Two things are infinite: the universe and human stupidity;
+      and I'm not sure about the universe.</blockquote>
+
+    <br/> <!-- pour retour à la ligne -->
+    En général, le formatage du texte se fait par CSS, mais il y a des balises HTML pour ça aussi.
+    <em>Ceci est un texte en emphase (italique dans la majorité des navigateurs) en utilisant la balise EM</em>
+    <strong>Ceci est un texte important (en gras dans la majorité des navigateurs) en utilisant la balise STRONG</strong>
+    <i>Ceci est un texte en italique en utilisant la balise I</i>.
+    <b>Ceci est un texte en gras en utilisant la balise B</b>.
+    "B" et "I" appartiennent toujours à HTML5,
+    mais elles doivent être utilisées en dernier recours lorsqu'aucune autre balise n'est plus appropriée.
+
+    <br/> <!-- pour retour à la ligne -->
+    Pour les indices et les exposants, on utilise SUB et SUP respectivement.
+    2 X<sub>i</sub><sup>3</sup> + 3 X<sub>j</sub><sup>2</sup> + 5 = 0
+
+    <br/> <!-- pour retour à la ligne -->
+    Pour les titres, on utilise H1 jusqu'à H6:
+    <h1>titre H1</h1>
+    <h2>titre H2</h2>
+    <h3>titre H3</h3>
+    <h4>titre H4</h4>
+    <h5>titre H5</h5>
+    <h6>titre H6</h6>
+
+
+    <!--=====================================-->
+    <h1>2- Listes</h1>
+    <hr><!-- ligne horizontale -->
+
+    Voici un exemple des liste à puces.
+    La balise qui contient les éléments de la liste est UL (unordered list).
+    Chaque élément est représenté par une balise LI (list item):
+    <ul>
+      <li>élément 1 dans la liste à puces</li>
+      <li>élément 2 dans la liste à puces</li>
+      <li>élément 3 dans la liste à puces</li>
+      <li>élément 4 dans la liste à puces</li>
+    </ul>
+
+
+    Pour la liste ordonnée, on utilise la balise OL (ordered list):
+    <ol start="5">
+      <li>élément 1 dans la liste ordonnée</li>
+      <li>élément 2 dans la liste ordonnée</li>
+      <li>élément 3 dans la liste ordonnée</li>
+      <li>élément 4 dans la liste ordonnée</li>
+    </ol>
+
+
+    Pour la liste de définitions, on utilise la balise DL (definition list).
+    Dedans, on trouve deux types de balises: Terme de définition DT (definition term)
+    et Description de définition DD (definition description).
+    <dl>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+
+      <dt>HTML</dt>
+      <dd>Hypertext Markup Language</dd>
+    </dl>
+
+
+    <!--=====================================-->
+    <h1 id="tbl">3- Tables</h1>
+    <hr><!-- ligne horizontale -->
+
+    Un tableau est créé en utilisant la balise TABLE.
+    Il est composé de lignes (TR) et des colonnes (TD).
+    Dans HTML, on crée une ligne en utilisant TR et dedans on crée des colonnes (TD).
+    <table border="1"> <!-- l'attribut border est pour afficher les bordures de la table -->
+      <tr> <!-- ligne 1-->
+        <td>étudiant</td> <!-- ligne 1 colonne 1-->
+        <td>note CI</td> <!-- ligne 1 colonne 2-->
+        <td>note CF</td> <!-- ligne 1 colonne 3-->
+      </tr>
+      <tr> <!-- ligne 2-->
+        <td>ét1</td> <!-- ligne 2 colonne 1-->
+        <td>12</td> <!-- ligne 2 colonne 2-->
+        <td>15</td> <!-- ligne 2 colonne 3-->
+      </tr>
+      <tr> <!-- ligne 3-->
+        <td>ét2</td> <!-- ligne 3 colonne 1-->
+        <td>17</td> <!-- ligne 3 colonne 2-->
+        <td>13</td> <!-- ligne 3 colonne 3-->
+      </tr>
+      <caption>Les notes des étudiants</caption>
+    </table>
+
+    Pour marquer une cellule comme cellule de titre, on utilise TH à la place de TD.
+    Aussi, pour ajouter une légende (titre de la table), on utilise la balise CAPTION.
+    <table border="1"> <!-- l'attribut border est pour afficher les bordures de la table -->
+      <caption>Notes des 1CP en BWeb</caption>
+      <tr> <!-- ligne 1-->
+        <th>étudiant</th> <!-- ligne 1 colonne 1-->
+        <th>note CI</th> <!-- ligne 1 colonne 2-->
+        <th>note CF</th> <!-- ligne 1 colonne 3-->
+      </tr>
+      <tr> <!-- ligne 2-->
+        <td>ét1</td> <!-- ligne 2 colonne 1-->
+        <td>12</td> <!-- ligne 2 colonne 2-->
+        <td>15</td> <!-- ligne 2 colonne 3-->
+      </tr>
+      <tr> <!-- ligne 3-->
+        <td>ét2</td> <!-- ligne 3 colonne 1-->
+        <td>17</td> <!-- ligne 3 colonne 2-->
+        <td>13</td> <!-- ligne 3 colonne 3-->
+      </tr>
+    </table>
+
+    Si une cellule prend plusieurs colonnes, on utilise l'attribut COLSPAN.
+    Si elle prend plusieurs lignes, on utilise l'attribut ROWSPAN.
+    <table border="1"> <!-- l'attribut border est pour afficher les bordures de la table -->
+      <tr> <!-- ligne 1-->
+        <td>1-1</td> <!-- ligne 1 colonne 1-->
+        <td colspan="2">1-2</td> <!-- ligne 1 colonne 2-->
+        <!-- ligne 1 colonne 3 est prise par la cellule 1-2 -->
+        <td>1-4</td> <!-- ligne 1 colonne 4-->
+      </tr>
+      <tr> <!-- ligne 2-->
+        <td rowspan="3">2-1</td> <!-- ligne 2 colonne 1-->
+        <td>2-2</td> <!-- ligne 2 colonne 2-->
+        <td>2-3</td> <!-- ligne 2 colonne 3-->
+        <td>2-4</td> <!-- ligne 2 colonne 4-->
+      </tr>
+      <tr> <!-- ligne 3-->
+        <!-- ligne 3 colonne 1 est prise par la cellule 2-1 -->
+        <td>3-2</td> <!-- ligne 3 colonne 2-->
+        <td>3-3</td> <!-- ligne 3 colonne 3-->
+        <td>3-4</td> <!-- ligne 3 colonne 4-->
+      </tr>
+      <tr> <!-- ligne 4-->
+        <!-- ligne 4 colonne 1 est prise par la cellule 2-1 -->
+        <td colspan="2" rowspan="2">4-2</td> <!-- ligne 4 colonne 2-->
+        <!-- ligne 4 colonne 3 est prise par la cellule 4-2-->
+        <td>4-4</td> <!-- ligne 4 colonne 4-->
+      </tr>
+      <tr> <!-- ligne 5-->
+        <td>5-1</td> <!-- ligne 5 colonne 1-->
+        <!-- ligne 5 colonne 2 est prise par la cellule 4-2-->
+        <!-- ligne 5 colonne 3 est prise par la cellule 4-2-->
+        <td>5-4</td> <!-- ligne 5 colonne 4-->
+      </tr>
+    </table>
+
+
+
+    <!--=====================================-->
+    <h1>4- Images</h1>
+    <hr><!-- ligne horizontale -->
+
+    On peut insérer des images dans une page Web en utilisant l'emplacement d'une image.
+    On peut utiliser des addresses absolues, par exemple le logo de l'ESI sur son site (vous aurez besoin le la connexion).
+    <br/> <!-- pour retour à la ligne -->
+    <img src="http://esi.dz/templates/ja_elastica/images/logo-trans.png"
+    alt="Image non trouvée ou problème de connexion" />
+
+    <br/> <!-- pour retour à la ligne -->
+    Un exemple d'une image sur disque (adresse relative) avec redimentionnement.
+    <img src="img/pic.jpg" height="50px" width="100px" title="Le titre de l'image" />
+
+    <br/> <!-- pour retour à la ligne -->
+    Un exemple d'une image qui n'existe pas.
+    <img src="img/ma_kansh.jpg" alt="Cette image n'existe pas!!" />
+
+    <!--=====================================-->
+    <h1>6- Liens</h1>
+    <hr><!-- ligne horizontale -->
+
+    Pour ouvrir une page web distante dans un nouveau onglet:
+    <a href="http://www.esi.dz" target="_blank">
+      Ouvrir le site de l'ESI dans une nouvelle page.
+    </a>
+
+    <br/> <!-- pour retour à la ligne -->
+    Pour ouvrir une page web locale:
+    <a href="exemple_html_2019_p2.htm" target="_blank" title="Cliquez ici pour aller à p2">
+      Ouvrir la page2.
+    </a>
+
+    <br/> <!-- pour retour à la ligne -->
+    Pour aller vers un emplacement dans la même page,
+    il faut attribuer un ID à une balise (un H1 par exemple).
+    Ensuite, dans notre balise "a", l'adresse sera un dièse # suivi de l'ID.
+    <a href="#tbl">
+      Aller vers les tables.
+    </a>
+
+    <!--=====================================-->
+    <h1>5- Formulaire</h1>
+    <hr><!-- ligne horizontale -->
+
+    On va créer un petit formulaire qui envoie une requête vers Google.
+    Un formulaire est créé en utilisant la balise FORM.
+    L'attribut ACTION doit être fourni; c'est l'adresse qui reçoit notre formulaire.
+    Le bouton de type SUBMIT doit être inséré, sinon on ne peut pas envoyer le formulaire.
+
+    <!-- action: l'adresse où le formulaire doit être envoyé
+         target: pour ouvrir le lien dans une nouvelle page
+         method: GET ou POST
+    -->
+    <form action="https://www.google.com/search" target="_blank" method="get">
+      <!-- une zone de texte dont le nom est "q",
+      placeholder: pour afficher un texte qui invite l'utilisateur à saisir -->
+      <input type="text" name="q" placeholder="Insérer votre requête" />
+      <!-- Les deux boutons: envoyer et effacer le contenu du formulaire -->
+      <input type="submit" value="envoyer" />
+      <input type="reset" value="effacer" />
+    </form>
+
+    Voici un formulaire avec plusieurs composants.
+    On va utiliser la balise FIELDSET pour regrouper les éléments liés.
+    Aussi, on va utiliser des tableaux pour structurer notre formulaire.
+    <form action="https://www.google.com/search" method="post">
+      <fieldset>
+        <legend>Info. Perso.</legend>
+        <table>
+          <tr>
+            <td>Nom</td>
+            <td></td>
+            <!-- le maximum de caractères à insérer est 8
+            required: le champs doit être remplis, sinon on ne peut pas envoyer
+          -->
+            <td><input type="text" name="nom" maxlength="8" placeholder="Insérer votre nom" required /></td>
+          </tr>
+          <tr>
+            <td>Date de naissance</td>
+            <td></td>
+            <!-- on peut définir l'interval de date accepté en utilisant min et max -->
+            <td><input type="date" name="dn" min="1930-01-01" max="2002-12-31" /></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td></td>
+            <td><input type="email" value="https://www."/></td>
+          </tr>
+          <tr>
+            <td>Niveau</td>
+            <td></td>
+            <td>
+              <select  name="niv">
+                <optgroup label="Cycle préparatoire">
+                  <!-- cette option est sélectionnée par défaut -->
+                  <option value="1cp" selected>Première année CP</option>
+                  <option value="2cp">Deuxième année CP</option>
+                </optgroup>
+                <optgroup label="Cycle supérieure">
+                  <option value="1cs">Première année CS</option>
+                  <option value="2cs">Deuxième année CS</option>
+                  <option value="3cs">Troisième année CS</option>
+                </optgroup>
+              </select>
+
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Questions:</legend>
+        Quelle est votre saison préférée? <br>
+        <!-- les radio ayants le même nom forment le même groupe -->
+        <input type="radio" name="saison" value="hiv" /> Hiver
+        <input type="radio" name="saison" value="pri" /> Printemps
+        <input type="radio" name="saison" value="ete" /> Eté
+        <input type="radio" name="saison" value="aut" /> Automne
+        <br>
+        Quelles sont vos couleurs préférées? <br>
+        <input type="checkbox" name="colpref" value="red" /> Rouge
+        <input type="checkbox" name="colpref" value="blue" /> Bleu
+        <input type="checkbox" name="colpref" value="yellow" /> Jaune
+        <input type="checkbox" name="colpref" value="green" /> Vert
+        <br>
+        Choisissez une couleur:<br>
+        <input type="color" name="col" />
+      </fieldset>
+      <input type="submit" value="envoyer" />
+      <input type="reset" value="effacer" />
+    </form>
+
+
+
+  </body>
+</html>
