@@ -1,0 +1,8 @@
+Dans le chapitre 1, on présentra des notions nécessaires pour
+comprendre la programmation tel que le bit.
+Quelques représentations des nombres et du texte seront entamées.
+En plus, les technologies de langages et d'exécusion seront présentées.
+
+Le chapitre 2 est réservé pour les concepts de base de la programmaion.
+Les commentaires, les variables et les instructions sont parmi les concepts
+présentés dans ce chapitre.

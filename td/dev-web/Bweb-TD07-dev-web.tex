@@ -1,0 +1,219 @@
+% !TEX TS-program = pdflatex
+% !TeX program = pdflatex
+% !TEX encoding = UTF-8
+% !TEX spellcheck = fr
+
+\documentclass[11pt, a4paper]{article}
+%\usepackage{fullpage}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+%\usepackage{indentfirst}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage{txfonts} 
+\usepackage[]{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{wrapfig}
+
+\usepackage{turnstile}%Induction symbole
+
+\renewcommand{\baselinestretch}{1}
+
+\setlength{\parindent}{24pt}
+
+
+\begin{document}
+
+\selectlanguage {french}
+%\pagestyle{empty} 
+
+\noindent
+\begin{tabular}{ll}
+\multirow{3}{*}{\includegraphics[width=2cm]{../esi-logo.png}} & \'Ecole national Supérieure d'Informatique\\
+& 1ère année cycle préparatoire\\
+& Bureautique et Web
+\end{tabular}\\[.25cm]
+\noindent\rule{\textwidth}{1pt}\\%[-0.25cm]
+\begin{center}
+{\LARGE \textbf{T.D. Développement web}}
+%\begin{flushright}
+%	ARIES Abdelkrime
+%\end{flushright}
+\end{center}
+\noindent\rule{\textwidth}{1pt}
+
+\section*{Exercice : HTML}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir : 
+	\begin{itemize}
+		\item créer un site web statique 
+		\item comprendre et utiliser les éléments HTML
+		\item structurer les pages en utilisant les éléments sémantiques HTML5
+		\item créer des formulaires en utilisant HTML
+	\end{itemize}\\
+	\hline
+\end{tabular}
+
+Votre rapport "Introduction à la programmation" a été transformé à un livre. 
+Pour promouvoir votre livre, vous avez décidé de créer un petit site web statique. 
+Afin d'enrichir le site avec des photos, vous avez envisagé de présenter quelques photos de votre wilaya.
+
+\begin{enumerate}
+	\item Choisir un éditeur de texte 
+	\item Créer un dossier \textbf{prog} et recopier le dossier \textbf{img} dedans
+	\item Dans le dossier \textbf{prog}, créer une page \textbf{index.html}
+	\item Cette page doit avoir l'entête suivante: 
+\begin{verbatim}
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="[VOTRE NOM]">
+  <meta name="description" content="Livre sur la programmation">
+  <meta name="keywords" content="livre, programmation">
+  <title>Introduction à la programmation</title>
+</head>	
+\end{verbatim}
+	\item La page doit contenir une entête (la bannière et le titre), un menu, un contenu principale et le pied de page. 
+	\begin{itemize}
+		\item L'entête est un élément \textbf{<header>} qui contient un \textbf{<div id="banner">} contenant une image \textbf{img/banner.png}. 
+		L'élément \textbf{<div>} est suivi par un élément de type \textbf{<h1>} contenant le titre "Introduction à la programmation"
+		\item le menu est un élément \textbf{<nav>}. 
+		Il contient des listes à puce avec 3 éléments. 
+		Chaque élément de liste contient un lien hypertexte vers une page. 
+		Donc, on doit avoir 3 liens : un vers le menu principal (\textbf{index.html}), 
+		un vers la page de présentation de l'auteur (\textbf{auteur.html})
+		et un vers la page de contact (\textbf{contact.html})
+		\item le contenu principal est un élément de type \textbf{<main>}. 
+		Laisser le vide pour l'instant.
+		\item le pied de page est un élément de type \textbf{<footer>}. 
+		Il contient le mot \textbf{Copyright} suivi par la marque déposée (\textbf{\&copy;}) suivi par l'année suivi par votre nom complet. 
+		Un utilisateur qui clique sur votre nom doit pouvoir envoyer un mail vers votre boite mail.
+	\end{itemize}
+	
+	\item dupliquer la page \textbf{index.html} pour avoir deux autres pages : \textbf{auteur.html} et \textbf{contact.html}
+	\item dans chaque page, remplacer la référence vers elle-même dans le menu par \textbf{\#}. 
+	Ceci pour empêcher le rechargement de la même page. 
+	\item En plus, ajouter l'attribut \textbf{class="actif"} à l'élément de liste \textbf{<li>} de la page en cours.
+	\item Ouvrir les pages dans un navigateur et à chaque modification dans la source actualiser la page pour voir le résultat.
+	
+\end{enumerate}
+
+\subsection*{La page "index.html"}
+
+Dans l'élément \textbf{<main>}, insérer le contenu principale de la page  
+\begin{enumerate}
+	\item Créer une section \textbf{Information}. Une section est un élément de type \textbf{<section>} avec un titre de niveau 2.
+	\item Dans cette section, créer le tableau suivant : 
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\multirow{2}{*}{\textbf{Information}} & \multicolumn{2}{c|}{\textbf{Edition}} \\
+		\cline{2-3}
+		& \textbf{Edition 1} & \textbf{Edition 2} \\
+		\hline
+		\textbf{Titre} & \multicolumn{2}{l|}{Introduction à la programmation} \\
+		\hline
+		\textbf{auteur} & \multicolumn{2}{l|}{VOTRE NOM COMPLET} \\
+		\hline
+		\textbf{année} & 2019 & 2020 \\
+		\hline
+		\textbf{\#pages} & 30 & 50 \\
+		\hline
+	\end{tabular}
+	\item Les textes en gras sont des titres. Les bordures du tableau ne sont pas visibles (on va utiliser CSS après).
+	\item Créer une autre section \textbf{Description} et recopier le contenu à partir de \textbf{description.text}
+	\item mettre le nom \textbf{Rick Cook} en emphase fort. 
+	\item définir le titre "The Wizardry Compiled" comme liens hypertexte vers \\ \url{https://www.amazon.com/Wizardry-Compiled-Rick-Cook/dp/0671698567}\\
+	La page du lien doit s'ouvrir dans une nouvelle onglet. 
+	\item définir ces paroles comme citation en bloc.
+	\item créer une deuxième section \textbf{Contenu} et recopier le contenu à partir de \textbf{contenu.txt}. 
+	La description de chaque chapitre doit être dans un nouveau paragraphe.
+	\item avant la deuxième paragraphe, ajouter le code suivant : 
+\begin{verbatim}
+<aside>
+  Plus de concepts seront ajoutées dans des versions ultérieurs.
+</aside>
+\end{verbatim}
+	
+\end{enumerate}
+
+\subsection*{La page "auteur.html"}
+
+Dans l'élément \textbf{<main>}, insérer le contenu principale de la page  
+\begin{enumerate}
+	\item ajouter une section \textbf{A propos de l'auteur}. Mettre votre nom en emphase fort et ajouter une petite description. 
+	Par exemple : 
+\begin{verbatim}
+<section id="moi">
+  <h2>A propos de l'auteur</h2>
+  <p>
+    <strong>ARIES Abdelkrime</strong> :
+    ingénieur en informatique de l'université de Jijel,
+    magister en informatique de l'école nationale supérieure d'informatique d'Alger.
+  </p>
+</section>	
+\end{verbatim}
+	\item chercher des images sur votre wilaya (au moins 3 images). Si leurs tailles sont grandes, redimensionner les (de préférence, les images doivent avoir la même largeur et hauteur). 
+	Insérer les dans le dossier \textbf{prog/img/}
+	\item ajouter une deuxième section \textbf{Quelques images de WILAYA}. 
+	\item dans cette  section, après le titre, ajouter le code suivant : 
+\begin{verbatim}
+<div id="slideshow">
+  <div class="slide-wrapper">
+    <div class="slide">...</div>
+    <div class="slide">...</div>
+    <div class="slide">...</div>
+  </div>
+</div>	
+\end{verbatim}
+	\item remplacer les trois points par une image (la balise \textbf{<img>}). 
+	\item si vous avez plus de trois images, recopier la ligne du \textbf{<div class="slide">}
+\end{enumerate}
+
+\subsection*{La page "contact.html"}
+
+Dans l'élément \textbf{<main>}, insérer le contenu principale de la page  
+\begin{enumerate}
+	\item ajouter un formulaire vers le site \url{https://www.monsite.com} avec la méthode \textbf{POST}. 
+	\item dans le formulaire, ajouter une section \textbf{Informations personnelles}. 
+	Elle doit contenir : 
+	\begin{itemize}
+		\item le nom et le prénom séparés. Ces champs doivent être obligatoires. 
+		\item la date de naissance. Le contact doit être âgé entre 17 ans et 80 ans.
+		\item l'émail 
+		\item niveau d'étude : 1CP, 2CP, 1CS, 2CS, 3CS, Licence, Master ou Autre (liste déroulante)
+		\item expérience : débutant, intermédiaire ou avancé (boutons radio). Par défaut, "débutant" est choisi.
+	\end{itemize}
+	\item ajouter une autre section \textbf{Opinion}. Cette section doit contenir : 
+	\begin{itemize}
+		\item Quelles sont les éléments à améliorer : les commentaires, les variables ou les instructions (sous forme de cases à coucher).
+		\item Choisir une couleur pour la page de garde (un champ de couleur). La valeur par défaut est bleu (\textbf{\#0000ff})
+		\item Votre opinion (un élément \textbf{<textarea>} avec 3 lignes)
+		\item Joindre un fichier. Les fichiers acceptés sont de type PDF (\textbf{application/pdf})
+	\end{itemize}
+	\item ajouter un bouton pour envoyer le formulaire
+\end{enumerate}
+
+
+
+
+\section*{Exercice : CSS}
+
+\vspace{-12pt}
+\begin{tabular}{|p{\textwidth}|}
+	\hline\\
+	Objectif : l'étudiant doit pouvoir utiliser CSS afin d'améliorer la présentation de son site web \\\\
+	\hline
+\end{tabular}
+
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,10 @@
+Le livre "Introduction à la programmation" est une tentative
+d'introduire la programmation aux débutants.
+Pourquoi apprendre à programmer ?
+Pour répondre, voici une citation par Rick Cook
+dans son livre
+  The Wizardry Compiled
+:
+  Aujourd'hui, la programmation est devenue une course entre le développeur,
+  qui s'efforce de produire de meilleures applications à l'épreuve des imbéciles et l'univers, qui s'efforce de produire de meilleurs imbéciles.
+  Pour l'instant, l'univers a une bonne longueur d'avance
