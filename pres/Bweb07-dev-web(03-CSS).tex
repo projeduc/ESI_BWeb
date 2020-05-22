@@ -7,81 +7,846 @@
 
 \input{options}
 
-\title[BWEB: 08- Web (HTML)] %
-{Bureautique et Web \\Chapitre 08: Développement Web\\ \slshape\small  HTML}  
+\title[BWEB : 07- CSS] %
+{Bureautique et Web \\Chapitre 07 : Développement Web\\ \slshape\small  CSS}  
+
+\changegraphpath{../img/dev-web/}
 
 \begin{document}
-
+	
 \begin{frame}
-\frametitle{Éditeurs Web}
-\framesubtitle{Éditeurs de texte}
+\frametitle{CSS}
+\framesubtitle{Introduction}
 
-\def\arraystretch{0}
-
-\begin{tabular}{p{.2\textwidth}cp{.6\textwidth}}%p{.3\textwidth}
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb08-dev-web/aptana-logo.png} &
-	& 
-	\url{http://www.aptana.com/}\\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb08-dev-web/atom-logo.png} &
-	& 
-	\url{https://atom.io/}\\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb08-dev-web/bluefish-logo.png} &
-	& 
-	\url{https://sourceforge.net/projects/bluefish/}\\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb08-dev-web/brackets-logo.png} &
-	& 
-	\url{http://brackets.io/}\\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb08-dev-web/visual-studio-code-logo.png} &
-	& 
-	\url{https://code.visualstudio.com/}\\
-	
-	\hline
-	
-\end{tabular}
+\begin{itemize}
+	\item CSS : Cascading Style Sheets
+	\item un langage de feuille de style 
+	\item il sert à décrire la présentation d'une page web
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Éditeurs Web}
-\frametitle{Éditeurs WISIWIG}
+\frametitle{CSS}
+\framesubtitle{Fonctionnement}
 
-\def\arraystretch{0}
-
-\begin{tabular}{p{.2\textwidth}cp{.7\textwidth}}%p{.3\textwidth}
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb08-dev-web/bluegriffon-logo.png} &
-	& 
-	\url{http://bluegriffon.org/}\\
-	
-	\hline
-	
-	\includegraphics[height=.8cm]{..//img/Bweb08-dev-web/google-web-designer-logo.png} &
-	& 
-	\url{https://webdesigner.withgoogle.com/} \\
-	
-	\hline
-	
-\end{tabular}
+\begin{figure}
+	\centering
+	\hgraphpage{rendering.pdf}
+	\caption{Application de CSS \cite{mdn}}
+\end{figure}
+\begin{itemize}
+	\item \keyword{DOM} : Document Object Model
+\end{itemize}
 
 \end{frame}
 
+
+\begin{frame}
+\frametitle{CSS}
+\framesubtitle{Plan}
+
+\begin{multicols}{2}
+%	\small
+\tableofcontents
+\end{multicols}
+\end{frame}
+
+%===================================================================================
+\section{Les règles et la cascade}
+%===================================================================================
+
+\subsection{Les règles et les valeurs}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les règles et les valeurs : Les règles}
+
+\begin{minipage}{0.60\textwidth} 
+\begin{itemize}
+	\item Une règle se compose d'un sélecteur et d'une déclaration (propriété/valeur)
+	\item \optword{Sélecteur} : permet de sélectionner les éléments sur lesquels appliquer le style souhaité
+	\item \optword{Propriété} : différentes façons dont on peut mettre en forme un élément HTML
+	\item \optword{Valeur} : permet de choisir une mise en forme parmi d'autres pour une propriété donnée
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{exampleblock}{Structure d'une règle CSS}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+*sélecteur* {
+  *proriété1*: valeur1;
+  *proriété2*: valeur2;
+}
+\end{lstlisting}
+\end{exampleblock}
+\begin{figure}
+	\centering
+	\hgraphpage[.6\textwidth]{CSS-regle.pdf}
+	\caption{Structure d'une règle CSS \cite{mdn}}
+\end{figure}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les règles et les valeurs : Unités absolues de longueur}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item Une règle se compose d'un sélecteur et d'une déclaration (propriété/valeur)
+		\item \optword{Sélecteur} : permet de sélectionner les éléments sur lesquels appliquer le style souhaité
+		\item \optword{Propriété} : différentes façons dont on peut mettre en forme un élément HTML
+		\item \optword{Valeur} : permet de choisir une mise en forme parmi d'autres pour une propriété donnée
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{exampleblock}{Structure d'une règle CSS}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		*sélecteur* {
+		*proriété1*: valeur1;
+		*proriété2*: valeur2;
+		}
+		\end{lstlisting}
+	\end{exampleblock}
+	\begin{figure}
+		\centering
+		\hgraphpage[.6\textwidth]{CSS-regle.pdf}
+		\caption{Structure d'une règle CSS \cite{mdn}}
+	\end{figure}
+\end{minipage}
+
+\end{frame}
+
+\subsection{Application de CSS}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Application de CSS}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Application de CSS : l'attribut "style"}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Application de CSS : la balise "style"}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{exampleblock}{Structure d'une règle CSS}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+*sélecteur* {
+*proriété1*: valeur1;
+*proriété2*: valeur2;
+}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Application de CSS : Style externe}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\subsection{Les sélecteurs}
+
+\begin{frame}
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les sélecteurs}
+
+\begin{itemize}
+	\item Les sélecteurs simples
+	\begin{itemize}
+		\item \optword{Sélecteur universel}
+		\item \optword{Sélecteurs de type}
+		\item \optword{Sélecteurs de classe}
+		\item \optword{Sélecteurs d'identifiant}
+		\item \optword{Sélecteurs d'attribut}
+	\end{itemize}
+	\item Les combinateurs
+	\begin{itemize}
+		\item \optword{Sélecteurs d'éléments descendants}
+		\item \optword{Sélecteurs d'éléments fils}
+		\item \optword{Sélecteurs de voisin}
+		\item \optword{Sélecteurs de voisin direct}
+	\end{itemize}
+	\item \optword{Les pseudo-classes}
+	\item \optword{Les pseudo-éléments}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les sélecteurs : Les sélecteurs simples}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item \optword{universel} sélectionne tous les éléments en utilisant le mot clé \keyword{*}
+		\item \optword{de type} l'élément est ciblé par so type
+		\item \optword{de classe} l'élément est ciblé par la valeur de son attribut \keyword{class} en précédant cette valeur par \keyword{.}
+		\item \optword{d'identifiant} l'élément est ciblé par la valeur de son attribut \keyword{id} en précédant cette valeur par \keyword{\#}
+		\item \optword{d'attribut} l'élément est ciblé par la valeur d'un attribut donné en utilisant la syntaxe \expword{[attr operateur valeur]}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{selecteur\_simple.html}
+%\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+* {font-size: 12pt;}
+p {color: magenta;}
+.p {color: green;}
+#p {color: blue;}
+input[type=text] {color: red;}
+\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les sélecteurs : Les combinateurs}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item \optword{d'éléments descendants} on sépare l'élément et son descendant par un espace
+		\item \optword{d'éléments fils} on sépare l'élément et son fils par \keyword{>}
+		\item \optword{de voisin} on sépare l'élément et son voisin par \keyword{\textasciitilde}
+		\item \optword{de voisin direct} on sépare l'élément et son voisin par \keyword{+}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{combinateur.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+#id1 p {color:blue;}
+#id2 > p {color:red;}
+h1 ~ p {color:green;}
+h2 + p {color:orange;}
+\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les sélecteurs : Les pseudo-classes}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item l'élément est ciblé par un état spécifique
+		\item \keyword{:hover} la souris est positionnée sur l'élément
+		\item \keyword{:visited} un lien visité
+		\item \keyword{:link} un lien non visité
+		\item \keyword{:active} un élément activé par l'utilisateur.
+		\item \keyword{:checked} un bouton radio, case à couché ou une option sélectionnée
+		\item \keyword{:disabled} un élément désactivé
+		\item \keyword{:enabled} un élément activé
+		\item \keyword{:required} un champs obligatoire
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{pseudo-classes1.html}
+%\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+a:link {color: blue;}
+a:visited {color: purple;}
+a:hover {color: yellow;}
+a:active {color: red;}
+input:checked {color:blue;}
+input:disabled {color:grey;}
+input:required {color:red;}
+\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les sélecteurs : Les pseudo-classes (2)}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item \keyword{:not(s)} un élément qui n'est pas un élément sélectionné par le sélecteur \expword{s}
+		\item \keyword{:nth-child(an+b)} un élément qui possède an+b-1 éléments voisins (au même niveau) avant lui 
+		\item \keyword{:nth-of-type(an+b)} des éléments d'un type donné, en fonction de leur position au sein d'un groupe de frères et sœurs.
+		\item \keyword{:out-of-range} un élément \keyword{<input>} lorsque sa valeur est en dehors de l'intervalle autorisé par les attributs \keyword{min} et \keyword{max}.
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{pseudo-classes2.html}
+%\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+*:not(h1){font-style: italic;}
+tr:nth-child(2n) {
+  background: lightblue;
+}
+tr:nth-child(2n+1) {
+  background: lightgreen;
+}
+#id1 p:nth-child(2n+1) {
+  color: red;
+}
+#id2 p:nth-of-type(2n+1) {
+  color: blue;
+}
+input:out-of-range {
+  background: red;
+}
+\end{lstlisting}\vspace{-6pt}
+\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les sélecteurs : Les pseudo-éléments}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item Mettre en forme certaines parties de l'élément ciblé par la règle.
+		\item \keyword{::first-line} la première ligne d'un élément
+		\item \keyword{::first-letter} la première lettre d'un élément
+		\item \keyword{::selection} la portion sélectionnée d'un élément
+		\item \keyword{::before} insérer une chose avant le contenu d'un élément
+		\item \keyword{::after} insérer une chose après le contenu d'un élément
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{pseudo-element.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+p#id1::first-letter {
+  color: blue; }
+p#id2::first-line {
+  color: red; }
+p#id3::selection {
+  color: green; }
+p#id4::before {
+  content: "avant ";
+  color: orange;
+}
+p#id4::after {
+  content: " *après*";
+  color: magenta;
+}
+\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{frame}
+
+\subsection{Cascade et héritage}
+
+\begin{frame}
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Cascade et héritage}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Cascade et héritage : L'héritage}
+
+\begin{minipage}{0.60\textwidth}
+\begin{itemize}
+	\item 
+\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{Structure d'un document HTML}
+	\lstset{escapeinside=**}
+	\scriptsize\bfseries
+	\begin{lstlisting}[language={html}]
+	h1 {
+	color: red;
+	}
+	\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Cascade et héritage : Cascade}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Cascade et héritage : Spécificité}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+%===================================================================================
+\section{Mise en page}
+%===================================================================================
+
+\subsection{Le modèle en boite}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Mise en page}
+\framesubtitle{Le modèle en boite}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+
+\subsection{Les flotteurs}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Mise en page}
+\framesubtitle{Les flotteurs}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+
+\subsection{La position}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Mise en page}
+\framesubtitle{La position}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+
+\subsection{Réactivité (responsiveness)}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Mise en page}
+\framesubtitle{Réactivité (responsiveness)}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+%===================================================================================
+\section{Propriétés de texte}
+%===================================================================================
+
+\subsection{Le texte}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Propriétés de texte}
+\framesubtitle{Le texte}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{text-transform}
+		\item \keyword{text-decoration}
+		\item \keyword{text-shadow}
+		\item \keyword{text-align}
+		\item \keyword{text-indent}
+		\item \keyword{text-orientation}
+		\item \keyword{direction}
+		\item \keyword{line-height}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\subsection{La police}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Propriétés de texte}
+\framesubtitle{La police}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{font-family}
+		\item \keyword{font-size}
+		\item \keyword{font-style}
+		\item \keyword{font-weight}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Propriétés de texte}
+\framesubtitle{La police : définir une famille de police}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{@font-face}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{Structure d'un document HTML}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+@font-face {
+  font-family: "maPolice";
+  src: url("unePolice.ttf");
+}
+\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{frame}
+
+\subsection{Mots et lettres}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Propriétés de texte}
+\framesubtitle{Mots et lettres}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{word-spacing}
+		\item \keyword{word-break}
+		\item \keyword{letter-spacing}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\subsection{Listes}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Propriétés de texte}
+\framesubtitle{Listes}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{list-style-type}
+		\item \keyword{list-style-position}
+		\item \keyword{list-style-image}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+%===================================================================================
+\section{Aspect et animations}
+%===================================================================================
+
+\subsection{Arrière-plan}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Arrière-plan}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{background-color}
+		\item \keyword{background-image}
+		\item \keyword{background-repeat}
+		\item \keyword{background-attachment}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Arrière-plan : Arrière-plan dégradé}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\subsection{Transformations}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transformations}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\subsection{Animations}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Animations}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{Structure d'un document HTML}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+		\begin{lstlisting}[language={html}]
+		h1 {
+		color: red;
+		}
+		\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{CSS}
+\framesubtitle{Un peu d'humour}
+
+\begin{center}
+	\vgraphpage{css-humour.jpg}
+\end{center}
+
+\end{frame}
+
+\insertbibliography{Bweb07}{*}
 
 \end{document}
 

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Combinateur</title>
+    <style type="text/css">
+      body > div {border: 1px solid;}
+      /*les éléments de type p descendats d'un élément avec id="id1"*/
+      #id1 p {color:blue;}
+      /*les éléments de type p descendats directs d'un élément avec id="id2"*/
+      #id2 > p {color:red;}
+      /*les éléments de type p voisins d'un élément de type h1*/
+      h1 ~ p {color:green;}
+      /*les éléments de type p voisins d'un élément de type h2*/
+      h2 + p {color:orange;}
+    </style>
+  </head>
+  <body>
+    <div id="id1">
+      La règle "#id1 p"
+      <p>div#id1 p</p>
+      <p>div#id1 p</p>
+      <div>
+        <p>div#id1 div p</p>
+      </div>
+    </div>
+    <div id="id2">
+      La règle "#id2 > p"
+      <p>div#id2 p</p>
+      <p>div#id2 p</p>
+      <div>
+        <p>div#id2 div p</p>
+      </div>
+    </div>
+    <div>
+      Aucune règle
+      <p>div p</p>
+      <p>div p</p>
+    </div>
+    <div>
+      La règle "h1 ~ p"
+      <p>div p</p>
+      <h1>div h1</h1>
+      <p>div p</p>
+      <p>div p</p>
+    </div>
+    <div>
+      La règle "h2 + p"
+      <p>div p</p>
+      <h2>div h2</h2>
+      <p>div p</p>
+      <p>div p</p>
+    </div>
+  </body>
+</html>

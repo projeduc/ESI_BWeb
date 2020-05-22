@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Pseudo classes 2</title>
+    <style type="text/css">
+      /*Tous les éléments qui ne sont pas de type <p>*/
+      *:not(h1) {font-style: italic;}
+      /*Les éléments <tr> (lignes d'un tableau) pairs*/
+      tr:nth-child(2n) {background: lightblue;}
+      /*Les éléments <tr> (lignes d'un tableau) impairs*/
+      tr:nth-child(2n+1) {background: lightgreen;}
+      /*Tous les éléments <p> impairs par rapport à tous les éléments
+      dans l'élément ayant id="id1"*/
+      #id1 p:nth-child(2n+1) {color: red;}
+      /*Tous les éléments <p> impairs par rapport aux éléments de type <p>
+      dans l'élément ayant id="id1"*/
+      #id2 p:nth-of-type(2n+1) {color: blue;}
+      /*lorsque la valeur d'un champs n'est pas entre min et max*/
+      input:out-of-range {background: red;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Présentation de :nth-child</h1>
+    <table>
+      <tr><td>element</td></tr>
+      <tr><td>element</td></tr>
+      <tr><td>element</td></tr>
+      <tr><td>element</td></tr>
+      <tr><td>element</td></tr>
+    </table>
+    <div id="id1">
+      <p>div#id1 p</p>
+      <pre>div#id1 pre</pre>
+      <p>div#id1 p</p>
+      <pre>div#id1 pre</pre>
+      <pre>div#id1 pre</pre>
+      <p>div#id1 p</p>
+      <p>div#id1 p</p>
+    </div>
+
+    <h1>Présentation de :nth-of-type</h1>
+    <div id="id2">
+      <p>div#id2 p</p>
+      <pre>div#id2 pre</pre>
+      <p>div#id2 p</p>
+      <pre>div#id2 pre</pre>
+      <pre>div#id2 pre</pre>
+      <p>div#id2 p</p>
+      <p>div#id2 p</p>
+    </div>
+
+    <h1>Présentation de :out-of-range</h1>
+    Changer la valeur pour voir la différence
+    <br>
+    <input type="number" min="1" max="10" value="12">
+
+  </body>
+</html>

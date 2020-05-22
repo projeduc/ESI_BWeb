@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS: priorité</title>
+    <meta charset="UTF-8">
+    <style>
+
+    /*
+    On applique la règle avec la plus grande priorité
+    Une priorité se compose de 4 positions:
+    les unités pour le nombre des éléments ou pseudo-éléments dans le sélecteur
+    les dizaines pour le nombre de sélecteurs de classe, sélecteurs d'attribut ou de pseudo-classe
+    les centaines pour le nombre des ID
+    les milliers pour l'attribut STYLE
+    */
+
+   /*
+   Pour sélectionner:
+   1- une balise: on utilise son nom
+   2- une classe: on utilise son nom précédé par un point (.)
+   3- un ID: on utilise son nom précédé par un dièse (#)
+    */
+
+    /*ici, on a regrouper deux sélecteurs en utilisant la virgule */
+    a, p { /*les balises H1 et P, priorité de chaque sélecteur=0001*/
+      color: red;
+      font-style: italic;
+    }
+
+    p a {/*les balises H1 descendantes de P, priorité=0002*/
+      color: blue;
+      /*font-style n'est pas défini ici, donc c'est celle de la règle précédente
+      qui va s'appliquer*/
+    }
+
+    .c1 {/*les balises dont la classe est c1, priorité=0010*/
+      color: yellow;
+    }
+
+    p.c1 a {/*les balises A descendantes de P dont la classe est c1,
+      priorité=0012*/
+      color: green;
+    }
+
+    p.c1 a.c2 {/*les balises A dont la classe c2 descendantes de
+               P dont la classe est c1, priorité=0022*/
+      color: magenta;
+    }
+
+    #i1 {/*l'élément avec l'ID i1, priorité=0100*/
+      color: Lime;
+    }
+
+    div#i2 {/*l'élément avec l'ID i2 descendant d'un DIV, priorité=0101*/
+      color: Crimson;
+    }
+
+    #i2 {/*l'élément avec l'ID i2, priorité=0100*/
+    /*cette règle ne va pas s'appliquer puisque la règle précédente est
+    prioritaire*/
+      color: Olive;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <a>a</a> <br>
+    <p>
+      p
+      <br>
+      <a>p a</a>
+    </p>
+    <p class="c1">
+      p.c1
+      <br>
+      <a>p.c1 a</a>
+      <br>
+      <a class="c2">p.c1 a.c2</a>
+      <br>
+      <a class="c2" id="i1">p.c1 a.c2#i1</a>
+    </p>
+    <a class="c1">a.c1</a>
+    <div>div</div>
+    <div class="c1">div.c1</div>
+    <div>
+      <p class="c1">div p.c1</p>
+      <div>div div</div>
+    </div>
+    <div id="i2">div#i2</div>
+  </body>
+</html>

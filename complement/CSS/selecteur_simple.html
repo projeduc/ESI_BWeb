@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Sélecteur Simple</title>
+    <style type="text/css">
+      /*Tous les éléments*/
+      * {font-size: 12pt;}
+      /*les éléments de type p*/
+      p {color: magenta;}
+      /*les éléments avec class="p"*/
+      .p {color: green;}
+      /*l'élément ayant id="p"*/
+      #p {color: blue;}
+      /*Les champs de saisie de type texte*/
+      input[type=text] {color:red;}
+    </style>
+  </head>
+  <body>
+    <p>p1</p>
+    <p class="p">p1.p</p>
+    <h1 id="p">h1#p</p>
+    <h1 class="p">h1.p</p>
+    <h1>h1</h1>
+    <input type="text" value="Un texte" >
+    <br>
+    <input type="email" value="moi@serveur.dom" >
+  </body>
+</html>

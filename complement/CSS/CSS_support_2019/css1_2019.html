@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS: application</title>
+    <meta charset="UTF-8">
+    <!-- style interne en utilisant la balise STYLE -->
+    <style type="text/css">
+    p {
+      color: blue;
+    }
+    </style>
+
+    <!-- importer un style externe -->
+    <link href="externe.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <h1>Attribut STYLE</h1>
+
+    Pour appliquer un style, on peut utiliser l'attribut STYLE de la balise.
+    Par exemple, la balise P suivante va être en rouge:
+    <p style="color: red;">paragraphe 1</p>
+
+    <h1>Balise STYLE</h1>
+
+    Si on veut séparer le style de la balise
+    et regrouper tous les styles dans un même emplacement,
+    on peut utiliser la balise STYLE dans HEAD.
+    Ceci peut nous permet d'appliquer un même style sur plusieurs éléments au même temps.
+    Dans l'exemple suivant, les balises P sont colorées en bleu.
+    <p>paragraphe 2</p>
+    <p>paragraphe 3</p>
+
+    <h1>Style externe</h1>
+
+    Si on veut appliquer le même style sur plusieurs pages web,
+    on peut recopier le même style dans la balise STYLE sur toutes les pages.
+    Mais, lorsqu'on veut modifier une règle, on doit la modifier dans toutes les pages.
+    Une solution est d'utiliser un style externe.
+    On importe un style externe en utilisant la balise LINK dans HEAD.
+    Par exemple, les DIV suivants sont colorés en vert à partir d'un style externe.
+    <div>DIV 1</div>
+    <div>DIV 2</div>
+
+
+  </body>
+</html>

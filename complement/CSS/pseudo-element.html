@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Pseudo classes 1</title>
+    <style type="text/css">
+      p#id1::first-letter {color: blue;}
+      p#id2::first-line {color: red;}
+      p#id3::selection {color: green;}
+      p#id4::before {
+        content: "avant ";
+        color: orange;
+      }
+      p#id4::after {
+        content: " après";
+        color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="id1">
+      La première lettre est colorée.
+    </p>
+    </div>
+    <p id="id2">
+      La première ligne est colorée. La première ligne est colorée.
+      La première ligne est colorée. La première ligne est colorée.
+      La première ligne est colorée. La première ligne est colorée.
+      La première ligne est colorée. La première ligne est colorée.
+      La première ligne est colorée. La première ligne est colorée.
+      La première ligne est colorée. La première ligne est colorée.
+      La première ligne est colorée. La première ligne est colorée.
+      La première ligne est colorée. La première ligne est colorée.
+    </p>
+    <p id="id3">
+      Sélectionner une portion de ce texte pour voir le résultat.
+    </p>
+    <p id="id4">ELEMENT</p>
+
+  </body>
+</html>
