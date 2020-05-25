@@ -93,34 +93,86 @@
 
 \begin{frame}[fragile]
 \frametitle{CSS : Les règles et la cascade}
-\framesubtitle{Les règles et les valeurs : Unités absolues de longueur}
+\framesubtitle{Les règles et les valeurs : Unités absolues}
 
-\begin{minipage}{0.60\textwidth} 
-	\begin{itemize}
-		\item Une règle se compose d'un sélecteur et d'une déclaration (propriété/valeur)
-		\item \optword{Sélecteur} : permet de sélectionner les éléments sur lesquels appliquer le style souhaité
-		\item \optword{Propriété} : différentes façons dont on peut mettre en forme un élément HTML
-		\item \optword{Valeur} : permet de choisir une mise en forme parmi d'autres pour une propriété donnée
-	\end{itemize}
+\scriptsize\bfseries
+\rowcolors{2}{lightblue}{lightyellow}
+\begin{minipage}{0.50\textwidth} 
+\begin{center}
+	\begin{tabular}{lll}
+		\rowcolor{darkblue}
+		\color{white}Unité & \color{white}Nom & \color{white}Description \\
+		cm & Centimètres & 1cm = 96px/2.54\\
+		mm & Millimètres & 1mm = 1/10 cm\\
+		Q & 1/4 millimètres & 1Q = 1/40 cm\\
+		in & Pouces & 1in = 2.54cm = 96px\\
+		pc & Picas & 1pc = 1/6 in\\
+		pt & Points & 1pt = 1/72 in\\
+		px & Pixels & 1px = 1/96 in\\
+	\end{tabular}
+\end{center}
 \end{minipage}
 %
-\begin{minipage}{0.38\textwidth}
-	\begin{exampleblock}{Structure d'une règle CSS}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		*sélecteur* {
-		*proriété1*: valeur1;
-		*proriété2*: valeur2;
-		}
-		\end{lstlisting}
-	\end{exampleblock}
-	\begin{figure}
-		\centering
-		\hgraphpage[.6\textwidth]{CSS-regle.pdf}
-		\caption{Structure d'une règle CSS \cite{mdn}}
-	\end{figure}
+\begin{minipage}{0.49\textwidth}
+	\begin{center}
+		\begin{tabular}{llp{.3\textwidth}}
+			\rowcolor{darkblue}
+			
+			\color{white}Unité & \color{white}Nom & \textcolor{white}{Description} \\
+			s & Secondes &  \\
+			ms & Millisecondes & Un millième de seconde.\\
+		\end{tabular}
+	\end{center}
+	\begin{center}
+		\begin{tabular}{llp{.4\textwidth}}
+			\rowcolor{darkblue}
+			\color{white}Unité & \color{white}Nom & \color{white}Description \\
+			Hz & Hertz & Nombre de fois par seconde.\\
+			kHz & Kilohertz & 1000 Hertz.\\
+		\end{tabular}
+	\end{center}
 \end{minipage}
+
+%\scriptsize\bfseries
+%\rowcolors{2}{lightblue}{lightyellow}
+\begin{center}
+	\begin{tabular}{lll}
+		\rowcolor{darkblue}
+		\color{white}Unité & \color{white}Nom & \color{white}Description \\
+		deg & Degrés & Un cercle se divise en 360 degrés égaux. \\
+		grad & Grades/Gradians & Un cercle se compose de 400 grades. \\
+		rad & Radians & Un cercle se compose de $2\pi$ radians. \\
+		turn & Tours & Un cercle se compose d'un tour. \\
+	\end{tabular}
+\end{center}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Les règles et les valeurs : Unités relatives}
+
+\scriptsize\bfseries
+\rowcolors{2}{lightblue}{lightyellow}
+
+\begin{center}
+	\begin{tabular}{p{.1\textwidth}p{.8\textwidth}}
+		\rowcolor{darkblue}
+		\color{white}Unité & \color{white}Sens\\
+		em & * Dans le cas de \keyword{font-size} : Taille de police du parent 
+		
+		* Dans d'autres cas comme \keyword{width} : Taille de police  de l'élément lui-même\\
+		ex & La hauteur du caractère minuscule "x"\\
+		ch & La largeur du caractère "0"\\
+		rem & Taille de police de l'élément racine\\
+		lh & Hauteur de ligne de l'élément\\
+		vw & 1 \% de la largeur de la fenêtre\\
+		vh & 1 \% de la longueur de la fenêtre\\
+		vmin & 1 \% de la dimension minimale de la fenêtre\\
+		vmax & 1 \% de la dimension maximale de la fenêtre\\
+		\% & Pourcentage par rapport à l'élément parent\\
+	\end{tabular}
+\end{center}
 
 \end{frame}
 
@@ -130,76 +182,143 @@
 \frametitle{CSS : Les règles et la cascade}
 \framesubtitle{Application de CSS}
 
+\begin{itemize}
+	\item Styles en ligne
+	\begin{itemize}
+		\item définir un style dans la balise de l'élément
+		\item en utilisant l'attribut \keyword{style} de l'élément
+	\end{itemize}
+	\item Feuille de style interne
+	\begin{itemize}
+		\item définir une feuille de style dans une page HTML
+		\item en utilisant la balise \keyword{<style>} dans \keyword{<head>}
+	\end{itemize}
+	\item Feuille de style externe
+	\begin{itemize}
+		\item définir une feuille de style séparée
+		\item en utilisant la balise \keyword{<link>} dans \keyword{<head>}
+	\end{itemize}
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{CSS : Les règles et la cascade}
-\framesubtitle{Application de CSS : l'attribut "style"}
+\framesubtitle{Application de CSS : Style en ligne}
 
 \begin{minipage}{0.60\textwidth} 
 	\begin{itemize}
-		\item 
+		\item En utilisant l'attribut \keyword{style} de la balise
+		\item Mise en forme d'un seul élément
+		\item Si on veut utiliser la même mise en forme pour plusieurs éléments, on doit la recopier
+		\item Exemple, \expword{Si on veut utiliser la même couleur pour tous les éléments de type <p>, on doit recopier le style dans chaque éléments}
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{block}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{block}
-\end{minipage}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{CSS : Les règles et la cascade}
-\framesubtitle{Application de CSS : la balise "style"}
-
-\begin{minipage}{0.60\textwidth} 
-	\begin{itemize}
-		\item 
-	\end{itemize}
-\end{minipage}
-%
-\begin{minipage}{0.38\textwidth}
-\begin{exampleblock}{Structure d'une règle CSS}
+\begin{block}{Style en ligne}
 \lstset{escapeinside=**}
 \scriptsize\bfseries
 \begin{lstlisting}[language={html}]
-*sélecteur* {
-*proriété1*: valeur1;
-*proriété2*: valeur2;
-}
+<html>
+  <head>
+    <title>en ligne</title>
+  </head>
+  <body>
+    <p style="color:red;">
+      Paragraphe en rouge
+    </p>
+  </body>
+<html>
 \end{lstlisting}
-\end{exampleblock}
+\end{block}
 \end{minipage}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{CSS : Les règles et la cascade}
-\framesubtitle{Application de CSS : Style externe}
+\framesubtitle{Application de CSS : Feuille de style interne}
 
 \begin{minipage}{0.60\textwidth} 
 	\begin{itemize}
-		\item 
+		\item En utilisant la balise \keyword{<style>} dans l'entête
+		\item \keyword{type="text/css"} pour dire au navigateur qu'il s'agit de CSS
+		\item Mise en forme des éléments d'une page HTML
+		\item Si on veut utiliser la même feuille pour plusieurs pages, on doit la recopier
+		\item Exemple, \expword{Si on veut utiliser la même couleur pour tous les éléments de type <p>, on doit recopier le style dans chaque éléments}
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{block}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{block}
+\begin{block}{Style en ligne}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<html>
+  <head>
+    <title>interne</title>
+    <style type="text/css">
+      p {color: red;}
+    </style>
+  </head>
+  <body>
+    <p>Paragraphe1</p>
+    <div>DIV1</div>
+    <p>Paragraphe2</p>
+    <p>Paragraphe3</p>
+  </body>
+<html>
+\end{lstlisting}
+\end{block}
 \end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Les règles et la cascade}
+\framesubtitle{Application de CSS : Feuille de style externe}
+
+\begin{minipage}{0.60\textwidth} 
+	\begin{itemize}
+		\item En utilisant la balise \keyword{<style>} dans l'entête
+		\item \keyword{type="text/css"} peut être omis
+		\item \keyword{rel="stylesheet"} pour dire au navigateur qu'il s'agit d'une feuille de style
+		\item \keyword{href} l'emplacement de la feuille
+		\item Mise en forme des éléments de plusieurs pages 
+	\end{itemize}
+\begin{minipage}{0.95\textwidth} 
+\begin{block}{style.css}
+	\lstset{escapeinside=**}
+	\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={CSS}]
+p {
+  color: red;
+}
+\end{lstlisting}\vspace{-6pt}
+\end{block}
+\end{minipage}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{Lier la page avec une feuille de style externe}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+<html>
+  <head>
+    <title>externe</title>
+    <link rel="stylesheet" 
+         href="style.css">
+  </head>
+  <body>
+    <p>Paragraphe1</p>
+    <div>DIV1</div>
+    <p>Paragraphe2</p>
+  </body>
+<html>
+\end{lstlisting}
+\end{block}
+\end{minipage}
+
 \end{frame}
 
 \subsection{Les sélecteurs}
@@ -248,12 +367,14 @@
 \begin{block}{selecteur\_simple.html}
 %\lstset{escapeinside=**}
 \scriptsize\bfseries
-\begin{lstlisting}[language={html}]
+\begin{lstlisting}[language={CSS}]
 * {font-size: 12pt;}
 p {color: magenta;}
 .p {color: green;}
 #p {color: blue;}
-input[type=text] {color: red;}
+input[type=text] {
+  color: red;
+}
 \end{lstlisting}
 \end{block}
 \end{minipage}
@@ -277,7 +398,7 @@ input[type=text] {color: red;}
 \begin{block}{combinateur.html}
 \lstset{escapeinside=**}
 \scriptsize\bfseries
-\begin{lstlisting}[language={html}]
+\begin{lstlisting}[language={CSS}]
 #id1 p {color:blue;}
 #id2 > p {color:red;}
 h1 ~ p {color:green;}
@@ -287,7 +408,7 @@ h2 + p {color:orange;}
 \end{minipage}
 \end{frame}
 
-\begin{frame}[fragile]
+\begin{frame}[fragile]{Code}
 \frametitle{CSS : Les règles et la cascade}
 \framesubtitle{Les sélecteurs : Les pseudo-classes}
 
@@ -309,7 +430,7 @@ h2 + p {color:orange;}
 \begin{block}{pseudo-classes1.html}
 %\lstset{escapeinside=**}
 \scriptsize\bfseries
-\begin{lstlisting}[language={html}]
+\begin{lstlisting}[language={CSS}]
 a:link {color: blue;}
 a:visited {color: purple;}
 a:hover {color: yellow;}
@@ -320,6 +441,7 @@ input:required {color:red;}
 \end{lstlisting}
 \end{block}
 \end{minipage}
+
 \end{frame}
 
 \begin{frame}[fragile]
@@ -402,15 +524,15 @@ p#id4::after {
 
 \subsection{Cascade et héritage}
 
-\begin{frame}
-\frametitle{CSS : Les règles et la cascade}
-\framesubtitle{Cascade et héritage}
-
-\begin{itemize}
-	\item 
-\end{itemize}
-
-\end{frame}
+%\begin{frame}
+%\frametitle{CSS : Les règles et la cascade}
+%\framesubtitle{Cascade et héritage}
+%
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+%
+%\end{frame}
 
 \begin{frame}[fragile]
 \frametitle{CSS : Les règles et la cascade}
@@ -418,19 +540,32 @@ p#id4::after {
 
 \begin{minipage}{0.60\textwidth}
 \begin{itemize}
-	\item 
+	\item Si un élément contient un autre élément, ce dernier hérite les propriétés e son parent
+	\item Sauf si la propriété a été redéfinie
+	\item Par exemple, \expword{Si on définit la couleur pour l'élément <body>, tous les éléments dedans vont hériter cette propriété}
 \end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-\begin{block}{Structure d'un document HTML}
-	\lstset{escapeinside=**}
-	\scriptsize\bfseries
-	\begin{lstlisting}[language={html}]
-	h1 {
-	color: red;
-	}
-	\end{lstlisting}
+\begin{block}{Héritage dans CSS}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={HTML5}]
+<html>
+  <head>
+    <title>interne</title>
+    <style type="text/css">
+      body {color: red;}
+    </style>
+  </head>
+  <body>
+    <p>Paragraphe1</p>
+    <div>DIV1</div>
+    <p>Paragraphe2</p>
+    <p>Paragraphe3</p>
+  </body>
+<html>
+\end{lstlisting}
 \end{block}
 \end{minipage}
 \end{frame}
@@ -441,22 +576,49 @@ p#id4::after {
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item 
+		\item L'origine de la feuille
+		\begin{itemize}
+			\item \optword{Agent utilisateur} : chaque navigateur fournit une feuille de style par défaut
+			\item \optword{Auteur} : celui qui a créé le site web 
+			\item \optword{Utilisateur} : celui qui utilise le site web 
+		\end{itemize}
+		\item L'algorithme de la cascade
+		\begin{enumerate}
+			\item Filtrer les règles des différentes sources pour garder celles applicables sur un élément
+			\item Trier les règles en se basant sur leurs origines et importances.
+			\item Appliquer les règles les plus importantes 
+		\end{enumerate}
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{block}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{block}
+\begin{center}
+	\scriptsize\bfseries
+	\rowcolors{2}{lightblue}{lightyellow}
+	\begin{tabular}{ll}
+		\rowcolor{darkblue}
+		\color{white}Origine & \color{white}Importance\\
+		Agent utilisateur & normale\\
+		Utilisateur & normale\\
+		Auteur & normale\\
+		Auteur & !important\\
+		Utilisateur & !important\\
+		Agent utilisateur & !important\\
+	\end{tabular}
+\end{center}
+\begin{exampleblock}{Exemple d'une règle importante}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={HTML5}]
+p {
+  color: red;
+  font-size: 14pt !important;
+}
+\end{lstlisting}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
+
 
 \begin{frame}[fragile]
 \frametitle{CSS : Les règles et la cascade}
@@ -464,20 +626,31 @@ p#id4::after {
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item 
+		\item On calcule la spécificité en se basant sur le sélecteur
+		\item une règle en ligne : spécificité \optword{1000} 
+		\item le nombre des IDs dans le sélecteur multiplié par \optword{100}
+		\item le nombre des classes, les sélecteurs d'attributs et pseudo-classes dans le sélecteur multiplié par \optword{10}
+		\item le nombre des éléments et pseudo-éléments dans le sélecteur
+		\item on fait la somme
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{block}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{block}
+\begin{exampleblock}{Exemple de spécificité}
+\lstset{escapeinside=!!}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+p a {}/*!spécificité! = 002*/
+p .a {}/*!spécificité! = 011*/
+p #a {}/*!spécificité! = 101*/
+/*!spécificité! = 112*/
+div#a p.c {}
+/*!spécificité! = 011*/
+input[type=text] {}
+/*!spécificité! = 012*/
+a:hover img {}
+\end{lstlisting}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
 
@@ -485,57 +658,204 @@ p#id4::after {
 \section{Mise en page}
 %===================================================================================
 
-\subsection{Le modèle en boite}
+\subsection{Le modèle en boîte}
 
 \begin{frame}[fragile]
 \frametitle{CSS : Mise en page}
-\framesubtitle{Le modèle en boite}
+\framesubtitle{Le modèle en boîte : Rendu et disposition}
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item 
+		\item On définit le rendu et la disposition des éléments en utilisant la propriété \keyword{display}
+		\item \optword{none} : l'élément est caché
+		\item \optword{block} : l'élément est défini comme bloc
+		\item \optword{inline} : l'élément est défini comme en ligne
+		\item \optword{inline-block} : l'élément est défini comme en ligne, mais on peut définir la hauteur et la largeur
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{block}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{block}
+\begin{block}{display.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={CSS}]
+p {
+  background: red;
+  height: 50px;
+}
+#p1 {display:none;}
+#p2 {display:block;}
+#p3 {display:inline;}
+#p4 {display:inline-block;}
+\end{lstlisting}
+\end{block}
 \end{minipage}
 \end{frame}
 
-
-\subsection{Les flotteurs}
-
 \begin{frame}[fragile]
 \frametitle{CSS : Mise en page}
-\framesubtitle{Les flotteurs}
+\framesubtitle{Le modèle en boîte : Rendu et disposition}
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item 
+		\item \keyword{display: flex;}
+		\item les éléments d'un conteneur flexible peuvent être disposés dans n'importe quelle direction
+		\item l'attribut \keyword{flex-direction} définit la direction des éléments fils
+		\begin{itemize}
+			\item \optword{row} : la direction du texte
+			\item \optword{row-inverse} : l'inverse de la direction du texte
+			\item \optword{column} : de haut en bas
+			\item \optword{column-inverse} : de bas en haut
+		\end{itemize}
+	\item \keyword{flex-wrap: wrap;} : les éléments peuvent être affichés sur plusieurs lignes 
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{block}{Structure d'un document HTML}
+\begin{block}{display.html}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={CSS}]
+div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c {width: 30%;}
+#div5 {
+  flex-direction:row;}
+#div6 {
+  flex-direction:row-reverse;}
+#div7 {
+  flex-direction:column;}
+#div8 {
+  flex-direction:column-reverse;}
+\end{lstlisting}
+\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Mise en page}
+\framesubtitle{Le modèle en boîte : composition d'une boîte}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{margin} : la marge entre l'élément et ses voisins
+		\item \keyword{border} : la bordure de l'élément 
+		\item \keyword{paddin} : la marge entre la bordure et le contenu
+		\item \keyword{width} : la largeur du contenu
+		\item \keyword{height} : la hauteur du contenu
+		\item pour spécifier la direction des marges (internes ou externes) ou la bordure, on ajoute \keyword{-top} (haut), \keyword{-left} (gauche), \keyword{-right} (droit) ou \keyword{-bottom} (bas)
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\hgraphpage{box-model.pdf}
+	\begin{block}{box.html}
 		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
+		\tiny\bfseries
+\begin{lstlisting}[language={html}]
+#d1 {
+  background: red;
+  width: 200px; height: 100px;
+  padding: 5px;
+  border-top: 5px solid green;
+  border-bottom: 5px dashed green;
+  margin-bottom: 20px;
+}
+#d1 p {background: blue;}
+\end{lstlisting}
 	\end{block}
 \end{minipage}
 \end{frame}
 
+\subsection{Les flotteurs et débordement}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Mise en page}
+\framesubtitle{Les flotteurs et débordement : Les flotteurs}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item créer des mises en page de sites web avec plusieurs colonnes d'informations flottantes les unes à côté des autres
+		\item éléments de type bloc
+		\item l'attribut \keyword{float} avec la valeur \optword{left} (à gauche) ou \optword{right} (à droite)
+		\item pour terminer le flottement, utiliser l'attribut \keyword{clear} avec la valeur \optword{both} (les deux types de flottement), \optword{left} (à gauche) ou \optword{right} (à droite)
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{float.html}
+		\lstset{escapeinside=**}
+		\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+.c1 {background: red;}
+.c2 {background: blue;}
+.c2::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.c3 {background: green;}
+#f {
+  width: 200px;
+  height: 200px;
+  float: left;
+  background: cyan;
+}
+\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Mise en page}
+\framesubtitle{Les flotteurs et débordement : Le débordement}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item Dans un élément en bloc, si le contenu dépasse la taille de l'élément, on peut spécifier comment le gérer
+		\item on utilise l'attribut \keyword{overflow} avec la valeur
+		\begin{itemize}
+			\item \optword{visible} le contenu n'est pas rogné (par défaut)
+			\item \optword{hidden} le contenu est rogné
+			\item \optword{scroll} ajouter des barres de défilement
+			\item \optword{auto} comportement de l'agent utilisateur
+		\end{itemize}
+		\item On peut spécifier le dépassement vertical en utilisant l'attribut \keyword{overflow-y}
+		\item On peut spécifier le dépassement horizontal en utilisant l'attribut \keyword{overflow-x}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+	\begin{block}{overflow.html}
+		\lstset{escapeinside=**}
+		\tiny\bfseries
+\begin{lstlisting}[language={html}]
+div {
+  width: 150px; height: 150px;
+}
+
+#d1 {
+  background: yellow;
+  overflow: scroll; }
+
+#d2 {
+  background: red;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+
+#d3 {
+  background: blue;
+  overflow: hidden; }
+
+#d4 {
+  background: orange;
+  overflow: visible; }
+\end{lstlisting}
+	\end{block}
+\end{minipage}
+\end{frame}
 
 \subsection{La position}
 
@@ -553,11 +873,9 @@ p#id4::after {
 	\begin{block}{Structure d'un document HTML}
 		\lstset{escapeinside=**}
 		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
+\begin{lstlisting}[language={html}]
+
+\end{lstlisting}
 	\end{block}
 \end{minipage}
 \end{frame}

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Display</title>
+    <style type="text/css">
+      p {
+        background: red;
+        height: 50px;
+        border: 1px solid;
+      }
+      #p1 {display:none;}
+      #p2 {display:block;}
+      #p3 {display:inline;}
+      #p4 {display:inline-block;}
+      div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .c {width: 30%;}
+      #div5 {flex-direction:row;}
+      #div6 {flex-direction:row-reverse;}
+      #div7 {flex-direction:column;}
+      #div8 {flex-direction:column-reverse;}
+    </style>
+  </head>
+  <body>
+    Avant P1
+    <p id="p1">ELEMENT</p>
+    Après P1
+
+    <hr>
+
+    Avant P2
+    <p id="p2">ELEMENT</p>
+    Après P2
+
+    <hr>
+
+    Avant P3
+    <p id="p3">ELEMENT</p>
+    Après P3
+
+    <hr>
+
+    Avant P4
+    <p id="p4">ELEMENT</p>
+    Après P4
+
+    <hr>
+
+    <div id="div5">
+      <p class="c">A</p>
+      <p class="c">B</p>
+      <p class="c">C</p>
+      <p class="c">D</p>
+    </div>
+
+    <hr>
+
+    <div id="div6">
+      <p class="c">A</p>
+      <p class="c">B</p>
+      <p class="c">C</p>
+      <p class="c">D</p>
+    </div>
+
+    <hr>
+
+    <div id="div7">
+      <p class="c">A</p>
+      <p class="c">B</p>
+      <p class="c">C</p>
+      <p class="c">D</p>
+    </div>
+
+    <hr>
+
+    <div id="div8">
+      <p class="c">A</p>
+      <p class="c">B</p>
+      <p class="c">C</p>
+      <p class="c">D</p>
+    </div>
+
+  </body>
+</html>
