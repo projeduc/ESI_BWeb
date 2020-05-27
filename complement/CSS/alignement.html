@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Alignement</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      .c {
+        width: 300px;
+        height: 200px;
+        border: 2px dashed red;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      .c div {
+        margin: 5px;
+        background: yellow;
+      }
+
+      #deux {
+        align-self: stretch;
+      }
+
+      #trois {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="c">
+      <div id="un">Un</div>
+      <div id="deux">deux</div>
+      <div id="trois">Trois</div>
+      <div id="quatre">Quatre</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Réactivité (responsiveness)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style type="text/css">
+      .c {
+        background: green;
+        height: 100px;
+        width: auto;
+      }
+
+      @media screen and (min-width:640px) {
+        .c {
+          background: blue;
+          height: 200px;
+          width: 560px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      @media print {
+        .c {
+          background: none;
+          height: 2cm;
+          border: 2mm dashed red;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="c">
+
+    </div>
+  </body>
+</html>

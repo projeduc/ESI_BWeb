@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Position</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      .boite {
+        width: 150px;
+        height: 150px;
+      }
+      #stat {
+        position: static;
+        background: red;
+      }
+      #rel {
+        position: relative;
+        background: green;
+        top: -50px; left:50px;
+        z-index: 1;
+      }
+      #fix {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: yellow;
+        height:200px; width:300px;
+
+      }
+      #abs {
+        position: absolute;
+        background: blue;
+        top: 2em; left:100px;
+      }
+
+      #stic {
+        position: sticky;
+        background: magenta;
+        top: 10px; left:300px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>
+      Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1
+      Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1
+      Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1
+      Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1
+      Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1  Paragraphe1
+    </p>
+    <div id="stat" class="boite">
+      Position = static
+    </div>
+    <div id="rel" class="boite">
+      Position = relative
+    </div>
+    <div id="fix">
+      Position = fixed
+      <div id="abs" class="boite">
+        Position = absolute
+      </div>
+    </div>
+    <div id="stic" class="boite">
+      Position = sticky
+    </div>
+    <p>
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+      Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2  Paragraphe2
+    </p>
+    <p>
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+      Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3  Paragraphe3
+    </p>
+
+  </body>
+</html>

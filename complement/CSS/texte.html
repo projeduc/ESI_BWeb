@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Propriétés de texte</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+
+      /*alignement et direction*/
+      p {width: 400px; padding: 5px;}
+
+      p#p1 {
+        background: yellow;
+        text-align: justify;
+        text-indent: 1.5cm;
+        line-height: 2em;
+      }
+
+      p#p2 {
+        background: cyan;
+        direction: rtl;
+      }
+
+      .ib {
+        height: 150px;
+        display: inline-block;
+        border: 2px solid black;
+        margin-right: 10px;
+      }
+
+      /*Orientation du texte*/
+      .vlr {writing-mode: vertical-lr;}
+      .vrl {writing-mode: vertical-rl;}
+      .htb {writing-mode: horizontal-tb;}
+      .mixed {text-orientation: mixed;}
+      .upright {text-orientation: upright;}
+      .sideways {text-orientation: sideways;}
+
+      .maj {text-transform: uppercase;}
+      .min {text-transform: lowercase;}
+      .cap {text-transform: capitalize;}
+
+      .dec1 {
+        text-decoration: underline wavy red;
+        text-shadow: 2px 2px 3px yellow;
+      }
+
+      .dec2 {
+        text-decoration: underline overline dashed blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Mise en page</h1>
+    <p id="p1">
+      Un texte un peu long pour tester l'alignement d'un paragraphe.
+      Le texte doit être contenu dans un élément de type bloque afin que ça marche.
+      Il sera aligné par rapport à cette élément.
+    </p>
+    <p id="p2">
+      هذا نص بالعربية لتجريب الكتابة من اليمين إلى اليسار
+    </p>
+
+    <h1>Orientation</h1>
+    <h2>writing-mode: horizontal-tb</h2>
+    <div class="ib htb upright">
+      このテキストは日本語で書かれています。
+      Ce texte est écrit en japonais.
+    </div>
+
+    <h2>writing-mode: (1) vertical-lr (2) vertical-rl</h2>
+    <h3>text-orientation:mixed</h3>
+    <div class="ib vlr mixed">
+      このテキストは日本語で書かれています。
+      Ce texte est écrit en japonais.
+    </div>
+    <div class="ib vrl mixed">
+      このテキストは日本語で書かれています。
+      Ce texte est écrit en japonais.
+    </div>
+
+    <h3>text-orientation: upright</h3>
+    <div class="ib vlr upright">
+      このテキストは日本語で書かれています。
+      Ce texte est écrit en japonais.
+    </div>
+    <div class="ib vrl upright">
+      このテキストは日本語で書かれています。
+      Ce texte est écrit en japonais.
+    </div>
+
+    <h3>text-orientation: sideways</h3>
+    <div class="ib vlr sideways">
+      このテキストは日本語で書かれています。
+      Ce texte est écrit en japonais.
+    </div>
+    <div class="ib vrl sideways">
+      このテキストは日本語で書かれています。
+      Ce texte est écrit en japonais.
+    </div>
+
+    <h1>Casse et décoration</h1>
+    <p class="ib maj">
+      text-transform: uppercase;
+      <br>
+      MAJUSCULES, minuscules
+    </p>
+    <p class="ib min">
+      text-transform: lowercase;
+      <br>
+      Vers minuscules : MAJUSCULES, minuscules
+    </p>
+    <p class="ib cap">
+      text-transform: capitalize;
+      <br>
+      Première lettre en majuscules : MAJUSCULES, minuscules
+    </p>
+
+    <br>
+    
+    <p class="ib dec1">
+      text-decoration: underline wavy red;
+      <br>
+      text-shadow: 2px 2px 3px yellow;
+    </p>
+
+    <p class="ib dec2">
+      text-decoration: underline overline dashed blue;
+    </p>
+
+  </body>
+</html>
