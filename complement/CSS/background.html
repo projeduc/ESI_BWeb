@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Arrière-plan</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      /*couleur*/
+      .ib {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        overflow: auto;
+      }
+      #d1 {
+        background-color: cyan;
+      }
+      #d2 {
+        background: #BB0099;
+      }
+      #d3 {
+        background: rgb(120,0,155);
+      }
+      #d4 {
+        background: rgba(120,0,155,0.4);
+      }
+
+      #d5 {
+        background: url("assets/puce.png");
+        background-repeat: repeat;
+      }
+
+      #d6 {
+        background: url("assets/img.jpg");
+        background-size: contain;
+        background-attachment: fixed;
+      }
+
+      #d7 {
+        background: url("assets/img.jpg");
+        background-size: cover;
+        background-attachment:scroll;
+      }
+
+      #d8 {
+        background: url("assets/img.jpg");
+        background-size: cover;
+        background-attachment: local;
+      }
+
+      #d9 {
+        background: linear-gradient(red, yellow, blue);
+      }
+
+      #d10 {
+        background: linear-gradient(45deg,red, yellow,green);
+      }
+
+      #d11 {
+        background: radial-gradient(red, yellow, blue);
+      }
+
+      #d12 {
+        background: radial-gradient(circle at 0px 0px,red, yellow, blue);
+      }
+
+      #d13 {
+        background: repeating-linear-gradient(red, yellow, blue 25%);
+      }
+
+      #d14 {
+        background: repeating-radial-gradient(red, yellow, red 33.3%);
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Couleur</h1>
+
+    <div id="d1" class="ib">
+      background-color: cyan;
+    </div>
+
+    <div id="d2" class="ib">
+      background-color: #BB0099;
+    </div>
+
+    <div id="d3" class="ib">
+      background-color: rgb(120,0,155);
+    </div>
+
+    <div id="d4" class="ib">
+      background-color: rgba(120,0,155,0.4);
+    </div>
+
+    <h1>Image</h1>
+
+    <div id="d5" class="ib">
+      background-image: url("assets/puce.png");
+      <br>
+      background-repeat: repeat;
+    </div>
+
+    <div id="d6" class="ib">
+      Un texte très long pour tester l'image de l'arrière-plan.
+      Il doit défiler pour comparer les différentes valeurs de background-attachment.
+      Un texte très long pour tester l'image de l'arrière-plan.
+      Il doit défiler pour comparer les différentes valeurs de background-attachment.
+    </div>
+
+    <div id="d7" class="ib">
+      Un texte très long pour tester l'image de l'arrière-plan.
+      Il doit défiler pour comparer les différentes valeurs de background-attachment.
+      Un texte très long pour tester l'image de l'arrière-plan.
+      Il doit défiler pour comparer les différentes valeurs de background-attachment.
+    </div>
+
+    <div id="d8" class="ib">
+      Un texte très long pour tester l'image de l'arrière-plan.
+      Il doit défiler pour comparer les différentes valeurs de background-attachment.
+      Un texte très long pour tester l'image de l'arrière-plan.
+      Il doit défiler pour comparer les différentes valeurs de background-attachment.
+    </div>
+
+    <h1>Couleurs dégradées</h1>
+
+    <div id="d9" class="ib">
+      dégradée linéaire
+    </div>
+
+    <div id="d10" class="ib">
+      dégradée linéaire avec angle
+    </div>
+
+    <div id="d11" class="ib">
+      dégradée radiale
+    </div>
+
+    <div id="d12" class="ib">
+      dégradée radiale avec position du centre
+    </div>
+
+    <div id="d13" class="ib">
+      dégradée linéaire répétée
+    </div>
+
+    <div id="d14" class="ib">
+      dégradée radiale répétée
+    </div>
+
+
+  </body>
+</html>

@@ -1244,24 +1244,38 @@ p#p2 {
 \frametitle{CSS : Propriétés de texte}
 \framesubtitle{Police}
 
-\begin{minipage}{0.60\textwidth}
+\begin{minipage}{0.50\textwidth}
 	\begin{itemize}
 		\item \keyword{font-family} : la police utilisée
 		\item \keyword{font-size} : la taille de la police
 		\item \keyword{font-style} : le style de la police
+		\begin{itemize}
+			\item \optword{normal} : pas de style
+			\item \optword{italic} : en italique
+		\end{itemize}
 		\item \keyword{font-weight} : 
+		\begin{itemize}
+			\item \optword{normal} : pas de style
+			\item \optword{bold} : en gras
+			\item \optword{bolder} : plus gras
+			\item \optword{lighter} : moins gras
+		\end{itemize}
 	\end{itemize}
 \end{minipage}
 %
-\begin{minipage}{0.38\textwidth}
-	\begin{exampleblock}{Structure d'un document HTML}
+\begin{minipage}{0.49\textwidth}
+	\begin{exampleblock}{font.html}
 		\lstset{escapeinside=**}
 		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
+\begin{lstlisting}[language={html}]
+.c1 {
+  font-family: Verdana, Arial, 
+                    sans-serif;
+  font-size: 20px;
+  font-style:italic;
+  font-weight: bold;
+}
+\end{lstlisting}
 	\end{exampleblock}
 \end{minipage}
 \end{frame}
@@ -1270,20 +1284,36 @@ p#p2 {
 \frametitle{CSS : Propriétés de texte}
 \framesubtitle{Police : Définir une famille de police}
 
-\begin{minipage}{0.60\textwidth}
+\begin{minipage}{0.50\textwidth}
 	\begin{itemize}
-		\item \keyword{@font-face}
+		\item \keyword{@font-face}  pour définir une nouvelle famille de polices
+		\item \keyword{font-family} pour donner un nom à cette famille
+		\item \keyword{src} pour spécifier l'emplacement du fichier de police
 	\end{itemize}
 \end{minipage}
 %
-\begin{minipage}{0.38\textwidth}
-\begin{exampleblock}{Structure d'un document HTML}
+\begin{minipage}{0.49\textwidth}
+\begin{block}{Définir une nouvelle police}
 \lstset{escapeinside=**}
 \scriptsize\bfseries
-\begin{lstlisting}[language={html}]
+\begin{lstlisting}[language={CSS}]
 @font-face {
   font-family: "maPolice";
   src: url("unePolice.ttf");
+}
+\end{lstlisting}
+\end{block}
+\begin{exampleblock}{font.html}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={CSS}]
+@font-face {
+  font-family: "Handlee";
+  src: url("assets/Handlee-Regular.ttf");
+}
+
+.c3 {
+  font-family: Handlee;
 }
 \end{lstlisting}
 \end{exampleblock}
@@ -1298,22 +1328,37 @@ p#p2 {
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item \keyword{word-spacing}
-		\item \keyword{word-break}
-		\item \keyword{letter-spacing}
+		\item \keyword{word-spacing} : espacement entre les mots
+		\item \keyword{word-break} : couper le dernier mot dans la ligne
+		\begin{itemize}
+			\item \optword{normal} : passage à la ligne classique
+			\item \optword{break-all} : couper
+			\item \optword{keep-all} : comme \optword{normal}, mais pas de césure pour les textes asiatiques
+		\end{itemize}
+		\item \keyword{letter-spacing} : espacement entre les lettres
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{exampleblock}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{exampleblock}
+\begin{exampleblock}{font.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries
+\begin{lstlisting}[language={html}]
+.m1 {
+  word-spacing: 15px;
+}
+
+.m2 {
+  border: 1px solid;
+  width: 200px;
+  word-break: break-all;
+}
+
+.m3 {
+  letter-spacing: 3px;
+}
+\end{lstlisting}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
 
@@ -1325,22 +1370,47 @@ p#p2 {
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item \keyword{list-style-type}
-		\item \keyword{list-style-position}
-		\item \keyword{list-style-image}
+		\item \keyword{list-style-type} : style des puces et de numérotation
+		\begin{itemize}
+			\item Puces : \optword{disc}, \optword{circle}, \optword{square}
+			\item Numérotation : \optword{decimal}, \optword{lower-latin}, \optword{lower-greek}, \optword{lower-roman} (pour le majuscule, remplacer \optword{lower} par \optword{upper})
+			\item code hexadécimal d'un caractère
+		\end{itemize}
+		\item \keyword{list-style-position} : la position du marqueur 
+		\begin{itemize}
+			\item \optword{inside} le marqueur est dans la boîte principale.
+			\item \optword{outside} le marqueur est en dehors de la boîte principale.
+		\end{itemize}
+		\item \keyword{list-style-image} : image comme marqueur 
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
 	\begin{exampleblock}{Structure d'un document HTML}
 		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{exampleblock}
+\tiny\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={CSS}]
+ul.l1 {
+  list-style-type: square;
+  list-style-position: inside; }
+
+ul.l2 {
+  list-style-type: "\1F44D"; }
+
+ul.l3 {
+  list-style-type:upper-roman; }
+
+ul.l4 {
+  list-style-position: inside; }
+
+ul.l4 li.o {
+  list-style-position: outside; }
+
+ul.l5 {
+  list-style-image: 
+        url("assets/puce.png"); }
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
 
@@ -1352,100 +1422,512 @@ p#p2 {
 
 \begin{frame}[fragile]
 \frametitle{CSS : Aspect et animations}
-\framesubtitle{Arrière-plan}
+\framesubtitle{Arrière-plan : Couleur et image (1)}
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item \keyword{background-color}
-		\item \keyword{background-image}
-		\item \keyword{background-repeat}
-		\item \keyword{background-attachment}
+		\item \keyword{background-color} : définir une couleur
+		\begin{itemize}
+			\item Mot clé : \optword{red}, \optword{green}, etc.
+			\item Valeur hexadécimale : \expword{\#BB0099}
+			\item \keyword{rgb()} : \expword{rgb(120, 0, 155)}
+			\item \keyword{rgba()} : \expword{rgb(120, 0, 155, 0.4)} (avec transparence)
+		\end{itemize}
+		\item \keyword{background-image} : spécifier une image
+		\item \keyword{background-repeat} : répétition de l'image
+		\begin{itemize}
+			\item \optword{repeat} : répétition sur X et Y
+			\item \optword{repeat-x} : répétition sur X
+			\item \optword{repeat-y} : répétition sur Y
+			\item \optword{no-repeat} : sans répétition
+		\end{itemize}
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{exampleblock}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{exampleblock}
+\begin{exampleblock}{background.html}
+\lstset{escapeinside=**}
+\tiny\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+#d1 {
+  background-color: cyan;
+}
+
+#d2 {
+  background: #BB0099;
+}
+
+#d3 {
+  background: rgb(120,0,155);
+}
+
+#d4 {
+  background: rgba(120,0,155,0.4);
+}
+
+#d5 {
+  background-image: 
+          url("assets/puce.png");
+  background-repeat: repeat;
+}
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{CSS : Aspect et animations}
-\framesubtitle{Arrière-plan : Arrière-plan dégradé}
+\framesubtitle{Arrière-plan : Couleur et image (2)}
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item 
+		\item \keyword{background-size} : taille de l'image d'arrière-plan 
+		\begin{itemize}
+			\item \optword{contain} : élargir l'image sans rognage
+			\item \optword{cover} : élargir l'image avec rognage
+			\item pourcentage 
+			\item taille
+		\end{itemize}
+		\item \keyword{background-attachment} : arrière-plan
+		\begin{itemize}
+			\item \optword{fixed} : est fixé par rapport au zone d'affichage
+			\item \optword{local} : se déplace avec le contenu
+			\item \optword{scroll} : est fixé par rapport au contenu
+		\end{itemize}
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{exampleblock}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{exampleblock}
+\begin{exampleblock}{Structure d'un document HTML}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={CSS}]
+#d7 {
+  background: url("assets/img.jpg");
+  background-size: cover;
+  background-attachment:scroll;
+}
+
+#d8 {
+  background: url("assets/img.jpg");
+  background-size: cover;
+  background-attachment: local;
+}
+\end{lstlisting}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
 
-\subsection{Transformations}
-
 \begin{frame}[fragile]
 \frametitle{CSS : Aspect et animations}
-\framesubtitle{Transformations}
+\framesubtitle{Arrière-plan : Couleur dégradée}
 
-\begin{minipage}{0.60\textwidth}
+\begin{minipage}{0.45\textwidth}
 	\begin{itemize}
-		\item 
+		\item \optword{linear-gradient()} : dégradés linéaires 
+		\item \optword{radial-gradient()} : dégradés radiaux
+		\item \optword{repeating-linear-gradient()} : dégradés linéaires répétés
+		\item \optword{repeating-radial-gradient()} : dégradés radiaux répétés
 	\end{itemize}
 \end{minipage}
 %
-\begin{minipage}{0.38\textwidth}
-	\begin{exampleblock}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{exampleblock}
+\begin{minipage}{0.54\textwidth}
+\begin{exampleblock}{Structure d'un document HTML}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={html}]
+#d9 {
+  background: 
+    linear-gradient(red, yellow, blue);}
+#d10 {
+  background: 
+    linear-gradient(45deg,red, yellow,green); }
+#d11 {
+  background: 
+    radial-gradient(red, yellow, blue); }
+#d12 {
+  background: 
+    radial-gradient(circle at 0px 0px,red, yellow); }
+#d13 {
+  background: 
+    repeating-linear-gradient(red, yellow, blue 25%); 
+}
+#d14 {
+  background: 
+    repeating-radial-gradient(red, yellow, red 33.3%); 
+}
+\end{lstlisting}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
 
-\subsection{Animations}
+\subsection{Bordures et ombres}
 
 \begin{frame}[fragile]
 \frametitle{CSS : Aspect et animations}
-\framesubtitle{Animations}
+\framesubtitle{Bordures et ombres : Aspect des bordures}
+
+\begin{minipage}{0.47\textwidth}
+	\begin{itemize}
+		\item \keyword{border} : définir la bordure 
+		\begin{itemize}
+			\item \expword{taille style couleur}
+		\end{itemize}
+		\item \keyword{border-width} : taille de bordure
+		\item \keyword{border-style} : style de lignes
+		\begin{itemize}
+			\item \optword{none} : sans bordure
+			\item \optword{dotted} : points ronds
+			\item \optword{dashed} : tirets
+			\item \optword{solid} : ligne continue
+			\item \optword{double} : double ligne
+			\item ...
+		\end{itemize}
+		\item \keyword{border-radius} : coins arrondis pour la bordure
+		\begin{itemize}
+			\item \expword{haut-gauche haut-droite bas-droite bas-gauche}
+		\end{itemize}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.52\textwidth}
+\begin{exampleblock}{border\_shadow.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+#d1 { border: 8px double red; }
+
+#d2 { border-width: 8px;
+      border-style: inset; }
+
+#d3 { border: 8px blue;
+      border-style: groove; }
+
+#d4 { border: 5px solid;
+      border-radius: 20px; }
+
+#d5 { border: 5px solid;
+  border-radius: 10px 40px 40px 10px;}
+
+#d6 { border: 5px solid;
+      border-radius: 50%; }
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Bordures et ombres : Ombre des boîtes}
+
+\begin{minipage}{0.47\textwidth}
+	\begin{itemize}
+		\item \keyword{box-shadow} : définir des ombres à une boîte 
+		\begin{itemize}
+			\item \expword{décalage-x décalage-y rayon couleur} 
+		\end{itemize}
+		\item Si une \keyword{border-radius} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis.
+		\item On peut définir plusieurs ombres en utilisant la virgule comme séparateur
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.52\textwidth}
+\begin{exampleblock}{border\_shadow.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={html}]
+#d7 {
+  border: 5px solid;
+  border-radius: 25%;
+  box-shadow: 5px 5px 5px red;
+}
+
+#d8 {
+  border: 5px solid;
+  box-shadow: 5px 5px 5px blue, 
+             -5px -5px 5px gold;
+}
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+\end{frame}
+
+\subsection{Transformations et filtres}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transformations et filtres : Transformations}
 
 \begin{minipage}{0.60\textwidth}
 	\begin{itemize}
-		\item 
+		\item \keyword{transform} : définir une trasformation à un élément en bloque
+		\begin{itemize}
+			\item \optword{rotate()} : rotation
+			\item \optword{skew()} : distorsion
+			\item \optword{translate()} : translation
+			\item \optword{scale()} : échelle
+		\end{itemize}
+		\item \keyword{transform-origin} : modifier l'origine du repère de transformation
+		\begin{itemize}
+			\item \optword{top}, \optword{left}, \optword{right}, \optword{bottom} 
+			\item on peut utiliser deux mots clés ; \expword{top left}
+			\item on peut utiliser des coordonnées (X, Y) ; \expword{5px 10px}
+		\end{itemize}
+		\item On peut enchaîner plusieurs fonctions en les séparant par un espace
 	\end{itemize}
 \end{minipage}
 %
 \begin{minipage}{0.38\textwidth}
-	\begin{exampleblock}{Structure d'un document HTML}
-		\lstset{escapeinside=**}
-		\scriptsize\bfseries
-		\begin{lstlisting}[language={html}]
-		h1 {
-		color: red;
-		}
-		\end{lstlisting}
-	\end{exampleblock}
+\begin{exampleblock}{transform\_filter.html}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={CSS}]
+.ib { display: inline-block;
+  width: 200px; height: 200px;
+  overflow: auto; border: solid;
+  margin-right: 10px; }
+
+.ib img { display: block;
+  margin-left: 20px; }
+
+#d1 img { transform: rotate(30deg); }
+
+#d2 img { 
+  transform: skew(0deg, 30deg); }
+
+#d3 img { 
+  transform: translate(-50%, 40px); 
+}
+
+#d4 img { transform: scale(2, 0.5);
+  transform-origin: left; }
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transformations et filtres : Filtres}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{filter} : appliquer un effet graphique pour modifier l'apparence d'une image
+		\begin{itemize}
+			\item \optword{blur()} : flou gaussien
+			\item \optword{brightness()} : luminosité
+			\item \optword{contrast()} : contraste
+			\item \optword{grayscal()} : niveau de gris
+			\item \optword{hue-rotate()} : rotation de teinte
+			\item \optword{invert()} : inverser les couleurs
+			\item \optword{opacity()} : régler l'opacité de l'image
+		\end{itemize}
+		\item On peut enchaîner plusieurs fonctions en les séparant par un espace
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{exampleblock}{transform\_filter.html}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={CSS}]
+#d5 img { filter: blur(2px); }
+
+#d6 img { filter: brightness(150%); }
+
+#d7 img { filter: contrast(200%); }
+
+#d8 img { filter: grayscale(80%); }
+
+#d9 img { 
+  filter: hue-rotate(160deg); }
+
+#d10 img { filter: invert(100%); }
+
+#d11 img { filter: opacity(50%); }
+
+#d12 img { 
+  filter: brightness(150%) 
+           hue-rotate(160deg); 
+}
+
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+\end{frame}
+
+\subsection{Transitions et animations}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transitions et animations}
+
+\begin{itemize}
+	\item Certaines animations permettent de guider les utilisateurs vers les actions possibles et utiles
+	\item Éléments d'une animation (transition) :
+	\begin{itemize}
+		\item la durée de l'animation (transition)
+		\item le retard : la durée à attendre avant de débuter l'animation (transition) 
+		\item les propriétés à animer 
+		\item la fonction de vitesse : elle définit la vitesse de l'animation (transition)
+	\end{itemize}
+	\item Certaines animations s'avèrent problématiques pour les personnes souffrant de troubles cognitifs, d'épilepsie ou autre. 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transitions et animations : Fonctions de vitesse}
+
+\begin{tabular}{ccc}
+	linear & ease & ease-in\\
+	\hgraphpage[0.25\textwidth]{css-linear.png} &
+	\hgraphpage[0.25\textwidth]{css-ease.png} &
+	\hgraphpage[0.25\textwidth]{css-ease-in.png} \\
+	
+	ease-in-out & ease-out & \\
+	\hgraphpage[0.25\textwidth]{css-ease-in-out.png} &
+	\hgraphpage[0.25\textwidth]{css-ease-out.png} &
+	 \\
+	
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transitions et animations : Transitions}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{transition} : définir la transition entre deux états d'un élément.
+		\item Les différents états peuvent être définis à l'aide de pseudo-classes telles que \keyword{:hover} ou \keyword{:active}
+		\item les paramètres d'une transition 
+		\begin{itemize}
+			\item la propriété ou \optword{all} (pour toutes les propriétés changées)
+			\item la durée de transition 
+			\item la fonction de vitesse
+			\item le retard
+		\end{itemize}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{exampleblock}{animations.html}
+\lstset{escapeinside=**}
+\tiny\bfseries
+\begin{lstlisting}[language={html}]
+#d1 img {
+  transition: all 1s linear;
+}
+
+#d1 img:hover {
+  filter: brightness(200%);
+  transform: scale(1.5, 1.5);
+}
+
+#d2 .barre-c .barre {
+  width: 10%;
+  height: 20px;
+  background: red;
+  transition: width 1s ease;
+}
+
+#d2 .barre-c .barre:hover {
+  width: 100%;
+  background: blue;
+}
+\end{lstlisting}
+\end{exampleblock}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transitions et animations : Animations (définir les étapes)}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{@keyframe} : définir les étapes qui composent la séquence d'une animation 
+		\begin{itemize}
+			\item Un nom des séquences
+			\item les étapes par pourcentages. Il faut avoir, au moins, les étapes \optword{0\%} et \optword{100\%}
+			\item pour chaque étape, les règles (propriétés et valeurs)
+		\end{itemize}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{block}{Forme des étapes}
+\lstset{escapeinside=**}
+\tiny\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={CSS}]
+@keyframe nom-etapes {
+  de { propriete: valeur; }
+  vers { propriete: valeur; }
+}
+\end{lstlisting}\vspace{-6pt}
+\end{block}
+\begin{exampleblock}{animations.html}
+\lstset{escapeinside=**}
+\tiny\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={CSS}]
+@keyframes couleur-marge {
+  0% {
+    background: green;
+    margin-left: 0%;
+  }
+  50% {
+    background: yellow;
+    margin-left: 45%;
+  }
+  100% {
+    background: red;
+    margin-left: 90%;
+  }
+}
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{CSS : Aspect et animations}
+\framesubtitle{Transitions et animations : Animations (appliquer l'animation)}
+
+\begin{minipage}{0.60\textwidth}
+	\begin{itemize}
+		\item \keyword{animation} : définir la transition entre deux états d'un élément.
+		\item les paramètres d'une transition 
+		\begin{itemize}
+			\item la durée 
+			\item la fonction de vitesse
+			\item le retard
+			\item le nombre des itérations ou \optword{infinite}
+			\item la direction : \optword{normal} (de 0\% vers 100\%), \optword{reverse} (de 100\% vers 0\%), \optword{alternate} (de 0\% vers 100\% ensuite l'inverse) 
+			\item le nom des étapes définies par \keyword{@keyframe}
+		\end{itemize}
+	\end{itemize}
+\end{minipage}
+%
+\begin{minipage}{0.38\textwidth}
+\begin{exampleblock}{animations.html}
+\lstset{escapeinside=**}
+\scriptsize\bfseries\vspace{-6pt}
+\begin{lstlisting}[language={CSS}]
+#d3 .barre-c .barre {
+  width: 10%;
+  height: 20px;
+  animation: 3s 
+             ease-in-out 
+             20ms 
+             infinite 
+             alternate 
+             couleur-marge;
+}
+\end{lstlisting}\vspace{-6pt}
+\end{exampleblock}
 \end{minipage}
 \end{frame}
 

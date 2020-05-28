@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Bordures et ombres</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      /*couleur*/
+      .ib {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        overflow: auto;
+        margin-right: 10px;
+      }
+      #d1 {
+        border: 8px double red;
+      }
+      #d2 {
+        border-width: 8px;
+        border-style: inset;
+      }
+      #d3 {
+        border: 8px blue;
+        border-style: groove;
+      }
+      #d4 {
+        border: 5px solid;
+        border-radius: 20px;
+      }
+
+      #d5 {
+        border: 5px solid;
+        border-radius: 10px 40px 40px 10px;
+      }
+
+      #d6 {
+        border: 5px solid;
+        border-radius: 50%;
+      }
+
+      #d7 {
+        border: 5px solid;
+        border-radius: 25%;
+        box-shadow: 5px 5px 5px red;
+      }
+
+      #d8 {
+        border: 5px solid;
+        box-shadow: 5px 5px 5px blue, -5px -5px 5px gold;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Bordures</h1>
+
+    <div id="d1" class="ib">
+      border: 8px double red;
+    </div>
+
+    <div id="d2" class="ib">
+      border-width: 8px;<br>
+      border-style: inset;
+    </div>
+
+    <div id="d3" class="ib">
+      border: 8px blue;<br>
+      border-style: groove;
+    </div>
+
+    <h1>Coins arrondis</h1>
+
+    <div id="d4" class="ib">
+      border-radius: 20px;
+    </div>
+
+    <div id="d5" class="ib">
+      border-radius: 10px 40px 40px 10px;
+    </div>
+
+    <div id="d6" class="ib">
+      border-radius: 50%;
+    </div>
+
+    <h1>Ombres</h1>
+
+    <div id="d7" class="ib"></div>
+
+    <div id="d8" class="ib"></div>
+
+  </body>
+</html>

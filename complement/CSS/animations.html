@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Transitions et Animations</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    .ib {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      margin-right: 10px;
+      border: solid;
+    }
+
+    .ib img {
+      display: block;
+      margin: auto;
+    }
+
+    #d1 img {
+      transition: all 1s linear;
+    }
+
+    #d1 img:hover {
+      filter: brightness(200%);
+      transform: scale(1.5, 1.5);
+    }
+
+    .barre-c {
+      margin: auto;
+      width: 80%;
+      border: 2px solid;
+    }
+
+    #d2 .barre-c .barre {
+      width: 10%;
+      height: 20px;
+      background: red;
+      transition: width 1s ease;
+    }
+
+    #d2 .barre-c .barre:hover {
+      width: 100%;
+      background: blue;
+    }
+
+    /*Animations*/
+    @keyframes couleur-marge {
+      0% {
+        background: green;
+        margin-left: 0%;
+      }
+      50% {
+        background: yellow;
+        margin-left: 45%;
+      }
+      100% {
+        background: red;
+        margin-left: 90%;
+      }
+    }
+
+    #d3 .barre-c .barre {
+      width: 10%;
+      height: 20px;
+      animation: 3s ease-in-out 20ms infinite alternate couleur-marge;
+    }
+
+    @keyframes agrandir {
+      50% {
+        filter: brightness(200%);
+        transform: scale(1.5, 1.5) rotate(180deg);
+      }
+
+      100% {
+        filter: brightness(100%);
+        transform: scale(1, 1) rotate(360deg);
+      }
+    }
+
+    #d4 img {
+      animation: 3s ease-in 0s infinite normal agrandir;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Transitions</h1>
+
+    <div id="d1" class="ib">
+      <p>Positionner la souris sur l'image</p>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d2" class="ib">
+      <p>Positionner la souris sur la barre rouge</p>
+      <div class="barre-c">
+        <div class="barre"></div>
+      </div>
+    </div>
+
+    <h1>Animation</h1>
+
+    <div id="d3" class="ib">
+      <p>Barre d'attente</p>
+      <div class="barre-c">
+        <div class="barre"></div>
+      </div>
+    </div>
+
+    <div id="d4" class="ib">
+      <p>Tourner l'image</p>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+
+  </body>
+</html>

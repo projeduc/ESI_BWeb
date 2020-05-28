@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Transformations et filtres</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    .ib {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      overflow: auto;
+      margin-right: 10px;
+      border: solid;
+    }
+
+    .ib img {
+      display: block;
+      margin-left: 20px;
+    }
+
+    #d1 img {
+      transform: rotate(30deg);
+    }
+
+    #d2 img {
+      transform: skew(0deg, 30deg);
+    }
+
+    #d3 img {
+      transform: translate(-50%, 40px);
+    }
+
+    #d4 img {
+      transform: scale(2, 0.5);
+      transform-origin: left;
+    }
+
+    /*Filtres*/
+    #d5 img {
+      filter: blur(2px);
+    }
+
+    #d6 img {
+      filter: brightness(150%);
+    }
+
+    #d7 img {
+      filter: contrast(200%);
+    }
+
+    #d8 img {
+      filter: grayscale(80%);
+    }
+
+    #d9 img {
+      filter: hue-rotate(160deg);
+    }
+
+    #d10 img {
+      filter: invert(100%);
+    }
+
+    #d11 img {
+      filter: opacity(50%);
+    }
+
+    #d12 img {
+      filter: brightness(150%)
+           hue-rotate(160deg);
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Transformation</h1>
+
+    <div class="ib">
+      <h2>Image originale</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d1" class="ib">
+      <h2>Rotation</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d2" class="ib">
+      <h2>Distorsion</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d3" class="ib">
+      <h2>Translation</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d4" class="ib">
+      <h2>Echelle</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <h1>Filtres</h1>
+
+    <div class="ib">
+      <h2>Image originale</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d5" class="ib">
+      <h2>Flou gaussien</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d6" class="ib">
+      <h2>Luminosité</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d7" class="ib">
+      <h2>Contraste</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d8" class="ib">
+      <h2>Niveau de gris</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d9" class="ib">
+      <h2>Rotation de teinte</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d10" class="ib">
+      <h2>Inverser les couleurs</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d11" class="ib">
+      <h2>Opacité</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+    <div id="d12" class="ib">
+      <h2>Luminosité puis Rotation de teinte</h2>
+      <img src="assets/esi-dz.png" >
+    </div>
+
+  </body>
+</html>

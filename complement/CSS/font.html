@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Police, Mots et Listes</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      /*Font*/
+      .c1 {
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      @font-face {
+        font-family: "Handlee";
+        src: url("assets/Handlee-Regular.ttf");
+      }
+
+      .c2 {
+        font-family: Handlee;
+      }
+
+      /*Mots et Lettres*/
+      .m1 {
+        word-spacing: 15px;
+      }
+
+      .m2 {
+        border: 1px solid;
+        width: 200px;
+        word-break: break-all;
+      }
+
+      .m3 {
+        letter-spacing: 3px;
+      }
+
+      /*Listes*/
+      ul.l1 {
+        list-style-type: square;
+        list-style-position: inside;
+      }
+
+      ul.l2 {
+        list-style-type: "\1F44D";
+      }
+
+      ul.l3 {
+        list-style-type:upper-roman;
+      }
+
+      ul.l4 {
+        list-style-position: inside;
+      }
+
+      ul.l4 li.o {
+        list-style-position: outside;
+      }
+
+      ul.l5 {
+        list-style-image: url("assets/puce.png");
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Font</h1>
+    <p class="c1">
+      Un texte pour tester les styles de polices
+    </p>
+    <p>
+      Un texte par défaut pour comparer
+    </p>
+    <p class="c2">
+      Un texte avec une police définie
+    </p>
+
+    <h1>Mots et Lettres</h1>
+    <p class="m1">
+      Un texte avec grand espacement entre les mots
+    </p>
+    <p class="m2">
+      Un texte avec des mots coupés.
+      Lorsqu'on atteint la fin, on n'ajoute pas des espaces.
+      Mais, on coupe le dernier mot en deux : la deuxième partie saute vers la ligne suivante.
+    </p>
+    <p class="m3">
+      Un texte avec des lettres espacées
+    </p>
+
+    <h1>Listes</h1>
+    Des listes à puces
+    <ul class="l1">
+      <li>élément 1</li>
+      <li>élément 2</li>
+      <li>élément 3</li>
+    </ul>
+
+    Des listes à puces utilisant des caractères
+    <ul class="l2">
+      <li>élément 1</li>
+      <li>élément 2</li>
+      <li>élément 3</li>
+    </ul>
+
+    Des listes à puces comme listes numérotées
+    <ul class="l3">
+      <li>élément 1</li>
+      <li>élément 2</li>
+      <li>élément 3</li>
+    </ul>
+
+    Des listes à puces avec position
+    <ul class="l4">
+      <li>Inside</li>
+      <li class="o">Outside</li>
+      <li>Inside</li>
+    </ul>
+
+    Des listes avec images
+    <ul class="l5">
+      <li>élément 1</li>
+      <li>élément 2</li>
+      <li>élément 3</li>
+    </ul>
+
+  </body>
+</html>
