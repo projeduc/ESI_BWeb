@@ -6,34 +6,34 @@ Le cours contient une initiation aux outils bureatiques ainsi que le dévelopeme
 ## Contenu du module
 
 1. **Environnement de travail** : le but de ce chapitre est d'introduire les différents environnements de travail aux étudiants.
-  - Environnement de travail local : Système d’exploitation, Windows, Linux, Machine virtuelle
-  - Environnement de travail distant : Accès (adressage, web, protocoles et serveurs), le cloud (IaaS, PaaS, SaaS)
+    - Environnement de travail local : Système d’exploitation, Windows, Linux, Machine virtuelle
+    - Environnement de travail distant : Accès (adressage, web, protocoles et serveurs), le cloud (IaaS, PaaS, SaaS)
 1. **Recherche d'information et messagerie** : le but de ce chapitre est de comprendre comment la recherche d'information et la messagerie fonctionnent. Aussi, comment utiliser les services Google et Gmail.
-  - Recherche d'information :  Localiser l'information sur le web, Moteurs de recherche, Structure d'un moteur de recherche
-  - Rechercher avec Google : Effectuer une recherche, Paramètres et outils de recherche, Réponses rapides
-  - Messagerie électronique : Accès à la messagerie, Envoyer un message, Recevoir un message
-  - Messagerie Gmail : Paramètres, Organisation et recherche, Gestion de contacts
+    - Recherche d'information :  Localiser l'information sur le web, Moteurs de recherche, Structure d'un moteur de recherche
+    - Rechercher avec Google : Effectuer une recherche, Paramètres et outils de recherche, Réponses rapides
+    - Messagerie électronique : Accès à la messagerie, Envoyer un message, Recevoir un message
+    - Messagerie Gmail : Paramètres, Organisation et recherche, Gestion de contacts
 1. **Rédaction d'un document numérique** : Ici, les étudiants doivent comprendre les différentes parties d'un rapport ou un livre. Ils doivent métriser un des outils pour la rédaction des rapports.
-  - Introduction : Structure d'un rapport,  Outils de rédaction
-  - Microsoft Word : Préparer un document, Enrichir un document, Références, Révision et partage
-  - LibreOffice Writer : Préparer un document, Enrichir un document, Références, Révision et partage
-  - Introduction au LaTeX : Préparer un document, Enrichir un document, Références
+    - Introduction : Structure d'un rapport,  Outils de rédaction
+    - Microsoft Word : Préparer un document, Enrichir un document, Références, Révision et partage
+    - LibreOffice Writer : Préparer un document, Enrichir un document, Références, Révision et partage
+    - Introduction au LaTeX : Préparer un document, Enrichir un document, Références
 1. **Diffusion et collecte d'informations** : Ici, les étudiants vont apprendre la technique de publipostage et comment créer des formulaires
-  - Publipostage : Les données, Masque de publipostage, Aperçu et Fusion
-  - Formulaires : Les champs, Formulaires Word, Formulaires Google
+    - Publipostage : Les données, Masque de publipostage, Aperçu et Fusion
+    - Formulaires : Les champs, Formulaires Word, Formulaires Google
 1. **Présentations** : Les étudiants  doivent apprendre comment créer une présentation  et comment la présenter
-  - Préparation : Objectif (Pourquoi?), Audience (Qui?), Sujet (Quoi?), Outils
-  - Contenu : Structure, Esthétique
-  - Présentation orale : Avant, Durant, Après, Remarques à l'audience
-  - Microsoft PowerPoint : Préparation, Transitions et animations, affichage
+    - Préparation : Objectif (Pourquoi?), Audience (Qui?), Sujet (Quoi?), Outils
+    - Contenu : Structure, Esthétique
+    - Présentation orale : Avant, Durant, Après, Remarques à l'audience
+    - Microsoft PowerPoint : Préparation, Transitions et animations, affichage
 1. **Tableurs** : Les étudiants doivent apprendre comment créer des feuilles de calcul
-  - Introduction : Éléments d'un tableur, Cas d'utilisation, Outils
-  - Microsoft Excel : Données et opérations, Formules et référencement, fonctions, formatage, imppression et protection
-  - Tableaux croisés dynamiques : Créations, outils
+    - Introduction : Éléments d'un tableur, Cas d'utilisation, Outils
+    - Microsoft Excel : Données et opérations, Formules et référencement, fonctions, formatage, imppression et protection
+    - Tableaux croisés dynamiques : Créations, outils
 1. **Développement web** : Ici, les étudiants doivent pouvoir créer des sites statiques  en utilisant HTML et CSS
-  - Introduction : Généralités, Front-end, Back-end, Outils
-  - HTML : structure et élémennts, Liens et multimédia, Dispositions, Formulaires
-  - CSS : Règles et cascade, Mise en page, Propriétés de texte, Aspect et animations
+    - Introduction : Généralités, Front-end, Back-end, Outils
+    - HTML : structure et élémennts, Liens et multimédia, Dispositions, Formulaires
+    - CSS : Règles et cascade, Mise en page, Propriétés de texte, Aspect et animations
 
 
 ## Licence
