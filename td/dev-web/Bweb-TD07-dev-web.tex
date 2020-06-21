@@ -213,7 +213,314 @@ Dans l'élément \textbf{<main>}, insérer le contenu principale de la page
 \end{tabular}
 
 \begin{enumerate}
-	\item 
+	\item Ajouter le méta \textbf{viewport} aux trois fichiers HTML
+	\item Créer un fichier "style.css"
+	\item Définir ce fichier comme feuille de style externe aux trois fichiers HTML
+	\item Dans ce qui vient, le choix des couleurs et des tailles est laissé à l'étudiant
+\end{enumerate}
+
+\subsection*{Entête et pied de page}
+
+Définir les règles 
+\begin{enumerate}
+	\item Pour les éléments \textbf{<header>} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Un gradient de couleurs comme arrière-plan
+		\item La disposition \textbf{flex} (afin d'afficher le banner et le titre côte à côte)
+		\item Sans marges externes (afin que le menu soit attaché à l'entête)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les titres de niveau 1 descendants d'un élément \textbf{<header>} :
+	\begin{itemize}
+		\item Définir les marges \textbf{auto} (afin de centrer le titre horizontalement et verticalement)
+	\end{itemize} 
+	\item Pour l'élément dont l'identifiant est \textbf{banner} :
+	\begin{itemize}
+		\item Des marges externes de 5px
+	\end{itemize} 
+	\item Pour l'image descendante de l'élément dont l'identifiant est \textbf{banner} :
+	\begin{itemize}
+		\item Une hauteur de 100px
+	\end{itemize} 
+	\item Pour les éléments \textbf{<footer>} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Choisir deux couleurs de fond et d'écriture
+		\item Centrer le texte horizontalement
+		\item Fixer les marges internes à 5px
+		\item Définir la marge externe en haut par 10px
+		\item Rendre les coins arrondis : 5px (sans afficher les bordures)
+	\end{itemize} 
+	\end{multicols}
+\end{enumerate}
+
+\subsection*{Menu}
+
+Définir les règles 
+\begin{enumerate}
+	\item Pour les éléments \textbf{<nav>} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item La position \textbf{sticky} (afin que le menu défile jusqu'à une position et s'arrête ; reste affiché en haut)
+		\item La distance en haut doit être 0 
+		\item Sans marges externes (afin que le menu soit attaché à l'entête)
+		\item Choisir une couleur de fond 
+		\item En défilant la page, on remarqué que le contenu passe sur le menu. 
+		On veut qu'il passe sous le menu (ce dernier doit être proche de l'œil: axe Z)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les éléments \textbf{<ul>} descendants de \textbf{<nav>} :
+	\begin{itemize}
+		\item Sans marges externes et internes
+	\end{itemize} 
+	\item Pour les éléments \textbf{<li>} descendants de \textbf{<nav>} :
+	\begin{itemize}
+		\item disposition en \textbf{inline-block} (afin que les éléments du menu soient positionnés un après l'autre)
+	\end{itemize} 
+	\item Pour les liens hypertextes descendants des éléments \textbf{<ul>} qui sont à leur tour descendants de \textbf{<nav>}  :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Disposition en \textbf{inline-block} ou \textbf{block} (afin d'appliquer les marges)
+		\item Marges internes et externes de 5px
+		\item Choisir des couleurs de fond et d'écriture
+		\item Éliminer les décorations des liens (souligné) en utilisant la valeur \textbf{none}
+		\item Mettre le texte en gras
+		\item Rendre les coins arrondis : 5px (sans afficher les bordures)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les liens hypertextes descendants des éléments \textbf{<li>} dont la classe est \textbf{actif} et qui sont à leur tour descendants de \textbf{<nav>}  :
+	\begin{itemize}
+		\item Définir une couleur de fond (Afin de préciser que l'élément du menu est déjà sélectionné)
+	\end{itemize} 
+
+	\item Lorsqu'on met le curseur sur les liens hypertextes descendants des éléments \textbf{<li>} qui sont à leur tour descendants de \textbf{<nav>}  :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Définir une couleur de fond différente de l'originale
+		\item Définir une transition de la couleur du fond (durée 3s)
+	\end{itemize} 
+	\end{multicols}
+	\item Lorsqu'on met le curseur sur les liens hypertextes descendants des éléments \textbf{<li>} dont la classe est \textbf{actif} et qui sont à leur tour descendants de \textbf{<nav>}  :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item La même couleur de fond que la règle avant précédente
+		\item Définir la transition à \textbf{none} (afin de ne pas avoir une transition pour les éléments sélectionnés)
+	\end{itemize} 
+	\end{multicols}
+
+\end{enumerate}
+
+\subsection*{Les sections}
+
+Définir les règles 
+\begin{enumerate}
+	\item Pour les éléments \textbf{<section>} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Une bordure à ligne continue avec une taille de 3px et une couleur au choix
+		\item Rendre les coins arrondis : 10px
+		\item Ajouter une marge en haut de 30px (afin de faire ressortir le titre)
+		\item Définir la position comme \textbf{relative} (Afin qu'on puisse positionner le titre par rapport à la section)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les titres de niveau 2 qui sont fils directes de \textbf{<section>} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Marges internes de 0.2em
+		\item Bordures formatées comme celles de \textbf{<section>}
+		\item La position \textbf{absolute} avec positionnement en haut de -1.7em et à gauche de 10px
+		\item Couleur de fond blanche 
+		\item Transformer le texte en majuscule 
+		\item Taille de la police : 1em
+	\end{itemize} 
+	\end{multicols}
+	\item Ajouter du contenu avant celui \textbf{<section>} en utilisant \textbf{::before} (afin de laisser un espace entre le  titre qu'on a déplacé et le reste du contenu de la section) :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Le contenu est vide
+		\item De type block
+		\item La hauteur est de 1em
+		\item La marge en bas : 5px
+	\end{itemize} 
+	\end{multicols}
+\end{enumerate}
+
+\subsection*{Les tableaux}
+
+Définir les règles 
+\begin{enumerate}
+	\item La largeur d'un tableau doit être 100\% de la largeur de la fenêtre
+	\item Pour les cellules d'un tableau (normales et de titre) :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item La marge interne : 5px
+		\item Rendre les coins arrondis : 5px (sans afficher les bordures)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les cellules de titres de colonnes :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Choisir une couleur foncée de fond
+		\item Choisir la couleur blanche pour l'écriture
+	\end{itemize}  
+	\end{multicols}
+	\item Pour les cellules de titres de lignes :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Choisir une autre couleur foncée de fond
+		\item Choisir la couleur blanche pour l'écriture
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les cellules normales descendantes des lignes \textbf{<tr>} impaires :
+	\begin{itemize}
+		\item Choisir une couleur claire de fond
+	\end{itemize} 
+	\item Pour les cellules normales descendantes des lignes \textbf{<tr>} paires :
+	\begin{itemize}
+		\item Choisir une autre couleur claire de fond
+	\end{itemize} 
+\end{enumerate}
+
+\subsection*{Format de texte}
+
+Définir les règles 
+\begin{enumerate}
+	\item Pour chaque paragraphe (\textbf{<p>}) :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Définir une indentation de première ligne : 2em;
+		\item Justifier le texte
+	\end{itemize} 
+	\end{multicols}
+	\item Pour la première lettre d'un paragraphe :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Définir une couleur d'écriture au choix
+		\item Justifier le texte
+		\item Attribuer la valeur 3em à la taille de la police
+		\item La lettre ne doit pas être en gras (\textit{font-weight: normal;})
+		\item La police doit être \textbf{AngloText} accompagnée comme ressource
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les citations en bloque :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Définir les marges gauches et droite par 2em (ou plus)
+		\item Fixer les marges internes à 5px;
+		\item Attribuer une bordure de 1px avec ligne continue et une couleur aux choix
+		\item Rendre les coins arrondis : 10px
+		\item Afficher le texte en italique 
+		\item Définir un ombre de boîte (choisir des dimensions et la couleur)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les éléments \textbf{<aside>} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Choisir une couleur de fond claire
+		\item Le texte doit être gras et en italique
+		\item Fixer la marge externe gauche à 15px
+		\item Définir une marge interne de 5px
+		\item Flotter à droite
+		\item Définir une grande bordure gauche (10px)
+	\end{itemize} 
+	\end{multicols}
+\end{enumerate}
+
+\subsection*{Diaporama des images}
+
+Ici, on va créer un diaporama des images de la page "\textbf{auteur.html}". 
+Dans ce qui suit, $N$ réfère au nombre des images. 
+L'idée est de stocké les images avec des largeurs similaires l'une après l'autre horizontalement dans un \textbf{<div>}. 
+Ce \textbf{<div>} doit être inclus dans un autre qui a la taille d'une seule image (pour afficher une seule à la fois).
+L'animation consiste à décaler le \textbf{<div>} interne sur plusieurs étapes.
+\begin{enumerate}
+	\item Définir des étapes d'animation :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Chaque étape a une distance de $\frac{100}{N-1}\%$. 
+		Si nous avons 4 images, les étapes sont : 0\%, 33\%, 67\% et 100\%.
+		Si nous avons 3 images, les étapes sont : 0\%, 50\%, 100\%.
+		\item Pour chaque étape, on diminue la position gauche de 100\% par rapport à l'étape précédente.
+	\end{itemize} 
+	\end{multicols}
+\begin{verbatim}
+@keyframes slideshow {
+  0% {left: 0;}
+  33% {left: -100%;}
+  67% {left: -200%;}
+  100% {left: -300%;}
+}
+\end{verbatim}
+	\item Pour les éléments ayant une classe \textbf{slide-wrapper} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Cacher le débordement du contenu (\textbf{overflow})
+		\item Définir la largeur par 50\%;
+		\item Spécifier les marges par \textbf{auto} (pour centrer le diaporama)
+		\item Rendre les coins arrondis : 20px (sans afficher les bordures)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour éléments ayant une classe \textbf{slide} et descendant des éléments de classe \textbf{slide-wrapper} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Définir la position comme \textbf{relative}
+		\item Fixer la largeur à $N * 100\%$ (Si on a 4 images, donc 400\%)
+		\item Éliminer les marges externes
+		\item Rendre les coins arrondis : 10px
+		\item Initialiser la position gauche à 0
+		\item Définir une animation de 20s (ou au choix) en utilisant les étapes définies précédemment. 
+		L'animation doit boucler infiniment et à l'alternance (va et vient) 
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les images \textbf{<img>} descendantes d'un éléments ayant une classe \textbf{slide} et descendant des éléments de classe \textbf{slide-wrapper} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Flotter à gauche
+		\item Définir une largeur de $\frac{100}{N}\%$. Par exemple, pour 4 images, la largeur est 25\%.
+	\end{itemize} 
+	\end{multicols}
+\end{enumerate}
+
+\subsection*{Les formulaires}
+
+Définir les règles 
+\begin{enumerate}
+	\item Pour les éléments \textbf{<input>}, \textbf{<select>} et \textbf{<textarea>} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Définir une bordure de 1px avec couleur au choix 
+		\item Rendre les coins arrondis : 5px
+		\item Fixer les marges internes et externes à 5px
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les éléments \textbf{<input>} qui sont obligatoires :
+	\begin{itemize}
+		\item Définir une couleur de fond
+	\end{itemize} 
+	
+\end{enumerate}
+
+\subsection*{Le smartphone}
+
+Dans les médias de type \textbf{screen} avec une largeur maximale de \textbf{600px}, on définit les règles suivantes.
+
+\begin{enumerate}
+	\item Pour les étiquettes, ajouter un contenu après leurs contenus en utilisant \textbf{::after} :
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item Son contenu est vide
+		\item disposition en bloque (pour que les champs de saisi retournent à la ligne)
+	\end{itemize} 
+	\end{multicols}
+	\item Pour les éléments de type \textbf{<select>}, \textbf{<textarea>} et \textbf{<input>} qui ne sont pas de type \textbf{checkbox} ou \textbf{radio} :
+	\begin{itemize}
+		\item Largeur de 90\%
+	\end{itemize}
+	\item Pour les éléments dont la classe est \textbf{slide-wrapper} :
+	\begin{itemize}
+		\item Largeur de 90\%
+	\end{itemize}  
 \end{enumerate}
 
 \end{document}
