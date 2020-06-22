@@ -17,6 +17,7 @@
 \usepackage{wrapfig}
 \usepackage{multicol}
 \usepackage[export]{adjustbox} %for images in table, also for frame
+\usepackage[many]{tcolorbox}
 
 \hypersetup{
 	colorlinks,
@@ -120,29 +121,85 @@
 	\end{multicols*}
 }
 
+\definecolor{my-grey}{RGB}{233, 233, 233}
+
 \newcommand{\insertlicence}{
 	\begin{frame}[plain]
-	\frametitle{Licence : CC-BY-NC 4.0}
+	\frametitle{Licence : CC-BY 4.0}
 %	\framesubtitle{Licence: CC-BY-NC 4.0}
-	\begin{center}
-		\bfseries Attribution - Pas d'Utilisation Commerciale 4.0 International 
-		\url{https://creativecommons.org/licenses/by-nc/4.0/deed.fr}
-	\end{center}
 
-	\tiny
-
-	Vous êtes autorisé à : 
-	\begin{itemize}
-		\item \textbf{Partager} — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
-		\item \textbf{Adapter} — remixer, transformer et créer à partir du matériel
-	\end{itemize}
+	\begin{tcolorbox}[colback=cyan,
+		colframe=cyan,  
+		arc=0pt,outer arc=0pt,
+		valign=top, 
+		halign=center,
+		width=\textwidth]
+		
+		\includegraphics[width=.5cm]{../img/licence/cc_icon_white_x2.png}
+		\includegraphics[width=.5cm]{../img/licence/attribution_icon_white_x2.png}
+		
+		\color{white}
+		\bfseries Attribution 4.0 International (CC BY 4.0) \\
+		\tiny \url{https://creativecommons.org/licenses/by/4.0/deed.fr}
+		
+	\end{tcolorbox}\vspace{-.5cm}
+	\begin{tcolorbox}[colback=my-grey,
+		colframe=my-grey,  
+		center, arc=0pt,outer arc=0pt,
+		valign=top, 
+		halign=left,
+		width=\textwidth]
+		
+		\tiny
+		
+		\begin{center}
+			\bfseries\Large
+			Vous êtes autorisé à :
+		\end{center}
+		
+		\begin{minipage}{0.83\textwidth}
+			\begin{itemize}
+				\item[] \textbf{Partager} — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
+				\item[] \textbf{Adapter} — remixer, transformer et créer à partir du matériel
+				pour toute utilisation, y compris commerciale.
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}{0.15\textwidth}
+			\includegraphics[width=\textwidth]{../img/licence/FreeCulturalWorks_seal_x2.jpg}
+		\end{minipage}
 	
-	Selon les conditions suivantes : 
-	\begin{itemize}
-		\item \textbf{Attribution} — Vous devez créditer l'Œuvre, intégrer un lien vers la licence et indiquer si des modifications ont été effectuées à l'Oeuvre. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
-		\item \textbf{Pas d'Utilisation Commerciale} — Vous n'êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel la composant. 
-		\item \textbf{Pas de restrictions complémentaires} — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
-	\end{itemize}
+		
+		\begin{center}
+			\bfseries\Large
+			Selon les conditions suivantes :
+		\end{center}
+		
+		\begin{itemize}
+			\item[] \textbf{Attribution} — Vous devez créditer l'Œuvre, intégrer un lien vers la licence et indiquer si des modifications ont été effectuées à l'Oeuvre. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre. 
+			\item[] \textbf{Pas de restrictions complémentaires} — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
+		\end{itemize}
+		
+	\end{tcolorbox}
+	
+%	\begin{center}
+%		\bfseries Attribution 4.0 International (CC BY 4.0)
+%		\url{https://creativecommons.org/licenses/by/4.0/deed.fr}
+%	\end{center}
+
+%	\tiny
+%
+%	Vous êtes autorisé à : 
+%	\begin{itemize}
+%		\item \textbf{Partager} — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
+%		\item \textbf{Adapter} — remixer, transformer et créer à partir du matériel
+%	\end{itemize}
+%	
+%	Selon les conditions suivantes : 
+%	\begin{itemize}
+%		\item \textbf{Attribution} — Vous devez créditer l'Œuvre, intégrer un lien vers la licence et indiquer si des modifications ont été effectuées à l'Oeuvre. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
+%		\item \textbf{Pas d'Utilisation Commerciale} — Vous n'êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel la composant. 
+%		\item \textbf{Pas de restrictions complémentaires} — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
+%	\end{itemize}
 
 	\end{frame}
 }
