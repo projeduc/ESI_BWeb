@@ -9,6 +9,8 @@
 Ceci est le répo contenant les cours et les TD/TP du module "Bureatique et Web" destiné aux premières années cycle préparatoire au sein de l'école nationale supérieure d'informatique (ESI), Alger, Algérie.
 Le cours contient une initiation aux outils bureatiques ainsi que le dévelopement web.
 
+[Télécharger les cours ICI](https://github.com/projeduc/ESI_1CP_BWeb/releases/latest)
+
 ## Contenu du module
 
 1. **Environnement de travail** : le but de ce chapitre est d'introduire les différents environnements de travail aux étudiants.
