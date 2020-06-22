@@ -1,7 +1,7 @@
 # Cours Bureatique et Web
 
 [![Type](https://img.shields.io/badge/Type-Cours-0014A8.svg?style=flat)](https://github.com/projeduc/ESI_1CP_BWeb)
-[![License](https://img.shields.io/badge/Licence-CC--BY--NC_4.0-0014A8.svg?style=flat)](https://creativecommons.org/licenses/by-nc/4.0/deed.fr)
+[![License](https://img.shields.io/badge/Licence-CC--BY_4.0-0014A8.svg?style=flat)](https://creativecommons.org/licenses/by/4.0/deed.fr)
 [![GitHub release](https://img.shields.io/github/release/projeduc/ESI_1CP_BWeb.svg)](https://github.com/projeduc/ESI_1CP_BWeb/releases)
 [![Github All Releases](https://img.shields.io/github/downloads/projeduc/ESI_1CP_BWeb/total.svg)](https://github.com/projeduc/ESI_1CP_BWeb/releases)
 [![Github Release](https://img.shields.io/github/downloads/projeduc/ESI_1CP_BWeb/latest/total.svg)](https://github.com/projeduc/ESI_1CP_BWeb/releases/latest)
@@ -47,18 +47,14 @@ Le cours contient une initiation aux outils bureatiques ainsi que le dévelopeme
 Abdelkrime Aries @ 2020
 
 
-Attribution - Pas d'Utilisation Commerciale 4.0 International
-https://creativecommons.org/licenses/by-nc/4.0/deed.fr
+Attribution 4.0 International (CC BY 4.0)
+
+https://creativecommons.org/licenses/by/4.0/deed.fr
 
 Vous êtes autorisé à :
-- Partager — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
-- Adapter — remixer, transformer et créer à partir du matériel
+- **Partager** — copier, distribuer et communiquer le matériel par tous moyens et sous tous formats
+- **Adapter** — remixer, transformer et créer à partir du matériel pour toute utilisation, y compris commerciale.
 
 Selon les conditions suivantes :
-- Attribution — Vous devez créditer l'Œuvre, intégrer un lien vers la licence et indiquer si des modifications ont été effectuées à
-l'Oeuvre. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l’Offrant vous soutient
-ou soutient la façon dont vous avez utilisé son Oeuvre.
-- Pas d'Utilisation Commerciale — Vous n’êtes pas autorisé à faire un usage commercial de cette Oeuvre, tout ou partie du matériel
-la composant.
-- Pas de restrictions complémentaires — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques
-qui restreindraient légalement autrui à utiliser l’Oeuvre dans les conditions décrites par la licence.
+- **Attribution** — Vous devez créditer l'Œuvre, intégrer un lien vers la licence et indiquer si des modifications ont été effectuées à l'Oeuvre. Vous devez indiquer ces informations par tous les moyens raisonnables, sans toutefois suggérer que l'Offrant vous soutient ou soutient la façon dont vous avez utilisé son Oeuvre.
+- **Pas de restrictions complémentaires** — Vous n'êtes pas autorisé à appliquer des conditions légales ou des mesures techniques qui restreindraient légalement autrui à utiliser l'Oeuvre dans les conditions décrites par la licence.
