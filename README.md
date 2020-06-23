@@ -1,4 +1,4 @@
-# Cours Bureatique et Web
+# Cours Bureautique et Web
 
 [![Type](https://img.shields.io/badge/Type-Cours-0014A8.svg?style=flat)](https://github.com/projeduc/ESI_1CP_BWeb)
 [![License](https://img.shields.io/badge/Licence-CC--BY_4.0-0014A8.svg?style=flat)](https://creativecommons.org/licenses/by/4.0/deed.fr)
@@ -6,8 +6,8 @@
 [![Github All Releases](https://img.shields.io/github/downloads/projeduc/ESI_1CP_BWeb/total.svg)](https://github.com/projeduc/ESI_1CP_BWeb/releases)
 [![Github Release](https://img.shields.io/github/downloads/projeduc/ESI_1CP_BWeb/latest/total.svg)](https://github.com/projeduc/ESI_1CP_BWeb/releases/latest)
 
-Ceci est le répo contenant les cours et les TD/TP du module "Bureatique et Web" destiné aux premières années cycle préparatoire au sein de l'école nationale supérieure d'informatique (ESI), Alger, Algérie.
-Le cours contient une initiation aux outils bureatiques ainsi que le dévelopement web.
+Ceci est le répo contenant les cours et les TD/TP du module "Bureautique et Web" destiné aux premières années cycle préparatoire au sein de l'école nationale supérieure d'informatique (ESI), Alger, Algérie.
+Le cours contient une initiation aux outils bureautiques ainsi que le dévelopement web.
 
 [Télécharger les cours ICI](https://github.com/projeduc/ESI_1CP_BWeb/releases/latest)
 
